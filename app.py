@@ -11,7 +11,9 @@ serving.WSGIRequestHandler.log_request = log_request
 
 app = Flask(__name__, static_url_path='/assets')
 
-app.jinja_env.globals['s'] = lambda filename: url_for('static', filename=filename)
+app.jinja_env.globals['static'] = lambda filename: url_for('static', filename=filename)
+app.jinja_env.trim_blocks = True
+app.jinja_env.lstrip_blocks = True
 
 
 @app.route('/', defaults={'filename': 'index'})

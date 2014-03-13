@@ -1,4 +1,98 @@
+@import 'vars';
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  //-webkit-font-smoothing: subpixel-antialiased;
+}
+
+
 .sidebar {
-  padding-left: 223px;
+  padding-left: 0;
   padding-right: 0;
+}
+
+// Our Custom Navbar
+.navbar-primary {
+  border: none;
+  border-radius: 0;
+  background-color: $navbar-color;
+  padding: 7px;
+  margin-bottom: 0;
+
+  .navbar-brand {
+    color: $text-color;
+    font-size: 1.4em;
+    font-weight: 500;
+
+    .brand-subtext {
+      color: #81979C;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 0.5em;
+    }
+  }
+
+  .navbar-nav {
+    li > a {
+      color: $text-color;
+      &:hover { background-color: transparent; }
+    }
+  }
+}
+
+
+.sidebar {
+  min-height: 1000px;
+  background-color: $sidebar-color;
+}
+
+.nav-sidebar {
+  padding-left: 12px;
+
+  li {
+    border-bottom: 1px solid lighten($sidebar-color, 1);
+
+    // Showing the collapse indicator to the left of item name
+    &.dropdown span:before {
+      display: inline-block;
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: '\f138';
+      margin: 0 5px 0 -3px;
+      color: darken($text-color, 50);
+    }
+  }
+
+  li > a {
+    padding: 19px 11px 19px 15px;
+    font-size: 0.95em;
+    font-weight: 500;
+    line-height: 1.1em;
+    color: darken($text-color, 12);
+    border-left: 8px solid transparent;
+
+    i {
+      margin-right: 6px;
+      color: darken($text-color, 40);
+      float: right;
+      font-size: 1.6em;
+      transition: all 0.2s ease-in-out;
+      -webkit-transition: all 0.2s ease-in-out;
+    }
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-color: lighten($sidebar-color, 3);
+      border-left-color: #27ae60;
+      color: #fff;
+      i { color: darken($text-color, 10); }
+      transition: all 0.2s ease-in-out;
+      -webkit-transition: all 0.2s ease-in-out;
+    }
+  }
 }

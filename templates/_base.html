@@ -11,13 +11,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Vakarian Admin is an admin theme. >>>> CHANGE THIS <<<<">
 
-    <!-- Bootstrap CSS -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,300,700,800' rel='stylesheet' type='text/css'>
+
+    {{ c('Bootstrap CSS') }}
     <link rel="stylesheet" href="{{ static('css/lib/bootstrap.min.css') }}">
 
-    <!-- Vendor CSS -->
+    {{ c('Vendor CSS') }}
     <link rel="stylesheet" href="{{ static('css/lib/font-awesome.min.css') }}">
 
-    <!-- Vakarian CSS -->
+    {{ c('Vakarian Base CSS') }}
+    <link rel="stylesheet" href="{{ static('css/compiled/base.css') }}">
+
+    {{ c('Vakarian Page Specific CSS') }}
     {% block css %}{%- endblock %}
 
     <script src="{{ static('js/modernizr-2.6.2-respond-1.1.0.min.js') }}"></script>
@@ -29,15 +34,50 @@
     <div class="wrapper">
 
         {{ c('top nav bar') }}
-        <div class="top-nav-bar">
+        <nav class="navbar navbar-primary" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-primary-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><i class="fa fa-dribbble"></i> Vakarian <span class="brand-subtext hidden-xs">Admin Panel</span></a>
+                </div>
 
-        </div>{{ c('/top nav bar') }}
+                <div class="collapse navbar-collapse" id="navbar-primary-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Link</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
 
-        <div class="container">
             <div class="row">
 
                 {{ c('left sidebar') }}
                 <div class="col-md-2 sidebar">
+
+                    <ul class="nav nav-sidebar">
+                        <li><a href="#"><i class="fa fa-desktop fa-fw"></i> <span>Dashboard</span></a></li>
+                        <li class="dropdown"><a href="#"><i class="fa fa-th fa-fw"></i> <span>Grids</span></a></li>
+                        <li class="dropdown"><a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> <span>Charts</span></a></li>
+                        <li class="dropdown"><a href="#"><i class="fa fa-table fa-fw"></i> <span>Tables</span></a></li>
+                        <li class="dropdown"><a href="#"><i class="fa fa-calendar fa-fw"></i> <span>Calendar</span></a></li>
+                        <li class="dropdown"><a href="#"><i class="fa fa-list-alt fa-fw"></i> <span>Form Elements</span></a></li>
+                        <li class="dropdown"><a href="#"><i class="fa fa-clock-o fa-fw"></i> <span>UI Elements</span></a></li>
+                    </ul>
 
                 </div>{{ c('/left sidebar') }}
 
@@ -48,16 +88,14 @@
 
             </div>{{ c('/div.row') }}
 
-        </div>{{ c('/div.container') }}
-
     </div>{{ c('/page wrapper') }}
 
     {% block main %}{% endblock %}
 
 
-    <!-----------------------
+    <!------------------------
         JavaScript Includes
-    ------------------------>
+      ------------------------>
 
     {{ cu('jQuery and Bootstrap') }}
     <script src="{{ static('js/jquery-2.1.0.min.js') }}"></script>

@@ -8,7 +8,8 @@ $(document).ready(function() {
         }
     });
     // Showing and collapsing the children
-    $(".nav-sidebar > li.dropdown > a").on('click', function() {
+    $(".nav-sidebar > li.dropdown > a").on('click', function(e) {
+        e.preventDefault();
         var parent = $(this).parent("li");
         $(".nav-sidebar > li.dropdown").children("ul").slideUp(150);
         if (parent.hasClass("active")) {

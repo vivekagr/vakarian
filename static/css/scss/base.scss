@@ -112,6 +112,7 @@ body {
       color: darken($text-color, 40);
       float: right;
       font-size: 1.6em;
+      line-height: 0.9em;
       @include transition((background-color 0.1s ease, color 0.1s ease));
     }
 

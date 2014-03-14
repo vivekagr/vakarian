@@ -1,11 +1,11 @@
 @import 'vars';
 
-@mixin transition($transition-property, $transition-time, $method) {
-    -webkit-transition: $transition-property $transition-time $method;
-    -moz-transition: $transition-property $transition-time $method;
-    -ms-transition: $transition-property $transition-time $method;
-    -o-transition: $transition-property $transition-time $method;
-    transition: $transition-property $transition-time $method;
+@mixin transition($val...) {
+  -webkit-transition: $val;
+  -moz-transition: $val;
+  -ms-transition: $val;
+  -o-transition: $val;
+  transition: $val;
 }
 
 .fa-icon {
@@ -104,6 +104,7 @@ body {
     line-height: 1.1em;
     color: darken($text-color, 22);
     border-left: 3px solid transparent;
+    @include transition((background-color 0.1s ease, color 0.1s ease));
 
     // Item icon to the right
     i {
@@ -111,19 +112,24 @@ body {
       color: darken($text-color, 40);
       float: right;
       font-size: 1.6em;
+      @include transition((background-color 0.1s ease, color 0.1s ease));
     }
 
     // Making the text and icon brighter on hover
     &:hover {
+      @include transition((background-color 0.1s ease, color 0.1s ease));
       background-color: lighten($sidebar-color, 4);
       color: $text-color;
-      i { color: darken($text-color, 10); }
+      i {
+        color: darken($text-color, 10);
+        @include transition((background-color 0.1s ease, color 0.1s ease));
+      }
     }
   }
 
   // For the active item whose dropdown children's are shown
   > li.active {
-    border-top: 1px solid darken($sidebar-color, 4);
+    border-top-color: darken($sidebar-color, 2);
     > a {
       border-left-color: #d35400;
       background-color: darken($sidebar-color, 4);

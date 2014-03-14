@@ -10,13 +10,13 @@ $(document).ready(function() {
     // Showing and collapsing the children
     $(".nav-sidebar > li.dropdown > a").on('click', function() {
         var parent = $(this).parent("li");
-        $(".nav-sidebar > li.dropdown").children("ul").slideUp(200);
+        $(".nav-sidebar > li.dropdown").children("ul").slideUp(150);
         if (parent.hasClass("active")) {
             parent.removeClass("active");
         } else {
-            navSidebarLi.removeClass("active", 1000);
+            navSidebarLi.removeClass("active");
             parent.addClass("active");
-            parent.children("ul").slideDown(200);
+            parent.children("ul").slideDown(150);
         }
     });
 });

@@ -1,7 +1,7 @@
 {%- macro c(content) %}
-<!-- {{ content }} -->
+{%- if not disable_comments %}<!-- {{ content }} -->{%- endif %}
 {%- endmacro %}
 
 {%- macro cu(content) %}
-<!-- {{ content|upper }} -->
+{%- if not disable_comments %}<!-- {{ content|upper }} -->{%- endif %}
 {%- endmacro %}

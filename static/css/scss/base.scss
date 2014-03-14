@@ -1,5 +1,13 @@
 @import 'vars';
 
+@mixin transition($transition-property, $transition-time, $method) {
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
+}
+
 .fa-icon {
   display: inline-block;
   font-family: FontAwesome;
@@ -11,12 +19,7 @@
 }
 
 * {
-  $transition-time: 0.1s;
-  transition: all $transition-time ease-in-out;
-  -webkit-transition: all $transition-time ease-in-out;
-  -moz-transition:    all $transition-time ease-in-out;
-  -ms-transition:     all $transition-time ease-in-out;
-  -o-transition:      all $transition-time ease-in-out;
+  @include transition(all, 0.2s, ease-in-out);
 }
 
 body {
@@ -132,6 +135,7 @@ body {
   // For the items which have dropdown child items
   li.dropdown {
     > ul {
+      display: none;
       background-color: darken($navbar-color, 9);
       padding-left: 0;
       > li > a {
@@ -154,6 +158,9 @@ body {
           border-left-color: #f39c12;
         }
       }
+    }
+    &.active > ul {
+      display: block;
     }
   }
 }

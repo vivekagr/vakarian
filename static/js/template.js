@@ -20,16 +20,19 @@ $(document).ready(function() {
             parent.children("ul").slideDown(150);
         }
     });
-
+    // Sidebar size toggle
     $(".sidebar-nav-toggle").on('click', function() {
-        var el = $(".sidebar");
-        if (el.hasClass("sidebar-slim-core") || el.hasClass("sidebar-slim")) {
-            el.removeClass("sidebar-slim", 150, function() {
-                el.removeClass("sidebar-slim-core", 150);
+        var sidebarEl = $(".sidebar"),
+            wrapperEl = $(".wrapper");
+        if (sidebarEl.hasClass("sidebar-slim")) {
+            sidebarEl.removeClass("sidebar-slim-width", 150, function() {
+                wrapperEl.removeClass("with-sidebar-slim", 150);
+                sidebarEl.removeClass("sidebar-slim", 150);
             });
         } else {
-            el.addClass("sidebar-slim-core", 150, function() {
-                el.addClass("sidebar-slim", 150);
+            sidebarEl.addClass("sidebar-slim", 150, function() {
+                wrapperEl.addClass("with-sidebar-slim", 150);
+                sidebarEl.addClass("sidebar-slim-width", 150);
             });
         }
 

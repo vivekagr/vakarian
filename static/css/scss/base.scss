@@ -61,10 +61,15 @@ body {
 
 // Sidebar
 .sidebar {
-  position: absolute;
-  float: left;
+  margin-top: 64px;
+  padding-bottom: 64px;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 210px;
-  min-height: 1000px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
   background-color: $sidebar-color;
 }
 
@@ -226,11 +231,18 @@ body {
   }
 }
 
-.sidebar-slim {
-  width: 75px;
+
+// Using separate .sidebar-slim-width and .with-sidebar-slim class
+// to preserve the slide animation effect with jQuery
+.with-sidebar-slim {
+  .content-wrapper {
+    padding-left: 75px;
+  }
 }
 
-.sidebar-slim-core {
+.sidebar-slim-width { width: 75px; }
+
+.sidebar-slim {
   .nav-sidebar > li > a > span { display: none; }
   .sidebar-profile-content {
     .welcome, .name, .position { display: none; }
@@ -262,4 +274,8 @@ body {
   }
 
 //  @include transition(all 0.3s ease);
+}
+
+.content-wrapper {
+  padding: 64px 0 0 210px;
 }

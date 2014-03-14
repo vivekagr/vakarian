@@ -19,7 +19,7 @@
 }
 
 * {
-  @include transition(all, 0.2s, ease-in-out);
+//  @include transition(all, 0.2s, ease-in-out);
 }
 
 body {
@@ -158,9 +158,6 @@ body {
           border-left-color: #f39c12;
         }
       }
-    }
-    &.active > ul {
-      display: block;
     }
   }
 }

@@ -1,7 +1,17 @@
 @import 'vars';
 
+.fa-icon {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 * {
-  $transition-time: 0.125s;
+  $transition-time: 0.1s;
   transition: all $transition-time ease-in-out;
   -webkit-transition: all $transition-time ease-in-out;
   -moz-transition:    all $transition-time ease-in-out;
@@ -60,35 +70,39 @@ body {
 
 // Navigation menu inside the sidebar
 .nav-sidebar {
-  li {
+  // Adding border to the top of every list item
+  > li {
     border-top: 1px solid lighten($sidebar-color, 4);
     &:last-of-type {
       border-bottom: 1px solid lighten($sidebar-color, 4);
     }
+  }
 
+  li {
     // Showing the collapse indicator icon to the left of item name
     &.dropdown span:before {
-      display: inline-block;
-      font-family: FontAwesome;
-      font-style: normal;
-      font-weight: normal;
-      line-height: 1;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+      @extend .fa-icon;
       content: '\f138';
       margin: 0 5px 0 -3px;
       color: darken($text-color, 50);
+    }
+
+    // Changing collapse indicator icon to 'fa-chevron-circle-down'
+    // on the active item
+    &.dropdown.active span:before {
+      content: '\f13a';
     }
   }
 
   li > a {
     padding: 20px 11px 20px 15px;
     font-size: 0.90em;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.1em;
     color: darken($text-color, 22);
     border-left: 8px solid transparent;
 
+    // Item icon to the right
     i {
       margin-right: 6px;
       color: darken($text-color, 40);
@@ -96,10 +110,50 @@ body {
       font-size: 1.6em;
     }
 
+    // Making the text and icon brighter on hover
     &:hover {
-      background-color: transparent;
+      background-color: lighten($sidebar-color, 4);
       color: $text-color;
       i { color: darken($text-color, 10); }
+    }
+  }
+
+  // For the active item whose dropdown children's are shown
+  > li.active {
+    border-top: 1px solid darken($sidebar-color, 4);
+    > a {
+      border-left: 2px solid #d35400;
+      background-color: darken($sidebar-color, 4);
+      color: $text-color;
+      i { color: darken($text-color, 10); }
+    }
+  }
+
+  // For the items which have dropdown child items
+  li.dropdown {
+    > ul {
+      background-color: darken($navbar-color, 9);
+      padding-left: 0;
+      > li > a {
+        display: block;
+        padding: 8px 30px;
+        font-size: 0.85em;
+        font-weight: 300;
+        border-left: 2px solid transparent;
+
+        &:before {
+          @extend .fa-icon;
+          content: '\f105';
+          margin: 0 5px 0 -3px;
+          color: darken($text-color, 50);
+        }
+
+        &:hover {
+          text-decoration: none;
+          background-color: $sidebar-color;
+          border-left-color: #f39c12;
+        }
+      }
     }
   }
 }
@@ -108,6 +162,9 @@ body {
 // User profile inside the sidebar
 
 .sidebar-profile-wrapper {
+  cursor: pointer;
+
+  // 'fa-angle-right' shown in the right on hover
   .fa {
     position: absolute;
     top: 35px;
@@ -117,7 +174,6 @@ body {
   }
 
   &:hover {
-    cursor: pointer;
     background-color: lighten($sidebar-color, 4);
 
     .fa {

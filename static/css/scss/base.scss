@@ -18,9 +18,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-* {
-//  @include transition(all, 0.2s, ease-in-out);
-}
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -36,6 +33,7 @@ body {
   margin-bottom: 0;
 
   .navbar-brand {
+    display: inline;
     color: $text-color;
     font-size: 1.4em;
     font-weight: 500;
@@ -226,4 +224,42 @@ body {
     color: #476581;
     font-size: 0.7em;
   }
+}
+
+.sidebar-slim {
+  width: 75px;
+}
+
+.sidebar-slim-core {
+  .nav-sidebar > li > a > span { display: none; }
+  .sidebar-profile-content {
+    .welcome, .name, .position { display: none; }
+  }
+  .nav-sidebar > li > a {
+    font-size: 1em;
+  }
+  .nav-sidebar > li > a > i {
+    margin-right: 0;
+    float: none;
+    font-size: 2em;
+  }
+}
+
+.sidebar-nav-toggle {
+  color: darken($navbar-color, 7);
+  background-color: darken($navbar-color, 2);
+  border: none;
+  border-radius: 0.2em;
+  margin: 0.55em;
+  font-size: 1.3em;
+
+  &:hover {
+    background-color: darken($navbar-color, 3);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+//  @include transition(all 0.3s ease);
 }

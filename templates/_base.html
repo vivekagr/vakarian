@@ -64,29 +64,37 @@
             </div><!-- /.container-fluid -->
         </nav>
 
-            <div class="row">
+            {{ c('left sidebar') }}
+            <div class="sidebar">
 
-                {{ c('left sidebar') }}
-                <div class="col-md-2 sidebar">
+                <div class="sidebar-profile-wrapper clearfix">
+                    <div class="sidebar-profile clearfix">
+                        <i class="fa fa-chevron-right"></i>
+                        <img class="sidebar-profile-avatar img-circle" src="{{ static('img/profile0.jpg') }}">
+                        <div class="sidebar-profile-content">
+                            <div class="welcome">Welcome</div>
+                            <div class="name">John Doe</div>
+                            <div class="position">Sales Dept.</div>
+                        </div>
+                    </div>
+                </div>
 
-                    <ul class="nav nav-sidebar">
-                        <li><a href="#"><i class="fa fa-desktop fa-fw"></i> <span>Dashboard</span></a></li>
-                        <li class="dropdown"><a href="#"><i class="fa fa-th fa-fw"></i> <span>Grids</span></a></li>
-                        <li class="dropdown"><a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> <span>Charts</span></a></li>
-                        <li class="dropdown"><a href="#"><i class="fa fa-table fa-fw"></i> <span>Tables</span></a></li>
-                        <li class="dropdown"><a href="#"><i class="fa fa-calendar fa-fw"></i> <span>Calendar</span></a></li>
-                        <li class="dropdown"><a href="#"><i class="fa fa-list-alt fa-fw"></i> <span>Form Elements</span></a></li>
-                        <li class="dropdown"><a href="#"><i class="fa fa-clock-o fa-fw"></i> <span>UI Elements</span></a></li>
-                    </ul>
+                <ul class="nav nav-sidebar">
+                    <li><a href="#"><i class="fa fa-desktop fa-fw"></i> <span>Dashboard</span></a></li>
+                    <li class="dropdown"><a href="#"><i class="fa fa-th fa-fw"></i> <span>Grids</span></a></li>
+                    <li class="dropdown"><a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> <span>Charts</span></a></li>
+                    <li class="dropdown"><a href="#"><i class="fa fa-table fa-fw"></i> <span>Tables</span></a></li>
+                    <li class="dropdown"><a href="#"><i class="fa fa-calendar fa-fw"></i> <span>Calendar</span></a></li>
+                    <li class="dropdown"><a href="#"><i class="fa fa-list-alt fa-fw"></i> <span>Form Elements</span></a></li>
+                    <li class="dropdown"><a href="#"><i class="fa fa-clock-o fa-fw"></i> <span>UI Elements</span></a></li>
+                </ul>
 
-                </div>{{ c('/left sidebar') }}
+            </div>{{ c('/left sidebar') }}
 
-                {{ c('content wrapper') }}
-                <div class="col-md-10 content-wrapper">
+            {{ c('content wrapper') }}
+            <div class="content-wrapper">
 
-                </div>{{ c('/content wrapper') }}
-
-            </div>{{ c('/div.row') }}
+            </div>{{ c('/content wrapper') }}
 
     </div>{{ c('/page wrapper') }}
 

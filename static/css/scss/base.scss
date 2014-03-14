@@ -1,17 +1,20 @@
 @import 'vars';
 
+* {
+  $transition-time: 0.125s;
+  transition: all $transition-time ease-in-out;
+  -webkit-transition: all $transition-time ease-in-out;
+  -moz-transition:    all $transition-time ease-in-out;
+  -ms-transition:     all $transition-time ease-in-out;
+  -o-transition:      all $transition-time ease-in-out;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
-  //-webkit-font-smoothing: subpixel-antialiased;
 }
 
 
-.sidebar {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-// Our Custom Navbar
+// Custom Navbar
 .navbar-primary {
   border: none;
   border-radius: 0;
@@ -23,6 +26,10 @@ body {
     color: $text-color;
     font-size: 1.4em;
     font-weight: 500;
+
+    &:hover {
+      color: #fff;
+    }
 
     .brand-subtext {
       color: #81979C;
@@ -41,18 +48,25 @@ body {
 }
 
 
+// Sidebar
 .sidebar {
+  position: absolute;
+  float: left;
+  width: 210px;
   min-height: 1000px;
   background-color: $sidebar-color;
 }
 
+
+// Navigation menu inside the sidebar
 .nav-sidebar {
-  padding-left: 12px;
-
   li {
-    border-bottom: 1px solid lighten($sidebar-color, 4);
+    border-top: 1px solid lighten($sidebar-color, 4);
+    &:last-of-type {
+      border-bottom: 1px solid lighten($sidebar-color, 4);
+    }
 
-    // Showing the collapse indicator to the left of item name
+    // Showing the collapse indicator icon to the left of item name
     &.dropdown span:before {
       display: inline-block;
       font-family: FontAwesome;
@@ -80,19 +94,69 @@ body {
       color: darken($text-color, 40);
       float: right;
       font-size: 1.6em;
-      transition: all 0.2s ease-in-out;
-      -webkit-transition: all 0.2s ease-in-out;
     }
-    transition: all 0.2s ease-in-out;
-    -webkit-transition: all 0.2s ease-in-out;
 
     &:hover {
       background-color: transparent;
-      //border-left-color: #27ae60;
       color: $text-color;
       i { color: darken($text-color, 10); }
-      transition: all 0.2s ease-in-out;
-      -webkit-transition: all 0.2s ease-in-out;
     }
+  }
+}
+
+
+// User profile inside the sidebar
+
+.sidebar-profile-wrapper {
+  .fa {
+    position: absolute;
+    top: 35px;
+    right: 15px;
+    color: $text-color;
+    display: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: lighten($sidebar-color, 4);
+
+    .fa {
+      display: block;
+    }
+  }
+}
+
+.sidebar-profile {
+  margin: 13px 11px;
+}
+
+.sidebar-profile-avatar {
+  float: left;
+  width: 55px;
+}
+
+.sidebar-profile-content {
+  float: left;
+  margin-left: 10px;
+  width: 115px;
+
+  .welcome {
+    margin-top: 2px;
+    color: #b3b8bc;
+    font-size: 0.67em;
+    line-height: 1em;
+  }
+
+  .name {
+    margin-top: 2px;
+    color: #ecf0f1;
+    font-size: 1.15em;
+    font-weight: 300;
+  }
+
+  .position {
+    margin-top: 2px;
+    color: #476581;
+    font-size: 0.7em;
   }
 }

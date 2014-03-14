@@ -103,7 +103,7 @@ body {
     font-weight: 600;
     line-height: 1.1em;
     color: darken($text-color, 22);
-    border-left: 8px solid transparent;
+    border-left: 3px solid transparent;
 
     // Item icon to the right
     i {
@@ -125,7 +125,7 @@ body {
   > li.active {
     border-top: 1px solid darken($sidebar-color, 4);
     > a {
-      border-left: 2px solid #d35400;
+      border-left-color: #d35400;
       background-color: darken($sidebar-color, 4);
       color: $text-color;
       i { color: darken($text-color, 10); }

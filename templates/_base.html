@@ -26,7 +26,7 @@
     {{ c('Vakarian Page Specific CSS') }}
     {% block css %}{%- endblock %}
 
-    <script src="{{ static('js/modernizr-2.6.2-respond-1.1.0.min.js') }}"></script>
+    <script src="{{ static('js/common/modernizr-2.6.2-respond-1.1.0.min.js') }}"></script>
 </head>
 
 <body>
@@ -141,15 +141,15 @@
       ------------------------>
 
     {{ cu('jQuery and Bootstrap') }}
-    <script src="{{ static('js/jquery-2.1.0.min.js') }}"></script>
-    <script src="{{ static('js/jquery-ui.min.js') }}"></script>
-    <script src="{{ static('js/bootstrap.min.js') }}"></script>
+    <script src="{{ static('js/common/jquery-2.1.0.min.js') }}"></script>
+    <script src="{{ static('js/common/jquery-ui.min.js') }}"></script>
+    <script src="{{ static('js/common/bootstrap.min.js') }}"></script>
 
     {{ cu('vendor') }}
     {% block vendor_js %}{% endblock %}
 
     {{ cu('template') }}
-    <script src="{{ static('js/template.js') }}"></script>
+    <script src="{{ static('js/template/template.js') }}"></script>
 
     {{ cu('page specific') }}
     {% block js %}{% endblock %}

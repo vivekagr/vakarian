@@ -64,10 +64,16 @@ body {
 
 
 // Sidebar
+
+// z-index of 9998 is set on `.sidebar` and 9999 on `.sidebar.sidebar-slim > .nav-sidebar > li > ul`
+// to prevent the canvas element belong to charts from overlapping with the dropdown sub-menu
+// http://stackoverflow.com/questions/2671699
+
 .sidebar {
   margin-top: 64px;
   padding-bottom: 64px;
   position: fixed;
+  z-index: 9998;
   top: 0;
   left: 0;
   width: 210px;

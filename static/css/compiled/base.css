@@ -41,6 +41,7 @@ body {
   margin-top: 64px;
   padding-bottom: 64px;
   position: fixed;
+  z-index: 9998;
   top: 0;
   left: 0;
   width: 210px;

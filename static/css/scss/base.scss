@@ -123,10 +123,11 @@ body {
     }
 
     // Making the text and icon brighter on hover
-    &:hover {
+    &:hover, &:focus {
       @include transition((background-color 0.1s ease, color 0.1s ease));
       background-color: lighten($sidebar-color, 4);
       color: $text-color;
+      outline: none;
       i {
         color: darken($text-color, 10);
         @include transition((background-color 0.1s ease, color 0.1s ease));

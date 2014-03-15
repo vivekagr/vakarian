@@ -79,15 +79,16 @@ body {
     -ms-transition: background-color 0.1s ease, color 0.1s ease;
     -o-transition: background-color 0.1s ease, color 0.1s ease;
     transition: background-color 0.1s ease, color 0.1s ease; }
-  .nav-sidebar li > a:hover {
+  .nav-sidebar li > a:hover, .nav-sidebar li > a:focus {
     -webkit-transition: background-color 0.1s ease, color 0.1s ease;
     -moz-transition: background-color 0.1s ease, color 0.1s ease;
     -ms-transition: background-color 0.1s ease, color 0.1s ease;
     -o-transition: background-color 0.1s ease, color 0.1s ease;
     transition: background-color 0.1s ease, color 0.1s ease;
     background-color: #33485d;
-    color: #ecf0f1; }
-    .nav-sidebar li > a:hover i {
+    color: #ecf0f1;
+    outline: none; }
+    .nav-sidebar li > a:hover i, .nav-sidebar li > a:focus i {
       color: #cfd9db;
       -webkit-transition: background-color 0.1s ease, color 0.1s ease;
       -moz-transition: background-color 0.1s ease, color 0.1s ease;

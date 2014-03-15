@@ -163,7 +163,7 @@ body {
     font-size: 0.7em; }
 
 .with-sidebar-slim .content-wrapper {
-  padding-left: 75px; }
+  margin-left: 75px; }
 
 .sidebar-slim-width {
   width: 75px; }

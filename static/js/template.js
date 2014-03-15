@@ -7,19 +7,39 @@ $(document).ready(function() {
             el.addClass("dropdown");
         }
     });
+
+    // Closing the collapsed sub-menu when clicking outside of it
+    // We are binding this over the entire html tag and are preventing the trigger
+    // from undesired areas (such as sub-menu itself) by using `stopPropagation`
+    // method on the event.
+    $('html').click(function() {
+        if ($(".sidebar-slim")[0])
+            $(".nav-sidebar > li.dropdown.active").removeClass('active').children("ul").hide();
+    });
+
     // Showing and collapsing the children
     $(".nav-sidebar > li.dropdown > a").on('click', function(e) {
         e.preventDefault();
-        var parent = $(this).parent("li");
-        $(".nav-sidebar > li.dropdown").children("ul").slideUp(150);
+        e.stopPropagation();
+        var parent = $(this).parent("li"),
+            sidebarSlim = $(".sidebar-slim"),
+            dropdownSubList = $(".nav-sidebar > li.dropdown").children("ul");
+        sidebarSlim[0] ? dropdownSubList.hide() : dropdownSubList.slideUp(150);
         if (parent.hasClass("active")) {
             parent.removeClass("active");
         } else {
             navSidebarLi.removeClass("active");
             parent.addClass("active");
-            parent.children("ul").slideDown(150);
+            sidebarSlim[0] ? parent.children("ul").show() : parent.children("ul").slideDown(150);
         }
     });
+
+    // Preventing the collapsed sub-menu from being closed while clicking it
+    $(".nav-sidebar > li.dropdown > ul").click(function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+    });
+
     // Sidebar size toggle
     $(".sidebar-nav-toggle").on('click', function() {
         var sidebarEl = $(".sidebar"),

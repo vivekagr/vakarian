@@ -18,6 +18,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  box-sizing: border-box;
+}
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -67,8 +70,8 @@ body {
   top: 0;
   left: 0;
   width: 210px;
-  overflow-x: hidden;
-  overflow-y: auto;
+//  overflow-x: visible;
+//  overflow-y: visible;
   height: 100%;
   background-color: $sidebar-color;
 }
@@ -232,6 +235,8 @@ body {
 }
 
 
+// SLIM SIDEBAR
+
 // Using separate .sidebar-slim-width and .with-sidebar-slim class
 // to preserve the slide animation effect with jQuery
 .with-sidebar-slim {
@@ -243,20 +248,31 @@ body {
 .sidebar-slim-width { width: 75px; }
 
 .sidebar-slim {
+
+  // Hiding the text
   .nav-sidebar > li > a > span { display: none; }
   .sidebar-profile-content {
     .welcome, .name, .position { display: none; }
   }
-  .nav-sidebar > li > a {
-    font-size: 1em;
+
+  // Positioning the sub-menu towards the right of the icon
+  .nav-sidebar > li > ul {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 200px;
+    z-index: 9999;
   }
   .nav-sidebar > li > a > i {
     margin-right: 0;
     float: none;
-    font-size: 2em;
+    font-size: 2.2em;
   }
 }
 
+
+// Toggle button beside the .navbar-brand in the
+// top navigation bar to switch the sidebar size
 .sidebar-nav-toggle {
   color: darken($navbar-color, 7);
   background-color: darken($navbar-color, 2);
@@ -272,10 +288,10 @@ body {
   &:focus {
     outline: none;
   }
-
-//  @include transition(all 0.3s ease);
 }
 
+
+// Wrapper for the main content area
 .content-wrapper {
   padding: 64px 0 0 210px;
 }

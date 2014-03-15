@@ -197,7 +197,7 @@ body {
 
 .content-wrapper {
   margin: 64px 0 0 210px;
-  padding: 0 20px;
+  padding: 0 25px;
   color: #2c3e50; }
 
 .page-title {
@@ -205,8 +205,9 @@ body {
   font-weight: 500; }
 
 .page-sub-title {
+  margin-left: 2px;
   color: #95a5a6;
-  font-size: 0.9em;
+  font-size: 0.85em;
   font-weight: 300; }
 
 .widget {
@@ -218,4 +219,4 @@ body {
     margin: 15px 0px; }
   .widget .widget-title {
     font-size: 1.2em;
-    font-weight: 400; }
+    font-weight: 500; }

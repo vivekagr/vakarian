@@ -296,7 +296,7 @@ body {
 // Wrapper for the main content area
 .content-wrapper {
   margin: 64px 0 0 210px;
-  padding: 0 20px;
+  padding: 0 25px;
   color: #2c3e50;
 }
 
@@ -306,8 +306,9 @@ body {
 }
 
 .page-sub-title {
+  margin-left: 2px;
   color: #95a5a6;
-  font-size: 0.9em;
+  font-size: 0.85em;
   font-weight: 300;
 }
 

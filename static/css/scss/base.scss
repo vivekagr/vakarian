@@ -24,6 +24,7 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
+  background-color: #ecf0f1;
 }
 
 
@@ -294,5 +295,34 @@ body {
 
 // Wrapper for the main content area
 .content-wrapper {
-  padding: 64px 0 0 210px;
+  margin: 64px 0 0 210px;
+  padding: 0 20px;
+  color: #2c3e50;
+}
+
+.page-title {
+  font-size: 1.6em;
+  font-weight: 500;
+}
+
+.page-sub-title {
+  color: #95a5a6;
+  font-size: 0.9em;
+  font-weight: 300;
+}
+
+.widget {
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 10px 15px;
+  color: #bdc3c7;
+
+  &.row {
+    margin: 15px 0px;
+  }
+
+  .widget-title {
+    font-size: 1.2em;
+    font-weight: 500;
+  }
 }

@@ -1,4 +1,5 @@
 from werkzeug import serving
+from werkzeug.contrib.fixers import ProxyFix
 from flask import Flask, url_for, render_template
 from jinja2 import Environment
 import config
@@ -30,6 +31,8 @@ app.jinja_env.globals['disable_comments'] = False
 def serve_file(filename):
     return render_template(filename + '.html')
 
+
+app.wsgi_app = ProxyFix(app.wsgi_app)
 
 if __name__ == '__main__':
     app.run('0.0.0.0', port=7779)

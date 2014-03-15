@@ -36,7 +36,6 @@ $(document).ready(function() {
 
     // Preventing the collapsed sub-menu from being closed while clicking it
     $(".nav-sidebar > li.dropdown > ul").click(function(e) {
-        e.preventDefault();
         e.stopPropagation();
     });
 

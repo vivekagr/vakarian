@@ -1,0 +1,67 @@
+{% extends '_base.html' %}
+
+{% set page_title = "Chart.js" %}
+{% set page_sub_title = "Various examples demonstrating Chart.js" %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ static('css/compiled/charts.css') }}">
+{%- endblock %}
+
+{% block main %}
+    <div class="row widget">
+        <h4 class="widget-title">Traffic Statistics</h4>
+        <div class="col-md-8">
+            <canvas id="chartJsCanvas"></canvas>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+{% endblock %}
+
+{% block vendor_js %}
+    <script src="{{ static('js/charts/chart.js/Chart.min.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            var navbarColor, data, options, chartCanvas, ctx, chart;
+
+            navbarColor = $(".navbar-primary").css('background-color');
+            data = {
+                labels : ["January","February","March","April","May","June","July"],
+                datasets : [
+                    {
+                        fillColor : "rgba(220,220,220,0.5)",
+                        strokeColor : "rgba(220,220,220,1)",
+                        pointColor : "rgba(220,220,220,1)",
+                        pointStrokeColor : "#fff",
+                        data : [65,59,90,81,56,55,40]
+                    },
+                    {
+                        fillColor : navbarColor.replace('rgb', 'rgba').replace(')', ', 0.8)'),
+                        strokeColor : navbarColor,
+                        pointColor : navbarColor,
+                        pointStrokeColor : "#fff",
+                        data : [28,48,40,19,96,27,100]
+                    }
+                ]
+            };
+
+            options = {
+                scaleFontFamily : "'Open Sans', sans-serif",
+                scaleFontSize : 12,
+                scaleShowGridLines: false,
+                scaleShowLabels : false
+            };
+
+            chartCanvas = $("#chartJsCanvas");
+
+            // Setting width and height attributes since Chart.js uses those
+            chartCanvas.attr('width', chartCanvas.width());
+            chartCanvas.attr('height', chartCanvas.height());
+
+            //Get the context of the canvas element we want to select
+            ctx = chartCanvas.get(0).getContext("2d");
+
+            // Initializing the chart
+            chart = new Chart(ctx).Line(data, options);
+        });
+    </script>
+{% endblock %}

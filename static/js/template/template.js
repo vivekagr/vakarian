@@ -40,7 +40,7 @@ $(document).ready(function() {
     });
 
     // Sidebar size toggle
-    $(".sidebar-nav-toggle").on('click', function() {
+    $("#sidebarNavToggle").on('click', function() {
         var sidebarEl = $(".sidebar"),
             wrapperEl = $(".wrapper");
         if (sidebarEl.hasClass("sidebar-slim")) {

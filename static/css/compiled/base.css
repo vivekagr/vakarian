@@ -37,6 +37,51 @@ body {
     .navbar-primary .navbar-nav li > a:hover {
       background-color: transparent; }
 
+button.btn-navbar {
+  color: #506f8f;
+  background-color: #354a5e;
+  border: none;
+  border-radius: 0.2em;
+  font-size: 1.3em;
+  margin: 0.55em; }
+  button.btn-navbar:hover {
+    background-color: #33475a; }
+
+.navbar-search {
+  display: inline-block; }
+  .navbar-search input {
+    display: inline-block;
+    vertical-align: middle;
+    background-color: transparent;
+    border: none;
+    color: #bdc3c7;
+    box-shadow: none;
+    font-size: 0.85em;
+    font-weight: 300;
+    width: 7em;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
+    .navbar-search input:hover, .navbar-search input:focus {
+      box-shadow: none; }
+    .navbar-search input::-webkit-input-placeholder {
+      color: #6187ae; }
+    .navbar-search input:-moz-placeholder {
+      color: #6187ae; }
+    .navbar-search input::-moz-placeholder {
+      color: #6187ae; }
+    .navbar-search input:-ms-input-placeholder {
+      color: #6187ae; }
+    .navbar-search input:focus {
+      width: 12em;
+      -webkit-transition: all 0.4s ease;
+      -moz-transition: all 0.4s ease;
+      -ms-transition: all 0.4s ease;
+      -o-transition: all 0.4s ease;
+      transition: all 0.4s ease; }
+
 .sidebar {
   margin-top: 64px;
   padding-bottom: 64px;
@@ -183,18 +228,6 @@ body {
   margin-right: 0;
   float: none;
   font-size: 2.2em; }
-
-.sidebar-nav-toggle {
-  color: #2c3d4d;
-  background-color: #354a5e;
-  border: none;
-  border-radius: 0.2em;
-  margin: 0.55em;
-  font-size: 1.3em; }
-  .sidebar-nav-toggle:hover {
-    background-color: #33475a; }
-  .sidebar-nav-toggle:focus {
-    outline: none; }
 
 .content-wrapper {
   margin: 64px 0 0 210px;

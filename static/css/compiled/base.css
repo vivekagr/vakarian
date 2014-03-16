@@ -213,11 +213,48 @@ body {
 
 .widget {
   background-color: #fff;
-  border-radius: 3px;
   padding: 10px 15px;
-  color: #bdc3c7; }
+  color: #bdc3c7;
+  border: 1px solid #e8eced;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.07);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.07); }
   .widget.row {
     margin: 15px 0px; }
   .widget .widget-title {
     font-size: 1.2em;
     font-weight: 500; }
+  .widget .widget-subtitle {
+    font-size: 0.9em;
+    font-weight: 300; }
+  .widget .metric {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+    margin: 12px 0;
+    font-size: 0.85em;
+    font-weight: 300;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
+    .widget .metric .metric-value {
+      display: block;
+      font-size: 2.3em;
+      color: #aaafb3;
+      -webkit-transition: all 0.2s ease;
+      -moz-transition: all 0.2s ease;
+      -ms-transition: all 0.2s ease;
+      -o-transition: all 0.2s ease;
+      transition: all 0.2s ease; }
+    .widget .metric:hover {
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease; }
+      .widget .metric:hover, .widget .metric:hover .metric-value {
+        color: #2c3e50; }

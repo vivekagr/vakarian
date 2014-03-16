@@ -1,12 +1,5 @@
+@import 'mixins';
 @import 'vars';
-
-@mixin transition($val...) {
-  -webkit-transition: $val;
-  -moz-transition: $val;
-  -ms-transition: $val;
-  -o-transition: $val;
-  transition: $val;
-}
 
 .fa-icon {
   display: inline-block;
@@ -320,9 +313,12 @@ body {
 
 .widget {
   background-color: #fff;
-  border-radius: 3px;
   padding: 10px 15px;
   color: #bdc3c7;
+  border: 1px solid #e8eced;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .07);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .07);
 
   &.row {
     margin: 15px 0px;
@@ -331,5 +327,31 @@ body {
   .widget-title {
     font-size: 1.2em;
     font-weight: 500;
+  }
+
+  .widget-subtitle {
+    font-size: 0.9em;
+    font-weight: 300;
+  }
+
+  .metric {
+    @include user-select(none);
+    cursor:default;
+    margin: 12px 0;
+    font-size: 0.85em;
+    font-weight: 300;
+    @include transition(all 0.2s ease);
+
+    .metric-value {
+      display: block;
+      font-size: 2.3em;
+      color: #aaafb3;
+      @include transition(all 0.2s ease);
+    }
+
+    &:hover {
+      &, .metric-value {color: $sidebar-color;}
+      @include transition(all 0.5s ease);
+    }
   }
 }

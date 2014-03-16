@@ -1,0 +1,14 @@
+@mixin user-select($val: none) {
+  -webkit-user-select: $val;
+  -moz-user-select: $val;
+  -ms-user-select: $val;
+  user-select: $val;
+}
+
+@mixin transition($val...) {
+  -webkit-transition: $val;
+  -moz-transition: $val;
+  -ms-transition: $val;
+  -o-transition: $val;
+  transition: $val;
+}

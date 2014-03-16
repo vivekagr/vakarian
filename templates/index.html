@@ -8,12 +8,32 @@
 {%- endblock %}
 
 {% block main %}
-    <div class="row widget">
+    <div class="row widget traffic-widget">
         <h4 class="widget-title">Traffic Statistics</h4>
         <div class="col-md-8">
             <div id="trafficChart"></div>
         </div>
-        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <h4 class="widget-subtitle">Highlight of Last 30 Days</h4>
+            <div class="row">
+                <div class="col-md-6 col-sm-3 col-xs-6 metric">
+                    <span id="visitsPiety" class="line"></span>
+                    <span class="metric-value">21,361</span> Visits
+                </div>
+                <div class="col-md-6 col-sm-3 col-xs-6 metric">
+                    <span id="uniquesPiety" class="line"></span>
+                    <span class="metric-value">16,875</span> Unique Visitors
+                </div>
+                <div class="col-md-6 col-sm-3 col-xs-6 metric">
+                    <span id="pageviewsPiety" class="line"></span>
+                    <span class="metric-value">48,773</span> Page Views
+                </div>
+                <div class="col-md-6 col-sm-3 col-xs-6 metric">
+                    <span id="bouncePiety" class="line"></span>
+                    <span class="metric-value">72.45%</span> Bounce Rate
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}
 
@@ -23,5 +43,6 @@
     <script src="{{ static('js/charts/flot/jquery.flot.tooltip.min.js') }}"></script>
     <script src="{{ static('js/charts/flot/jquery.flot.resize.js') }}"></script>
     <script src="{{ static('js/charts/flot/curvedLines.js') }}"></script>
+    <script src="{{ static('js/charts/peity/jquery.peity.min.js') }}"></script>
     <script src="{{ static('js/template/dashboard.js') }}"></script>
 {% endblock %}

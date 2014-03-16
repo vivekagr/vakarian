@@ -58,14 +58,33 @@ body {
 
 // Sidebar toggle and search submit button
 button.btn-navbar {
-  color: #506f8f;
+  position: relative;
+  color: #5b7ea3;
   background-color: darken($navbar-color, 2);
   border: none;
   border-radius: 0.2em;
   font-size: 1.3em;
   margin: 0.55em;
 
-  &:hover { background-color: darken($navbar-color, 3); }
+  &:hover { background-color: darken($navbar-color, 4); }
+
+  &:focus { outline: none; }
+
+  .events-count {
+    $size: 1.5em;
+    $position: -0.2em;
+    position: absolute;
+    top: $position;
+    right: $position;
+    background-color: #1abc9c;
+    font-size: 0.55em;
+    font-weight: 600;
+    vertical-align: middle;
+    color: darken($navbar-color, 3);
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+  }
 }
 
 // Navbar search form

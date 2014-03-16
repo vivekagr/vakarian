@@ -38,14 +38,29 @@ body {
       background-color: transparent; }
 
 button.btn-navbar {
-  color: #506f8f;
+  position: relative;
+  color: #5b7ea3;
   background-color: #354a5e;
   border: none;
   border-radius: 0.2em;
   font-size: 1.3em;
   margin: 0.55em; }
   button.btn-navbar:hover {
-    background-color: #33475a; }
+    background-color: #324557; }
+  button.btn-navbar:focus {
+    outline: none; }
+  button.btn-navbar .events-count {
+    position: absolute;
+    top: -0.2em;
+    right: -0.2em;
+    background-color: #1abc9c;
+    font-size: 0.55em;
+    font-weight: 600;
+    vertical-align: middle;
+    color: #33475a;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%; }
 
 .navbar-search {
   display: inline-block; }

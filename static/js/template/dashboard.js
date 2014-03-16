@@ -1,6 +1,6 @@
 var pageviews, df, data, options;
 
-pageviews = [5340, 8993, 7837, 12454, 17495, 22434, 23453, 25445, 22455, 28995, 32957, 30445, 37953, 46497, 53387];
+pageviews = [3478, 5340, 8993, 7837, 12454, 17495, 22434, 23453, 25445, 22455, 28995, 32957, 30445, 37953, 46497, 53387];
 
 df = [];
 
@@ -55,7 +55,7 @@ options = {
     xaxis: {
         mode: "time",
         minTickSize: [2, "month"],
-        // timeformat: "%b '%y",
+        timeformat: "%b '%y",
         font: {
             color: "#34495e",
             family: "'Open Sans', sans-serif",

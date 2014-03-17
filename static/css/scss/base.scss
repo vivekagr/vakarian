@@ -62,6 +62,50 @@ body {
       display: inline-block;
     }
   }
+
+  .dropdown-menu {
+    border: none;
+    border-radius: 2px;
+
+    > li > a {
+      padding-top: 6px;
+      padding-bottom: 6px;
+      padding-left: 10px;
+      font-size: 0.9em;
+      font-weight: 600;
+      color: #2c3e50;
+      vertical-align: middle;
+
+      > i {
+        margin: 4px 4px 0 0;
+        color: #95a5a6;
+      }
+    }
+
+    // Adding the caret above the menu
+    &:before, &:after {
+      position: absolute;
+      display: inline-block;
+      content: '';
+    }
+
+    &:before {
+      top: -7px;
+      right: 1.52em;
+      border-right: 7px solid transparent;
+      border-bottom: 7px solid #ccc;
+      border-left: 7px solid transparent;
+      border-bottom-color: rgba(0, 0, 0, 0.2);
+    }
+
+    &:after {
+      top: -6px;
+      right: 1.5em;
+      border-right: 6px solid transparent;
+      border-bottom: 6px solid #ffffff;
+      border-left: 6px solid transparent;
+    }
+  }
 }
 
 
@@ -74,8 +118,13 @@ button.btn-navbar {
   border-radius: 0.2em;
   font-size: 1.3em;
   margin: 0.55em;
+  @include transition(all 0.15s ease);
 
-  &:hover { background-color: darken($navbar-color, 4); }
+  &:hover {
+    background-color: darken($navbar-color, 4);
+    color: #749fcb;
+    @include transition(all 0.15s ease);
+  }
 
   &:focus { outline: none; }
 
@@ -122,6 +171,40 @@ button.btn-navbar {
     &:focus {
       width: 12em;
       @include transition(all 0.4s ease);
+    }
+  }
+}
+
+// Keeping the button highlighted when the dropdown menu is open
+.settings-dropdown.open button.btn-navbar {
+  background-color: darken($navbar-color, 4);
+  color: #749fcb;
+}
+
+// Notifications Dropdown
+.notifications-dropdown {
+  ul.dropdown-menu {
+     min-width: 260px;
+  }
+
+  ul.dropdown-menu > li > a {
+    padding: 10px 15px;
+    clear: both;
+
+    > i {
+      font-size: 2.2em;
+      margin: 3px 6px 0 0;
+      color: #DDDADA;
+    }
+  }
+
+  .media-body {
+    font-size: 0.9em;
+    font-weight: 300;
+    color: #bdc3c7;
+    .media-heading {
+      font-size: 1.2em;
+      color: #34495e;
     }
   }
 }

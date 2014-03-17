@@ -54,21 +54,58 @@
                 </ul>
 
                 <ul class="navbar-items pull-right">
+
+                    {{ c('Search field') }}
                     <li>
                         <form class="navbar-search">
                             <input class="form-control" type="text" placeholder="Search...">
                             <button type="submit" class="btn-navbar" id="navbarSearchToggle"><i class="fa fa-search fa-fw"></i></button>
                         </form>
                     </li>
-                    <li>
-                        <button type="button" class="btn-navbar">
+
+                    {{ c('Notifications dropdown') }}
+                    <li class="dropdown notifications-dropdown">
+                        <button type="button" class="btn-navbar" data-toggle="dropdown">
                             <span class="events-count">4</span>
                             <i class="fa fa-exclamation-circle fa-fw"></i>
                         </button>
+                        <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                            <li><a class="media" href="#">
+                                <i class="fa fa-envelope fa-fw pull-left"></i>
+                                <div class="media-body">
+                                    <h5 class="media-heading">You have unread mails</h5>
+                                    Last 9 min ago
+                                </div>
+                            </a></li>
+                            <li><a class="media" href="#">
+                                <i class="fa fa-exclamation-triangle fa-fw pull-left"></i>
+                                <div class="media-body">
+                                    <h5 class="media-heading">An error occured</h5>
+                                    2 hr. ago
+                                </div>
+                            </a></li>
+                            <li><a class="media" href="#">
+                                <i class="fa fa-users fa-fw pull-left"></i>
+                                <div class="media-body">
+                                    <h5 class="media-heading">Unattended support tickets</h5>
+                                    Last 6 hr. ago
+                                </div>
+                            </a></li>
+                        </ul>
                     </li>
-                    <li>
-                        <button type="button" class="btn-navbar"><i class="fa fa-gears fa-fw"></i></button>
+
+                    {{ c('Settings dropdown') }}
+                    <li class="dropdown settings-dropdown">
+                        <button type="button" class="btn-navbar" data-toggle="dropdown"><i class="fa fa-gears fa-fw"></i></button>
+                        <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                            <li><a href="#"><i class="fa fa-user fa-fw"></i> Profile</a></li>
+                            <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a></li>
+                            <li><a href="#"><i class="fa fa-question fa-fw"></i> Help</a></li>
+                            <li role="presentation" class="divider"></li>
+                            <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
+                        </ul>
                     </li>
+                    
                 </ul>
             </div>
         </nav>

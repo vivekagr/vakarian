@@ -295,6 +295,8 @@ button.btn-navbar {
     -ms-transition: all 0.2s ease;
     -o-transition: all 0.2s ease;
     transition: all 0.2s ease; }
+    .widget .metric svg {
+      float: right; }
     .widget .metric .metric-value {
       display: block;
       font-size: 2.3em;

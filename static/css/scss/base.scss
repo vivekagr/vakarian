@@ -386,6 +386,9 @@ button.btn-navbar {
   }
 
   .metric {
+    // Without right float, firefox doesn't render full sized graph
+    svg { float: right; }
+
     @include user-select(none);
     cursor:default;
     margin: 12px 0;

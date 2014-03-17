@@ -366,36 +366,3 @@ button.btn-navbar {
   .widget .widget-subtitle {
     font-size: 0.9em;
     font-weight: 300; }
-  .widget .metric {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    cursor: default;
-    margin: 12px 0;
-    font-size: 0.85em;
-    font-weight: 300;
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    -ms-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    transition: all 0.2s ease; }
-    .widget .metric svg {
-      float: right; }
-    .widget .metric .metric-value {
-      display: block;
-      font-size: 2.3em;
-      color: #aaafb3;
-      -webkit-transition: all 0.2s ease;
-      -moz-transition: all 0.2s ease;
-      -ms-transition: all 0.2s ease;
-      -o-transition: all 0.2s ease;
-      transition: all 0.2s ease; }
-    .widget .metric:hover {
-      -webkit-transition: all 0.5s ease;
-      -moz-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-      -o-transition: all 0.5s ease;
-      transition: all 0.5s ease; }
-      .widget .metric:hover, .widget .metric:hover .metric-value {
-        color: #2c3e50; }

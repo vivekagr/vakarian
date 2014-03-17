@@ -19,4 +19,51 @@
   margin: 0 0 20px;
   text-align: center; }
 .traffic-widget .metric {
-  text-align: right; }
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  margin: 12px 0;
+  font-size: 0.85em;
+  font-weight: 300;
+  text-align: right;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+  .traffic-widget .metric svg {
+    float: right; }
+  .traffic-widget .metric .metric-value {
+    display: block;
+    font-size: 2.3em;
+    color: #aaafb3;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
+  .traffic-widget .metric:hover {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
+    .traffic-widget .metric:hover, .traffic-widget .metric:hover .metric-value {
+      color: #2c3e50; }
+
+.social-media-widget {
+  padding: 0;
+  margin-bottom: 15px;
+  border-radius: 3px; }
+  .social-media-widget i {
+    font-size: 2.5em;
+    color: #ecf0f1; }
+  .social-media-widget .icon-area, .social-media-widget .content-area {
+    padding: 20px;
+    border-radius: 3px 0 0 3px; }
+  .social-media-widget.facebook .icon-area {
+    background-color: #2980b9; }
+  .social-media-widget.twitter .icon-area {
+    background-color: #55acee; }

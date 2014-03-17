@@ -1,3 +1,4 @@
+@import 'mixins';
 @import 'vars';
 
 #trafficChart {
@@ -25,7 +26,48 @@
     margin: 0 0 20px;
     text-align: center;
   }
+
   .metric {
+    // Without right float, firefox doesn't render full sized graph
+    svg { float: right; }
+
+    @include user-select(none);
+    cursor:default;
+    margin: 12px 0;
+    font-size: 0.85em;
+    font-weight: 300;
     text-align: right;
+    @include transition(all 0.2s ease);
+
+    .metric-value {
+      display: block;
+      font-size: 2.3em;
+      color: #aaafb3;
+      @include transition(all 0.2s ease);
+    }
+
+    &:hover {
+      &, .metric-value {color: $sidebar-color;}
+      @include transition(all 0.5s ease);
+    }
   }
+}
+
+.social-media-widget {
+  padding: 0;
+  margin-bottom: 15px;
+  border-radius: 3px;
+
+  i {
+    font-size: 2.5em;
+    color: #ecf0f1;
+  }
+
+  .icon-area, .content-area {
+    padding: 20px;
+    border-radius: 3px 0 0 3px;
+  }
+
+  &.facebook .icon-area { background-color: #2980b9; }
+  &.twitter .icon-area { background-color: #55acee; }
 }

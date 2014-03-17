@@ -63,6 +63,14 @@ body {
     }
   }
 
+  .dropdown {
+    // Keeping the button highlighted when the dropdown menu is open
+    &.open button.btn-navbar {
+      background-color: darken($navbar-color, 4);
+      color: #749fcb;
+    }
+  }
+
   .dropdown-menu {
     border: none;
     border-radius: 2px;
@@ -173,12 +181,6 @@ button.btn-navbar {
       @include transition(all 0.4s ease);
     }
   }
-}
-
-// Keeping the button highlighted when the dropdown menu is open
-.settings-dropdown.open button.btn-navbar {
-  background-color: darken($navbar-color, 4);
-  color: #749fcb;
 }
 
 // Notifications Dropdown

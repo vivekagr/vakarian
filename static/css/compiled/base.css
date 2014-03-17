@@ -42,6 +42,9 @@ body {
     .navbar-primary .navbar-items > li {
       float: left;
       display: inline-block; }
+  .navbar-primary .dropdown.open button.btn-navbar {
+    background-color: #324557;
+    color: #749fcb; }
   .navbar-primary .dropdown-menu {
     border: none;
     border-radius: 2px; }
@@ -144,10 +147,6 @@ button.btn-navbar {
       -ms-transition: all 0.4s ease;
       -o-transition: all 0.4s ease;
       transition: all 0.4s ease; }
-
-.settings-dropdown.open button.btn-navbar {
-  background-color: #324557;
-  color: #749fcb; }
 
 .notifications-dropdown ul.dropdown-menu {
   min-width: 260px; }

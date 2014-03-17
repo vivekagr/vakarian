@@ -185,6 +185,8 @@ button.btn-navbar {
     font-size: 1.2em;
     font-weight: 400;
     color: #34495e; }
+.notifications-dropdown .badge {
+  background-color: #d9ddde; }
 
 .sidebar {
   margin-top: 64px;

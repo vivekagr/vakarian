@@ -3,7 +3,7 @@ var pageviews, visits, uniques, bounce, df, data, options;
 Math.randrange = function(min, max) { return Math.random() * (max - min) + min; };
 
 // Data point
-pageviews = [3478,5340,8993,7837,12454,17495,22434,23453,25445,22455,28995,32957,30445,37953,46497,53387];
+pageviews = [3478,5340,8993,7837,12454,17495,22434,23453,25445,22455,28995,32957,30445,37953,46497,44286];
 visits = pageviews.map(function(x) { return Math.floor(x * Math.randrange(0.29, 0.39)); });
 uniques = pageviews.map(function(x) { return Math.floor(x * Math.randrange(0.16, 0.25)); });
 bounce = (function() {

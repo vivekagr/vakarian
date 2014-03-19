@@ -84,7 +84,10 @@
     background-color: #16a085; }
 
 #browser-donut {
-  height: 235px; }
+  height: 250px; }
+  #browser-donut tspan {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300; }
 
 #sales-map .map {
   padding-top: 10px; }

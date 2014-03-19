@@ -64,11 +64,14 @@
   }
 
   .icon-area {
+    float: left;
+    max-width: 200px;
     padding: 20px;
     border-radius: 3px 0 0 3px;
   }
 
   .content-area {
+    float: left;
     padding: 10px 29px 5px 14px;
     font-weight: 300;
     color: #95a5a6;

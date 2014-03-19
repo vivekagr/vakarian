@@ -57,12 +57,6 @@ options = {
         color: '#bdc3c7'
     },
     points: { radius: 1 },
-    'xaxis, yaxis': {
-        font: {
-            size: 11,
-            lineHeight: 13
-        }
-    },
     xaxis: {
         mode: "time",
         minTickSize: [2, "month"],

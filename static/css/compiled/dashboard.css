@@ -53,34 +53,34 @@
     .traffic-widget .metric:hover, .traffic-widget .metric:hover .metric-value {
       color: #2c3e50; }
 
-.social-media-widget {
+.quick-stat-widget {
   padding: 0;
   margin-bottom: 15px;
   border-radius: 3px; }
-  .social-media-widget i {
+  .quick-stat-widget i {
     font-size: 2.5em;
     color: #ecf0f1; }
-  .social-media-widget .icon-area {
+  .quick-stat-widget .icon-area {
     float: left;
     max-width: 200px;
     padding: 20px;
     border-radius: 3px 0 0 3px; }
-  .social-media-widget .content-area {
+  .quick-stat-widget .content-area {
     float: left;
     padding: 10px 29px 5px 14px;
     font-weight: 300;
     color: #95a5a6; }
-    .social-media-widget .content-area .metric-value {
+    .quick-stat-widget .content-area .metric-value {
       display: block;
       font-size: 2.2em;
       font-weight: 300;
       line-height: 1.1em;
       color: #B8C1CA; }
-  .social-media-widget.facebook .icon-area {
+  .quick-stat-widget.facebook .icon-area {
     background-color: #2980b9; }
-  .social-media-widget.twitter .icon-area {
+  .quick-stat-widget.twitter .icon-area {
     background-color: #55acee; }
-  .social-media-widget.sales .icon-area {
+  .quick-stat-widget.sales .icon-area {
     background-color: #16a085; }
 
 #browser-donut {
@@ -89,14 +89,13 @@
     font-family: 'Open Sans', sans-serif;
     font-weight: 300; }
 
-#sales-map .map {
+#us-cust-map .map {
   padding-top: 10px; }
-#sales-map .areaLegend tspan {
+#us-cust-map .areaLegend tspan {
   font-family: 'Open Sans', sans-serif;
   font-size: 0.8em;
   font-weight: 400; }
-
-.mapTooltip {
+#us-cust-map .mapTooltip {
   display: none;
   position: fixed;
   max-width: 200px;

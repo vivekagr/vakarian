@@ -119,7 +119,7 @@ Morris.Donut({
 
 // Render the USA customer's graph
 
-$("#sales-map").mapael({
+$("#us-cust-map").mapael({
     map: {
         name: "usa_states",
         defaultArea: {

@@ -92,20 +92,29 @@
   height: 235px;
 }
 
-#sales-map .map {
-  padding-top: 10px;
+#sales-map {
+  .map {
+    padding-top: 10px;
+  }
+  .areaLegend tspan {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+    font-weight: 400;
+  }
 }
 
 .mapTooltip {
-    position : fixed;
-    background-color : #fff;
-    moz-opacity:0.70;
-    opacity: 0.70;
-    filter:alpha(opacity=70);
-    border-radius:10px;
-    padding : 10px;
-    z-index: 1000;
-    max-width: 200px;
-    display:none;
-    color:#343434;
+  display: none;
+  position : fixed;
+  max-width: 200px;
+  background-color : #fff;
+  color: #34495e;
+  font-size: 0.75em;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 5px 7px;
+  z-index: 1000;
+  moz-opacity: 0.80;
+  opacity: 0.80;
+  filter: alpha(opacity=80);
 }

@@ -129,13 +129,16 @@ $("#sales-map").mapael({
             },
             attrsHover : {
                 fill: "#34495e",
-                "stroke-width" : 0
+                "stroke-width" : 0,
+                animDuration: 150
             }
         }
     },
     legend: {
         area: {
             display: true,
+//            hideElemsOnClick: { enabled: false },
+            marginBottom: 8,
             slices: [
                 {
                     max: 500,
@@ -146,25 +149,31 @@ $("#sales-map").mapael({
                     min: 500,
                     max: 1000,
                     attrs: { fill: "#D4D7DA" },
-                    label: "Between 5-10k customers"
+                    label: "Between 500-1k customers"
                 },
                 {
                     min: 1000,
-                    max: 1500,
                     attrs: { fill: "#808B96" },
-                    label: "Between 10-15k customers"
+                    label: "Above 1k customers"
                 }
             ]
         }
     },
     areas: {
-        'CA': { value: 1132, tooltip: {content: "California"} },
-        'NM': { value: 87, tooltip: {content : "New Mexico"} },
-        'NY': { value: 789, tooltip: {content : "New York"} },
-        'MT': { value: 87, tooltip: {content : "Montana"} },
-        'SF': { value: 289, tooltip: {content : "San Francisco"} },
-        'TX': { value: 203, tooltip: {content : "Texas"} },
-        'OK': { value: 245, tooltip: {content: "Oklahoma"} }
+        'AZ': { value: 627, tooltip: {content: "Arizona - 627 customers"} },
+        'AK': { value: 27, tooltip: {content: "Alaska - 27 customers"} },
+        'AR': { value: 736, tooltip: {content: "Arkansas - 736 customers"} },
+        'CA': { value: 1132, tooltip: {content: "California - 1132 customers"} },
+        'GA': { value: 356, tooltip: {content: "Georgia - 356 customers"} },
+        'IL': { value: 542, tooltip: {content: "Illinois - 542 customers"} },
+        'NE': { value: 1283, tooltip: {content : "Nebraska - 1283 customers"} },
+        'NM': { value: 87, tooltip: {content : "New Mexico - 87 customers"} },
+        'NY': { value: 789, tooltip: {content : "New York - 789 customers"} },
+        'MT': { value: 87, tooltip: {content : "Montana - 87 customers"} },
+        'SF': { value: 289, tooltip: {content : "San Francisco - 289 customers"} },
+        'TX': { value: 203, tooltip: {content : "Texas - 203 customers"} },
+        'OK': { value: 245, tooltip: {content: "Oklahoma - 245 customers"} },
+        'WA': { value: 1453, tooltip: {content: "Washington - 1453 customers"} }
     }
 });
 

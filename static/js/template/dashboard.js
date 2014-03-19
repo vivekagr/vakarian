@@ -13,8 +13,6 @@ bounce = (function() {
     return val;
 })();
 
-console.log(visits);
-
 df = [];
 
 // Creating out dataset in format [ [timestamp, value],... ] with values from above array

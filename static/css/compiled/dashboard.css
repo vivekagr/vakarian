@@ -60,10 +60,25 @@
   .social-media-widget i {
     font-size: 2.5em;
     color: #ecf0f1; }
-  .social-media-widget .icon-area, .social-media-widget .content-area {
+  .social-media-widget .icon-area {
     padding: 20px;
     border-radius: 3px 0 0 3px; }
+  .social-media-widget .content-area {
+    padding: 10px 29px 5px 14px;
+    font-weight: 300;
+    color: #95a5a6; }
+    .social-media-widget .content-area .metric-value {
+      display: block;
+      font-size: 2.2em;
+      font-weight: 300;
+      line-height: 1.1em;
+      color: #B8C1CA; }
   .social-media-widget.facebook .icon-area {
     background-color: #2980b9; }
   .social-media-widget.twitter .icon-area {
     background-color: #55acee; }
+  .social-media-widget.sales .icon-area {
+    background-color: #16a085; }
+
+#browser-donut {
+  height: 200px; }

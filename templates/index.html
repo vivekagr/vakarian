@@ -4,6 +4,7 @@
 {% set page_sub_title = "Welcome back John" %}
 
 {% block css %}
+    <link rel="stylesheet" href="{{ static('css/lib/morris-0.4.3.min.css') }}">
     <link rel="stylesheet" href="{{ static('css/compiled/dashboard.css') }}">
 {%- endblock %}
 
@@ -36,22 +37,43 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-5">
             <div class="widget">
                 <h4 class="widget-title">Social Media Stats</h4>
             </div>
         </div>
         <div class="col-md-4">
+            <div class="widget">
+                <h4 class="widget-title">Browsers</h4>
+                <div id="browser-donut"></div>
+            </div>
+        </div>
+        <div class="col-md-3">
             <div class="widget social-media-widget facebook">
                 <div class="row">
-                    <div class="col-xs-3 icon-area"><i class="fa fa-facebook fa-fw"></i></div>
-                    <div class="col-xs-9 content-area"></div>
+                    <div class="col-xs-4 icon-area"><i class="fa fa-facebook fa-fw"></i></div>
+                    <div class="col-xs-8 content-area">
+                        <span class="metric-value">32,278</span>
+                        <span class="metric-desc">likes</span>
+                    </div>
                 </div>
             </div>
             <div class="widget social-media-widget twitter">
                 <div class="row">
-                    <div class="col-xs-3 icon-area"><i class="fa fa-twitter fa-fw"></i></div>
-                    <div class="col-xs-9 content-area"></div>
+                    <div class="col-xs-4 icon-area"><i class="fa fa-twitter fa-fw"></i></div>
+                    <div class="col-xs-8 content-area">
+                        <span class="metric-value">7,026</span>
+                        <span class="metric-desc">followers</span>
+                    </div>
+                </div>
+            </div>
+            <div class="widget social-media-widget sales">
+                <div class="row">
+                    <div class="col-xs-4 icon-area"><i class="fa fa-dollar fa-fw"></i></div>
+                    <div class="col-xs-8 content-area">
+                        <span class="metric-value">$78,892</span>
+                        <span class="metric-desc">in sales</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -59,11 +81,20 @@
 {% endblock %}
 
 {% block vendor_js %}
+    {{ c('Flot Charts') }}
     <script src="{{ static('js/charts/flot/jquery.flot.min.js') }}"></script>
     <script src="{{ static('js/charts/flot/jquery.flot.time.min.js') }}"></script>
     <script src="{{ static('js/charts/flot/jquery.flot.tooltip.min.js') }}"></script>
     <script src="{{ static('js/charts/flot/jquery.flot.resize.js') }}"></script>
     <script src="{{ static('js/charts/flot/curvedLines.js') }}"></script>
+
+    {{ c('Peity Charts') }}
     <script src="{{ static('js/charts/peity/jquery.peity.min.js') }}"></script>
+
+    {{ c('morris.js') }}
+    <script src="{{ static('js/charts/raphael-min.js') }}"></script>
+    <script src="{{ static('js/charts/morris.js/morris-0.4.3.min.js') }}"></script>
+
+    {{ c('') }}
     <script src="{{ static('js/template/dashboard.js') }}"></script>
 {% endblock %}

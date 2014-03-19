@@ -63,11 +63,31 @@
     color: #ecf0f1;
   }
 
-  .icon-area, .content-area {
+  .icon-area {
     padding: 20px;
     border-radius: 3px 0 0 3px;
   }
 
+  .content-area {
+    padding: 10px 29px 5px 14px;
+    font-weight: 300;
+    color: #95a5a6;
+
+    .metric-value {
+      display: block;
+      font-size: 2.2em;
+      font-weight: 300;
+      line-height: 1.1em;
+      color: #B8C1CA;
+    }
+  }
+
   &.facebook .icon-area { background-color: #2980b9; }
   &.twitter .icon-area { background-color: #55acee; }
+  &.sales .icon-area { background-color: #16a085; }
+
+}
+
+#browser-donut {
+  height: 200px;
 }

@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
     var navSidebarLi = $(".nav-sidebar > li");
     // Adding 'dropdown' class to list items with children
     navSidebarLi.each(function() {

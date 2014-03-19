@@ -39,7 +39,11 @@
     <div class="row">
         <div class="col-md-5">
             <div class="widget">
-                <h4 class="widget-title">Social Media Stats</h4>
+                <h4 class="widget-title">Customer Base</h4>
+                <div id="sales-map">
+                    <div class="map"></div>
+                    <div class="areaLegend"></div>
+                </div>
             </div>
         </div>
         <div class="col-md-4">
@@ -91,10 +95,17 @@
     {{ c('Peity Charts') }}
     <script src="{{ static('js/charts/peity/jquery.peity.min.js') }}"></script>
 
+    {{ c('Raphel.js - dependency for morris.js and jquery.mapael.js') }}
+    <script src="{{ static('js/raphael-min.js') }}"></script>
+
     {{ c('morris.js') }}
-    <script src="{{ static('js/charts/raphael-min.js') }}"></script>
     <script src="{{ static('js/charts/morris.js/morris-0.4.3.min.js') }}"></script>
 
-    {{ c('') }}
+    {{ c('jQuery Mapael') }}
+    <script src="{{ static('js/maps/jquery.mapael.js') }}"></script>
+    <script src="{{ static('js/maps/usa_states.js') }}"></script>
+{% endblock %}
+
+{% block js %}
     <script src="{{ static('js/template/dashboard.js') }}"></script>
 {% endblock %}

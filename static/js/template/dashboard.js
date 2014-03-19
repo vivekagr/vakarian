@@ -1,3 +1,5 @@
+$(function() {
+
 var pageviews, visits, uniques, bounce, df, data, options;
 
 var randrange = function(min, max) { return Math.random() * (max - min) + min; };
@@ -113,4 +115,55 @@ Morris.Donut({
         {label: "Others", value: 8}
     ],
     colors: ['#2ecc71', '#3498db', '#e74c3c', '#f39c12', '#ecf0f1']
+});
+
+$("#sales-map").mapael({
+    map: {
+        name: "usa_states",
+        defaultArea: {
+            attrs : {
+                fill: "#ecf0f1",
+                stroke : "#DEE3E4"
+            },
+            attrsHover : {
+                fill: "#34495e",
+                "stroke-width" : 0
+            }
+        }
+    },
+    legend: {
+        area: {
+            display: true,
+            slices: [
+                {
+                    max: 5000,
+                    attrs: { fill: "#bdc3c7" },
+                    label: "Under 5k customers"
+                },
+                {
+                    min: 5000,
+                    max: 10000,
+                    attrs: { fill: "#34495e" },
+                    label: "Between 5-10k customers"
+                },
+                {
+                    min: 10000,
+                    max: 15000,
+                    attrs: { fill: "#34495e" },
+                    label: "Between 10-15k customers"
+                }
+            ]
+        }
+    },
+    areas: {
+        'CA': { value: 9827, tooltip: {content: "California"} },
+        'NM': { value: 873, tooltip: {content : "New Mexico"} },
+        'NY': { value: 7849, tooltip: {content : "New York"} },
+        'MT': { value: 873, tooltip: {content : "Montana"} },
+        'SF': { value: 2893, tooltip: {content : "San Francisco"} },
+        'TX': { value: 2083, tooltip: {content : "Texas"} },
+        'OK': { value: 11342, tooltip: {content: "Oklahoma"}}
+    }
+});
+
 });

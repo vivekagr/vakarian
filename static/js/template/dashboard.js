@@ -117,13 +117,15 @@ Morris.Donut({
     colors: ['#2ecc71', '#3498db', '#e74c3c', '#f39c12', '#ecf0f1']
 });
 
+// Render the USA customer's graph
+
 $("#sales-map").mapael({
     map: {
         name: "usa_states",
         defaultArea: {
             attrs : {
                 fill: "#ecf0f1",
-                stroke : "#DEE3E4"
+                stroke : "#fff"
             },
             attrsHover : {
                 fill: "#34495e",
@@ -136,33 +138,33 @@ $("#sales-map").mapael({
             display: true,
             slices: [
                 {
-                    max: 5000,
-                    attrs: { fill: "#bdc3c7" },
+                    max: 500,
+                    attrs: { fill: "#E1E3E4" },
                     label: "Under 5k customers"
                 },
                 {
-                    min: 5000,
-                    max: 10000,
-                    attrs: { fill: "#34495e" },
+                    min: 500,
+                    max: 1000,
+                    attrs: { fill: "#D4D7DA" },
                     label: "Between 5-10k customers"
                 },
                 {
-                    min: 10000,
-                    max: 15000,
-                    attrs: { fill: "#34495e" },
+                    min: 1000,
+                    max: 1500,
+                    attrs: { fill: "#808B96" },
                     label: "Between 10-15k customers"
                 }
             ]
         }
     },
     areas: {
-        'CA': { value: 9827, tooltip: {content: "California"} },
-        'NM': { value: 873, tooltip: {content : "New Mexico"} },
-        'NY': { value: 7849, tooltip: {content : "New York"} },
-        'MT': { value: 873, tooltip: {content : "Montana"} },
-        'SF': { value: 2893, tooltip: {content : "San Francisco"} },
-        'TX': { value: 2083, tooltip: {content : "Texas"} },
-        'OK': { value: 11342, tooltip: {content: "Oklahoma"}}
+        'CA': { value: 1132, tooltip: {content: "California"} },
+        'NM': { value: 87, tooltip: {content : "New Mexico"} },
+        'NY': { value: 789, tooltip: {content : "New York"} },
+        'MT': { value: 87, tooltip: {content : "Montana"} },
+        'SF': { value: 289, tooltip: {content : "San Francisco"} },
+        'TX': { value: 203, tooltip: {content : "Texas"} },
+        'OK': { value: 245, tooltip: {content: "Oklahoma"} }
     }
 });
 

@@ -145,7 +145,7 @@ $(function() {
                     {
                         max: 500,
                         attrs: { fill: "#E1E3E4" },
-                        label: "Under 5k customers"
+                        label: "Under 500 customers"
                     },
                     {
                         min: 500,

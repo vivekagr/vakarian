@@ -1,4 +1,4 @@
-@import 'mixins';
+@import 'helper';
 @import 'vars';
 
 // Website traffic chart
@@ -138,3 +138,39 @@
   }
 }
 
+table.support-tickets-table {
+  margin-top: 10px;
+
+  thead > tr > th {
+    font-weight: 400;
+    color: #95a5a6;
+    border-bottom-width: 0;
+  }
+
+  tbody > tr > td {
+    font-size: 0.9em;
+    font-weight: 400;
+    border-top-color: #ecf0f1;
+
+    span.label {
+      background-color: #bdc3c7;
+      font-size: 0.85em;
+      font-weight: 600;
+
+      &.critical { background-color: #e74c3c; }
+      &.high { background-color: #f39c12; }
+      &.normal { background-color: #bdc3c7; }
+      &.low { background-color: #3498db; }
+    }
+
+    &.status:before {
+      @extend .fa-icon;
+      content: '\f05c';
+      margin-right: 0.4em;
+    }
+
+    &.status.answered:before {
+      content: '\f05d';
+    }
+  }
+}

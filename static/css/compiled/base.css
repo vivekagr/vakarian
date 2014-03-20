@@ -337,7 +337,7 @@ button.btn-navbar {
 
 .content-wrapper {
   margin: 64px 0 0 210px;
-  padding: 0 25px;
+  padding: 0 25px 25px;
   color: #2c3e50; }
 
 .page-title {

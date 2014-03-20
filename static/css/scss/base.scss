@@ -1,15 +1,5 @@
-@import 'mixins';
+@import 'helper';
 @import 'vars';
-
-.fa-icon {
-  display: inline-block;
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
 * {
   box-sizing: border-box;
@@ -454,7 +444,7 @@ button.btn-navbar {
 // Wrapper for the main content area
 .content-wrapper {
   margin: 64px 0 0 210px;
-  padding: 0 25px;
+  padding: 0 25px 25px;
   color: #2c3e50;
 }
 

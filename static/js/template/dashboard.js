@@ -121,8 +121,8 @@ $(function() {
     });
 
 
-    // USA customer base graph
-    $("#us-cust-map").mapael({
+    // USA user base graph
+    $("#us-subscribers-map").mapael({
         map: {
             name: "usa_states",
             defaultArea: {
@@ -145,37 +145,37 @@ $(function() {
                     {
                         max: 500,
                         attrs: { fill: "#E1E3E4" },
-                        label: "Under 500 customers"
+                        label: "Under 500 subscribers"
                     },
                     {
                         min: 500,
                         max: 1000,
                         attrs: { fill: "#D4D7DA" },
-                        label: "Between 500-1k customers"
+                        label: "Between 500-1k subscribers"
                     },
                     {
                         min: 1000,
                         attrs: { fill: "#808B96" },
-                        label: "Above 1k customers"
+                        label: "Above 1k subscribers"
                     }
                 ]
             }
         },
         areas: {
-            'AZ': { value: 627, tooltip: {content: "Arizona - 627 customers"} },
-            'AK': { value: 27, tooltip: {content: "Alaska - 27 customers"} },
-            'AR': { value: 736, tooltip: {content: "Arkansas - 736 customers"} },
-            'CA': { value: 1132, tooltip: {content: "California - 1132 customers"} },
-            'GA': { value: 356, tooltip: {content: "Georgia - 356 customers"} },
-            'IL': { value: 542, tooltip: {content: "Illinois - 542 customers"} },
-            'NE': { value: 1283, tooltip: {content : "Nebraska - 1283 customers"} },
-            'NM': { value: 87, tooltip: {content : "New Mexico - 87 customers"} },
-            'NY': { value: 789, tooltip: {content : "New York - 789 customers"} },
-            'MT': { value: 87, tooltip: {content : "Montana - 87 customers"} },
-            'SF': { value: 289, tooltip: {content : "San Francisco - 289 customers"} },
-            'TX': { value: 203, tooltip: {content : "Texas - 203 customers"} },
-            'OK': { value: 245, tooltip: {content: "Oklahoma - 245 customers"} },
-            'WA': { value: 1453, tooltip: {content: "Washington - 1453 customers"} }
+            'AZ': { value: 627, tooltip: {content: "Arizona - 627 subscribers"} },
+            'AK': { value: 27, tooltip: {content: "Alaska - 27 subscribers"} },
+            'AR': { value: 736, tooltip: {content: "Arkansas - 736 subscribers"} },
+            'CA': { value: 1132, tooltip: {content: "California - 1132 subscribers"} },
+            'GA': { value: 356, tooltip: {content: "Georgia - 356 subscribers"} },
+            'IL': { value: 542, tooltip: {content: "Illinois - 542 subscribers"} },
+            'NE': { value: 1283, tooltip: {content : "Nebraska - 1283 subscribers"} },
+            'NM': { value: 87, tooltip: {content : "New Mexico - 87 subscribers"} },
+            'NY': { value: 789, tooltip: {content : "New York - 789 subscribers"} },
+            'MT': { value: 87, tooltip: {content : "Montana - 87 subscribers"} },
+            'SF': { value: 289, tooltip: {content : "San Francisco - 289 subscribers"} },
+            'TX': { value: 203, tooltip: {content : "Texas - 203 subscribers"} },
+            'OK': { value: 245, tooltip: {content: "Oklahoma - 245 subscribers"} },
+            'WA': { value: 1453, tooltip: {content: "Washington - 1453 subscribers"} }
         }
     });
 

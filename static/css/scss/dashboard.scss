@@ -92,12 +92,13 @@
   &.facebook .icon-area { background-color: #2980b9; }
   &.twitter .icon-area { background-color: #55acee; }
   &.sales .icon-area { background-color: #16a085; }
+  &.errors .icon-area { background-color: #f39c12; }
 
 }
 
 // Browser Donut Chart with Morris.js
 #browser-donut {
-  height: 250px;
+  height: 285px;
 
   // Text appearing in the center
   tspan {
@@ -107,7 +108,7 @@
 }
 
 // US States Customer with Mapael
-#us-cust-map {
+#us-subscribers-map {
   .map {
     padding-top: 10px;
   }

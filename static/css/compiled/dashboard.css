@@ -82,20 +82,22 @@
     background-color: #55acee; }
   .quick-stat-widget.sales .icon-area {
     background-color: #16a085; }
+  .quick-stat-widget.errors .icon-area {
+    background-color: #f39c12; }
 
 #browser-donut {
-  height: 250px; }
+  height: 285px; }
   #browser-donut tspan {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300; }
 
-#us-cust-map .map {
+#us-subscribers-map .map {
   padding-top: 10px; }
-#us-cust-map .areaLegend tspan {
+#us-subscribers-map .areaLegend tspan {
   font-family: 'Open Sans', sans-serif;
   font-size: 0.8em;
   font-weight: 400; }
-#us-cust-map .mapTooltip {
+#us-subscribers-map .mapTooltip {
   display: none;
   position: fixed;
   max-width: 200px;

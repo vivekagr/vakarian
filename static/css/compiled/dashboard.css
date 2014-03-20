@@ -1,4 +1,4 @@
-.fa-icon, table.support-tickets-table tbody > tr > td.status:before {
+.fa-icon, table.support-tickets-table tbody > tr > td.status:before, .user-voice .media-body:before {
   display: inline-block;
   font-family: FontAwesome;
   font-style: normal;
@@ -149,6 +149,39 @@ table.support-tickets-table {
       margin-right: 0.4em; }
     table.support-tickets-table tbody > tr > td.status.answered:before {
       content: '\f05d'; }
+
+.user-voice {
+  margin-bottom: 10px; }
+  .user-voice img.media-object {
+    width: 40px; }
+  .user-voice .media-body {
+    position: relative;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #F5F6F7;
+    color: #34495e;
+    font-size: 0.88em;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
+    .user-voice .media-body .media-heading {
+      font-size: 1em;
+      color: #bdc3c7; }
+    .user-voice .media-body:before {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      font-size: 1.6em; }
+    .user-voice .media-body:hover {
+      background-color: #ecf0f1; }
+  .user-voice.twitter .media-body:before {
+    content: '\f081';
+    color: #55acee; }
+  .user-voice.facebook .media-body:before {
+    content: '\f082';
+    color: #2980b9; }
 
 #calendar {
   margin-top: 10px; }

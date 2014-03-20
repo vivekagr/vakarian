@@ -176,6 +176,55 @@ table.support-tickets-table {
   }
 }
 
+.users-voice-widget {
+}
+
+.user-voice {
+  margin-bottom: 10px;
+
+  img.media-object {
+    width: 40px;
+  }
+
+  .media-body {
+    position: relative;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #F5F6F7;
+    color: #34495e;
+    font-size: 0.88em;
+
+    .media-heading {
+      font-size: 1em;
+      color: #bdc3c7;
+    }
+
+    &:before {
+      @extend .fa-icon;
+      position:absolute;
+      top: 5px;
+      right: 5px;
+      font-size: 1.6em;
+    }
+
+    @include transition(all 0.2s ease);
+
+    &:hover {
+      background-color: #ecf0f1;
+    }
+  }
+
+  &.twitter .media-body:before {
+    content: '\f081';
+    color: #55acee;
+  }
+  &.facebook .media-body:before {
+    content: '\f082';
+    color: #2980b9;
+  }
+
+}
+
 // Over-riding the styles of fullcalendar to suit the template
 #calendar {
   margin-top: 10px;

@@ -351,6 +351,7 @@ button.btn-navbar {
   font-weight: 300; }
 
 .widget {
+  margin-bottom: 20px;
   background-color: #fff;
   padding: 10px 15px;
   color: #bdc3c7;
@@ -359,10 +360,12 @@ button.btn-navbar {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.07);
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.07); }
   .widget.row {
-    margin: 15px 0px; }
+    margin-left: 0;
+    margin-right: 0; }
   .widget .widget-title {
-    font-size: 1.2em;
-    font-weight: 500; }
+    font-size: 1.15em;
+    font-weight: 500;
+    margin: 5px 0 18px; }
   .widget .widget-subtitle {
     font-size: 0.9em;
     font-weight: 300; }

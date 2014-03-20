@@ -176,7 +176,9 @@ table.support-tickets-table {
     font-weight: 600;
     color: #34495e; }
   #calendar .fc-event {
-    background-color: #16a085;
+    background-color: #485A6D;
     border: none;
     font-size: 0.8em;
     padding: 1px; }
+  #calendar .fc-cell-overlay {
+    background-color: #D1D1D1; }

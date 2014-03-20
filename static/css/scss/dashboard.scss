@@ -223,9 +223,13 @@ table.support-tickets-table {
 
   // Event
   .fc-event {
-    background-color: #16a085;
+    background-color: #485A6D;
     border: none;
     font-size: 0.8em;
     padding: 1px;
+  }
+
+  .fc-cell-overlay {
+    background-color: #D1D1D1;
   }
 }

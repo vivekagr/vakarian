@@ -5,6 +5,7 @@
 
 {% block css %}
     <link rel="stylesheet" href="{{ static('css/lib/morris-0.4.3.min.css') }}">
+    <link rel="stylesheet" href="{{ static('css/lib/fullcalendar.css') }}">
     <link rel="stylesheet" href="{{ static('css/compiled/dashboard.css') }}">
 {%- endblock %}
 
@@ -93,13 +94,19 @@
             </div>
         </div>
     </div>
-{#    <div class="row">#}
-{#        <div class="col-md-4">#}
-{#            <div class="widget">#}
-{#                <h4 class="widget-title">Calendar</h4>#}
-{#            </div>#}
-{#        </div>#}
-{#    </div>#}
+    <div class="row">
+        <div class="col-md-5">
+            <div class="widget">
+                <h4 class="widget-title">What people are saying</h4>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="widget">
+                <h4 class="widget-title">Calendar</h4>
+                <div id="calendar"></div>
+            </div>
+        </div>
+    </div>
     <div class="row">
         <div class="col-md-12">
             <div class="widget">
@@ -183,6 +190,9 @@
     {{ c('jQuery Mapael') }}
     <script src="{{ static('js/maps/jquery.mapael.js') }}"></script>
     <script src="{{ static('js/maps/usa_states.js') }}"></script>
+
+    {{ c('FullCalendar') }}
+    <script src="{{ static('js/fullcalendar.min.js') }}"></script>
 {% endblock %}
 
 {% block js %}

@@ -174,3 +174,58 @@ table.support-tickets-table {
     }
   }
 }
+
+// Over-riding the styles of fullcalendar to suit the template
+#calendar {
+  margin-top: 10px;
+
+  // Header title
+  .fc-header-title h2 {
+    font-size: 1.25em;
+    font-weight: 300;
+    color: #34495e;
+  }
+
+  // Table header row
+  .fc-widget-header {
+    font-weight: 500;
+    color: #95a5a6;
+  }
+
+  // Table body
+  .fc-widget-content {
+    font-weight: 300;
+  }
+
+  // Button
+  .fc-button {
+    font-size: 0.7em;
+    font-weight: 600;
+    color: #7f8c8d;
+  }
+
+  // Button states
+  .fc-state-default, .fc-state-down, .fc-state-active {
+    border: none;
+    box-shadow: none;
+  }
+  .fc-state-default {
+    background-image: none;
+  }
+  .fc-state-active {
+    background-color: #E2E6E9;
+  }
+  .fc-state-highlight {
+    background-color: #FCEAA4;
+    font-weight: 600;
+    color: #34495e;
+  }
+
+  // Event
+  .fc-event {
+    background-color: #16a085;
+    border: none;
+    font-size: 0.8em;
+    padding: 1px;
+  }
+}

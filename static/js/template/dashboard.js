@@ -46,7 +46,7 @@ $(function() {
             lines: {
                 fill: true,
                 fillColor: {
-                    colors: [{ opacity: 0.6 }, { opacity: 0.6 }]
+                    colors: [{ opacity: 0.2 }, { opacity: 0.2 }]
                 }
             }
         },

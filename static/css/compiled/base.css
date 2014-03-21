@@ -353,7 +353,7 @@ button.btn-navbar {
 .widget {
   margin-bottom: 20px;
   background-color: #fff;
-  padding: 10px 15px;
+  padding-top: 10px;
   color: #bdc3c7;
   border: 1px solid #e8eced;
   border-radius: 3px;
@@ -365,7 +365,9 @@ button.btn-navbar {
   .widget .widget-title {
     font-size: 1.15em;
     font-weight: 500;
-    margin: 5px 0 18px; }
+    margin: 5px 15px 18px; }
   .widget .widget-subtitle {
     font-size: 0.9em;
     font-weight: 300; }
+  .widget .widget-content {
+    padding: 0 15px 10px; }

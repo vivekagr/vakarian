@@ -248,4 +248,7 @@ $(function() {
         events: events
     });
 
+    // Initializing the NanoScroller
+    $(".nano").nanoScroller();
+
 });

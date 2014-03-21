@@ -25,6 +25,8 @@
 
 // Widget containing website traffic statistics graphs
 .traffic-widget {
+  padding-bottom: 15px;
+
   .widget-subtitle {
     margin: 0 0 20px;
     text-align: center;
@@ -176,11 +178,13 @@ table.support-tickets-table {
   }
 }
 
-.users-voice-widget {
+.users-voice-widget .widget-content {
+  height: 354px;
 }
 
 .user-voice {
   margin-bottom: 10px;
+  padding: 0 15px;
 
   img.media-object {
     width: 40px;
@@ -228,6 +232,7 @@ table.support-tickets-table {
 // Over-riding the styles of fullcalendar to suit the template
 #calendar {
   margin-top: 10px;
+  padding-bottom: 15px;
 
   // Header title
   .fc-header-title h2 {

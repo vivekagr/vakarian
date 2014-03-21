@@ -100,8 +100,13 @@
 
 // Browser Donut Chart with Morris.js
 #browser-donut {
-  height: 285px;
   text-align: center;
+  @media (min-width: 1200px) {
+    height: 295px;
+  }
+  @media (max-width: 1200px) {
+    height: 270px;
+  }
 
   // Text appearing in the center
   tspan {

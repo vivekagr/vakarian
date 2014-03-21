@@ -107,9 +107,9 @@ $(function() {
     $(window).resize(function() { $(".line").peity("line"); });
 
 
-    // Browser donut chart
-    Morris.Donut({
+    var donut = Morris.Donut({
         element: 'browser-donut',
+        resize: true,
         data: [
             {label: "Chrome", value: 48},
             {label: "Firefox", value: 21},
@@ -117,8 +117,15 @@ $(function() {
             {label: "Internet Explorer", value: 12},
             {label: "Others", value: 8}
         ],
-        colors: ['#2ecc71', '#3498db', '#e74c3c', '#f39c12', '#ecf0f1']
+        colors: ['#2ecc71', '#3498db', '#e74c3c', '#f39c12', '#ecf0f1'],
+        formatter: function (y, data) { return + y + "%" }
     });
+
+//    $(window).resize(function() {
+//          donut.timeoutId = null;
+//          donut.raphael.setSize(donut.el.width(), donut.el.height());
+//          donut.redraw();
+//    });
 
 
     // USA user base graph

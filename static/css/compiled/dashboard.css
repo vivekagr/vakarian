@@ -97,8 +97,13 @@
     background-color: #c0392b; }
 
 #browser-donut {
-  height: 285px;
   text-align: center; }
+  @media (min-width: 1200px) {
+    #browser-donut {
+      height: 295px; } }
+  @media (max-width: 1200px) {
+    #browser-donut {
+      height: 270px; } }
   #browser-donut tspan {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300; }

@@ -9,11 +9,28 @@
 
 {% block main %}
     <div class="row widget">
-        <h4 class="widget-title">Traffic Statistics</h4>
-        <div class="col-md-8">
-            <canvas id="chartJsCanvas"></canvas>
+        <h4 class="widget-title">Line Chart</h4>
+        <div class="col-md-12">
+            <canvas id="lineChart"></canvas>
         </div>
-        <div class="col-md-4"></div>
+    </div>
+    <div class="row widget">
+        <h4 class="widget-title">Bar Chart</h4>
+        <div class="col-md-12">
+            <canvas id="barChart"></canvas>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="widget">
+
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="widget">
+
+            </div>
+        </div>
     </div>
 {% endblock %}
 
@@ -21,47 +38,92 @@
     <script src="{{ static('js/charts/chart.js/Chart.min.js') }}"></script>
     <script>
         $(document).ready(function() {
-            var navbarColor, data, options, chartCanvas, ctx, chart;
+
+            function setupChart(selector, type, data, options) {
+                /* Renders the chart and re-renders on window resize. */
+
+                var renderedOnce = false; // Keeping track whether the the chart has been rendered once
+
+                function render() {
+                    var el = $(selector);
+
+                    // Setting width and height attributes since Chart.js uses those
+                    el.attr('width', el.parent().width());
+                    el.attr('height', el.height());
+
+                    // Disabling the animation if the chart has been rendered once
+                    if (renderedOnce) {
+                        options.animation = false;
+                    } else {
+                        renderedOnce = true;
+                    }
+
+                    // Initializing the chart
+                    new Chart(el.get(0).getContext("2d"))[type](data, options);
+                }
+
+                render();
+                $(window).resize(render);
+            }
+
+            // Line Chart
+
+            var navbarColor, lineChartData, lineChartOptions;
 
             navbarColor = $(".navbar-primary").css('background-color');
-            data = {
-                labels : ["January","February","March","April","May","June","July"],
+            lineChartData = {
+                labels : ["January","February","March","April","May","June","July","August","September","October","November","December"],
                 datasets : [
                     {
                         fillColor : "rgba(220,220,220,0.5)",
                         strokeColor : "rgba(220,220,220,1)",
                         pointColor : "rgba(220,220,220,1)",
                         pointStrokeColor : "#fff",
-                        data : [65,59,90,81,56,55,40]
+                        data : [65,59,90,81,56,55,40,82,65,34,93,23]
                     },
                     {
                         fillColor : navbarColor.replace('rgb', 'rgba').replace(')', ', 0.8)'),
                         strokeColor : navbarColor,
                         pointColor : navbarColor,
                         pointStrokeColor : "#fff",
-                        data : [28,48,40,19,96,27,100]
+                        data : [28,48,40,62,96,48,82,45,72,40,50,34]
                     }
                 ]
             };
 
-            options = {
+            lineChartOptions = {
                 scaleFontFamily : "'Open Sans', sans-serif",
                 scaleFontSize : 12,
                 scaleShowGridLines: false,
                 scaleShowLabels : false
             };
 
-            chartCanvas = $("#chartJsCanvas");
+            setupChart("#lineChart", "Line", lineChartData, lineChartOptions);
 
-            // Setting width and height attributes since Chart.js uses those
-            chartCanvas.attr('width', chartCanvas.width());
-            chartCanvas.attr('height', chartCanvas.height());
 
-            //Get the context of the canvas element we want to select
-            ctx = chartCanvas.get(0).getContext("2d");
+            // Bar Chart
 
-            // Initializing the chart
-            chart = new Chart(ctx).Line(data, options);
+            var barChartData;
+
+            barChartData = {
+                labels : ["January","February","March","April","May","June","July","August","September","October","November","December"],
+                datasets : [
+                    {
+                        fillColor : navbarColor.replace('rgb', 'rgba').replace(')', ', 0.8)'),
+                        strokeColor : navbarColor,
+                        strokeWidth: 0,
+                        data : [65,59,90,81,56,55,40,82,65,34,93,23]
+                    },
+                    {
+                        fillColor : "rgba(220,220,220,0.5)",
+                        strokeColor : "rgba(220,220,220,1)",
+                        data : [28,48,40,62,96,48,82,45,72,40,50,34]
+                    }
+                ]
+            };
+
+            setupChart("#barChart", "Bar", barChartData, {});
+
         });
     </script>
 {% endblock %}

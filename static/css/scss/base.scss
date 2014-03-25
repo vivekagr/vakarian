@@ -490,3 +490,14 @@ button.btn-navbar {
     padding: 0 15px 10px;
   }
 }
+
+
+// Tool tip for flot charts
+#flotTip {
+  padding: 3px 5px;
+  background-color: $sidebar-color;
+  color: #ecf0f1;
+  font-size: 0.85em;
+  font-weight: 300;
+  border-radius: 3px;
+}

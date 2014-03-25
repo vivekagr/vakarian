@@ -1,0 +1,55 @@
+{% extends '_base.html' %}
+
+{% set page_title = "Flot charts" %}
+{% set page_sub_title = "Various chart examples demonstrating Flot" %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ static('css/compiled/charts.css') }}">
+{%- endblock %}
+
+{% block main %}
+    <div class="row widget">
+        <h4 class="widget-title">Realtime Graph</h4>
+        <div class="col-md-12">
+            <div id="realtime"></div>
+        </div>
+    </div>
+    <div class="row widget">
+        <h4 class="widget-title">Stacked Chart</h4>
+        <div class="col-md-12">
+            <div id="stacked"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="widget">
+                <h4 class="widget-title">Interactive Chart</h4>
+                <div class="chart-container">
+                    <div id="interactive"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="widget">
+                <h4 class="widget-title">Donut Chart</h4>
+                <div id="flotDonutChart"></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block vendor_js %}
+    {{ c('Flot Charts') }}
+    <script src="{{ static('js/charts/flot/jquery.flot.min.js') }}"></script>
+    <script src="{{ static('js/charts/flot/jquery.flot.time.min.js') }}"></script>
+    <script src="{{ static('js/charts/flot/jquery.flot.tooltip.min.js') }}"></script>
+    <script src="{{ static('js/charts/flot/jquery.flot.resize.js') }}"></script>
+    <script src="{{ static('js/charts/flot/jquery.flot.group.js') }}"></script>
+    <script src="{{ static('js/charts/flot/jquery.flot.simplestack.js') }}"></script>
+    <script src="{{ static('js/charts/flot/jquery.flot.pie.js') }}"></script>
+    <script src="{{ static('js/charts/flot/curvedLines.js') }}"></script>
+{% endblock %}
+
+{% block js %}
+    <script src="{{ static('js/template/charts-flot.js') }}"></script>
+{% endblock %}

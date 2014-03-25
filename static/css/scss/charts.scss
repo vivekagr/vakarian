@@ -1,5 +1,7 @@
 @import 'vars';
 
+// Chart.js
+
 #lineChart, #barChart, #radarChart, #polarChart, #pieChart {
   margin: 25px 0;
   width: 100%;
@@ -10,4 +12,21 @@
   margin: 25px 0;
   height: 310px;
   color: rgba(52, 152, 219, 0.73);
+}
+
+// Flot charts
+
+.chart-container {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#realtime, #interactive, #stacked, #flotDonutChart {
+  margin: 10px 0 20px;
+  height: 250px;
+  width: 100%;
+}
+
+#interactive, #flotDonutChart {
+  height: 320px;
 }

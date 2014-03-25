@@ -55,5 +55,9 @@ $(function() {
             });
         }
 
+        // Triggering windows resize event so that widgets like charts
+        // can re-render themselves according to their new container size
+        $(window).trigger('resize');
+
     });
 });

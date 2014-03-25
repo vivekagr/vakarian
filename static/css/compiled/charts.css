@@ -1,4 +1,9 @@
-#lineChart, #barChart {
-  margin: 15px 0;
+#lineChart, #barChart, #radarChart, #polarChart, #pieChart {
+  margin: 25px 0;
   width: 100%;
   height: 220px; }
+
+#radarChart, #polarChart, #pieChart, #doughnutChart {
+  margin: 25px 0;
+  height: 310px;
+  color: rgba(52, 152, 219, 0.73); }

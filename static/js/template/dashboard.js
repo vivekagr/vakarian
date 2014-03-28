@@ -1,6 +1,6 @@
 // Initializes the graphs on the dashboard
 
-$(function() {
+$(function () {
 
     var pageviews, visits, uniques, bounce, df, data, options, date, d, m, y, events;
 

@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function () {
 
     function setupChart(selector, type, data, options) {
         /* Renders the chart.js charts and re-renders on window resize. */

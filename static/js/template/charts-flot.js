@@ -66,7 +66,7 @@ $(function () {
         },
         grid: {
             color: "#bdc3c7",
-            borderWidth: 1,
+            borderWidth: 0,
             borderColor: "#bdc3c7"
         },
         yaxis: {
@@ -154,7 +154,7 @@ $(function () {
         },
         grid: {
             color: "#bdc3c7",
-            borderWidth: 1,
+            borderWidth: 0,
             borderColor: "#bdc3c7"
         }
     };

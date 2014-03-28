@@ -121,12 +121,7 @@ $(function () {
         formatter: function (y, data) { return + y + "%" }
     });
 
-//    $(window).resize(function() {
-//          donut.timeoutId = null;
-//          donut.raphael.setSize(donut.el.width(), donut.el.height());
-//          donut.redraw();
-//    });
-
+    
 
     // USA user base graph
     $("#us-subscribers-map").mapael({

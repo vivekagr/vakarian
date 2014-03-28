@@ -18,7 +18,8 @@ $(function () {
         xkey: 'period',
         ykeys: ['licensed', 'sorned'],
         labels: ['Licensed', 'Off the road'],
-        lineColors: ['#34495e', '#2980b9']
+        lineColors: ['#34495e', '#2980b9'],
+        resize: true
     });
 
     Morris.Donut({
@@ -30,7 +31,8 @@ $(function () {
             {label: 'Sugar', value: 10 }
         ],
         formatter: function (y) { return y + "%" },
-        colors: ["rgba(22,160,133,0.8)", "rgba(52,152,219,0.8)", "rgba(241,196,15,0.8)", "rgba(52,73,94,0.9)"]
+        colors: ["rgba(22,160,133,0.8)", "rgba(52,152,219,0.8)", "rgba(241,196,15,0.8)", "rgba(52,73,94,0.9)"],
+        resize: true
     });
 
     Morris.Area({
@@ -52,7 +54,8 @@ $(function () {
         labels: ['iPhone', 'iPad', 'iPod Touch'],
         pointSize: 2,
         hideHover: 'auto',
-        lineColors: ['#34495e', '#16a085', '#bdc3c7']
+        lineColors: ['#34495e', '#16a085', '#bdc3c7'],
+        resize: true
     });
 
     Morris.Bar({
@@ -71,7 +74,8 @@ $(function () {
         barRatio: 0.4,
         xLabelAngle: 35,
         hideHover: 'auto',
-        barColors: ["#16a085"]
+        barColors: ["#16a085"],
+        resize: true
     });
 
 });

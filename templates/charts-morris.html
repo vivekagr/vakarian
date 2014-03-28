@@ -1,0 +1,51 @@
+{% extends '_base.html' %}
+
+{% set page_title = "Morris.js" %}
+{% set page_sub_title = "Various examples demonstrating Morris.js" %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ static('css/lib/morris-0.4.3.min.css') }}">
+    <link rel="stylesheet" href="{{ static('css/compiled/charts.css') }}">
+{%- endblock %}
+
+{% block main %}
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="widget">
+                <h4 class="widget-title">Radar Chart</h4>
+                <div class="morris-chart" id="morrisArea"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="widget">
+                <h4 class="widget-title">Radar Chart</h4>
+                <div class="morris-chart" id="morrisLine"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="widget">
+                <h4 class="widget-title">Radar Chart</h4>
+                <div class="morris-chart" id="morrisDonut"></div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="widget">
+                <h4 class="widget-title">Radar Chart</h4>
+                <div class="morris-chart" id="morrisBar"></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block vendor_js %}
+    <script src="{{ static('js/raphael-min.js') }}"></script>
+    <script src="{{ static('js/charts/morris.js/morris.min.js') }}"></script>
+{% endblock %}
+
+{% block js %}
+    <script src="{{ static('js/template/charts-morris.js') }}"></script>
+{% endblock %}

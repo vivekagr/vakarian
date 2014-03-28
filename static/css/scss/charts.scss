@@ -30,3 +30,13 @@
 #interactive, #flotDonutChart {
   height: 320px;
 }
+
+// Morris charts
+
+.morris-chart {
+  margin: 20px 12px;
+  &#morrisDonut text > tspan {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300 !important;
+  }
+}

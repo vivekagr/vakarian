@@ -19,3 +19,9 @@
 
 #interactive, #flotDonutChart {
   height: 320px; }
+
+.morris-chart {
+  margin: 20px 12px; }
+  .morris-chart#morrisDonut text > tspan {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300 !important; }

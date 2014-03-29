@@ -1,0 +1,83 @@
+{% extends '_base.html' %}
+
+{% set page_title = "Flotr2" %}
+{% set page_sub_title = "Various examples demonstrating Flotr2 charts" %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ static('css/compiled/charts.css') }}">
+{%- endblock %}
+
+{% block main %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="widget">
+                <h4 class="widget-title">Basic Axis Example</h4>
+                <div class="flotr2-chart">
+                    <div class="chart" id="flotr2BasicAxis"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="widget">
+                <h4 class="widget-title">Line Chart</h4>
+                <div class="flotr2-chart">
+                    <div class="chart" id="flotr2Line"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="widget">
+                <h4 class="widget-title">Candle Chart</h4>
+                <div class="flotr2-chart">
+                    <div class="chart" id="flotr2Candle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="widget">
+                <h4 class="widget-title">Bar Chart</h4>
+                <div class="flotr2-chart">
+                    <div class="chart" id="flotr2Bar"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="widget">
+                <h4 class="widget-title">Stacked Bar Chart</h4>
+                <div class="flotr2-chart">
+                    <div class="chart" id="flotr2Stacked"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="widget">
+                <h4 class="widget-title">Pie Chart</h4>
+                <div class="flotr2-chart">
+                    <div class="chart" id="flotr2Pie"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="widget">
+                <h4 class="widget-title">Radar Chart</h4>
+                <div class="flotr2-chart">
+                    <div class="chart" id="flotr2Radar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block vendor_js %}
+    <script src="{{ static('js/charts/flotr2/flotr2.min.js') }}"></script>
+{% endblock %}
+
+{% block js %}
+    <script src="{{ static('js/template/charts-flotr2.js') }}"></script>
+{% endblock %}

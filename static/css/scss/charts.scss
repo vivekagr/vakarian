@@ -40,3 +40,31 @@
     font-weight: 300 !important;
   }
 }
+
+
+.flotr2-chart {
+  margin: 35px 20px 20px;
+
+  > .chart {
+    width: 100%;
+    height: 270px;
+  }
+
+  #flotr2BasicAxis {
+    height: 310px;
+  }
+
+  .flotr-legend {
+    padding: 3px;
+
+    tr {
+      margin: 2px;
+
+      td.flotr-legend-label {
+        display: inline-block;
+        margin-left: 2px;
+        font-size: 0.95em;
+      }
+    }
+  }
+}

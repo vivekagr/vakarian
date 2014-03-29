@@ -25,3 +25,19 @@
   .morris-chart#morrisDonut text > tspan {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300 !important; }
+
+.flotr2-chart {
+  margin: 35px 20px 20px; }
+  .flotr2-chart > .chart {
+    width: 100%;
+    height: 270px; }
+  .flotr2-chart #flotr2BasicAxis {
+    height: 310px; }
+  .flotr2-chart .flotr-legend {
+    padding: 3px; }
+    .flotr2-chart .flotr-legend tr {
+      margin: 2px; }
+      .flotr2-chart .flotr-legend tr td.flotr-legend-label {
+        display: inline-block;
+        margin-left: 2px;
+        font-size: 0.95em; }

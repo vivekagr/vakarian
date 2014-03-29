@@ -121,7 +121,7 @@ $(function () {
         formatter: function (y, data) { return + y + "%" }
     });
 
-    
+
 
     // USA user base graph
     $("#us-subscribers-map").mapael({

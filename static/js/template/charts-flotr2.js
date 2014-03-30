@@ -329,17 +329,92 @@ $(function () {
         [5, "oops"]
     ];
 
-    // Draw the graph.
     Flotr.draw(document.getElementById('flotr2Radar'), [ s1, s2 ], {
         colors: ['#34495e', '#1abc9c'],
-        radar : { show : true},
-        grid  : { circular : true, minorHorizontalLines : true},
-        yaxis : { min : 0, max : 10, minorTickFreq : 2},
-        xaxis : { ticks : ticks},
-        legend : {
+        radar: { show : true},
+        grid: { circular : true, minorHorizontalLines : true},
+        yaxis: { min : 0, max : 10, minorTickFreq : 2},
+        xaxis: { ticks : ticks},
+        legend: {
             labelBoxBorderColor: '#ecf0f1',
             backgroundColor: '#ecf0f1'
         }
     });
+
+
+    // Bubble chart
+
+    d1 = [];
+    d2 = [];
+
+    for (i = 0; i < 10; i++ ){
+        point = [i, Math.ceil(Math.random()*10), Math.ceil(Math.random()*10)];
+        d1.push(point);
+
+        point = [i, Math.ceil(Math.random()*10), Math.ceil(Math.random()*10)];
+        d2.push(point);
+    }
+
+    Flotr.draw(document.getElementById('flotr2Bubble'), [d1, d2], {
+        colors: ['#3498db', '#1abc9c'],
+        bubbles: { show : true, baseRadius : 5 },
+        xaxis: { min : -4, max : 14 },
+        yaxis: { min : -4, max : 14 },
+        grid: { outlineWidth: 0 }
+    });
+
+
+    // Time Series
+
+    var start = new Date("2009/01/01 01:00").getTime(),
+        options, graph, x, o, container;
+
+    d1 = [];
+
+    container = document.getElementById('flotr2Time');
+
+    for (i = 0; i < 100; i++) {
+        x = start+(i*1000*3600*24*36.5);
+        d1.push([x, i+Math.random()*30+Math.sin(i/20+Math.random()*2)*20+Math.sin(i/10+Math.random())*10]);
+    }
+
+    options = {
+        xaxis : {
+            mode : 'time',
+            labelsAngle : 45
+        },
+        selection : {
+            mode : 'x'
+        },
+        HtmlText : false,
+        grid: { outlineWidth: 0 }
+    };
+
+    // Draw graph with default options, overwriting with passed options
+    function drawGraph (opts) {
+
+        // Clone the options, so the 'options' variable always keeps intact.
+        o = Flotr._.extend(Flotr._.clone(options), opts || {});
+
+        // Return a new graph.
+        return Flotr.draw(
+            container,
+            [ d1 ],
+            o
+        );
+    }
+
+    drawGraph();
+
+    Flotr.EventAdapter.observe(container, 'flotr:select', function(area){
+        // Draw selected area
+        graph = drawGraph({
+            xaxis : { min : area.x1, max : area.x2, mode : 'time', labelsAngle : 45 },
+            yaxis : { min : area.y1, max : area.y2 }
+        });
+    });
+
+    // When graph is clicked, draw the graph with default area.
+    Flotr.EventAdapter.observe(container, 'flotr:click', function () { graph = drawGraph(); });
 
 });

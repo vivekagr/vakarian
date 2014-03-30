@@ -2,34 +2,35 @@
 
 // Chart.js
 
-#lineChart, #barChart, #radarChart, #polarChart, #pieChart {
+.chartjs-chart {
   margin: 25px 0;
   width: 100%;
   height: 220px;
+
+  &.chartjs-chart-circular {
+    height: 310px;
+    color: rgba(52, 152, 219, 0.73);
+  }
 }
 
-#radarChart, #polarChart, #pieChart, #doughnutChart {
-  margin: 25px 0;
-  height: 310px;
-  color: rgba(52, 152, 219, 0.73);
-}
 
 // Flot charts
 
-.chart-container {
+.flot-chart-container {
   padding-left: 10px;
   padding-right: 10px;
 }
 
-#realtime, #interactive, #stacked, #flotDonutChart {
+.flot-chart {
   margin: 10px 0 20px;
   height: 250px;
   width: 100%;
+
+  &#interactive, &#flotDonutChart {
+    height: 320px;
+  }
 }
 
-#interactive, #flotDonutChart {
-  height: 320px;
-}
 
 // Morris charts
 
@@ -41,6 +42,7 @@
   }
 }
 
+// Flotr2 charts
 
 .flotr2-chart {
   margin: 35px 20px 20px;

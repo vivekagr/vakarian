@@ -1,0 +1,128 @@
+{% extends '_base.html' %}
+
+{% set page_title = "Grid" %}
+{% set page_sub_title = "UI Elements / Grid" %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ static('css/compiled/grid.css') }}">
+{%- endblock %}
+
+{% block main %}
+    <div class="widget grid-example">
+        <h4 class="widget-title">Stacked-to-horizontal</h4>
+        <div class="row">
+            <div class="col-md-1"><span>.col-md-1</span></div>
+            <div class="col-md-1"><span>.col-md-1</span></div>
+            <div class="col-md-1"><span>.col-md-1</span></div>
+            <div class="col-md-1"><span>.col-md-1</span></div>
+            <div class="col-md-1"><span>.col-md-1</span></div>
+            <div class="col-md-1"><span>.col-md-1</span></div>
+            <div class="col-md-1"><span>.col-md-1</span></div>
+            <div class="col-md-1"><span>.col-md-1</span></div>
+            <div class="col-md-1"><span>.col-md-1</span></div>
+            <div class="col-md-1"><span>.col-md-1</span></div>
+            <div class="col-md-1"><span>.col-md-1</span></div>
+            <div class="col-md-1"><span>.col-md-1</span></div>
+        </div>
+        <div class="row">
+            <div class="col-md-8"><span>.col-md-8</span></div>
+            <div class="col-md-4"><span>.col-md-4</span></div>
+        </div>
+        <div class="row">
+            <div class="col-md-4"><span>.col-md-4</span></div>
+            <div class="col-md-4"><span>.col-md-4</span></div>
+            <div class="col-md-4"><span>.col-md-4</span></div>
+        </div>
+        <div class="row">
+            <div class="col-md-6"><span>.col-md-6</span></div>
+            <div class="col-md-6"><span>.col-md-6</span></div>
+        </div>
+    </div>
+
+    <div class="widget grid-example">
+        <h4 class="widget-title">Mobile and Desktop</h4>
+        <div class="row">
+            <div class="col-xs-12 col-md-8"><span>.col-xs-12 .col-md-8</span></div>
+            <div class="col-xs-6 col-md-4"><span>.col-xs-6 .col-md-4</span></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-md-4"><span>.col-xs-6 .col-md-4</span></div>
+            <div class="col-xs-6 col-md-4"><span>.col-xs-6 .col-md-4</span></div>
+            <div class="col-xs-6 col-md-4"><span>.col-xs-6 .col-md-4</span></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6"><span>.col-xs-6</span></div>
+            <div class="col-xs-6"><span>.col-xs-6</span></div>
+        </div>
+    </div>
+
+    <div class="widget grid-example">
+        <h4 class="widget-title">Mobile, Tablet, Desktops</h4>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-8"><span>.col-xs-12 .col-sm-6 .col-md-8</span></div>
+            <div class="col-xs-6 col-md-4"><span>.col-xs-6 .col-md-4</span></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-sm-4"><span>.col-xs-6 .col-sm-4</span></div>
+            <div class="col-xs-6 col-sm-4"><span>.col-xs-6 .col-sm-4</span></div>
+            <!-- Optional: clear the XS cols if their content doesn't match in height -->
+            <div class="clearfix visible-xs"></div>
+            <div class="col-xs-6 col-sm-4"><span>.col-xs-6 .col-sm-4</span></div>
+        </div>
+    </div>
+
+    <div class="widget grid-example">
+        <h4 class="widget-title">Responsive column resets</h4>
+        <div class="row">
+            <div class="col-xs-6 col-sm-3"><span>.col-xs-6 .col-sm-3<br>Resize your viewport or check it out on your phone for an example.</span></div>
+            <div class="col-xs-6 col-sm-3"><span>.col-xs-6 .col-sm-3</span></div>
+
+            <!-- Add the extra clearfix for only the required viewport -->
+            <div class="clearfix visible-xs"></div>
+
+            <div class="col-xs-6 col-sm-3"><span>.col-xs-6 .col-sm-3</span></div>
+            <div class="col-xs-6 col-sm-3"><span>.col-xs-6 .col-sm-3</span></div>
+        </div>
+    </div>
+
+    <div class="widget grid-example">
+        <h4 class="widget-title">Offsetting columns</h4>
+        <div class="row">
+            <div class="col-md-4"><span>.col-md-4</span></div>
+            <div class="col-md-4 col-md-offset-4"><span>.col-md-4 .col-md-offset-4</span></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-md-offset-3"><span>.col-md-3 .col-md-offset-3</span></div>
+            <div class="col-md-3 col-md-offset-3"><span>.col-md-3 .col-md-offset-3</span></div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3"><span>.col-md-6 .col-md-offset-3</span></div>
+        </div>
+    </div>
+
+    <div class="widget grid-example">
+        <h4 class="widget-title">Nesting columns</h4>
+        <div class="row">
+          <div class="col-md-9">
+            <span>Level 1: .col-md-9
+            <div class="row">
+              <div class="col-md-6">
+                <span>Level 2: .col-md-6</span>
+              </div>
+              <div class="col-md-6">
+                <span>Level 2: .col-md-6</span>
+              </div>
+            </div>
+            </span>
+          </div>
+        </div>
+    </div>
+
+    <div class="widget grid-example">
+        <h4 class="widget-title">Column ordering</h4>
+        <div class="row">
+            <div class="col-md-9 col-md-push-3"><span>.col-md-9 .col-md-push-3</span></div>
+            <div class="col-md-3 col-md-pull-9"><span>.col-md-3 .col-md-pull-9</span></div>
+        </div>
+    </div>
+{% endblock %}

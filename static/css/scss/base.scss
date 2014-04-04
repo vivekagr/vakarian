@@ -532,6 +532,11 @@ table {
   font-size: 0.95em;
 
   th { font-weight: 600; }
+
+  // Make the table row border color a bit lighter
+  >thead>tr>th, >tbody>tr>td {
+    border-color: #ecf0f1;
+  }
 }
 
 code {
@@ -548,6 +553,107 @@ pre {
   border: none;
 }
 
-.table>thead>tr>th, .table>tbody>tr>td {
-  border-color: #ecf0f1;
+.dataTables_wrapper  {
+
+  .dataTables_filter, .dataTables_paginate {
+      float: right;
+      text-align: right;
+  }
+
+  .dataTables_length, .dataTables_info {
+    float: left;
+  }
+
+  thead > tr > th {
+    &.sorting, &.sorting_asc, &.sorting_desc {
+      cursor: pointer;
+      &:hover {
+        background: #ecf0f1;
+      }
+    }
+    &.sorting_asc:after {
+      @extend .fa-icon;
+      content: '\f0dd';
+      float: right;
+    }
+    &.sorting_desc:before {
+      @extend .fa-icon;
+      content: '\f0de';
+      float: right;
+      margin-top: 4px;
+    }
+  }
+
+  tbody > tr.even {
+    background-color: #f9f9f9;
+  }
+
+  .dataTables_filter > label {
+    font-weight: 400;
+    font-size: 0.9em;
+
+    input[type='text'] {
+      padding: 4px;
+      border: none;
+      border-bottom: 1px solid #ecf0f1;
+      background-color: #ecf0f1;
+      border-radius: 3px;
+      font-size: 0.9em;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .dataTables_length > label {
+    font-weight: 400;
+    font-size: 0.9em;
+  }
+
+  .dataTables_info {
+    color: #bdc3c7;
+    font-size: 0.85em;
+    font-weight: 300;
+  }
+
+  .dataTables_paginate a {
+    display: inline-block;
+    font-size: 0.8em;
+    margin: 1px 3px;
+    padding: 3px 5px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 3px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+
+    &.paginate_disabled_previous, &.paginate_disabled_next {
+      background-color: #bdc3c7;
+    }
+
+    &.paginate_enabled_previous:hover, &.paginate_enabled_next:hover {
+      background-color: darken(#3498db, 5%);
+      cursor: pointer;
+    }
+
+    &.paginate_disabled_previous:before, &.paginate_enabled_previous:before {
+      @extend .fa-icon;
+      content: '\f0a8';
+      margin-right: 4px;
+    }
+
+    &.paginate_disabled_next:after, &.paginate_enabled_next:after {
+      @extend .fa-icon;
+      content: '\f0a9';
+      margin-left: 4px;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }

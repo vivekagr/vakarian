@@ -352,6 +352,7 @@ button.btn-navbar {
 
 .page-sub-title {
   margin-left: 2px;
+  margin-bottom: 20px;
   color: #95a5a6;
   font-size: 0.85em;
   font-weight: 300; }
@@ -360,7 +361,7 @@ button.btn-navbar {
   margin-bottom: 20px;
   background-color: #fff;
   padding-top: 10px;
-  color: #bdc3c7;
+  color: #34495e;
   border: 1px solid #e8eced;
   border-radius: 3px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.07);
@@ -371,12 +372,15 @@ button.btn-navbar {
   .widget .widget-title {
     font-size: 1.15em;
     font-weight: 500;
-    margin: 5px 15px 18px; }
+    margin: 5px 15px 18px;
+    color: #bdc3c7; }
   .widget .widget-subtitle {
     font-size: 0.9em;
     font-weight: 300; }
   .widget .widget-content {
     padding: 0 15px 10px; }
+    .widget .widget-content blockquote {
+      font-weight: 300; }
 
 #flotTip {
   padding: 3px 5px;

@@ -1,0 +1,81 @@
+{% extends '_base.html' %}
+
+{% set page_title = "Typography" %}
+{% set page_sub_title = "UI Elements / Typography" %}
+
+
+{% block main %}
+    <div class="row">
+        <div class="col-md-6">
+            <div class="widget">
+                <h4 class="widget-title">Headings</h4>
+                <div class="widget-content">
+                    <h6>Heading 6 <small>Secondary text</small></h6>
+                    <h5>Heading 5 <small>Secondary text</small></h5>
+                    <h4>Heading 4 <small>Secondary text</small></h4>
+                    <h3>Heading 3 <small>Secondary text</small></h3>
+                    <h2>Heading 2 <small>Secondary text</small></h2>
+                    <h1>Heading 1 <small>Secondary text</small></h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="widget">
+                <h4 class="widget-title">Paragraphs</h4>
+                <div class="widget-content">
+                    <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+
+                    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
+
+                    <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="widget">
+        <h4 class="widget-title">Text Color Classes</h4>
+        <div class="widget-content">
+            <p class="text-muted">Elitr complectitur te nam, nam veniam constituam ei. Pro id novum partem, has quod persius no.</p>
+            <p class="text-primary">An vis solum reque, an pri lorem laoreet conclusionemque. Alterum referrentur duo ad, oporteat eu nec.</p>
+            <p class="text-success">Cu usu wisi probatus. Debet dolores ad quo, lorem definitiones at cum, vim salutandi inciderint ne.</p>
+            <p class="text-warning">Pri consul persius adversarium eu, nonumes principes definiebas et sea, in est laoreet pertinacia.</p>
+            <p class="text-danger">Porro habemus vel eu, malis suavitate ei pri. Vis tollit argumentum at, cum in paulo sonet habemus.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-7">
+            <div class="widget">
+                <h4 class="widget-title">Other Elements</h4>
+                <div class="widget-content">
+                    <p class="lead">This is an example of lead text.</p>
+                    <p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
+                    <p>The following snippet of text is <em>rendered as italicized text</em>.</p>
+                    <p><small>This line of text is meant to be treated as fine print.</small></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="widget">
+                <h4 class="widget-title">Alignment</h4>
+                <div class="widget-content">
+                    <p class="text-left">Left aligned text.</p>
+                    <p class="text-center">Center aligned text.</p>
+                    <p class="text-right">Right aligned text.</p>
+                    <p class="text-justify">Justified text.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="widget">
+        <h4 class="widget-title">Blockquote</h4>
+        <div class="widget-content">
+            <blockquote>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+            </blockquote>
+            <blockquote class="blockquote-reverse">
+                <p>From this moment on you are a rock. You absorb nothing, you say nothing, and nothing breaks you.</p>
+                <footer>Frank Underwood</footer>
+            </blockquote>
+        </div>
+    </div>
+{% endblock %}

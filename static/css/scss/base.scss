@@ -570,6 +570,9 @@ pre {
       &:hover {
         background: #ecf0f1;
       }
+      &:active {
+        outline: none;
+      }
     }
     &.sorting_asc:after {
       @extend .fa-icon;
@@ -585,7 +588,7 @@ pre {
   }
 
   tbody > tr.even {
-    background-color: #f9f9f9;
+    background-color: #FAFAFA;
   }
 
   .dataTables_filter > label {

@@ -1,4 +1,4 @@
-.fa-icon, .nav-sidebar li.dropdown span:before, .nav-sidebar li.dropdown > ul > li > a:before {
+.fa-icon, .nav-sidebar li.dropdown span:before, .nav-sidebar li.dropdown > ul > li > a:before, .widget .widget-footnote:before {
   display: inline-block;
   font-family: FontAwesome;
   font-style: normal;
@@ -381,6 +381,13 @@ button.btn-navbar {
     padding: 0 15px 10px; }
     .widget .widget-content blockquote {
       font-weight: 300; }
+  .widget .widget-footnote {
+    font-size: 0.9em;
+    font-weight: 300;
+    color: #bdc3c7; }
+    .widget .widget-footnote:before {
+      content: '\f05a';
+      margin-right: 5px; }
 
 #flotTip {
   padding: 3px 5px;
@@ -389,3 +396,8 @@ button.btn-navbar {
   font-size: 0.85em;
   font-weight: 300;
   border-radius: 3px; }
+
+table {
+  font-size: 0.95em; }
+  table th {
+    font-weight: 600; }

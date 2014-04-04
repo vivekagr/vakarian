@@ -503,6 +503,18 @@ button.btn-navbar {
 
     blockquote { font-weight: 300; }
   }
+
+  .widget-footnote {
+    &:before {
+      @extend .fa-icon;
+      content: '\f05a';
+      margin-right: 5px;
+    }
+
+    font-size: 0.9em;
+    font-weight: 300;
+    color: #bdc3c7;
+  }
 }
 
 
@@ -514,4 +526,10 @@ button.btn-navbar {
   font-size: 0.85em;
   font-weight: 300;
   border-radius: 3px;
+}
+
+table {
+  font-size: 0.95em;
+
+  th { font-weight: 600; }
 }

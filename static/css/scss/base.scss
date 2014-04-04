@@ -547,3 +547,7 @@ kbd {
 pre {
   border: none;
 }
+
+.table>thead>tr>th, .table>tbody>tr>td {
+  border-color: #ecf0f1;
+}

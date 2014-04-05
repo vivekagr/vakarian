@@ -1,3 +1,12 @@
+.fa-icon, .sparkline-charts ul li:before {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
 .chartjs-chart {
   margin: 25px 0;
   width: 100%;
@@ -61,3 +70,25 @@
     .peity-charts dd .peity {
       width: 50px;
       height: 30px; }
+
+.sparkline-charts {
+  font-weight: 300;
+  margin-bottom: 15px; }
+  .sparkline-charts ul {
+    margin-top: 20px;
+    list-style: none; }
+    .sparkline-charts ul li {
+      font-size: 0.9em;
+      font-weight: 400;
+      margin: 15px 0; }
+      .sparkline-charts ul li span {
+        display: inline-block;
+        font-size: 1.1em;
+        margin: 0 2px; }
+      .sparkline-charts ul li:before {
+        content: '\f192';
+        margin-right: 5px; }
+
+.easy-pie-chart {
+  text-align: center;
+  margin: 20px 0; }

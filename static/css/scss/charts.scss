@@ -1,4 +1,5 @@
 @import 'vars';
+@import 'helper';
 
 // Chart.js
 
@@ -114,4 +115,38 @@
       height: 30px;
     }
   }
+}
+
+
+.sparkline-charts {
+  font-weight: 300;
+  margin-bottom: 15px;
+
+  ul {
+    margin-top: 20px;
+    list-style: none;
+
+    li {
+      font-size: 0.9em;
+      font-weight: 400;
+      margin: 15px 0;
+
+      span {
+        display: inline-block;
+        font-size: 1.1em;
+        margin: 0 2px;
+      }
+
+      &:before {
+        @extend .fa-icon;
+        content: '\f192';
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.easy-pie-chart {
+  text-align: center;
+  margin: 20px 0;
 }

@@ -1,6 +1,6 @@
 from werkzeug import serving
 from werkzeug.contrib.fixers import ProxyFix
-from flask import Flask, url_for, render_template
+from flask import Flask, url_for, render_template, send_file
 from jinja2 import Environment
 import config
 
@@ -30,6 +30,10 @@ app.jinja_env.globals['disable_comments'] = False
 @app.route('/<filename>.html')
 def serve_file(filename):
     return render_template(filename + '.html')
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_file('templates/favicon.ico')
 
 
 app.wsgi_app = ProxyFix(app.wsgi_app)

@@ -70,3 +70,48 @@
     }
   }
 }
+
+
+
+//// Other Charts Page
+
+// xCharts
+
+#xchart-wrapper {
+  padding: 0 10px 10px;
+}
+
+#xchart {
+  height: 300px;
+}
+
+
+// Peity Charts
+
+.peity-charts {
+  font-weight: 300;
+
+  p {
+    margin: 20px 0;
+  }
+
+  dl {
+    margin: 35px 0 10px;
+  }
+
+  dt {
+    font-weight: 600;
+    font-size: 0.95em;
+    margin-bottom: 10px;
+  }
+
+  dd {
+    padding-top: 2px;
+    margin-bottom: 20px;
+
+    .peity {
+      width: 50px;
+      height: 30px;
+    }
+  }
+}

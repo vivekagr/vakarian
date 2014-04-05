@@ -38,3 +38,26 @@
         display: inline-block;
         margin-left: 2px;
         font-size: 0.95em; }
+
+#xchart-wrapper {
+  padding: 0 10px 10px; }
+
+#xchart {
+  height: 300px; }
+
+.peity-charts {
+  font-weight: 300; }
+  .peity-charts p {
+    margin: 20px 0; }
+  .peity-charts dl {
+    margin: 35px 0 10px; }
+  .peity-charts dt {
+    font-weight: 600;
+    font-size: 0.95em;
+    margin-bottom: 10px; }
+  .peity-charts dd {
+    padding-top: 2px;
+    margin-bottom: 20px; }
+    .peity-charts dd .peity {
+      width: 50px;
+      height: 30px; }

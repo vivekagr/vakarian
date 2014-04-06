@@ -1,0 +1,111 @@
+{% extends '_base.html' %}
+
+{% set page_title = "Grid" %}
+{% set page_sub_title = "UI Elements / Grid" %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ static('css/compiled/buttons.css') }}">
+{%- endblock %}
+
+{% block main %}
+    <div class="row">
+        <div class="col-md-6">
+            <div class="widget">
+                <h4 class="widget-title">Default Buttons</h4>
+                <div class="widget-content">
+                    <button class="btn btn-v btn-default">Default</button>
+                    <button class="btn btn-v btn-primary">Primary</button>
+                    <button class="btn btn-v btn-success">Success</button>
+                    <button class="btn btn-v btn-info">Info</button>
+                    <button class="btn btn-v btn-warning">Warning</button>
+                    <button class="btn btn-v btn-danger">Danger</button>
+                    <button class="btn btn-v btn-inverse">Inverse</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="widget">
+                <h4 class="widget-title">Flat Buttons</h4>
+                <div class="widget-content">
+                    <button class="btn btn-v btn-flat btn-default">Default</button>
+                    <button class="btn btn-v btn-flat btn-primary">Primary</button>
+                    <button class="btn btn-v btn-flat btn-success">Success</button>
+                    <button class="btn btn-v btn-flat btn-info">Info</button>
+                    <button class="btn btn-v btn-flat btn-warning">Warning</button>
+                    <button class="btn btn-v btn-flat btn-danger">Danger</button>
+                    <button class="btn btn-v btn-flat btn-inverse">Inverse</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="widget">
+                <h4 class="widget-title">Wide Buttons</h4>
+                <div class="widget-content">
+                    <button class="btn btn-v btn-wide btn-default">Default</button>
+                    <button class="btn btn-v btn-wide btn-primary">Primary</button>
+                    <button class="btn btn-v btn-wide btn-success">Success</button>
+                    <button class="btn btn-v btn-wide btn-info">Info</button>
+                    <button class="btn btn-v btn-wide btn-warning">Warning</button>
+                    <button class="btn btn-v btn-wide btn-danger">Danger</button>
+                    <button class="btn btn-v btn-wide btn-inverse">Inverse</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="widget">
+                <h4 class="widget-title">Super Buttons</h4>
+                <div class="widget-content">
+                    <button class="btn btn-v btn-super btn-default">Default</button>
+                    <button class="btn btn-v btn-super btn-primary">Primary</button>
+                    <button class="btn btn-v btn-super btn-success">Success</button>
+                    <button class="btn btn-v btn-super btn-info">Info</button>
+                    <button class="btn btn-v btn-super btn-warning">Warning</button>
+                    <button class="btn btn-v btn-super btn-danger">Danger</button>
+                    <button class="btn btn-v btn-super btn-inverse">Inverse</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="widget">
+                <h4 class="widget-title">Block Buttons</h4>
+                <div class="widget-content">
+                    <button class="btn btn-v btn-block btn-default">Default</button>
+                    <button class="btn btn-v btn-block btn-primary">Primary</button>
+                    <button class="btn btn-v btn-block btn-success">Success</button>
+                    <button class="btn btn-v btn-block btn-info">Info</button>
+                    <button class="btn btn-v btn-block btn-warning">Warning</button>
+                    <button class="btn btn-v btn-block btn-danger">Danger</button>
+                    <button class="btn btn-v btn-block btn-inverse">Inverse</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="widget">
+                <h4 class="widget-title">Disabled Buttons</h4>
+                <div class="widget-content">
+                    <button class="btn btn-v btn-default" disabled>Default</button>
+                    <button class="btn btn-v btn-primary" disabled>Primary</button>
+                    <button class="btn btn-v btn-success" disabled>Success</button>
+                    <button class="btn btn-v btn-info" disabled>Info</button>
+                    <button class="btn btn-v btn-warning" disabled>Warning</button>
+                    <button class="btn btn-v btn-danger" disabled>Danger</button>
+                    <button class="btn btn-v btn-inverse" disabled>Inverse</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="widget">
+                <h4 class="widget-title">Buttons With Icons</h4>
+                <div class="widget-content">
+                    <button class="btn btn-v btn-default"><i class="fa fa-desktop"></i> Default</button>
+                    <button class="btn btn-v btn-primary"><i class="fa fa-bug"></i> Primary</button>
+                    <button class="btn btn-v btn-success"><i class="fa fa-leaf"></i> Success</button>
+                    <button class="btn btn-v btn-info"><i class="fa fa-envelope"></i> Info</button>
+                    <button class="btn btn-v btn-warning"><i class="fa fa-fire"></i> Warning</button>
+                    <button class="btn btn-v btn-danger"><i class="fa fa-warning"></i> Danger</button>
+                    <button class="btn btn-v btn-inverse"><i class="fa fa-heart"></i> Inverse</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

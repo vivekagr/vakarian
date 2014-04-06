@@ -660,3 +660,59 @@ pre {
     }
   }
 }
+
+.btn.btn-v {
+  border: none;
+  font-size: 0.9em;
+  font-weight: 400;
+  margin: 5px 2px;
+
+  // Percentage to darken the color of the btn by, when hovered
+  $hoverDarkenPercent: 4%;
+
+  $btnColors: (
+    default: #ecf0f1,
+    primary: #2980b9,
+    success: #16a085,
+    info: #53A5DB,
+    warning: #f39c12,
+    danger: #c0392b,
+    inverse: #34495e,
+  );
+
+  // Generating class for each btn type with respective background color
+  @each $btn, $col in $btnColors {
+    &.btn-#{$btn} {
+      background-color: $col;
+      &:hover { background-color: darken($col, $hoverDarkenPercent); }
+    }
+  }
+
+  // Removing border radius from flat button
+  &.btn-flat {
+    border-radius: 0;
+  }
+
+  // Fixing the text colors on default and inverse buttons
+  &.btn-default { color: #34495e; }
+  &.btn-inverse { color: #ecf0f1; }
+
+  // Making text bolder and increasing spaces inside & outside of wide button
+  &.btn-wide {
+    font-weight: 600;
+    margin-left: 3px;
+    margin-right: 3px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  // Making text bolder, uppercase and increasing padding of super button
+  &.btn-super {
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 25px;
+  }
+
+  // Adding a bit of margin towards the right of icon to separate text and icon apart
+  i { margin-right: 5px; }
+}

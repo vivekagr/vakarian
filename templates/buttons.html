@@ -3,10 +3,6 @@
 {% set page_title = "Grid" %}
 {% set page_sub_title = "UI Elements / Grid" %}
 
-{% block css %}
-    <link rel="stylesheet" href="{{ static('css/compiled/buttons.css') }}">
-{%- endblock %}
-
 {% block main %}
     <div class="row">
         <div class="col-md-6">
@@ -20,6 +16,12 @@
                     <button class="btn btn-v btn-warning">Warning</button>
                     <button class="btn btn-v btn-danger">Danger</button>
                     <button class="btn btn-v btn-inverse">Inverse</button>
+
+                    <div class="widget-info">
+                        <p>Add <code>.btn-v</code> class to the regular bootstrap button.</p>
+                        <pre>&lt;button class="btn btn-v btn-primary"&gt;Primary&lt;/button&gt;</pre>
+                        <p>Six color schemes are available - <code>.btn-default</code>, <code>.btn-primary</code>, <code>.btn-success</code>, <code>.btn-info</code>, <code>.btn-danger</code> and <code>.btn-inverse</code>.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -34,6 +36,11 @@
                     <button class="btn btn-v btn-flat btn-warning">Warning</button>
                     <button class="btn btn-v btn-flat btn-danger">Danger</button>
                     <button class="btn btn-v btn-flat btn-inverse">Inverse</button>
+
+                    <div class="widget-info">
+                        <p>Add <code>.btn-flat</code> class to make any button flat.</p>
+                        <pre>&lt;button class="btn btn-v btn-flat btn-primary"&gt;Primary&lt;/button&gt;</pre>
+                    </div>
                 </div>
             </div>
         </div>
@@ -48,6 +55,11 @@
                     <button class="btn btn-v btn-wide btn-warning">Warning</button>
                     <button class="btn btn-v btn-wide btn-danger">Danger</button>
                     <button class="btn btn-v btn-wide btn-inverse">Inverse</button>
+
+                    <div class="widget-info">
+                        <p>Add <code>.btn-wide</code> class to make any button wide.</p>
+                        <pre>&lt;button class="btn btn-v btn-wide btn-primary"&gt;Primary&lt;/button&gt;</pre>
+                    </div>
                 </div>
             </div>
         </div>
@@ -62,6 +74,11 @@
                     <button class="btn btn-v btn-super btn-warning">Warning</button>
                     <button class="btn btn-v btn-super btn-danger">Danger</button>
                     <button class="btn btn-v btn-super btn-inverse">Inverse</button>
+
+                    <div class="widget-info">
+                        <p>Add <code>.btn-super</code> class to make any button go superman.</p>
+                        <pre>&lt;button class="btn btn-v btn-super btn-primary"&gt;Primary&lt;/button&gt;</pre>
+                    </div>
                 </div>
             </div>
         </div>
@@ -76,6 +93,11 @@
                     <button class="btn btn-v btn-block btn-warning">Warning</button>
                     <button class="btn btn-v btn-block btn-danger">Danger</button>
                     <button class="btn btn-v btn-block btn-inverse">Inverse</button>
+
+                    <div class="widget-info">
+                        <p>Add <code>.btn-block</code> class to make any button block sized.</p>
+                        <pre>&lt;button class="btn btn-v btn-block btn-primary"&gt;Primary&lt;/button&gt;</pre>
+                    </div>
                 </div>
             </div>
         </div>
@@ -90,6 +112,11 @@
                     <button class="btn btn-v btn-warning" disabled>Warning</button>
                     <button class="btn btn-v btn-danger" disabled>Danger</button>
                     <button class="btn btn-v btn-inverse" disabled>Inverse</button>
+
+                    <div class="widget-info">
+                        <p>Buttons can be disabled by adding <code>disabled</code> attribute.</p>
+                        <pre>&lt;button class="btn btn-v btn-primary" disabled&gt;Primary&lt;/button&gt;</pre>
+                    </div>
                 </div>
             </div>
         </div>
@@ -104,8 +131,53 @@
                     <button class="btn btn-v btn-warning"><i class="fa fa-fire"></i> Warning</button>
                     <button class="btn btn-v btn-danger"><i class="fa fa-warning"></i> Danger</button>
                     <button class="btn btn-v btn-inverse"><i class="fa fa-heart"></i> Inverse</button>
+
+                    <div class="widget-info">
+                        <p>Icons (for e.g. Font Awesome) can be added to buttons.</p>
+                        <pre>&lt;button class=&quot;btn btn-v btn-primary&quot;&gt;&lt;i class=&quot;fa fa-bug&quot;&gt;&lt;/i&gt; Primary&lt;/button&gt;</pre>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="clearfix"></div>
+        <div class="col-md-6">
+            <div class="widget">
+                <h4 class="widget-title">Social Buttons</h4>
+                <div class="widget-content">
+                    <button class="btn btn-v btn-facebook"><i class="fa fa-facebook"></i> Facebook</button>
+                    <button class="btn btn-v btn-twitter"><i class="fa fa-twitter"></i> Twitter</button>
+                    <button class="btn btn-v btn-google-plus"><i class="fa fa-google-plus"></i> Google+</button>
+                    <br>
+                    <button class="btn btn-v btn-icon btn-facebook"><i class="fa fa-facebook"></i></button>
+                    <button class="btn btn-v btn-icon btn-twitter"><i class="fa fa-twitter"></i></button>
+                    <button class="btn btn-v btn-icon btn-google-plus"><i class="fa fa-google-plus"></i></button>
+
+                    <div class="widget-info">
+                        <p><code>.btn-facebook</code>, <code>.btn-twitter</code> and <code>.btn-google-plus</code> can be used to for social buttons.</p>
+                        <pre>&lt;button class=&quot;btn btn-v btn-facebook&quot;&gt;&lt;i class=&quot;fa fa-facebook&quot;&gt;&lt;/i&gt; Facebook&lt;/button&gt;<br><br>&lt;button class=&quot;btn btn-v btn-icon btn-twitter&quot;&gt;&lt;i class=&quot;fa fa-twitter&quot;&gt;&lt;/i&gt;&lt;/button&gt;</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="widget">
+                <h4 class="widget-title">Icon Buttons</h4>
+                <div class="widget-content">
+                    <button class="btn btn-v btn-icon btn-default"><i class="fa fa-comments-o"></i></button>
+                    <button class="btn btn-v btn-icon btn-primary"><i class="fa fa-rocket"></i></button>
+                    <button class="btn btn-v btn-icon btn-success"><i class="fa fa-check"></i></button>
+                    <button class="btn btn-v btn-icon btn-info"><i class="fa fa-flag"></i></button>
+                    <button class="btn btn-v btn-icon btn-warning"><i class="fa fa-unlock-alt"></i></button>
+                    <button class="btn btn-v btn-icon btn-danger"><i class="fa fa-exclamation"></i></button>
+                    <button class="btn btn-v btn-icon btn-inverse"><i class="fa fa-map-marker"></i></button>
+
+                    <div class="widget-info">
+                        <p>Only icons can also be used in the buttons with <code>.btn-icon</code> class.</p>
+                        <pre>&lt;button class=&quot;btn btn-v btn-icon btn-primary&quot;&gt;&lt;i class=&quot;fa fa-rocket&quot;&gt;&lt;/i&gt;&lt;/button&gt;</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 {% endblock %}

@@ -79,9 +79,6 @@ body {
       padding-top: 6px;
       padding-bottom: 6px;
       padding-left: 10px;
-      font-size: 0.9em;
-      font-weight: 600;
-      color: #2c3e50;
       vertical-align: middle;
 
       > i {
@@ -494,8 +491,27 @@ button.btn-navbar {
   }
 
   .widget-subtitle {
-    font-size: 0.9em;
-    font-weight: 300;
+    margin: 10px 0 3px 4px;
+    font-size: 0.8em;
+    color: #bdc3c7;
+
+    display: table;
+    white-space: nowrap;
+    &:before, &:after {
+      border-top: 1px solid #ecf0f1;
+      content: '';
+      display: table-cell;
+      position: relative;
+      top: 0.6em;
+    }
+    &:before {
+      width: 5px;
+      right: 3px;
+    }
+    &:after {
+      width: 5px;
+      left: 3px;
+    }
   }
 
   .widget-content {
@@ -529,6 +545,42 @@ button.btn-navbar {
       background-color: #f5f5f5;
       color: #16a085;
     }
+
+  }
+
+  .widget-info-fixed-size {
+    position: relative;
+
+    .widget-info {
+      overflow: scroll;
+      height: 120px;
+    }
+
+    &.open .widget-info {
+      overflow: visible;
+      height: auto;
+    }
+
+    .expand {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding: 2px 3px;
+      background: #fff;
+      border: 2px solid #ecf0f1;
+      border-top-left-radius: 3px;
+      font-size: 0.8em;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #D0D4D4;
+      @include user-select(none);
+      cursor: pointer;
+
+      &:hover {
+        color: #B0B4B4;
+      }
+    }
+
   }
 
   .widget-footnote {
@@ -721,6 +773,9 @@ pre {
     }
   }
 
+  &.btn-xs { font-size: 0.85em; }
+  &.btn-lg, .btn-group-lg > & { font-size: 1.2em; }
+
   // Removing border radius from flat button
   &.btn-flat {
     border-radius: 0;
@@ -750,6 +805,7 @@ pre {
   // Adding a bit of margin towards the right of icon to separate text and icon apart
   i { margin-right: 5px; }
 
+  // Making icon only buttons circular with proper aspect ratio
   &.btn-icon {
     font-size: 1em;
     width: 2.6em;
@@ -758,5 +814,25 @@ pre {
     text-align: center;
 
     i { margin-right: 0; }
+  }
+
+  // Fixing margin for vertical button groups
+  .btn-group-vertical &, .btn-group-vertical .btn-group {
+    margin: 1px 0;
+  }
+
+  .btn-group-justified & {
+    border: 1px solid white;
+  }
+}
+
+.dropdown-menu {
+  border-color: #ecf0f1;
+
+  li > a {
+    padding: 6px 15px;
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #2c3e50;
   }
 }

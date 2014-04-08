@@ -62,4 +62,15 @@ $(function () {
 
     });
 
+    // Control the size of widget info section
+    $(".widget-info-fixed-size").find(".expand").click(function() {
+        var parent = $(this).parent();
+        parent.toggleClass('open', 300);
+        if (parent.hasClass('open')) {
+            $(this).html('Expand');
+        } else {
+            $(this).html('Show Less');
+        }
+    });
+
 });

@@ -186,9 +186,12 @@
         {{ c('content wrapper') }}
         <div class="content-wrapper">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-sm-8">
                     <h3 class="page-title">{{ page_title }}</h3>
                     <h4 class="page-sub-title">{{ page_sub_title }}</h4>
+                </div>
+                <div class="col-sm-4">
+                    {% block title_area %}{% endblock %}
                 </div>
             </div>
             {% block main %}{% endblock %}

@@ -15,9 +15,19 @@
   }
 }
 
+// Disabling safari elastic scrolling
+html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   background-color: #ecf0f1;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
 }
 
 
@@ -246,8 +256,7 @@ button.btn-navbar {
   top: 0;
   left: 0;
   width: 210px;
-//  overflow-x: visible;
-//  overflow-y: visible;
+  overflow-y: scroll;
   height: 100%;
   background-color: $sidebar-color;
 }

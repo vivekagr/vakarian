@@ -16,9 +16,17 @@
     background: #1ccfab;
     color: white; }
 
+html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden; }
+
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #ecf0f1; }
+  background-color: #ecf0f1;
+  height: 100%;
+  width: 100%;
+  overflow: auto; }
 
 .navbar-primary {
   border: none;
@@ -199,6 +207,7 @@ button.btn-navbar {
   top: 0;
   left: 0;
   width: 210px;
+  overflow-y: scroll;
   height: 100%;
   background-color: #2c3e50; }
 

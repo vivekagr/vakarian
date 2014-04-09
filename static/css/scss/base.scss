@@ -468,6 +468,11 @@ button.btn-navbar {
   font-weight: 300;
 }
 
+.btn.btn-v.page-title-btn {
+  margin-top: 35px;
+  font-size: 0.85em;
+}
+
 .widget {
   margin-bottom: 20px;
   background-color: #fff;
@@ -748,6 +753,10 @@ pre {
   font-size: 0.9em;
   font-weight: 400;
   margin: 5px 2px;
+
+  &:focus {
+    outline: none;
+  }
 
   // Percentage to darken the color of the btn by, when hovered
   $hoverDarkenPercent: 4%;

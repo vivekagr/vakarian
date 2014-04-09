@@ -4,7 +4,7 @@
 {% set page_sub_title = "UI Elements / Grid" %}
 
 {% block title_area %}
-    <button class="btn btn-v btn-wide btn-primary pull-right" id="docToggle">Hide Documentation</button>
+    <button class="btn btn-v btn-sm btn-inverse pull-right page-title-btn" id="docToggle"><i class="fa fa-eye-slash"></i> Hide Documentation</button>
 {% endblock %}
 
 {% block main %}
@@ -671,11 +671,11 @@
         if (docEls.is(':visible')) {
             docEls.slideUp();
             $('.expand').hide();
-            btn.html('Show Documentation');
+            btn.html('<i class="fa fa-eye"></i> Show Documentation');
         } else {
             docEls.slideDown();
             $('.expand').show();
-            btn.html('Hide Documentation');
+            btn.html('<i class="fa fa-eye-slash"></i> Hide Documentation');
         }
     });
 </script>

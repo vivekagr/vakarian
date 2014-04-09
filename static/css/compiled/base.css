@@ -354,6 +354,10 @@ button.btn-navbar {
   font-size: 0.85em;
   font-weight: 300; }
 
+.btn.btn-v.page-title-btn {
+  margin-top: 35px;
+  font-size: 0.85em; }
+
 .widget {
   margin-bottom: 20px;
   background-color: #fff;
@@ -548,6 +552,8 @@ pre {
   font-size: 0.9em;
   font-weight: 400;
   margin: 5px 2px; }
+  .btn.btn-v:focus {
+    outline: none; }
   .btn.btn-v.btn-default {
     background-color: #ecf0f1; }
     .btn.btn-v.btn-default:hover {

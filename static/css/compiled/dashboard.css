@@ -187,38 +187,3 @@ table.support-tickets-table {
   .user-voice.facebook .media-body:before {
     content: '\f082';
     color: #2980b9; }
-
-#calendar {
-  margin-top: 10px;
-  padding-bottom: 15px; }
-  #calendar .fc-header-title h2 {
-    font-size: 1.25em;
-    font-weight: 300;
-    color: #34495e; }
-  #calendar .fc-widget-header {
-    font-weight: 500;
-    color: #95a5a6; }
-  #calendar .fc-widget-content {
-    font-weight: 300; }
-  #calendar .fc-button {
-    font-size: 0.7em;
-    font-weight: 600;
-    color: #7f8c8d; }
-  #calendar .fc-state-default, #calendar .fc-state-down, #calendar .fc-state-active {
-    border: none;
-    box-shadow: none; }
-  #calendar .fc-state-default {
-    background-image: none; }
-  #calendar .fc-state-active {
-    background-color: #E2E6E9; }
-  #calendar .fc-state-highlight {
-    background-color: #FCEAA4;
-    font-weight: 600;
-    color: #34495e; }
-  #calendar .fc-event {
-    background-color: #485A6D;
-    border: none;
-    font-size: 0.8em;
-    padding: 1px; }
-  #calendar .fc-cell-overlay {
-    background-color: #D1D1D1; }

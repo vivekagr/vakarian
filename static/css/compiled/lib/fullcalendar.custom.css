@@ -1,0 +1,45 @@
+.fullcalendar {
+  margin-top: 10px;
+  padding-bottom: 15px; }
+  .fullcalendar .fc-header-title h2 {
+    font-size: 1.25em;
+    font-weight: 300;
+    color: #34495e; }
+  .fullcalendar .fc-widget-header {
+    font-weight: 500;
+    color: #95a5a6; }
+  .fullcalendar .fc-widget-content {
+    font-weight: 300; }
+  .fullcalendar .fc-button {
+    font-size: 0.7em;
+    font-weight: 600;
+    color: #7f8c8d; }
+  .fullcalendar .fc-state-default, .fullcalendar .fc-state-down, .fullcalendar .fc-state-active {
+    border: none;
+    box-shadow: none; }
+  .fullcalendar .fc-state-default {
+    background-image: none; }
+  .fullcalendar .fc-state-active {
+    background-color: #E2E6E9; }
+  .fullcalendar .fc-state-highlight {
+    background-color: #FCEAA4;
+    font-weight: 600;
+    color: #34495e; }
+  .fullcalendar .fc-event {
+    background-color: #485A6D;
+    border: none;
+    font-size: 0.8em;
+    padding: 1px; }
+  .fullcalendar a.fc-event:hover {
+    color: white;
+    background-color: #2980b9; }
+  .fullcalendar .fc-cell-overlay {
+    background-color: #D1D1D1; }
+  .fullcalendar.fullcalendar-lg .fc-event {
+    background-color: #16a085;
+    margin-left: 3px;
+    margin-right: 3px;
+    padding: 3px;
+    font-size: 0.9em; }
+  .fullcalendar.fullcalendar-lg .fc-state-highlight {
+    background-color: #fff7c3; }

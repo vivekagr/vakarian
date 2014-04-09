@@ -6,6 +6,7 @@
 {% block css %}
     <link rel="stylesheet" href="{{ static('css/lib/morris-0.4.3.min.css') }}">
     <link rel="stylesheet" href="{{ static('css/lib/fullcalendar.css') }}">
+    <link rel="stylesheet" href="{{ static('css/compiled/lib/fullcalendar.custom.css') }}">
     <link rel="stylesheet" href="{{ static('css/lib/nanoscroller.css') }}">
     <link rel="stylesheet" href="{{ static('css/compiled/dashboard.css') }}">
 {%- endblock %}
@@ -143,7 +144,7 @@
         <div class="col-md-7">
             <div class="widget">
                 <h4 class="widget-title">Calendar</h4>
-                <div class="widget-content" id="calendar"></div>
+                <div class="widget-content fullcalendar" id="calendar"></div>
             </div>
         </div>
     </div>

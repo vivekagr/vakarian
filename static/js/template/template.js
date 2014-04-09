@@ -62,6 +62,15 @@ $(function () {
 
     });
 
+    // Focusing the search field if empty form is submitted by mistake
+    $('#navbarSearchForm').submit(function(e) {
+        var inputEl = $(this).find('input');
+        if (!inputEl.val()) {
+            e.preventDefault();
+            inputEl.focus();
+        }
+    });
+
     // Control the size of widget info section
     $(".widget-info-fixed-size").find(".expand").click(function() {
         var parent = $(this).parent();

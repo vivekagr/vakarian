@@ -1,11 +1,18 @@
 $(function () {
 
     var navSidebarLi = $(".nav-sidebar > li");
-    // Adding 'dropdown' class to list items with children
+
     navSidebarLi.each(function() {
         var el = $(this);
+
+        // Adding 'dropdown' class to list items with children
         if (el.children("ul").length > 0) {
             el.addClass("dropdown");
+        }
+
+        // Display the default active item
+        if (el.hasClass('active')) {
+            el.find('ul').show();
         }
     });
 

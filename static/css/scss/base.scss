@@ -332,11 +332,19 @@ button.btn-navbar {
   }
 
   // For the items which have dropdown child items
-  li.dropdown {
+  > li.dropdown {
     > ul {
       display: none;
       background-color: darken($navbar-color, 9);
       padding-left: 0;
+
+      > li.active > a {
+        text-decoration: none;
+        background-color: $sidebar-color;
+        color: #ecf0f1;
+        border-left-color: #f39c12;
+      }
+
       > li > a {
         display: block;
         padding: 8px 30px;

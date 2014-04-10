@@ -2,6 +2,8 @@ from werkzeug import serving
 from werkzeug.contrib.fixers import ProxyFix
 from flask import Flask, url_for, render_template, send_file
 from jinja2 import Environment
+
+from nav import nav_menu
 import config
 
 
@@ -25,11 +27,20 @@ app.jinja_env.lstrip_blocks = True
 # Disable the output of comments with this flag
 app.jinja_env.globals['disable_comments'] = False
 
+# Enabling `do` extension to mitigate scoping issues
+# Was unable to access `active` variable inside nested for and if blocks in sidebar nav
+# http://stackoverflow.com/questions/17925674
+app.jinja_env.add_extension('jinja2.ext.do')
+
+
+app.jinja_env.globals['nav_menu'] = nav_menu
+
 
 @app.route('/', defaults={'filename': 'index'})
 @app.route('/<filename>.html')
 def serve_file(filename):
-    return render_template(filename + '.html')
+    return render_template(filename + '.html', template=filename + '.html')
+
 
 @app.route('/favicon.ico')
 def favicon():

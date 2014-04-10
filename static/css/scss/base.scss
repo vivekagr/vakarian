@@ -451,6 +451,9 @@ button.btn-navbar {
 
 .sidebar-slim {
 
+  // Removing the overflow scroll so that nested lists can open up
+  overflow-y: visible;
+
   // Hiding the text
   .nav-sidebar > li > a > span { display: none; }
   .sidebar-profile-content {
@@ -466,9 +469,9 @@ button.btn-navbar {
     z-index: 9999;
   }
   .nav-sidebar > li > a > i {
-    margin-right: 0;
+    margin: 0 0 0 0.3em;
     float: none;
-    font-size: 2.2em;
+    font-size: 1.6em;
   }
 }
 

@@ -97,7 +97,7 @@ $(function () {
     });
 
     // Toggle sidebar size according to window width
-    $(window).resize(function() {
+    function autoAdjustSidebarWidth() {
         var width = $(window).width(),
             manuallyToggled = $(".sidebar").data('manually-toggled');
 
@@ -114,10 +114,15 @@ $(function () {
             // contract it only when window size is too small
             contractSidebarNav();
         }
+    }
 
-    });
+    // Adjust sidebar size once on document load
+    autoAdjustSidebarWidth();
 
-    // Focusing the search field if empty form is submitted by mistake
+    // Auto adjust sidebar size on window resize
+    $(window).resize(autoAdjustSidebarWidth);
+
+    // Focusing the search field if empty form being is submitted
     $('#navbarSearchForm').submit(function(e) {
         var inputEl = $(this).find('input');
         if (!inputEl.val()) {

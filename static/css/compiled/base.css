@@ -65,7 +65,7 @@ body {
       display: inline-block; }
   .navbar-primary .dropdown.open button.btn-navbar {
     background-color: #324557;
-    color: #749fcb; }
+    color: #c5d3e2; }
   .navbar-primary .dropdown-menu {
     border: none;
     border-radius: 2px; }
@@ -97,7 +97,7 @@ body {
 
 button.btn-navbar {
   position: relative;
-  color: #5b7ea3;
+  color: #81A0C0;
   background-color: #354a5e;
   border: none;
   border-radius: 0.2em;
@@ -110,7 +110,7 @@ button.btn-navbar {
   transition: all 0.15s ease; }
   button.btn-navbar:hover {
     background-color: #324557;
-    color: #749fcb;
+    color: #c5d3e2;
     -webkit-transition: all 0.15s ease;
     -moz-transition: all 0.15s ease;
     -ms-transition: all 0.15s ease;
@@ -154,13 +154,13 @@ button.btn-navbar {
     .navbar-search input:hover, .navbar-search input:focus {
       box-shadow: none; }
     .navbar-search input::-webkit-input-placeholder {
-      color: #6187ae; }
+      color: #81A0C0; }
     .navbar-search input:-moz-placeholder {
-      color: #6187ae; }
+      color: #81A0C0; }
     .navbar-search input::-moz-placeholder {
-      color: #6187ae; }
+      color: #81A0C0; }
     .navbar-search input:-ms-input-placeholder {
-      color: #6187ae; }
+      color: #81A0C0; }
     .navbar-search input:focus {
       width: 12em;
       -webkit-transition: all 0.4s ease;

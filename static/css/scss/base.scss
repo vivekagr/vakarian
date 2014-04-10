@@ -89,7 +89,7 @@ body {
     // Keeping the button highlighted when the dropdown menu is open
     &.open button.btn-navbar {
       background-color: darken($navbar-color, 4);
-      color: #749fcb;
+      color: lighten(#81A0C0, 20%);
     }
   }
 
@@ -139,7 +139,7 @@ body {
 // Sidebar toggle and search submit button
 button.btn-navbar {
   position: relative;
-  color: #5b7ea3;
+  color: #81A0C0;
   background-color: darken($navbar-color, 2);
   border: none;
   border-radius: 0.2em;
@@ -149,7 +149,7 @@ button.btn-navbar {
 
   &:hover {
     background-color: darken($navbar-color, 4);
-    color: #749fcb;
+    color: lighten(#81A0C0, 20%);
     @include transition(all 0.15s ease);
   }
 
@@ -197,10 +197,10 @@ button.btn-navbar {
     @include transition(all 0.2s ease);
 
     // Set a different, less flashy color for always visible placeholder
-    &::-webkit-input-placeholder { color: #6187ae; }
-    &:-moz-placeholder { color: #6187ae; }
-    &::-moz-placeholder { color: #6187ae; }
-    &:-ms-input-placeholder { color: #6187ae; }
+    &::-webkit-input-placeholder { color: #81A0C0; }
+    &:-moz-placeholder { color: #81A0C0; }
+    &::-moz-placeholder { color: #81A0C0; }
+    &:-ms-input-placeholder { color: #81A0C0; }
 
     // Increasing the width of the search field on focus
     &:focus {

@@ -37,6 +37,10 @@ body {
   background-color: #394f64;
   padding: 7px;
   margin-bottom: 0; }
+  @media (max-width: 768px) {
+    .navbar-primary .container-fluid {
+      padding-left: 0;
+      padding-right: 0; } }
   .navbar-primary .navbar-brand {
     display: inline;
     color: #ecf0f1;

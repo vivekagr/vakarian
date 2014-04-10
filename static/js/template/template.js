@@ -50,14 +50,14 @@ $(function () {
     // Expand Sidebar Navigation
     function expandSidebarNav() {
         var sidebarEl = $(".sidebar"),
-            wrapperEl = $(".wrapper");
+            pageWrapperEl = $(".page-wrapper");
 
         // If sidebar nav is already expanded, do nothing
         if (!sidebarEl.hasClass("sidebar-slim-width"))
             return;
 
         sidebarEl.removeClass("sidebar-slim-width", 150, function() {
-            wrapperEl.removeClass("with-sidebar-slim", 150);
+            pageWrapperEl.removeClass("with-sidebar-slim", 150);
             sidebarEl.removeClass("sidebar-slim", 150);
         });
     }
@@ -65,14 +65,14 @@ $(function () {
     // Contract Sidebar Navigation
     function contractSidebarNav() {
         var sidebarEl = $(".sidebar"),
-            wrapperEl = $(".wrapper");
+            pageWrapperEl = $(".page-wrapper");
 
         // If sidebar nav is already contracted, do nothing
         if (sidebarEl.hasClass("sidebar-slim-width"))
             return;
 
         sidebarEl.addClass("sidebar-slim", 150, function() {
-            wrapperEl.addClass("with-sidebar-slim", 150);
+            pageWrapperEl.addClass("with-sidebar-slim", 150);
             sidebarEl.addClass("sidebar-slim-width", 150);
         });
     }

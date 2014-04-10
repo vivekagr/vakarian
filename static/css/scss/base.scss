@@ -31,6 +31,11 @@ body {
 }
 
 
+.page-wrapper {
+  position: relative;
+}
+
+
 // Custom Navbar
 .navbar-primary {
   border: none;
@@ -252,21 +257,22 @@ button.btn-navbar {
 
 // Sidebar
 
-// z-index of 9998 is set on `.sidebar` and 9999 on `.sidebar.sidebar-slim > .nav-sidebar > li > ul`
-// to prevent the canvas element belong to charts from overlapping with the dropdown sub-menu
-// http://stackoverflow.com/questions/2671699
-
 .sidebar {
-  margin-top: 64px;
   padding-bottom: 64px;
-  position: fixed;
-  z-index: 9998;
+  position: absolute;
   top: 0;
   left: 0;
   width: 210px;
-  overflow-y: scroll;
   height: 100%;
   background-color: $sidebar-color;
+  z-index: 2;
+}
+
+// For making sidebar fixed
+.sidebar-fixed {
+  position: fixed;
+  margin-top: 64px;
+  overflow-y: scroll;
 }
 
 
@@ -466,7 +472,6 @@ button.btn-navbar {
     left: 100%;
     top: 0;
     width: 200px;
-    z-index: 9999;
   }
   .nav-sidebar > li > a > i {
     margin: 0 0 0 0.3em;

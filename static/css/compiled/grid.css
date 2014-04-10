@@ -7,9 +7,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.grid-example {
-  padding-bottom: 8px; }
-
 .grid-example > .widget-content > .row {
   margin-left: -10px;
   margin-right: -10px; }

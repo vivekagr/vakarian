@@ -142,4 +142,19 @@ $(function () {
         }
     });
 
+    // Toggle documentation
+    $('#docToggle').click(function() {
+        var docEls = $('.widget-info'),
+            btn    = $('#docToggle');
+        if (docEls.is(':visible')) {
+            docEls.slideUp();
+            $('.expand').hide();
+            btn.html('<i class="fa fa-eye"></i> Show Documentation');
+        } else {
+            docEls.slideDown();
+            $('.expand').show();
+            btn.html('<i class="fa fa-eye-slash"></i> Hide Documentation');
+        }
+    });
+
 });

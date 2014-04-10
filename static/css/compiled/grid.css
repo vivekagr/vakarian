@@ -10,6 +10,10 @@
 .grid-example {
   padding-bottom: 8px; }
 
+.grid-example > .widget-content > .row {
+  margin-left: -10px;
+  margin-right: -10px; }
+
 .grid-example .row {
   margin-left: 5px;
   margin-right: 5px; }

@@ -5,3 +5,7 @@
 {%- macro cu(content) %}
 {%- if not disable_comments %}<!-- {{ content|upper }} -->{%- endif %}
 {%- endmacro %}
+
+{%- macro cuh(content) %}
+{%- if not disable_comments %}<!-- //// {{ content|upper }} //// -->{%- endif %}
+{%- endmacro %}

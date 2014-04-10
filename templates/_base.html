@@ -1,4 +1,4 @@
-{% from  '_helper.html' import c, cu %}
+{% from  '_helper.html' import c, cu, cuh %}
 {%- set temp =  disable_comments %}
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -13,6 +13,7 @@
     <meta name="description" content="Vakarian Admin is an admin theme. >>>> CHANGE THIS <<<<">
     <link rel="icon" href="favicon.ico">
 
+    {{ c('Open Sans Font from Google Fonts Library') }}
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,300,700,800' rel='stylesheet' type='text/css'>
 
     {{ c('Bootstrap CSS') }}
@@ -27,26 +28,20 @@
     {{ c('Vakarian Page Specific CSS') }}
     {% block css %}{%- endblock %}
 
+
+    {{ c('Modernizer') }}
     <script src="{{ static('js/common/modernizr-2.6.2-respond-1.1.0.min.js') }}"></script>
 </head>
 
 <body>
 
-    {{ c('page wrapper') }}
+    {{ cuh('page wrapper') }}
     <div class="page-wrapper">
 
-        {{ c('top nav bar') }}
+        {{ cuh('top navigation bar start') }}
         <nav class="navbar navbar-fixed-top navbar-primary" role="navigation">
             <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-primary-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#"><i class="fa fa-dribbble"></i> Vakarian <span class="brand-subtext hidden-xs">Admin Panel</span></a>
-                </div>
+                <a class="navbar-brand" href="#"><i class="fa fa-dribbble"></i> Vakarian <span class="brand-subtext">Admin Panel</span></a>
 
                 <ul class="navbar-items">
                     <li>
@@ -57,7 +52,7 @@
                 <ul class="navbar-items pull-right">
 
                     {{ c('Search field') }}
-                    <li>
+                    <li class="hidden-xs">
                         <form class="navbar-search" id="navbarSearchForm">
                             <input class="form-control" type="text" placeholder="Search...">
                             <button type="submit" class="btn-navbar"><i class="fa fa-search fa-fw"></i></button>
@@ -113,8 +108,9 @@
             </div>
         </nav>
 
-        {{ c('left sidebar') }}
-        <div class="sidebar sidebar-fixed">
+        {{ cuh('Sidebar Start') }}
+        {{ c('Add .sidebar-fixed below to make the sidebar fixed to the window') }}
+        <div class="sidebar">
 
             <div class="sidebar-profile-wrapper clearfix">
                 <div class="sidebar-profile clearfix">
@@ -152,9 +148,9 @@
                 {% endfor %}
             </ul>
 
-        </div>{{ c('/left sidebar') }}
+        </div>{{ cu('Sidebar finish') }}
 
-        {{ c('content wrapper') }}
+        {{ cuh('content wrapper start') }}
         <div class="content-wrapper">
             <div class="row">
                 <div class="col-sm-8">

@@ -158,6 +158,14 @@ button.btn-navbar {
     height: $size;
     border-radius: 50%;
   }
+
+  // Hiding sidebar size toggle button on small screen
+  // where we do not want user to see expanded version
+  &#sidebarNavToggle {
+    @media(max-width: 800px) {
+      display: none;
+    }
+  }
 }
 
 // Navbar search form

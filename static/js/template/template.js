@@ -47,25 +47,73 @@ $(function () {
         e.stopPropagation();
     });
 
-    // Sidebar size toggle
-    $("#sidebarNavToggle").on('click', function() {
+    // Expand Sidebar Navigation
+    function expandSidebarNav() {
         var sidebarEl = $(".sidebar"),
             wrapperEl = $(".wrapper");
-        if (sidebarEl.hasClass("sidebar-slim")) {
-            sidebarEl.removeClass("sidebar-slim-width", 150, function() {
-                wrapperEl.removeClass("with-sidebar-slim", 150);
-                sidebarEl.removeClass("sidebar-slim", 150);
-            });
+
+        // If sidebar nav is already expanded, do nothing
+        if (!sidebarEl.hasClass("sidebar-slim-width"))
+            return;
+
+        sidebarEl.removeClass("sidebar-slim-width", 150, function() {
+            wrapperEl.removeClass("with-sidebar-slim", 150);
+            sidebarEl.removeClass("sidebar-slim", 150);
+        });
+    }
+
+    // Contract Sidebar Navigation
+    function contractSidebarNav() {
+        var sidebarEl = $(".sidebar"),
+            wrapperEl = $(".wrapper");
+
+        // If sidebar nav is already contracted, do nothing
+        if (sidebarEl.hasClass("sidebar-slim-width"))
+            return;
+
+        sidebarEl.addClass("sidebar-slim", 150, function() {
+            wrapperEl.addClass("with-sidebar-slim", 150);
+            sidebarEl.addClass("sidebar-slim-width", 150);
+        });
+    }
+
+    // Toggle sidebar size
+    $("#sidebarNavToggle").on('click', function() {
+        var sidebar = $(".sidebar");
+
+        // Storing the knowledge that user manually toggled the size
+        sidebar.data('manually-toggled', '1');
+
+        if (sidebar.hasClass("sidebar-slim")) {
+            expandSidebarNav();
         } else {
-            sidebarEl.addClass("sidebar-slim", 150, function() {
-                wrapperEl.addClass("with-sidebar-slim", 150);
-                sidebarEl.addClass("sidebar-slim-width", 150);
-            });
+            contractSidebarNav();
         }
 
         // Triggering windows resize event so that widgets like charts
         // can re-render themselves according to their new container size
         $(window).trigger('resize');
+
+    });
+
+    // Toggle sidebar size according to window width
+    $(window).resize(function() {
+        var width = $(window).width(),
+            manuallyToggled = $(".sidebar").data('manually-toggled');
+
+        if (!manuallyToggled) {
+            // If user didn't manually toggle the sidebar size
+            // then automatically resize according to window width
+            if (width > 800) {
+                expandSidebarNav();
+            } else {
+                contractSidebarNav();
+            }
+        } else if (width < 800) {
+            // Else if user did manually toggle the sidebar size,
+            // contract it only when window size is too small
+            contractSidebarNav();
+        }
 
     });
 

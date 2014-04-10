@@ -1,7 +1,7 @@
 nav_menu = [
     { 'title': 'Dashboard', 'icon': 'desktop', 'template': 'index.html' },
 
-    { 'title': 'UI Elements', 'icon': 'bar-th', 'children': [
+    { 'title': 'UI Elements', 'icon': 'th', 'children': [
         { 'title': 'Typography', 'template': 'typography.html' },
         { 'title': 'Buttons', 'template': 'buttons.html' },
         { 'title': 'Grid', 'template': 'grid.html' },
@@ -10,7 +10,7 @@ nav_menu = [
         { 'title': 'Icons', 'template': '#' },
     ] },
 
-    { 'title': 'Charts', 'icon': 'chart-o', 'children': [
+    { 'title': 'Charts', 'icon': 'bar-chart-o', 'children': [
         { 'title': 'Flot', 'template': 'charts-flot.html' },
         { 'title': 'Morris.js', 'template': 'charts-morris.html' },
         { 'title': 'Chart.js', 'template': 'charts-chartjs.html' },

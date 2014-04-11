@@ -1,0 +1,30 @@
+{% extends '_base.html' %}
+
+{% set page_title = "Icons" %}
+{% set page_sub_title = "UI Elements / Icons" %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ static('css/compiled/icons.css') }}"
+{% endblock %}
+
+{% block main %}
+    <div class="widget">
+        <h4 class="widget-title">Glyphicons</h4>
+
+        <ul class="nav nav-tabs">
+            <li class=""><a href="#profile" data-toggle="tab">Home</a></li>
+            <li class=""><a href="#profile" data-toggle="tab">Profile</a></li>
+        </ul>
+
+        <div class="widget-content ">
+            <ul class="glyphicons-list clearfix">
+                {% for glyphicon in glyphicons %}
+                <li>
+                    <span class="glyphicon glyphicon-{{ glyphicon }}"></span>
+                    <span class="glyphicon-class">.glyphicon-{{ glyphicon }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}

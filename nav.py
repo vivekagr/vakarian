@@ -7,7 +7,7 @@ nav_menu = [
         { 'title': 'Grid', 'template': 'grid.html' },
         { 'title': 'Widgets', 'template': '#' },
         { 'title': 'Components', 'template': '#' },
-        { 'title': 'Icons', 'template': '#' },
+        { 'title': 'Icons', 'template': 'icons.html' },
     ] },
 
     { 'title': 'Charts', 'icon': 'bar-chart-o', 'children': [

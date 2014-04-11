@@ -4,6 +4,7 @@ from flask import Flask, url_for, render_template, send_file
 from jinja2 import Environment
 
 from nav import nav_menu
+from data import glyphicons
 import config
 
 
@@ -39,7 +40,15 @@ app.jinja_env.globals['nav_menu'] = nav_menu
 @app.route('/', defaults={'filename': 'index'})
 @app.route('/<filename>.html')
 def serve_file(filename):
-    return render_template(filename + '.html', template=filename + '.html')
+
+    context_dict = {
+        'template': filename + '.html',
+    }
+
+    if filename == 'icons':
+        context_dict['glyphicons'] = glyphicons
+
+    return render_template(filename + '.html', **context_dict)
 
 
 @app.route('/favicon.ico')

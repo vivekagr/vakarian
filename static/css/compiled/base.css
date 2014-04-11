@@ -389,6 +389,7 @@ button.btn-navbar {
   font-size: 0.85em; }
 
 .widget {
+  position: relative;
   margin-bottom: 20px;
   background-color: #fff;
   padding-top: 10px;
@@ -484,6 +485,11 @@ button.btn-navbar {
     .widget .widget-footnote:before {
       content: '\f05a';
       margin-right: 5px; }
+  .widget ul.nav.nav-tabs {
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 10px; }
 
 #flotTip {
   padding: 3px 5px;

@@ -182,7 +182,7 @@ button.btn-navbar {
 }
 
 // Navbar search form
-.navbar-search {
+.navbar-search, .sidebar-search {
   display: inline-block;
   input {
     display: inline-block;
@@ -208,6 +208,36 @@ button.btn-navbar {
       width: 12em;
       @include transition(all 0.4s ease);
     }
+  }
+}
+
+.sidebar-search {
+  display: block;
+  position: relative;
+
+  input {
+    padding: 7px 25px 7px 7px;
+    background-color: #3F566D;
+    color: #2c3e50;
+    font-weight: 600;
+    border-radius: 3px;
+    margin: 10px;
+    width: 90%;
+
+    &:focus {
+      width: 90%;
+      background-color: lighten(#3F566D, 7%);
+      outline: none;
+    }
+  }
+
+  &:before {
+    @extend .fa-icon;
+    position: absolute;
+    content: '\f002';
+    color: $sidebar-color;
+    top: 18px;
+    right: 18px;
   }
 }
 
@@ -414,6 +444,8 @@ button.btn-navbar {
       display: block;
     }
   }
+
+  border-bottom: 1px solid #33485d;
 }
 
 .sidebar-profile {
@@ -465,6 +497,8 @@ button.btn-navbar {
 .sidebar-slim-width { width: 75px; }
 
 .sidebar-slim {
+
+  .sidebar-search { display: none; }
 
   // Removing the overflow scroll so that nested lists can open up
   overflow-y: visible;

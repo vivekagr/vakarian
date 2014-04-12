@@ -646,8 +646,39 @@ button.btn-navbar {
   ul.nav.nav-tabs {
     border: none;
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 0;
+    right: 15px;
+
+    li {
+      border: none;
+
+      &:first-child > a { border-bottom-left-radius: 5px; }
+      &:last-child > a { border-bottom-right-radius: 5px; }
+
+      &.active > a {
+        background-color: transparent;
+        border-color: #F3F6F6;
+
+        &:hover {
+          background-color: transparent;
+        }
+      }
+
+      a {
+        padding: 5px 12px;
+        margin-right: 1px;
+        border: 1px solid transparent;
+        border-top: none;
+        border-radius: 0;
+        background-color: #F3F6F6;
+        color: #34495e;
+        font-size: 0.85em;
+
+        &:hover {
+          background-color: darken(#F3F6F6, 2%);
+        }
+      }
+    }
   }
 }
 

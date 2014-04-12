@@ -488,8 +488,30 @@ button.btn-navbar {
   .widget ul.nav.nav-tabs {
     border: none;
     position: absolute;
-    top: 10px;
-    right: 10px; }
+    top: 0;
+    right: 15px; }
+    .widget ul.nav.nav-tabs li {
+      border: none; }
+      .widget ul.nav.nav-tabs li:first-child > a {
+        border-bottom-left-radius: 5px; }
+      .widget ul.nav.nav-tabs li:last-child > a {
+        border-bottom-right-radius: 5px; }
+      .widget ul.nav.nav-tabs li.active > a {
+        background-color: transparent;
+        border-color: #F3F6F6; }
+        .widget ul.nav.nav-tabs li.active > a:hover {
+          background-color: transparent; }
+      .widget ul.nav.nav-tabs li a {
+        padding: 5px 12px;
+        margin-right: 1px;
+        border: 1px solid transparent;
+        border-top: none;
+        border-radius: 0;
+        background-color: #F3F6F6;
+        color: #34495e;
+        font-size: 0.85em; }
+        .widget ul.nav.nav-tabs li a:hover {
+          background-color: #edf2f2; }
 
 #flotTip {
   padding: 3px 5px;

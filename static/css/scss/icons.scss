@@ -1,4 +1,4 @@
-.glyphicons-list {
+.icons-list {
   list-style: none;
   padding-left: 0;
 
@@ -21,15 +21,15 @@
     }
   }
 
-  .glyphicon, .glyphicon-class {
+  .glyphicon, .fa, .icon-class {
     display: block;
   }
 
-  .glyphicon {
+  .glyphicon, .fa {
     font-size: 1.6em;
   }
 
-  .glyphicon-class {
+  .icon-class {
     margin-top: 12px;
     font-size: 0.84em;
   }

@@ -1,3 +1,4 @@
+import yaml
 from werkzeug import serving
 from werkzeug.contrib.fixers import ProxyFix
 from flask import Flask, url_for, render_template, send_file
@@ -46,6 +47,16 @@ def serve_file(filename):
     }
 
     if filename == 'icons':
+        fa = yaml.load(open('fa_icons.yml').read())
+        fa_icons = {}
+        for icon in fa['icons']:
+            for cat in icon['categories']:
+                if fa_icons.get(cat):
+                    fa_icons[cat].append({'id': icon['id'], 'name': icon['name']})
+                else:
+                    fa_icons[cat] = [{'id': icon['id'], 'name': icon['name']}]
+        context_dict['fa_icons'] = fa_icons
+
         context_dict['glyphicons'] = glyphicons
 
     return render_template(filename + '.html', **context_dict)

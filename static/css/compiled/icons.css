@@ -1,7 +1,7 @@
-.glyphicons-list {
+.icons-list {
   list-style: none;
   padding-left: 0; }
-  .glyphicons-list li {
+  .icons-list li {
     float: left;
     width: 50%;
     padding: 10px 5px;
@@ -12,17 +12,17 @@
     vertical-align: middle;
     border-radius: 3px; }
     @media (min-width: 768px) {
-      .glyphicons-list li {
+      .icons-list li {
         width: 25%; } }
     @media (min-width: 992px) {
-      .glyphicons-list li {
+      .icons-list li {
         width: 12.5%; } }
-    .glyphicons-list li:hover {
+    .icons-list li:hover {
       background-color: #dde4e6; }
-  .glyphicons-list .glyphicon, .glyphicons-list .glyphicon-class {
+  .icons-list .glyphicon, .icons-list .fa, .icons-list .icon-class {
     display: block; }
-  .glyphicons-list .glyphicon {
+  .icons-list .glyphicon, .icons-list .fa {
     font-size: 1.6em; }
-  .glyphicons-list .glyphicon-class {
+  .icons-list .icon-class {
     margin-top: 12px;
     font-size: 0.84em; }

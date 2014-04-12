@@ -9,22 +9,49 @@
 
 {% block main %}
     <div class="widget">
-        <h4 class="widget-title">Glyphicons</h4>
+        <h4 class="widget-title">Icons</h4>
 
         <ul class="nav nav-tabs">
-            <li class=""><a href="#profile" data-toggle="tab">Home</a></li>
-            <li class=""><a href="#profile" data-toggle="tab">Profile</a></li>
+            <li class="active"><a href="#glyphicon" data-toggle="tab">Glyphicons</a></li>
+            <li><a href="#fontawesome" data-toggle="tab">Font Awesome</a></li>
         </ul>
 
-        <div class="widget-content ">
-            <ul class="glyphicons-list clearfix">
-                {% for glyphicon in glyphicons %}
-                <li>
-                    <span class="glyphicon glyphicon-{{ glyphicon }}"></span>
-                    <span class="glyphicon-class">.glyphicon-{{ glyphicon }}</span>
-                </li>
-                {% endfor %}
-            </ul>
+        <div class="widget-content">
+            <div class="tab-content">
+                <div class="tab-pane active" id="glyphicon">
+                    <ul class="icons-list clearfix">
+                        {% for glyphicon in glyphicons %}
+                            <li>
+                                <span class="glyphicon glyphicon-{{ glyphicon }}"></span>
+                                <span class="icon-class">.glyphicon-{{ glyphicon }}</span>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                    <div class="widget-info">
+                        <p>For performance reasons, all icons require a base class <code>.glyphicon</code> and individual icon class. To use, place the following code just about anywhere. Be sure to leave a space between the icon and text for proper padding.</p>
+                        <pre>&lt;span class=&quot;glyphicon glyphicon-search&quot;&gt;&lt;/span&gt;</pre>
+                        <p>Find more about Glyphicons at <a href="http://getbootstrap.com/components/#glyphicons" target="_blank">bootstrap's documentation</a> and <a href="http://glyphicons.com/" target="_blank">official website</a>.</p>
+                    </div>
+                </div>
+                <div class="tab-pane" id="fontawesome">
+                    {% for cat, icons in fa_icons.iteritems() %}
+                    <div class="widget-subtitle">{{ cat }}</div>
+                    <ul class="icons-list clearfix">
+                        {% for icon in icons %}
+                        <li>
+                            <i class="fa fa-{{ icon.id }}"></i>
+                            <span class="icon-class">.fa .fa-{{ icon.id }}</span>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    {% endfor %}
+                    <div class="widget-info">
+                        <p>For performance reasons, all icons require a base class <code>.fa</code> and individual icon class. You can place Font Awesome icons just about anywhere with the <code>&lt;i&gt;</code> tag.</p>
+                        <pre>&lt;i class=&quot;fa fa-camera-retro&quot;&gt;&lt;/i&gt; fa-camera-retro</pre>
+                        <p>Visit <a href="http://fortawesome.github.io/Font-Awesome/examples/" target="_blank">Font Awesome's documentation</a> to know more.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 {% endblock %}

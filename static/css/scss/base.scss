@@ -680,6 +680,8 @@ button.btn-navbar {
       }
     }
   }
+
+  .alert.alert-dismissable > .close { right: 0; }
 }
 
 
@@ -925,4 +927,27 @@ pre {
     font-weight: 600;
     color: #2c3e50;
   }
+}
+
+.widget .alert {
+  padding: 12px 15px;
+  border: none;
+  font-size: 0.9em;
+
+  &.alert-default {
+    background-color: #ecf0f1;
+
+    &, & .alert-link {
+      color: #7f8c8d;
+    }
+  }
+}
+
+.alert.alert-page {
+  background-color: #fff;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-left-width: 6px;
+  border-radius: 0;
 }

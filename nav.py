@@ -5,8 +5,9 @@ nav_menu = [
         { 'title': 'Typography', 'template': 'typography.html' },
         { 'title': 'Buttons', 'template': 'buttons.html' },
         { 'title': 'Grid', 'template': 'grid.html' },
-        { 'title': 'Widgets', 'template': '#' },
+        { 'title': 'Alerts', 'template': 'alerts.html' },
         { 'title': 'Components', 'template': '#' },
+        { 'title': 'Widgets', 'template': '#' },
         { 'title': 'Icons', 'template': 'icons.html' },
     ] },
 

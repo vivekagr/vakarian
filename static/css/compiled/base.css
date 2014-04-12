@@ -512,6 +512,8 @@ button.btn-navbar {
         font-size: 0.85em; }
         .widget ul.nav.nav-tabs li a:hover {
           background-color: #edf2f2; }
+  .widget .alert.alert-dismissable > .close {
+    right: 0; }
 
 #flotTip {
   padding: 3px 5px;
@@ -696,3 +698,20 @@ pre {
     font-size: 0.9em;
     font-weight: 600;
     color: #2c3e50; }
+
+.widget .alert {
+  padding: 12px 15px;
+  border: none;
+  font-size: 0.9em; }
+  .widget .alert.alert-default {
+    background-color: #ecf0f1; }
+    .widget .alert.alert-default, .widget .alert.alert-default .alert-link {
+      color: #7f8c8d; }
+
+.alert.alert-page {
+  background-color: #fff;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-left-width: 6px;
+  border-radius: 0; }

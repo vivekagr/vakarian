@@ -123,7 +123,8 @@
                     </div>
                 </div>
             </div>
-
+            {% set active_parent_title=[] %}
+            {% set active_page_title = [] %}
             <ul class="nav nav-sidebar">
                 {% for item in nav_menu %}
                 {% if item.children %}{# Item with children #}
@@ -132,6 +133,8 @@
                 {% for child in item.children %}
                     {% if child.template == template %}
                         {% do active.append(1) %}
+                        {% do active_parent_title.append(item.title) %}
+                        {% do active_page_title.append(child.title) %}
                     {% endif %}
                 {% endfor %}
                 <li{% if active %} class="active"{% endif %}>
@@ -153,13 +156,22 @@
         {{ cuh('content wrapper start') }}
         <div class="content-wrapper">
             <div class="row">
-                <div class="col-sm-8">
+                <div class="{% if title_area_set %}col-sm-8{% else %}col-sm-12{% endif %}">
                     <h3 class="page-title">{{ page_title }}</h3>
-                    <h4 class="page-sub-title">{{ page_sub_title }}</h4>
+                    {% if active_parent_title %}
+                    <ul class="breadcrumb-alt clearfix">
+                        <li class="highlight"><a href="#">You are here</a></li>
+                        <li><a href="#">{{ active_parent_title[0] }}</a></li>
+                        <li><a href="#">{{ active_page_title[0] }}</a></li>
+                    </ul>
+                    {% endif %}
+                    {% if page_subtitle %}
+                    <div class="page-sub-title">{{ page_subtitle }}</div>
+                    {% endif %}
                 </div>
-                <div class="col-sm-4">
+                {% if title_area_set %}<div class="col-sm-4">
                     {% block title_area %}{% endblock %}
-                </div>
+                </div>{% endif %}
             </div>
             {% block main %}{% endblock %}
         </div>{{ c('/content wrapper') }}

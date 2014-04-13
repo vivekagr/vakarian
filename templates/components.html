@@ -1,0 +1,171 @@
+{% extends '_base.html' %}
+
+{% set page_title = "Components" %}
+
+{% set title_area_set = True %}
+{% block title_area %}
+    <button class="btn btn-v btn-sm btn-inverse pull-right page-title-btn" id="docToggle"><i class="fa fa-eye-slash"></i> Hide Documentation</button>
+{% endblock %}
+
+{% block main %}
+    <div class="row">
+        <div class="col-md-6">
+            <div class="widget">
+                <h4 class="widget-title">Breadcrumb</h4>
+
+                <div class="widget-content">
+                    <ul class="breadcrumb-v">
+                        <li class="highlight"><a href="#">You are here</a></li>
+                        <li><a href="#">UI Elements</a></li>
+                        <li><a href="#">Typography</a></li>
+                    </ul>
+
+                    <div class="widget-info">
+                        <p>Indicate the current page's location within a navigational hierarchy.</p>
+                        <pre>&lt;ul class=&quot;breadcrumb-v&quot;&gt;<br/>    &lt;li class=&quot;highlight&quot;&gt;&lt;a href=&quot;#&quot;&gt;You are here&lt;/a&gt;&lt;/li&gt;<br/>    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;UI Elements&lt;/a&gt;&lt;/li&gt;<br/>    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Typography&lt;/a&gt;&lt;/li&gt;<br/>&lt;/ul&gt;</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="widget">
+                <h4 class="widget-title">Plain Breadcrumb</h4>
+
+                <div class="widget-content">
+                    <ul class="breadcrumb breadcrumb-plain">
+                        <li><a href="#">UI Elements</a></li>
+                        <li class="active">Typography</li>
+                    </ul>
+
+                    <div class="widget-info">
+                        <p>An alternative version of breadcrumb. Based on bootstrap's default breadcrumb and can be used by adding <code>.breadcrumb-plain</code>.</p>
+                        <pre>&lt;ul class=&quot;breadcrumb breadcrumb-plain&quot;&gt;<br/>    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;UI Elements&lt;/a&gt;&lt;/li&gt;<br/>    &lt;li class=&quot;active&quot;&gt;Typography&lt;/li&gt;<br/>&lt;/ul&gt;</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="widget">
+                <h4 class="widget-title">Pagination</h4>
+
+                <div class="widget-content">
+                    <ul class="pagination">
+                        <li class="disabled"><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                    </ul>
+
+                    <ul class="pagination pagination-inverse">
+                        <li class="disabled"><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                    </ul>
+
+                    <div class="widget-info-fixed-size">
+                        <div class="widget-info">
+                            <p>Provide pagination links for your site or app with <code>.pagination</code>. The large block is hard to miss, easily scalable, and provides large click areas.</p>
+                            <p>Links are customizable for different circumstances. Use <code>.disabled</code> for unclickable links and <code>.active</code> to indicate the current page.</p>
+                            <pre>&lt;ul class=&quot;pagination&quot;&gt;<br/>    &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-angle-left&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;<br/>    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;<br/>    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;<br/>    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;<br/>    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;<br/>    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;<br/>    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-angle-right&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;<br/>&lt;/ul&gt;</pre>
+                            <p>Add <code>.pagination-inverse</code> for the darker version.</p>
+                            <pre>&lt;ul class=&quot;pagination pagination-inverse&quot;&gt;...&lt;/ul&gt;</pre>
+                        </div>
+                        <div class="expand">Expand</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="widget">
+                <h4 class="widget-title">Pagination Sizes</h4>
+                <div class="widget-content">
+                    <ul class="pagination pagination-sm">
+                        <li class="disabled"><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                    </ul>
+                    <br>
+
+                    <ul class="pagination">
+                        <li class="disabled"><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                    </ul>
+                    <br>
+
+                    <ul class="pagination pagination-lg">
+                        <li class="disabled"><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                    </ul>
+
+                    <div class="widget-info">
+                        <p>Fancy larger or smaller pagination? Add <code>.pagination-lg</code> or <code>.pagination-sm</code> for additional sizes.</p>
+                        <pre>&lt;ul class=&quot;pagination pagination-lg&quot;&gt;...&lt;/ul&gt;<br/>&lt;ul class=&quot;pagination&quot;&gt;...&lt;/ul&gt;<br/>&lt;ul class=&quot;pagination pagination-sm&quot;&gt;...&lt;/ul&gt;</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="widget">
+                <h4 class="widget-title">Pager</h4>
+                <div class="widget-content">
+                    <ul class="pager">
+                        <li><a href="#">Previous</a></li>
+                        <li><a href="#">Next</a></li>
+                    </ul>
+                    <ul class="pager pager-inverse">
+                        <li><a href="#">Previous</a></li>
+                        <li><a href="#">Next</a></li>
+                    </ul>
+
+                    <div class="widget-info">
+                        <p>Quick previous and next links for simple pagination implementations with light markup and styles. It's great for simple sites like blogs or magazines.</p>
+                        <p>By default, the pager centers links.</p>
+                        <pre>&lt;ul class=&quot;pager&quot;&gt;<br/>    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Previous&lt;/a&gt;&lt;/li&gt;<br/>    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Next&lt;/a&gt;&lt;/li&gt;<br/>&lt;/ul&gt;</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="widget">
+                <h4 class="widget-title">Pager Alignment and State</h4>
+                <div class="widget-content">
+                    <ul class="pager">
+                        <li class="previous disabled"><a href="#">&larr; Older</a></li>
+                        <li class="next"><a href="#">Newer &rarr;</a></li>
+                    </ul>
+                    <ul class="pager pager-inverse">
+                        <li class="previous disabled"><a href="#">&larr; Older</a></li>
+                        <li class="next"><a href="#">Newer &rarr;</a></li>
+                    </ul>
+
+                    <div class="widget-info">
+                        <p>You can align each link to the sides with <code>.previous</code> and <code>.next</code>.</p>
+                        <p>Pager links also use the general <code>.disabled</code> utility class from the pagination.</p>
+                        <pre>&lt;ul class=&quot;pager&quot;&gt;<br/>    &lt;li class=&quot;previous disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;&amp;larr; Older&lt;/a&gt;&lt;/li&gt;<br/>    &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;#&quot;&gt;Newer &amp;rarr;&lt;/a&gt;&lt;/li&gt;<br/>&lt;/ul&gt;</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -988,7 +988,8 @@ pre {
 }
 
 
-.breadcrumb-alt {
+// Creating a new class instead of squandering bootstrap's breadcrumbs
+.breadcrumb-v {
   background: transparent;
   list-style: none;
   padding-left: 0;
@@ -1041,6 +1042,101 @@ pre {
       width: $height;
       height: $height;
       @include transform(scale(0.767) rotate(45deg));
+    }
+  }
+}
+
+.breadcrumb-plain {
+  font-size: 0.86em;
+  background-color: #F7F7F7;
+
+  > li > a {
+    color: #3498db;
+  }
+}
+
+.pagination {
+  > li > a {
+    border-color: #bdc3c7;
+    color: #7f8c8d;
+    padding-left: 18px;
+    padding-right: 18px;
+    font-size: 0.9em;
+
+    &:hover {
+      color: #2c3e50;
+      background-color: #ecf0f1;
+      border-color: #bdc3c7;
+    }
+  }
+
+  &.pagination-sm > li > a {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 0.8em;
+  }
+
+  &.pagination-lg > li > a {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1em;
+  }
+
+  > li.active > a {
+    background-color: #3498db;
+    &:hover { border-color: none; }
+  }
+
+  &.pagination-inverse {
+    > li > a {
+      background-color: #505F6F;
+      color: #fff;
+      border-color: #fff;
+
+      &:hover {
+        background-color: #2c3e50;
+      }
+    }
+
+    > li.active > a {
+      background-color: #27ae60;
+      &:hover { border-color: #fff; }
+    }
+
+    > li.disabled > a {
+      color: #bdc3c7;
+
+      &:hover {
+        background-color: #505F6F;
+      }
+    }
+  }
+
+  .widget & {
+    margin: 7px 0;
+  }
+}
+
+.pager {
+  > li > a {
+    font-size: 0.9em;
+    @include transition(all 0.15s ease);
+  }
+
+  &.pager-inverse {
+    > li > a {
+      border-color: #fff;
+      background-color: #34495e;
+      color: #ecf0f1;
+
+      &:hover {
+        background-color: #2980b9;
+      }
+    }
+
+    > li.disabled > a {
+      background-color: #95a5a6;
+      &:hover { color: #ecf0f1; }
     }
   }
 }

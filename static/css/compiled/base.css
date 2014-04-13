@@ -28,6 +28,9 @@ body {
   width: 100%;
   overflow: auto; }
 
+a {
+  color: #3498db; }
+
 .page-wrapper {
   position: relative;
   min-height: 100%; }

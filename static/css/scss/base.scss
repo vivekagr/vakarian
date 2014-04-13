@@ -1140,3 +1140,11 @@ pre {
     }
   }
 }
+
+.label {
+  &.label-default { background-color: #D6DADB; }
+  &.label-primary { background-color: #3498db; }
+  &.label-success { background-color: #1abc9c; }
+  &.label-warning { background-color: #f1c40f; }
+  &.label-danger { background-color: #e74c3c; }
+}

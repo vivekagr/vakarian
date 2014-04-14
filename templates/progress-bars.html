@@ -1,0 +1,235 @@
+{% extends '_base.html' %}
+
+{% set page_title = "Progress Bars" %}
+
+{% set title_area_set = True %}
+{% block title_area %}
+    <button class="btn btn-v btn-sm btn-inverse pull-right page-title-btn" id="docToggle"><i class="fa fa-eye-slash"></i> Hide Documentation</button>
+{% endblock %}
+
+{% block main %}
+    <div class="widget">
+        <h4 class="widget-title">Basic Example</h4>
+
+        <div class="widget-content">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                    <span class="sr-only">60% Complete</span>
+                </div>
+            </div>
+
+            <div class="widget-info">
+                <p>Default progress bar.</p>
+                <pre>&lt;div class=&quot;progress&quot;&gt;<br/>    &lt;div class=&quot;progress-bar&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;60&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 60%;&quot;&gt;<br/>        &lt;span class=&quot;sr-only&quot;&gt;60% Complete&lt;/span&gt;<br/>    &lt;/div&gt;<br/>&lt;/div&gt;</pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="widget">
+        <h4 class="widget-title">With Label</h4>
+
+        <div class="widget-content">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                    <span>60% Complete</span>
+                </div>
+            </div>
+
+            <div class="widget-info">
+                <p>Remove the <code>.sr-only</code> class from within the progress bar to show a visible percentage. For low percentages, consider adding a <code>min-width</code> to ensure the label's text is fully visible.</p>
+                <pre>&lt;div class=&quot;progress&quot;&gt;<br/>    &lt;div class=&quot;progress-bar&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;60&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 60%;&quot;&gt;<br/>        &lt;span&gt;60% Complete&lt;/span&gt;<br/>    &lt;/div&gt;<br/>&lt;/div&gt;</pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="widget">
+        <h4 class="widget-title">Contextual Alternatives</h4>
+
+        <div class="widget-content">
+            <div class="progress">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                    <span class="sr-only">40% Complete</span>
+                </div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">
+                    <span class="sr-only">20% Complete</span>
+                </div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                    <span class="sr-only">60% Complete</span>
+                </div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+                    <span class="sr-only">80% Complete</span>
+                </div>
+            </div>
+
+            <div class="widget-info">
+                <p>Use <code>.progress-bar-success</code>, <code>.progress-bar-info</code>, <code>.progress-bar-warning</code> and <code>.progress-bar-danger</code> to add colors to the progress bars.</p>
+                <pre>&lt;div class=&quot;progress&quot;&gt;<br/>    &lt;div class=&quot;progress-bar progress-bar-success&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;40&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 40%;&quot;&gt;<br/>        &lt;span class=&quot;sr-only&quot;&gt;40% Complete&lt;/span&gt;<br/>    &lt;/div&gt;<br/>&lt;/div&gt;</pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="widget">
+        <h4 class="widget-title">Slim</h4>
+
+        <div class="widget-content">
+            <div class="progress progress-slim">
+                <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+                    <span class="sr-only">30% Complete</span>
+                </div>
+            </div>
+            <div class="progress progress-slim">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+                    <span class="sr-only">80% Complete</span>
+                </div>
+            </div>
+
+            <div class="widget-info">
+                <p>For the slim variation, just add <code>.progress-slim</code>.</p>
+                <pre>&lt;div class=&quot;progress progress-slim&quot;&gt;<br/>    &lt;div class=&quot;progress-bar&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;30&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 30%;&quot;&gt;<br/>        &lt;span class=&quot;sr-only&quot;&gt;30% Complete&lt;/span&gt;<br/>    &lt;/div&gt;<br/>&lt;/div&gt;</pre>
+                <p>Due the the lack of space, slim progress bar do not support labels.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="widget">
+        <h4 class="widget-title">Striped</h4>
+
+        <div class="widget-content">
+            <div class="progress progress-slim progress-striped">
+                <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+                    <span class="sr-only">30% Complete</span>
+                </div>
+            </div>
+            <div class="progress progress-slim progress-striped">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+                    <span class="sr-only">80% Complete</span>
+                </div>
+            </div>
+            <div class="progress progress-striped">
+                <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+                    <span class="sr-only">30% Complete</span>
+                </div>
+            </div>
+            <div class="progress progress-striped">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+                    <span class="sr-only">80% Complete</span>
+                </div>
+            </div>
+
+            <div class="widget-info">
+                <p>Uses a gradient to create a striped effect.</p>
+                <pre>&lt;div class=&quot;progress progress-striped&quot;&gt;<br/>    &lt;div class=&quot;progress-bar&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;30&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 30%;&quot;&gt;<br/>        &lt;span class=&quot;sr-only&quot;&gt;30% Complete&lt;/span&gt;<br/>    &lt;/div&gt;<br/>&lt;/div&gt;</pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="widget">
+        <h4 class="widget-title">Animated</h4>
+
+        <div class="widget-content">
+            <div class="progress progress-slim progress-striped active">
+                <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+                    <span class="sr-only">30% Complete</span>
+                </div>
+            </div>
+            <div class="progress progress-slim progress-striped active">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+                    <span class="sr-only">80% Complete</span>
+                </div>
+            </div>
+            <div class="progress progress-striped active">
+                <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+                    <span class="sr-only">30% Complete</span>
+                </div>
+            </div>
+            <div class="progress progress-striped active">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+                    <span class="sr-only">80% Complete</span>
+                </div>
+            </div>
+
+            <div class="widget-info">
+                <p>Add <code>.active</code> to <code>.progress-striped</code> to animate the stripes right to left. Not available in IE9 and below.</p>
+                <pre>&lt;div class=&quot;progress progress-striped active&quot;&gt;<br/>    &lt;div class=&quot;progress-bar&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;30&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 30%;&quot;&gt;<br/>        &lt;span class=&quot;sr-only&quot;&gt;30% Complete&lt;/span&gt;<br/>    &lt;/div&gt;<br/>&lt;/div&gt;</pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="widget">
+        <h4 class="widget-title">Stacked</h4>
+
+        <div class="widget-content">
+            <div class="progress progress-slim">
+                <div class="progress-bar progress-bar-success" style="width: 35%">
+                    <span class="sr-only">35% Complete (success)</span>
+                </div>
+                <div class="progress-bar progress-bar-warning" style="width: 20%">
+                    <span class="sr-only">20% Complete (warning)</span>
+                </div>
+                <div class="progress-bar progress-bar-danger" style="width: 10%">
+                    <span class="sr-only">10% Complete (danger)</span>
+                </div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-success" style="width: 25%">
+                    <span class="sr-only">25% Complete (success)</span>
+                </div>
+                <div class="progress-bar progress-bar-warning" style="width: 10%">
+                    <span class="sr-only">10% Complete (warning)</span>
+                </div>
+                <div class="progress-bar progress-bar-danger" style="width: 7%">
+                    <span class="sr-only">7% Complete (danger)</span>
+                </div>
+            </div>
+
+            <div class="widget-info">
+                <p>Place multiple bars into the same <code>.progress</code> to stack them.</p>
+                <pre>&lt;div class=&quot;progress&quot;&gt;<br/>    &lt;div class=&quot;progress-bar progress-bar-success&quot; style=&quot;width: 35%&quot;&gt;<br/>        &lt;span class=&quot;sr-only&quot;&gt;35% Complete (success)&lt;/span&gt;<br/>    &lt;/div&gt;<br/>    &lt;div class=&quot;progress-bar progress-bar-warning&quot; style=&quot;width: 20%&quot;&gt;<br/>        &lt;span class=&quot;sr-only&quot;&gt;20% Complete (warning)&lt;/span&gt;<br/>    &lt;/div&gt;<br/>    &lt;div class=&quot;progress-bar progress-bar-danger&quot; style=&quot;width: 10%&quot;&gt;<br/>        &lt;span class=&quot;sr-only&quot;&gt;10% Complete (danger)&lt;/span&gt;<br/>    &lt;/div&gt;<br/>&lt;/div&gt;</pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="widget">
+        <h4 class="widget-title">Animated - Dynamic</h4>
+
+        <div class="widget-content">
+            <div class="progress">
+                <div class="progress-bar progress-bar-animated-label" role="progressbar" aria-valuetransitiongoal="75"></div>
+            </div>
+            <div class="progress progress-striped">
+                <div class="progress-bar progress-bar-success progress-bar-animated" role="progressbar" aria-valuetransitiongoal="60"></div>
+            </div>
+            <div class="progress progress-slim">
+                <div class="progress-bar progress-bar-info progress-bar-animated" role="progressbar" aria-valuetransitiongoal="30"></div>
+            </div>
+
+            <button class="btn btn-v btn-primary" id="animate-btn">Animate</button>
+
+            <div class="widget-info">
+                <p>Click on the Animate button to see the effect.</p>
+                <pre>&lt;div class=&quot;progress&quot;&gt;<br/>    &lt;div class=&quot;progress-bar progress-bar-animated&quot; role=&quot;progressbar&quot; aria-valuetransitiongoal=&quot;75&quot;&gt;&lt;/div&gt;<br/>&lt;/div&gt;</pre>
+                <pre>&lt;script type=&quot;text/javascript&quot; src=&quot;js/bootstrap-progressbar.min.js&quot;&gt;&lt;/script&gt;<br/>&lt;script&gt;<br/>    $('.progress .progress-bar').progressbar();<br/>&lt;/script&gt;</pre>
+                <p>This feature is provided by <a href="http://www.minddust.com/bootstrap-progressbar/" target="_blank">bootstrap-progressbar</a>. Visit the <a href="http://www.minddust.com/bootstrap-progressbar/bootstrap-3.1.0.html" target="_blank">documentation</a> for more information and examples. </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block vendor_js %}
+    <script src="{{ static('js/bootstrap-progressbar.min.js') }}"></script>
+{% endblock %}
+
+{% block js %}
+    <script>
+        $('#animate-btn').click(function() {
+            $('.progress-bar-animated-label').progressbar({ display_text: 'fill' });
+            $('.progress-bar-animated').progressbar();
+        });
+    </script>
+{% endblock %}

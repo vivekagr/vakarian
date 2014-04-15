@@ -1,0 +1,321 @@
+{% extends '_base.html' %}
+
+{% set page_title = "Form Elements" %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ static('css/lib/bootstrap-slider.min.css') }}">
+{% endblock %}
+
+{% block main %}
+    <div class="row">
+        <div class="col-md-5">
+            <div class="widget">
+                <h4 class="widget-title">Basic Form</h4>
+                <div class="widget-content">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputFile">File input</label>
+                            <div class="file-input-wrapper">
+                                <div class="btn btn-v btn-default"><i class="fa fa-file"></i> Choose File</div>
+                                <input type="file" id="exampleInputFile">
+                            </div>
+                            <p class="help-block">Example block-level help text here.</p>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Check me out
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-v btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="widget">
+                <h4 class="widget-title">Horizontal Form</h4>
+                <div class="widget-content">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label" for="exampleInputName2">Full Name</label>
+                            <div class="col-sm-9">
+                                <input type="email" class="form-control" id="exampleInputName2" placeholder="Full name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label" for="exampleInputEmail2">Email address</label>
+                            <div class="col-sm-9">
+                                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label" for="exampleInputPassword2">Password</label>
+                            <div class="col-sm-9">
+                                <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label" for="exampleInputPassword2">Plan</label>
+                            <div class="col-sm-9">
+                                <div class="btn-group" data-toggle="buttons">
+                                  <label class="btn btn-v btn-default active">
+                                    <input type="radio" name="options" id="option1"> Free
+                                  </label>
+                                  <label class="btn btn-v btn-default">
+                                    <input type="radio" name="options" id="option2"> Basic
+                                  </label>
+                                  <label class="btn btn-v btn-default">
+                                    <input type="radio" name="options" id="option3"> Premium
+                                  </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-3 col-sm-9">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox"> I agree to the terms & conditions
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-3 col-sm-9">
+                                <button type="submit" class="btn btn-v btn-primary">Sign up</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="widget">
+        <h4 class="widget-title">Inline Form</h4>
+        <div class="widget-content">
+            <form class="form-inline" role="form">
+                <div class="form-group">
+                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="exampleInputPassword3">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+                </div>
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox"> Remember me
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-v btn-default">Sign in</button>
+            </form>
+        </div>
+    </div>
+    <div class="widget">
+        <h4 class="widget-title">Form Inputs</h4>
+        <div class="widget-content">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="simpleInputField">Simple Input Field</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="simpleInputField">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="simpleInputFieldWithPlaceholder">Placeholder</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="simpleInputFieldWithPlaceholder" placeholder="Some Placeholder">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="simpleInputFieldWithHelpText">Help Text</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="simpleInputFieldWithHelpText">
+                        <div class="help-block">This text is supposed to help you</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="simpleInputFieldWithPredefinedText">Predefined Text</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="simpleInputFieldWithPredefinedText" value="Oh hello!">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Static Control</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static">email@example.com</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="disabledInputField">Disabled</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="disabledInputField" disabled>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="simpleTextArea">Text Area</label>
+                    <div class="col-sm-10">
+                        <textarea class="form-control" rows="3" id="simpleTextArea"></textarea>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="widget">
+        <h4 class="widget-title">Bootstrap Slider</h4>
+
+        <ul class="nav nav-tabs fixed">
+            <li class="active"><a href="#horizontalSliders" data-toggle="tab">Horizontal Sliders</a></li>
+            <li><a href="#verticalSliders" data-toggle="tab">Vertical Sliders</a></li>
+        </ul>
+
+        <div class="widget-content">
+            <div class="tab-content">
+                <div class="tab-pane active" id="horizontalSliders">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Slider With Range 1-100</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="slider" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="29" data-slider-orientation="horizontal" data-slider-selection="before">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">With Incremental Step Of 10</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="slider" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="60" data-slider-orientation="horizontal" data-slider-selection="before">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Ranged Slider Between -20 and 120</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="slider" data-slider-min="-20" data-slider-max="120" data-slider-step="5" data-slider-value="[40, 90]" data-slider-orientation="horizontal" data-slider-selection="before">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Disabled</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="slider" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="29" data-slider-orientation="horizontal" data-slider-selection="before" data-slider-enabled="false">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">With Square Handle</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="slider" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="29" data-slider-orientation="horizontal" data-slider-selection="before" data-slider-handle="square">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">With Triangular Handle</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="slider" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="29" data-slider-orientation="horizontal" data-slider-selection="before" data-slider-handle="triangle">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="verticalSliders">
+                    <div class="text-center">
+                        <input type="text" class="slider" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="29" data-slider-orientation="vertical" data-slider-selection="before">
+                        <input type="text" class="slider" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="60" data-slider-orientation="vertical" data-slider-selection="before">
+                        <input type="text" class="slider" data-slider-min="-20" data-slider-max="120" data-slider-step="5" data-slider-value="[40, 90]" data-slider-orientation="vertical" data-slider-selection="before">
+                        <input type="text" class="slider" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="29" data-slider-orientation="vertical" data-slider-selection="before" data-slider-enabled="false">
+                        <input type="text" class="slider" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="29" data-slider-orientation="vertical" data-slider-selection="before" data-slider-handle="square">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="widget">
+                <h4 class="widget-title">Form Input Validation States</h4>
+                <div class="widget-content">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group has-success">
+                            <label class="col-sm-2 control-label" for="successField">Success</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="successField" value="This is a valid input">
+                            </div>
+                        </div>
+                        <div class="form-group has-warning">
+                            <label class="col-sm-2 control-label" for="warningField">Warning</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="warningField" value="Something seems fishy in here">
+                            </div>
+                        </div>
+                        <div class="form-group has-error">
+                            <label class="col-sm-2 control-label" for="errorField">Error</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="errorField">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="widget">
+                <h4 class="widget-title">Control Sizing</h4>
+                <div class="widget-content">
+                    <form role="form">
+                        <div class="form-group">
+                            <label  class="sr-only control-label" for="inputFieldSmall">Small</label>
+                            <input type="text" class="form-control input-sm" id="inputFieldSmall" placeholder="Small">
+                        </div>
+                        <div class="form-group">
+                            <label  class="sr-only control-label" for="inputFieldNormal">Normal</label>
+                            <input type="text" class="form-control" id="inputFieldNormal" placeholder="Normal">
+                        </div>
+                        <div class="form-group">
+                            <label  class="sr-only control-label" for="inputFieldLarge">Large</label>
+                            <input type="text" class="form-control input-lg" id="inputFieldLarge" placeholder="Large">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="widget">
+        <h4 class="widget-title">Column Sizing</h4>
+        <div class="widget-content">
+            <form role="form">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <input type="text" class="form-control" placeholder=".col-xs-2">
+                        </div>
+                        <div class="col-xs-3">
+                            <input type="text" class="form-control" placeholder=".col-xs-3">
+                        </div>
+                        <div class="col-xs-4">
+                            <input type="text" class="form-control" placeholder=".col-xs-4">
+                        </div>
+                    </div>
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+{% endblock %}
+
+{% block vendor_js %}
+    <script src="{{ static('js/bootstrap-slider.min.js') }}"></script>
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(function() {
+            $("input.slider").slider({
+                tooltip_separator: '-'
+            });
+        });
+    </script>
+{% endblock %}

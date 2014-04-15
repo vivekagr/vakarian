@@ -159,6 +159,23 @@ $(function () {
         }
     });
 
+    // Trigger file upload dialon on clicking the button replacement
+    $('.file-input-wrapper > .btn').click(function() {
+        $(this).parent().find('input').trigger('click');
+    });
+
+    // Show the file name on selection
+    $('.file-input-wrapper > input').change(function() {
+        var vals = $(this).val(),
+            filename = vals.length ? vals.split('\\').pop() : '';
+        if ($('.file-input-wrapper > .file-name').length === 0) {
+            $('.file-input-wrapper').append($('<div class="file-name">' + filename + '</div>'));
+        } else {
+            $('.file-input-wrapper > .file-name').html(filename);
+        }
+    });
+
+    // Fade in the content wrapper
     $('.content-wrapper').fadeIn();
 
 });

@@ -5,7 +5,7 @@ from flask import Flask, url_for, render_template, send_file
 from jinja2 import Environment
 
 from nav import nav_menu
-from data import glyphicons
+from data import glyphicons, weather_icons
 import config
 
 
@@ -58,6 +58,7 @@ def serve_file(filename):
         context_dict['fa_icons'] = fa_icons
 
         context_dict['glyphicons'] = glyphicons
+        context_dict['weather_icons'] = weather_icons
 
     return render_template(filename + '.html', **context_dict)
 

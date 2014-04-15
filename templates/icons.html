@@ -3,7 +3,8 @@
 {% set page_title = "Icons" %}
 
 {% block css %}
-    <link rel="stylesheet" href="{{ static('css/compiled/icons.css') }}"
+    <link rel="stylesheet" href="{{ static('css/lib/weather-icons.min.css') }}">
+    <link rel="stylesheet" href="{{ static('css/compiled/icons.css') }}">
 {% endblock %}
 
 {% block main %}
@@ -13,6 +14,7 @@
         <ul class="nav nav-tabs">
             <li class="active"><a href="#glyphicon" data-toggle="tab">Glyphicons</a></li>
             <li><a href="#fontawesome" data-toggle="tab">Font Awesome</a></li>
+            <li><a href="#weatherIcons" data-toggle="tab">Weather Icons</a></li>
         </ul>
 
         <div class="widget-content">
@@ -46,8 +48,26 @@
                     {% endfor %}
                     <div class="widget-info">
                         <p>For performance reasons, all icons require a base class <code>.fa</code> and individual icon class. You can place Font Awesome icons just about anywhere with the <code>&lt;i&gt;</code> tag.</p>
-                        <pre>&lt;i class=&quot;fa fa-camera-retro&quot;&gt;&lt;/i&gt; fa-camera-retro</pre>
+                        <pre>&lt;i class=&quot;fa fa-camera-retro&quot;&gt;&lt;/i&gt;</pre>
                         <p>Visit <a href="http://fortawesome.github.io/Font-Awesome/examples/" target="_blank">Font Awesome's documentation</a> to know more.</p>
+                    </div>
+                </div>
+                <div class="tab-pane" id="weatherIcons">
+                    {% for cat, icons in weather_icons.iteritems() %}
+                    <div class="widget-subtitle">{{ cat }}</div>
+                    <ul class="icons-list clearfix">
+                        {% for icon in icons %}
+                        <li>
+                            <i class="wi-{{ icon }}"></i>
+                            <span class="icon-class">.wi-{{ icon }}</span>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    {% endfor %}
+                    <div class="widget-info">
+                        <p>Weather Icons is a font of 92 weather themed icons, ready to be dropped right into Bootstrap or any other project.</p>
+                        <pre>&lt;i class=&quot;wi-day-lightning&quot;&gt;&lt;/i&gt;</pre>
+                        <p>Visit <a href="http://erikflowers.github.io/weather-icons/" target="_blank">Weather Icon's documentation</a> to know more.</p>
                     </div>
                 </div>
             </div>

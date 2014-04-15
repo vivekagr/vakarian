@@ -21,11 +21,11 @@
     }
   }
 
-  .glyphicon, .fa, .icon-class {
+  .glyphicon, .fa, .icon-class, [class^="wi-"], [class*=" wi-"] {
     display: block;
   }
 
-  .glyphicon, .fa {
+  .glyphicon, .fa, [class^="wi-"], [class*=" wi-"] {
     font-size: 1.6em;
   }
 

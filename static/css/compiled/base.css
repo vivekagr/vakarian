@@ -546,21 +546,21 @@ button.btn-navbar {
       .widget ul.nav.nav-tabs li:last-child > a {
         border-bottom-right-radius: 5px; }
       .widget ul.nav.nav-tabs li.active > a {
-        background-color: transparent;
-        border-color: #F3F6F6; }
+        background-color: #3498db;
+        border-color: #3498db; }
         .widget ul.nav.nav-tabs li.active > a:hover {
-          background-color: transparent; }
+          background-color: #3498db; }
       .widget ul.nav.nav-tabs li a {
         padding: 5px 12px;
         margin-right: 1px;
         border: 1px solid transparent;
         border-top: none;
         border-radius: 0;
-        background-color: #F3F6F6;
-        color: #34495e;
+        background-color: #2980b9;
+        color: #ecf0f1;
         font-size: 0.85em; }
         .widget ul.nav.nav-tabs li a:hover {
-          background-color: #edf2f2; }
+          background-color: #2677ac; }
   .widget .alert.alert-dismissable > .close {
     right: 0; }
 

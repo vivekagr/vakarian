@@ -19,9 +19,9 @@
         width: 12.5%; } }
     .icons-list li:hover {
       background-color: #dde4e6; }
-  .icons-list .glyphicon, .icons-list .fa, .icons-list .icon-class {
+  .icons-list .glyphicon, .icons-list .fa, .icons-list .icon-class, .icons-list [class^="wi-"], .icons-list [class*=" wi-"] {
     display: block; }
-  .icons-list .glyphicon, .icons-list .fa {
+  .icons-list .glyphicon, .icons-list .fa, .icons-list [class^="wi-"], .icons-list [class*=" wi-"] {
     font-size: 1.6em; }
   .icons-list .icon-class {
     margin-top: 12px;

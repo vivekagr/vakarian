@@ -742,11 +742,11 @@ button.btn-navbar {
       &:last-child > a { border-bottom-right-radius: 5px; }
 
       &.active > a {
-        background-color: transparent;
-        border-color: #F3F6F6;
+        background-color: #3498db;
+        border-color: #3498db;
 
         &:hover {
-          background-color: transparent;
+          background-color: #3498db;
         }
       }
 
@@ -756,12 +756,12 @@ button.btn-navbar {
         border: 1px solid transparent;
         border-top: none;
         border-radius: 0;
-        background-color: #F3F6F6;
-        color: #34495e;
+        background-color: #2980b9;
+        color: #ecf0f1;
         font-size: 0.85em;
 
         &:hover {
-          background-color: darken(#F3F6F6, 2%);
+          background-color: darken(#2980b9, 3%);
         }
       }
     }

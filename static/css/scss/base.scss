@@ -4,6 +4,7 @@
 * {
   box-sizing: border-box;
 
+  // Changing the color of text selection
   &::selection {
     background: #1ccfab;
     color: white;
@@ -30,19 +31,45 @@ body {
   overflow: auto;
 }
 
+// Changing the default anchor link color
 a {
   color: #3498db;
 }
 
+table {
+  font-size: 0.95em;
 
+  th { font-weight: 600; }
+
+  // Make the table row border color a bit lighter
+  >thead>tr>th, >tbody>tr>td {
+    border-color: #ecf0f1;
+  }
+}
+
+code {
+  color: white;
+  background: #16a085;
+  border-radius: 2px;
+}
+
+kbd {
+  background-color: #34495e;
+}
+
+pre {
+  border: none;
+}
+
+// This encapsulates the entire page
 .page-wrapper {
   position: relative;
   min-height:100%
 }
 
 
-// Custom Navbar
-.navbar-primary {
+// Top bar
+.topbar {
   border: none;
   border-radius: 0;
   background-color: $navbar-color;
@@ -81,6 +108,7 @@ a {
     }
   }
 
+  // To add any elements, such as buttons to the top bar, add it within a ul.navbar-items
   .navbar-items {
     margin: 0;
     list-style: none;
@@ -141,7 +169,8 @@ a {
 }
 
 
-// Sidebar toggle and search submit button
+// Use this on any button within the top navbar,
+// used for sidebar size toggle, search, notifications and settings button
 button.btn-navbar {
   position: relative;
   color: #81A0C0;
@@ -185,9 +214,10 @@ button.btn-navbar {
   }
 }
 
-// Navbar search form
+// Top navbar and sidebar search
 .navbar-search, .sidebar-search {
   display: inline-block;
+
   input {
     display: inline-block;
     vertical-align: middle;
@@ -215,6 +245,7 @@ button.btn-navbar {
   }
 }
 
+// Some custom styles for sidebar search
 .sidebar-search {
   display: block;
   position: relative;
@@ -235,6 +266,7 @@ button.btn-navbar {
     }
   }
 
+  // Add the search icon towards the right
   &:before {
     @extend .fa-icon;
     position: absolute;
@@ -312,7 +344,7 @@ button.btn-navbar {
   z-index: 2;
 }
 
-// For making sidebar fixed
+// For making sidebar fixed to the left of the window
 .sidebar-fixed {
   position: fixed;
   margin-top: 64px;
@@ -430,7 +462,6 @@ button.btn-navbar {
 
 
 // User profile inside the sidebar
-
 .sidebar-profile-wrapper {
   cursor: pointer;
 
@@ -553,10 +584,14 @@ button.btn-navbar {
   font-weight: 300;
 }
 
+// For button towards the right of the page title
 .btn.btn-v.page-title-btn {
   margin-top: 35px;
   font-size: 0.85em;
 }
+
+
+// WIDGET (white box for placing the content)
 
 .widget {
   position: relative;
@@ -574,6 +609,7 @@ button.btn-navbar {
     margin-right: 0;
   }
 
+  // Widget title
   .widget-title {
     font-size: 1.15em;
     font-weight: 500;
@@ -581,6 +617,7 @@ button.btn-navbar {
     color: #bdc3c7;
   }
 
+  // Widget sub-title
   .widget-subtitle {
     margin: 10px 0 3px 4px;
     font-size: 0.8em;
@@ -605,11 +642,13 @@ button.btn-navbar {
     }
   }
 
+  // All the content within the div (except title and footer) should be within this div
   .widget-content {
     padding: 0 15px 10px;
     blockquote { font-weight: 300; }
   }
 
+  // Used for showing extra details about the widget
   .widget-info {
     margin: 10px 0 5px;
     padding: 7px 10px;
@@ -639,6 +678,8 @@ button.btn-navbar {
 
   }
 
+  // If there is too much content in the .widget-info,
+  // encapsulate it within this to limit it's size.
   .widget-info-fixed-size {
     position: relative;
 
@@ -674,6 +715,7 @@ button.btn-navbar {
 
   }
 
+  // Show any small text as a footnote with this
   .widget-footnote {
     &:before {
       @extend .fa-icon;
@@ -686,6 +728,7 @@ button.btn-navbar {
     color: #bdc3c7;
   }
 
+  // For any nav tabs within a widget
   ul.nav.nav-tabs {
     border: none;
     position: absolute;
@@ -724,6 +767,7 @@ button.btn-navbar {
     }
   }
 
+  // Fixing alert's close icon/btn's position within a widget
   .alert.alert-dismissable > .close { right: 0; }
 }
 
@@ -738,31 +782,7 @@ button.btn-navbar {
   border-radius: 3px;
 }
 
-table {
-  font-size: 0.95em;
-
-  th { font-weight: 600; }
-
-  // Make the table row border color a bit lighter
-  >thead>tr>th, >tbody>tr>td {
-    border-color: #ecf0f1;
-  }
-}
-
-code {
-  color: white;
-  background: #16a085;
-  border-radius: 2px;
-}
-
-kbd {
-  background-color: #34495e;
-}
-
-pre {
-  border: none;
-}
-
+// Custom styles for datatables
 .dataTables_wrapper  {
 
   .dataTables_filter, .dataTables_paginate {
@@ -873,7 +893,7 @@ pre {
 
 
 // Buttons
-
+// Adding these styles within .btn-v to avoid squandering with the .btn
 .btn.btn-v {
   border: none;
   font-size: 0.9em;
@@ -961,6 +981,7 @@ pre {
   }
 }
 
+// Customizing the dropdown menu
 .dropdown-menu {
   border-color: #ecf0f1;
 
@@ -972,6 +993,7 @@ pre {
   }
 }
 
+// Styles for the alerts within a widget
 .widget .alert {
   padding: 12px 15px;
   border: none;
@@ -986,6 +1008,7 @@ pre {
   }
 }
 
+// Use this when creating alert on the page level (not inside any widget)
 .alert.alert-page {
   background-color: #fff;
   border-top: none;
@@ -1054,7 +1077,8 @@ pre {
   }
 }
 
-.breadcrumb-plain {
+// Use this for a simpler breadcrumb
+.breadcrumb.breadcrumb-plain {
   font-size: 0.86em;
   background-color: #F7F7F7;
 
@@ -1063,6 +1087,7 @@ pre {
   }
 }
 
+// Customizing the .pagination class
 .pagination {
   > li > a {
     border-color: #bdc3c7;

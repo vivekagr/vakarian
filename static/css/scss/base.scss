@@ -1056,7 +1056,7 @@ button.btn-navbar {
     background-color: #F7F7F7;
     color: #95a5a6;
     font-weight: 600;
-    padding: 0 11.5px 0 17px;
+    padding: 0 11.5px 0 20px;
 
     &:hover {
       text-decoration: none;
@@ -1075,6 +1075,18 @@ button.btn-navbar {
       @include transform(scale(0.767) rotate(45deg));
     }
   }
+
+  &.breadcrumb-v-inverse {
+    li.highlight a {
+      $bg-color: #34495e;
+      background-color: $bg-color;
+
+      &:after {
+        background-color: $bg-color;
+        border-color: $bg-color;
+      }
+    }
+  }
 }
 
 // Use this for a simpler breadcrumb
@@ -1084,6 +1096,18 @@ button.btn-navbar {
 
   > li > a {
     color: #3498db;
+  }
+
+  &.breadcrumb-plain-inverse {
+    background-color: #34495e;
+
+    > li > a {
+      color: #1abc9c;
+    }
+
+    > li.active {
+      color: #bdc3c7;
+    }
   }
 }
 

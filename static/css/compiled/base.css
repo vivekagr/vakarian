@@ -778,7 +778,7 @@ button.btn-navbar {
     background-color: #F7F7F7;
     color: #95a5a6;
     font-weight: 600;
-    padding: 0 11.5px 0 17px; }
+    padding: 0 11.5px 0 20px; }
     .breadcrumb-v a:hover {
       text-decoration: none;
       color: #34495e; }
@@ -796,12 +796,23 @@ button.btn-navbar {
       -ms-transform: scale(0.767) rotate(45deg);
       -o-transform: scale(0.767) rotate(45deg);
       transform: scale(0.767) rotate(45deg); }
+  .breadcrumb-v.breadcrumb-v-inverse li.highlight a {
+    background-color: #34495e; }
+    .breadcrumb-v.breadcrumb-v-inverse li.highlight a:after {
+      background-color: #34495e;
+      border-color: #34495e; }
 
 .breadcrumb.breadcrumb-plain {
   font-size: 0.86em;
   background-color: #F7F7F7; }
   .breadcrumb.breadcrumb-plain > li > a {
     color: #3498db; }
+  .breadcrumb.breadcrumb-plain.breadcrumb-plain-inverse {
+    background-color: #34495e; }
+    .breadcrumb.breadcrumb-plain.breadcrumb-plain-inverse > li > a {
+      color: #1abc9c; }
+    .breadcrumb.breadcrumb-plain.breadcrumb-plain-inverse > li.active {
+      color: #bdc3c7; }
 
 .pagination > li > a {
   border-color: #bdc3c7;

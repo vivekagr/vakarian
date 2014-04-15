@@ -16,6 +16,8 @@ $(function () {
         }
     });
 
+    $('.sidebar').show();
+
     // Closing the collapsed sub-menu when clicking outside of it
     // We are binding this over the entire html tag and are preventing the trigger
     // from undesired areas (such as sub-menu itself) by using `stopPropagation`
@@ -156,5 +158,7 @@ $(function () {
             btn.html('<i class="fa fa-eye-slash"></i> Hide Documentation');
         }
     });
+
+    $('.content-wrapper').fadeIn();
 
 });

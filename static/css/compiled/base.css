@@ -236,6 +236,7 @@ button.btn-navbar {
   background-color: #d9ddde; }
 
 .sidebar {
+  display: none;
   padding-bottom: 64px;
   position: absolute;
   top: 0;
@@ -397,6 +398,7 @@ button.btn-navbar {
     font-size: 1.6em; }
 
 .content-wrapper {
+  display: none;
   margin: 64px 0 0 210px;
   padding: 0 25px 25px;
   color: #2c3e50; }

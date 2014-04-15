@@ -300,6 +300,8 @@ button.btn-navbar {
 // Sidebar
 
 .sidebar {
+  // Hiding the sidebar by default and showing it after page load
+  display: none;
   padding-bottom: 64px;
   position: absolute;
   top: 0;
@@ -530,6 +532,8 @@ button.btn-navbar {
 
 // Wrapper for the main content area
 .content-wrapper {
+  // Hiding the div by default and fading it in after window load.
+  display: none;
   margin: 64px 0 0 210px;
   padding: 0 25px 25px;
   color: #2c3e50;

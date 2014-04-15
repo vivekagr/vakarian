@@ -887,3 +887,13 @@ pre {
   -webkit-box-shadow: none; }
   .progress-slim > .progress-bar > span {
     display: none; }
+
+.modal .modal-content {
+  border-radius: 3px;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  border: none; }
+  .modal .modal-content p {
+    font-size: 0.9em; }
+.modal .modal-footer .btn.btn-v {
+  margin-bottom: 0; }

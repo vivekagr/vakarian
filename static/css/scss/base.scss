@@ -1172,3 +1172,17 @@ pre {
   -webkit-box-shadow: none;
   > .progress-bar > span { display: none; }
 }
+
+.modal {
+  .modal-content {
+    border-radius: 3px;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    border: none;
+
+    p { font-size: 0.9em; }
+  }
+  .modal-footer .btn.btn-v {
+    margin-bottom: 0;
+  }
+}

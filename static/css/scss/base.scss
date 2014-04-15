@@ -728,8 +728,8 @@ button.btn-navbar {
     color: #bdc3c7;
   }
 
-  // For any nav tabs within a widget
-  ul.nav.nav-tabs {
+  // For fixed nav tabs within a widget
+  ul.nav.nav-tabs.fixed {
     border: none;
     position: absolute;
     top: 0;

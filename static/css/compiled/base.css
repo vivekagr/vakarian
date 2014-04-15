@@ -534,23 +534,23 @@ button.btn-navbar {
     .widget .widget-footnote:before {
       content: '\f05a';
       margin-right: 5px; }
-  .widget ul.nav.nav-tabs {
+  .widget ul.nav.nav-tabs.fixed {
     border: none;
     position: absolute;
     top: 0;
     right: 15px; }
-    .widget ul.nav.nav-tabs li {
+    .widget ul.nav.nav-tabs.fixed li {
       border: none; }
-      .widget ul.nav.nav-tabs li:first-child > a {
+      .widget ul.nav.nav-tabs.fixed li:first-child > a {
         border-bottom-left-radius: 5px; }
-      .widget ul.nav.nav-tabs li:last-child > a {
+      .widget ul.nav.nav-tabs.fixed li:last-child > a {
         border-bottom-right-radius: 5px; }
-      .widget ul.nav.nav-tabs li.active > a {
+      .widget ul.nav.nav-tabs.fixed li.active > a {
         background-color: #3498db;
         border-color: #3498db; }
-        .widget ul.nav.nav-tabs li.active > a:hover {
+        .widget ul.nav.nav-tabs.fixed li.active > a:hover {
           background-color: #3498db; }
-      .widget ul.nav.nav-tabs li a {
+      .widget ul.nav.nav-tabs.fixed li a {
         padding: 5px 12px;
         margin-right: 1px;
         border: 1px solid transparent;
@@ -559,7 +559,7 @@ button.btn-navbar {
         background-color: #2980b9;
         color: #ecf0f1;
         font-size: 0.85em; }
-        .widget ul.nav.nav-tabs li a:hover {
+        .widget ul.nav.nav-tabs.fixed li a:hover {
           background-color: #2677ac; }
   .widget .alert.alert-dismissable > .close {
     right: 0; }

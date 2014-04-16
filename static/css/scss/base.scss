@@ -1387,3 +1387,31 @@ div.slider.slider-vertical {
     border-right-color: #ecf0f1;
   }
 }
+
+.panel-group .panel {
+  font-size: 0.9em;
+  border-color: #ecf0f1;
+  border-radius: 3px;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+
+  .panel-heading {
+    background-color: #ecf0f1;
+  }
+
+  .panel-title {
+    font-size: 1.2em;
+  }
+}
+
+.tooltip {
+  $background-color: #dce0e1;
+  .tooltip-inner {
+    background-color: $background-color;
+    color: #34495e;
+  }
+  &.left .tooltip-arrow { border-left-color: $background-color; }
+  &.right .tooltip-arrow { border-right-color: $background-color; }
+  &.top .tooltip-arrow { border-top-color: $background-color; }
+  &.bottom .tooltip-arrow { border-bottom-color: $background-color; }
+}

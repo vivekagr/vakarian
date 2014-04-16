@@ -997,3 +997,26 @@ div.slider.slider-vertical {
     margin-left: -9px; }
   div.slider.slider-vertical .tooltip .tooltip-arrow {
     border-right-color: #ecf0f1; }
+
+.panel-group .panel {
+  font-size: 0.9em;
+  border-color: #ecf0f1;
+  border-radius: 3px;
+  box-shadow: none;
+  -webkit-box-shadow: none; }
+  .panel-group .panel .panel-heading {
+    background-color: #ecf0f1; }
+  .panel-group .panel .panel-title {
+    font-size: 1.2em; }
+
+.tooltip .tooltip-inner {
+  background-color: #dce0e1;
+  color: #34495e; }
+.tooltip.left .tooltip-arrow {
+  border-left-color: #dce0e1; }
+.tooltip.right .tooltip-arrow {
+  border-right-color: #dce0e1; }
+.tooltip.top .tooltip-arrow {
+  border-top-color: #dce0e1; }
+.tooltip.bottom .tooltip-arrow {
+  border-bottom-color: #dce0e1; }

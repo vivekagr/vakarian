@@ -21,6 +21,8 @@
   transform: $val;
 }
 
+// Extend this class and set a font awesome
+// icon with it's hex code in `content` property
 .fa-icon {
   display: inline-block;
   font-family: FontAwesome;

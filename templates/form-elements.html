@@ -3,6 +3,7 @@
 {% set page_title = "Form Elements" %}
 
 {% block css %}
+    <link rel="stylesheet" href="{{ static('css/lib/bootstrap-select.min.css') }}">
     <link rel="stylesheet" href="{{ static('css/lib/bootstrap-slider.min.css') }}">
 {% endblock %}
 
@@ -238,6 +239,190 @@
 
         </div>
     </div>
+
+    {{ c('Bootstrap Select Widget Starts') }}
+    <div class="widget">
+        <h4 class="widget-title">Bootstrap Select</h4>
+
+        <div class="widget-content">
+
+            {{ c('Default Bootstrap Selects') }}
+            <select class="selectpicker">
+                <option selected>Mustard</option>
+                <option>Ketchup</option>
+                <option>Relish</option>
+            </select>
+            <select class="selectpicker" data-style="btn-primary">
+                <option>Mustard</option>
+                <option selected>Ketchup</option>
+                <option>Relish</option>
+            </select>
+            <select class="selectpicker" data-style="btn-success">
+                <option>Mustard</option>
+                <option>Ketchup</option>
+                <option selected>Relish</option>
+            </select>
+            <select class="selectpicker" data-style="btn-info">
+                <option selected>Mustard</option>
+                <option>Ketchup</option>
+                <option>Relish</option>
+            </select>
+            <select class="selectpicker" data-style="btn-warning">
+                <option>Mustard</option>
+                <option selected>Ketchup</option>
+                <option>Relish</option>
+            </select>
+            <select class="selectpicker" data-style="btn-danger">
+                <option>Mustard</option>
+                <option>Ketchup</option>
+                <option selected>Relish</option>
+            </select>
+
+            {{ c('Bootstrap Selects With Multiple Selects') }}
+            <div class="widget-subtitle">With Multiple Selects</div>
+            <select class="selectpicker" multiple>
+                <option selected>Mustard</option>
+                <option>Ketchup</option>
+                <option selected>Relish</option>
+            </select>
+            <select class="selectpicker" data-style="btn-primary" multiple>
+                <option>Mustard</option>
+                <option selected>Ketchup</option>
+                <option>Relish</option>
+            </select>
+            <select class="selectpicker" data-style="btn-success" multiple>
+                <option selected>Mustard</option>
+                <option selected>Ketchup</option>
+                <option selected>Relish</option>
+            </select>
+            <select class="selectpicker" data-style="btn-info" multiple>
+                <option>Mustard</option>
+                <option>Ketchup</option>
+                <option selected>Relish</option>
+            </select>
+            <select class="selectpicker" data-style="btn-warning" multiple>
+                <option selected>Mustard</option>
+                <option selected>Ketchup</option>
+                <option>Relish</option>
+            </select>
+            <select class="selectpicker" data-style="btn-danger" multiple>
+                <option>Mustard</option>
+                <option>Ketchup</option>
+                <option>Relish</option>
+            </select>
+
+            {{ c('Bootstrap Selects With Option Groups') }}
+            <div class="widget-subtitle">With Option Groups</div>
+            <select class="selectpicker">
+                <optgroup label="Picnic">
+                    <option>Mustard</option>
+                    <option>Ketchup</option>
+                    <option>Relish</option>
+                </optgroup>
+                <optgroup label="Camping">
+                    <option>Tent</option>
+                    <option selected>Flashlight</option>
+                    <option>Toilet Paper</option>
+                </optgroup>
+            </select>
+            <select class="selectpicker" data-style="btn-primary">
+                <optgroup label="Picnic">
+                    <option>Mustard</option>
+                    <option>Ketchup</option>
+                    <option>Relish</option>
+                </optgroup>
+                <optgroup label="Camping">
+                    <option>Tent</option>
+                    <option selected>Flashlight</option>
+                    <option>Toilet Paper</option>
+                </optgroup>
+            </select>
+            <select class="selectpicker" data-style="btn-success">
+                <optgroup label="Picnic">
+                    <option>Mustard</option>
+                    <option>Ketchup</option>
+                    <option>Relish</option>
+                </optgroup>
+                <optgroup label="Camping">
+                    <option>Tent</option>
+                    <option selected>Flashlight</option>
+                    <option>Toilet Paper</option>
+                </optgroup>
+            </select>
+            <select class="selectpicker" data-style="btn-info">
+                <optgroup label="Picnic">
+                    <option>Mustard</option>
+                    <option>Ketchup</option>
+                    <option>Relish</option>
+                </optgroup>
+                <optgroup label="Camping">
+                    <option>Tent</option>
+                    <option selected>Flashlight</option>
+                    <option>Toilet Paper</option>
+                </optgroup>
+            </select>
+            <select class="selectpicker" data-style="btn-warning">
+                <optgroup label="Picnic">
+                    <option>Mustard</option>
+                    <option>Ketchup</option>
+                    <option>Relish</option>
+                </optgroup>
+                <optgroup label="Camping">
+                    <option>Tent</option>
+                    <option selected>Flashlight</option>
+                    <option>Toilet Paper</option>
+                </optgroup>
+            </select>
+            <select class="selectpicker" data-style="btn-danger">
+                <optgroup label="Picnic">
+                    <option>Mustard</option>
+                    <option>Ketchup</option>
+                    <option>Relish</option>
+                </optgroup>
+                <optgroup label="Camping">
+                    <option>Tent</option>
+                    <option selected>Flashlight</option>
+                    <option>Toilet Paper</option>
+                </optgroup>
+            </select>
+
+            {{ c('Bootstrap Selects With Search Field') }}
+            <div class="widget-subtitle">With Search Field</div>
+            <select class="selectpicker" data-live-search="true">
+                <option selected>Mustard</option>
+                <option>Ketchup</option>
+                <option>Relish</option>
+            </select>
+            <select class="selectpicker" data-style="btn-primary" data-live-search="true">
+                <option>Mustard</option>
+                <option selected>Ketchup</option>
+                <option>Relish</option>
+            </select>
+            <select class="selectpicker" data-style="btn-success" data-live-search="true">
+                <option>Mustard</option>
+                <option>Ketchup</option>
+                <option selected>Relish</option>
+            </select>
+            <select class="selectpicker" data-style="btn-info" data-live-search="true">
+                <option selected>Mustard</option>
+                <option>Ketchup</option>
+                <option>Relish</option>
+            </select>
+            <select class="selectpicker" data-style="btn-warning" data-live-search="true">
+                <option>Mustard</option>
+                <option selected>Ketchup</option>
+                <option>Relish</option>
+            </select>
+            <select class="selectpicker" data-style="btn-danger" data-live-search="true">
+                <option>Mustard</option>
+                <option>Ketchup</option>
+                <option selected>Relish</option>
+            </select>
+        </div>
+    </div>
+    {{ c('Bootstrap Select Widget Ends') }}
+
+    {{ c('Form Input Validation States Widget Starts') }}
     <div class="row">
         <div class="col-md-6">
             <div class="widget">
@@ -288,6 +473,9 @@
             </div>
         </div>
     </div>
+    {{ c('Form Input Validation States Widget Ends') }}
+
+    {{ c('Column Sizing Widget Starts') }}
     <div class="widget">
         <h4 class="widget-title">Column Sizing</h4>
         <div class="widget-content">
@@ -310,18 +498,24 @@
             </form>
         </div>
     </div>
+    {{ c('Column Sizing Widget Ends') }}
 {% endblock %}
 
 {% block vendor_js %}
+    <script src="{{ static('js/bootstrap-select.min.js') }}"></script>
     <script src="{{ static('js/bootstrap-slider.min.js') }}"></script>
 {% endblock %}
 
 {% block js %}
     <script>
         $(function() {
+            // Initializing Bootstrap Slider
             $("input.slider").slider({
                 tooltip_separator: '-'
             });
+
+            // Initializing Bootstrap Select
+            $(".selectpicker").selectpicker();
         });
     </script>
 {% endblock %}

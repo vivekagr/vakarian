@@ -912,8 +912,8 @@ button.btn-navbar {
     primary: #2980b9,
     success: #16a085,
     info: #53A5DB,
-    warning: #f39c12,
-    danger: #c0392b,
+    warning: #F7B650,
+    danger: #F55F4F,
     inverse: #34495e,
     facebook: #3B5998,
     twitter: #4099FF,
@@ -1240,16 +1240,22 @@ button.btn-navbar {
   }
 }
 
+.form-control {
+  padding: 10px 12px;
+  border-radius: 3px;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+
+  &:focus {
+    border-color: #A2A3A5;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+}
+
 .form-group {
   .help-block {
     font-size: 0.9em;
-  }
-
-  .form-control {
-    padding: 10px 12px;
-    border-radius: 3px;
-    box-shadow: none;
-    -webkit-box-shadow: none;
   }
 
   .file-input-wrapper {
@@ -1426,3 +1432,27 @@ div.slider.slider-vertical {
 
   .popover-content { font-size: 0.9em; }
 }
+
+.bootstrap-select {
+  > .btn {
+    @extend .btn-v;
+    &:focus { outline: none !important; }
+  }
+
+  .dropdown-menu {
+    a:focus {
+      outline: none;
+    }
+  }
+
+  .form-control {
+    font-size: 0.9em;
+  }
+
+  &.btn-group li.no-results {
+    background: transparent;
+    font-size: 0.9em;
+    padding: 4px;
+  }
+}
+

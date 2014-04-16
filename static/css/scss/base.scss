@@ -1388,6 +1388,7 @@ div.slider.slider-vertical {
   }
 }
 
+// Accordion
 .panel-group .panel {
   font-size: 0.9em;
   border-color: #ecf0f1;
@@ -1414,4 +1415,14 @@ div.slider.slider-vertical {
   &.right .tooltip-arrow { border-right-color: $background-color; }
   &.top .tooltip-arrow { border-top-color: $background-color; }
   &.bottom .tooltip-arrow { border-bottom-color: $background-color; }
+}
+
+.popover {
+  padding: 0;
+  border-radius: 4px;
+  border-color: #dce0e1;
+  box-shadow: 0 2px 11px rgba(0,0,0,.1);
+  -webkit-box-shadow: 0 2px 11px rgba(0,0,0,.1);
+
+  .popover-content { font-size: 0.9em; }
 }

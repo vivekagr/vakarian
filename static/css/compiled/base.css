@@ -1020,3 +1020,12 @@ div.slider.slider-vertical {
   border-top-color: #dce0e1; }
 .tooltip.bottom .tooltip-arrow {
   border-bottom-color: #dce0e1; }
+
+.popover {
+  padding: 0;
+  border-radius: 4px;
+  border-color: #dce0e1;
+  box-shadow: 0 2px 11px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 2px 11px rgba(0, 0, 0, 0.1); }
+  .popover .popover-content {
+    font-size: 0.9em; }

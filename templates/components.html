@@ -396,7 +396,7 @@
 
             <div class="widget-info-fixed-size">
                 <div class="widget-info">
-                    <p>Collapsable accordion can be built by extending the panel component.</p>
+                    <p>Collapsible accordion can be built by extending the panel component.</p>
                     <pre>&lt;div class=&quot;panel-group&quot; id=&quot;accordion&quot;&gt;<br/>    &lt;div class=&quot;panel panel-default&quot;&gt;<br/>        &lt;div class=&quot;panel-heading&quot;&gt;<br/>            &lt;h4 class=&quot;panel-title&quot;&gt;<br/>                &lt;a data-toggle=&quot;collapse&quot; data-parent=&quot;#accordion&quot; href=&quot;#collapseOne&quot;&gt;<br/>                    Collapsible Group Item #1<br/>                &lt;/a&gt;<br/>            &lt;/h4&gt;<br/>        &lt;/div&gt;<br/>        &lt;div id=&quot;collapseOne&quot; class=&quot;panel-collapse collapse in&quot;&gt;<br/>            &lt;div class=&quot;panel-body&quot;&gt;<br/>               ...<br/>            &lt;/div&gt;<br/>        &lt;/div&gt;<br/>    &lt;/div&gt;<br/>    &lt;div class=&quot;panel panel-default&quot;&gt;<br/>        &lt;div class=&quot;panel-heading&quot;&gt;<br/>            &lt;h4 class=&quot;panel-title&quot;&gt;<br/>                &lt;a data-toggle=&quot;collapse&quot; data-parent=&quot;#accordion&quot; href=&quot;#collapseTwo&quot;&gt;<br/>                    Collapsible Group Item #2<br/>                &lt;/a&gt;<br/>            &lt;/h4&gt;<br/>        &lt;/div&gt;<br/>        &lt;div id=&quot;collapseTwo&quot; class=&quot;panel-collapse collapse&quot;&gt;<br/>            &lt;div class=&quot;panel-body&quot;&gt;<br/>                ...<br/>            &lt;/div&gt;<br/>        &lt;/div&gt;<br/>    &lt;/div&gt;<br/>    &lt;div class=&quot;panel panel-default&quot;&gt;<br/>        &lt;div class=&quot;panel-heading&quot;&gt;<br/>            &lt;h4 class=&quot;panel-title&quot;&gt;<br/>                &lt;a data-toggle=&quot;collapse&quot; data-parent=&quot;#accordion&quot; href=&quot;#collapseThree&quot;&gt;<br/>                    Collapsible Group Item #3<br/>                &lt;/a&gt;<br/>            &lt;/h4&gt;<br/>        &lt;/div&gt;<br/>        &lt;div id=&quot;collapseThree&quot; class=&quot;panel-collapse collapse&quot;&gt;<br/>            &lt;div class=&quot;panel-body&quot;&gt;<br/>                ...<br/>            &lt;/div&gt;<br/>        &lt;/div&gt;<br/>    &lt;/div&gt;<br/>&lt;/div&gt;</pre>
                 </div>
                 <div class="expand">Expand</div>
@@ -415,12 +415,31 @@
             <button type="button" class="btn btn-v btn-primary tooltip-btn" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
 
             <div class="widget-info">
-                <p>Show a tooltip over any button, using CSS3 for animations, and data-attributes for local title storage.</p>
+                <p>Show a tooltip over any button, using CSS3 for animations, and data-attributes for local title storage. <code>data-placement</code> attribute can be set to <code>left</code>, <code>top</code>, <code>bottom</code> and <code>right</code>. Set the tooltip content in <code>title</code> attribute.</p>
                 <pre>&lt;button type=&quot;button&quot; class=&quot;btn btn-v btn-primary tooltip-btn&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;left&quot; title=&quot;Tooltip on left&quot;&gt;Tooltip on left&lt;/button&gt;<br/><br/>&lt;script&gt;<br/>    $('.tooltip-btn').tooltip();<br/>&lt;/script&gt;</pre>
             </div>
         </div>
     </div>
     {{ c('Tooltip Widget Ends') }}
+
+    {{ c('Popover Widget Starts') }}
+    <div class="widget">
+        <h4 class="widget-title">Popover</h4>
+        <div class="widget-content">
+            <div class="text-center">
+                <button type="button" class="btn btn-v btn-success popover-btn" data-container="body" data-toggle="popover" data-placement="left" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">Popover on left</button>
+                <button type="button" class="btn btn-v btn-success popover-btn" data-container="body" data-toggle="popover" data-placement="top" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">Popover on top</button>
+                <button type="button" class="btn btn-v btn-success popover-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-content="And here's some amazing content. Without title!!1">Popover on bottom</button>
+                <button type="button" class="btn btn-v btn-success popover-btn" data-container="body" data-toggle="popover" data-placement="right" data-content="And here's some amazing content. Without title!!1">Popover on right</button>
+            </div>
+
+            <div class="widget-info">
+                <p>Add small overlays of content, like those on the iPad, to any element for housing secondary information. <code>data-placement</code> attribute can be set to <code>left</code>, <code>top</code>, <code>bottom</code> and <code>right</code>. Use <code>data-original-title</code> and <code>data-content</code> attributes for popover title and content. Title is optional.</p>
+                <pre>&lt;button type=&quot;button&quot; class=&quot;btn btn-v btn-success popover-btn&quot; data-container=&quot;body&quot; data-toggle=&quot;popover&quot; data-placement=&quot;left&quot; data-content=&quot;And here's some amazing content. It's very engaging. right?&quot; data-original-title=&quot;A Title&quot;&gt;Popover on left&lt;/button&gt;<br/><br/>&lt;script&gt;<br/>    $('.popover-btn').popover();<br/>&lt;/script&gt;</pre>
+            </div>
+        </div>
+    </div>
+    {{ c('Popover Widget Ends') }}
 {% endblock %}
 
 {% block js %}
@@ -428,6 +447,9 @@
         $(function() {
             // Initializing the tooltips
             $('.tooltip-btn').tooltip();
+
+            // Initializing the popovers
+            $('.popover-btn').popover();
         });
     </script>
 {% endblock %}

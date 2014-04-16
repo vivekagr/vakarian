@@ -1437,6 +1437,12 @@ div.slider.slider-vertical {
   > .btn {
     @extend .btn-v;
     &:focus { outline: none !important; }
+
+    &.btn-primary, &.btn-success, &.btn-info, &.btn-warning, &.btn-danger {
+      .text-muted {
+        color: #ecf0f1;
+      }
+    }
   }
 
   .dropdown-menu {
@@ -1453,6 +1459,10 @@ div.slider.slider-vertical {
     background: transparent;
     font-size: 0.9em;
     padding: 4px;
+  }
+
+  .dropdown-menu li a:hover .text-muted, .dropdown-menu li a:focus .text-muted {
+    color: #95a5a6 !important;
   }
 }
 

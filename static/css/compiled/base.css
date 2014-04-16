@@ -1037,6 +1037,8 @@ div.slider.slider-vertical {
 
 .bootstrap-select > .btn:focus {
   outline: none !important; }
+.bootstrap-select > .btn.btn-primary .text-muted, .bootstrap-select > .btn.btn-success .text-muted, .bootstrap-select > .btn.btn-info .text-muted, .bootstrap-select > .btn.btn-warning .text-muted, .bootstrap-select > .btn.btn-danger .text-muted {
+  color: #ecf0f1; }
 .bootstrap-select .dropdown-menu a:focus {
   outline: none; }
 .bootstrap-select .form-control {
@@ -1045,3 +1047,5 @@ div.slider.slider-vertical {
   background: transparent;
   font-size: 0.9em;
   padding: 4px; }
+.bootstrap-select .dropdown-menu li a:hover .text-muted, .bootstrap-select .dropdown-menu li a:focus .text-muted {
+  color: #95a5a6 !important; }

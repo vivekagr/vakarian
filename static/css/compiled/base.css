@@ -957,18 +957,18 @@ div.slider.slider-horizontal .slider-track, div.slider.slider-vertical .slider-t
     box-shadow: none;
     -webkit-box-shadow: none; }
     div.slider.slider-horizontal .slider-track .slider-handle:not(.triangle), div.slider.slider-vertical .slider-track .slider-handle:not(.triangle) {
-      border: 2px solid #16a085; }
+      border: 2px solid #2980b9; }
     div.slider.slider-horizontal .slider-track .slider-handle.triangle, div.slider.slider-vertical .slider-track .slider-handle.triangle {
       margin-top: 2px;
       border-width: 0 10px 10px 10px;
-      border-bottom-color: #16a085; }
+      border-bottom-color: #2980b9; }
     div.slider.slider-horizontal .slider-track .slider-handle:focus, div.slider.slider-vertical .slider-track .slider-handle:focus {
       outline: none; }
   div.slider.slider-horizontal .slider-track .slider-selection, div.slider.slider-vertical .slider-track .slider-selection {
     background: none;
     box-shadow: none;
     -webkit-box-shadow: none;
-    background: #1abc9c; }
+    background: #3498db; }
 div.slider.slider-horizontal .tooltip .tooltip-inner, div.slider.slider-vertical .tooltip .tooltip-inner {
   background-color: #ecf0f1;
   color: #7f8c8d; }

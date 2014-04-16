@@ -1297,9 +1297,15 @@ button.btn-navbar {
 }
 
 
-// Bootstrap Slider
+// Bootstrap Slider Customization
 
 div.slider.slider-horizontal, div.slider.slider-vertical {
+  $track-color: #3498db;
+  $handle-color: #2980b9;
+  $disabled-slider-color: #bdc3c7;
+
+  $tooltip-bg: #ecf0f1;
+  $tooltip-color: #7f8c8d;
 
   .slider-track {
     box-shadow: none;
@@ -1314,13 +1320,13 @@ div.slider.slider-horizontal, div.slider.slider-vertical {
       -webkit-box-shadow: none;
 
       &:not(.triangle) {
-        border: 2px solid #16a085;
+        border: 2px solid $handle-color;
       }
 
       &.triangle {
         margin-top: 2px;
         border-width: 0 10px 10px 10px;
-        border-bottom-color: #16a085;
+        border-bottom-color: $handle-color;
       }
 
       &:focus {
@@ -1332,18 +1338,18 @@ div.slider.slider-horizontal, div.slider.slider-vertical {
       background: none;
       box-shadow: none;
       -webkit-box-shadow: none;
-      background: #1abc9c;
+      background: $track-color;
     }
   }
 
   .tooltip .tooltip-inner {
-      background-color: #ecf0f1;
-      color: #7f8c8d;
+      background-color: $tooltip-bg;
+      color: $tooltip-color;
     }
 
   &.slider-disabled {
-    .slider-handle.round { border-color: #bdc3c7; }
-    .slider-selection { background: #bdc3c7; }
+    .slider-handle.round { border-color: $disabled-slider-color; }
+    .slider-selection { background: $disabled-slider-color; }
   }
 }
 

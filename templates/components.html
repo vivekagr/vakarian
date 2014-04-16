@@ -9,6 +9,8 @@
 
 {% block main %}
     <div class="row">
+
+        {{ c('Breadcrumbs Starts') }}
         <div class="col-md-6">
             <div class="widget">
                 <h4 class="widget-title">Breadcrumb</h4>
@@ -32,6 +34,9 @@
                 </div>
             </div>
         </div>
+        {{ c('Breadcrumbs Ends') }}
+
+        {{ c('Plain Breadcrumbs Starts') }}
         <div class="col-md-6">
             <div class="widget">
                 <h4 class="widget-title">Plain Breadcrumb</h4>
@@ -53,6 +58,9 @@
                 </div>
             </div>
         </div>
+        {{ c('Plain Breadcrumbs Ends') }}
+
+        {{ c('Pagination Starts') }}
         <div class="col-md-6">
             <div class="widget">
                 <h4 class="widget-title">Pagination</h4>
@@ -91,6 +99,9 @@
                 </div>
             </div>
         </div>
+        {{ c('Pagination Ends') }}
+
+        {{ c('Pagination Sizes Starts') }}
         <div class="col-md-6">
             <div class="widget">
                 <h4 class="widget-title">Pagination Sizes</h4>
@@ -134,6 +145,9 @@
                 </div>
             </div>
         </div>
+        {{ c('Pagination Sizes Ends') }}
+
+        {{ c('Pager Starts') }}
         <div class="col-md-6">
             <div class="widget">
                 <h4 class="widget-title">Pager</h4>
@@ -155,6 +169,9 @@
                 </div>
             </div>
         </div>
+        {{ c('Pager Ends') }}
+
+        {{ c('Pager Alignment and State Widget Starts') }}
         <div class="col-md-6">
             <div class="widget">
                 <h4 class="widget-title">Pager Alignment and State</h4>
@@ -176,7 +193,12 @@
                 </div>
             </div>
         </div>
+        {{ c('Pager Alignment and State Widget Ends') }}
+
+        {{ c('Adding clearfix to prevent columns from mis-aligning') }}
         <div class="clearfix"></div>
+
+        {{ c('Labels Starts') }}
         <div class="col-md-6">
             <div class="widget">
                 <h4 class="widget-title">Labels</h4>
@@ -191,10 +213,14 @@
 
                     <div class="widget-info">
                         <p>Add a short and quick state information to any text with labels.</p>
+                        <pre>&lt;h1&gt;Example heading &lt;span class=&quot;label label-default&quot;&gt;New&lt;/span&gt;&lt;/h1&gt;</pre>
                     </div>
                 </div>
             </div>
         </div>
+        {{ c('Labels Ends') }}
+
+        {{ c('Label Colors Widget Starts') }}
         <div class="col-md-6">
             <div class="widget">
                 <h4 class="widget-title">Label Colors</h4>
@@ -207,7 +233,11 @@
                     <span class="label label-warning">Warning</span>
                     <span class="label label-danger">Danger</span>
 
+                    <h2>Example heading <span class="label label-primary">New</span></h2>
                     <h3>Example heading <span class="label label-success">New</span></h3>
+                    <h4>Example heading <span class="label label-info">New</span></h4>
+                    <h5>Example heading <span class="label label-warning">New</span></h5>
+                    <h6>Example heading <span class="label label-danger">New</span></h6>
 
                     <div class="widget-info">
                         <p>Add any of the below mentioned modifier classes to change the appearance of a label.</p>
@@ -216,100 +246,106 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-12">
-            <div class="widget">
-                <h4 class="widget-title">Badge</h4>
+        {{ c('Label Colors Widget Ends') }}
 
-                <div class="widget-content">
-                    <a href="#">Inbox <span class="badge">42</span></a>
+    </div>
 
-                    <div class="widget-info">
-                        <p>Easily highlight new or unread items by adding a <code>&lt;span class="badge"&gt;</code> to links, Bootstrap navs, and more.</p>
-                        <pre>&lt;a href=&quot;#&quot;&gt;Inbox &lt;span class=&quot;badge&quot;&gt;42&lt;/span&gt;&lt;/a&gt;</pre>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-12">
-            <div class="widget">
-                <h4 class="widget-title">Modals</h4>
+    {{ c('Badge Widget Starts') }}
+    <div class="widget">
+        <h4 class="widget-title">Badge</h4>
 
-                <div class="widget-content">
-                    <button class="btn btn-v btn-wide btn-primary" data-toggle="modal" data-target="#modalDemo">Launch demo modal</button>
-                    <button class="btn btn-v btn-wide btn-success" data-toggle="modal" data-target="#modalDemoLarge">Launch large demo modal</button>
-                    <button class="btn btn-v btn-wide btn-info" data-toggle="modal" data-target="#modalDemoSmall">Launch small demo modal</button>
-                    <div class="modal fade" id="modalDemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <h4>Overflowing text to show scroll behavior</h4>
-                                    <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-                                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-                                    <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-v btn-default" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-v btn-primary">Save changes</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal fade" id="modalDemoLarge" tabindex="-1" role="dialog" aria-labelledby="myModalLargeLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <h4>Overflowing text to show scroll behavior</h4>
-                                    <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-                                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-                                    <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-v btn-default" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-v btn-primary">Save changes</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal fade" id="modalDemoSmall" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-sm">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                    <h4 class="modal-title" id="myModalSmallLabel">Modal title</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <h4>Overflowing text to show scroll behavior</h4>
-                                    <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-                                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-                                    <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-v btn-default" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-v btn-primary">Save changes</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="widget-content">
+            <a href="#">Inbox <span class="badge">42</span></a>
 
-                    <div class="widget-info-fixed-size">
-                        <div class="widget-info">
-                            <p>Modals are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults.</p>
-                            <pre>&lt;button class=&quot;btn btn-v btn-wide btn-primary&quot; data-toggle=&quot;modal&quot; data-target=&quot;#myModal&quot;&gt;<br/>    Launch demo modal<br/>&lt;/button&gt;<br/>&lt;div class=&quot;modal fade&quot; id=&quot;myModal&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;myModalLabel&quot; aria-hidden=&quot;true&quot;&gt;<br/>    &lt;div class=&quot;modal-dialog&quot;&gt;<br/>        &lt;div class=&quot;modal-content&quot;&gt;<br/>            &lt;div class=&quot;modal-header&quot;&gt;<br/>                &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/button&gt;<br/>                &lt;h4 class=&quot;modal-title&quot; id=&quot;myModalLabel&quot;&gt;Modal title&lt;/h4&gt;<br/>            &lt;/div&gt;<br/>            &lt;div class=&quot;modal-body&quot;&gt;<br/>                ...<br/>            &lt;/div&gt;<br/>            &lt;div class=&quot;modal-footer&quot;&gt;<br/>                &lt;button type=&quot;button&quot; class=&quot;btn btn-v btn-default&quot; data-dismiss=&quot;modal&quot;&gt;Close&lt;/button&gt;<br/>                &lt;button type=&quot;button&quot; class=&quot;btn btn-v btn-primary&quot;&gt;Save changes&lt;/button&gt;<br/>            &lt;/div&gt;<br/>        &lt;/div&gt;<br/>    &lt;/div&gt;<br/>&lt;/div&gt;</pre>
-                        </div>
-                        <div class="expand">Expand</div>
-                    </div>
-                </div>
+            <div class="widget-info">
+                <p>Easily highlight new or unread items by adding a <code>&lt;span class="badge"&gt;</code> to links, Bootstrap navs, and more.</p>
+                <pre>&lt;a href=&quot;#&quot;&gt;Inbox &lt;span class=&quot;badge&quot;&gt;42&lt;/span&gt;&lt;/a&gt;</pre>
             </div>
         </div>
     </div>
+    {{ c('Badge Widget Ends') }}
+
+    {{ c('Modals Starts') }}
+    <div class="widget">
+        <h4 class="widget-title">Modals</h4>
+
+        <div class="widget-content">
+            <button class="btn btn-v btn-wide btn-primary" data-toggle="modal" data-target="#modalDemo">Launch demo modal</button>
+            <button class="btn btn-v btn-wide btn-success" data-toggle="modal" data-target="#modalDemoLarge">Launch large demo modal</button>
+            <button class="btn btn-v btn-wide btn-info" data-toggle="modal" data-target="#modalDemoSmall">Launch small demo modal</button>
+            <div class="modal fade" id="modalDemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                        </div>
+                        <div class="modal-body">
+                            <h4>Overflowing text to show scroll behavior</h4>
+                            <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                            <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-v btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-v btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="modalDemoLarge" tabindex="-1" role="dialog" aria-labelledby="myModalLargeLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                        </div>
+                        <div class="modal-body">
+                            <h4>Overflowing text to show scroll behavior</h4>
+                            <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                            <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-v btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-v btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="modalDemoSmall" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="myModalSmallLabel">Modal title</h4>
+                        </div>
+                        <div class="modal-body">
+                            <h4>Overflowing text to show scroll behavior</h4>
+                            <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                            <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-v btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-v btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="widget-info-fixed-size">
+                <div class="widget-info">
+                    <p>Modals are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults.</p>
+                    <pre>&lt;button class=&quot;btn btn-v btn-wide btn-primary&quot; data-toggle=&quot;modal&quot; data-target=&quot;#myModal&quot;&gt;<br/>    Launch demo modal<br/>&lt;/button&gt;<br/>&lt;div class=&quot;modal fade&quot; id=&quot;myModal&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;myModalLabel&quot; aria-hidden=&quot;true&quot;&gt;<br/>    &lt;div class=&quot;modal-dialog&quot;&gt;<br/>        &lt;div class=&quot;modal-content&quot;&gt;<br/>            &lt;div class=&quot;modal-header&quot;&gt;<br/>                &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/button&gt;<br/>                &lt;h4 class=&quot;modal-title&quot; id=&quot;myModalLabel&quot;&gt;Modal title&lt;/h4&gt;<br/>            &lt;/div&gt;<br/>            &lt;div class=&quot;modal-body&quot;&gt;<br/>                ...<br/>            &lt;/div&gt;<br/>            &lt;div class=&quot;modal-footer&quot;&gt;<br/>                &lt;button type=&quot;button&quot; class=&quot;btn btn-v btn-default&quot; data-dismiss=&quot;modal&quot;&gt;Close&lt;/button&gt;<br/>                &lt;button type=&quot;button&quot; class=&quot;btn btn-v btn-primary&quot;&gt;Save changes&lt;/button&gt;<br/>            &lt;/div&gt;<br/>        &lt;/div&gt;<br/>    &lt;/div&gt;<br/>&lt;/div&gt;</pre>
+                </div>
+                <div class="expand">Expand</div>
+            </div>
+        </div>
+    </div>
+    {{ c('Modals Ends') }}
+
+    {{ c('Collapses Widget Starts') }}
     <div class="widget">
         <h4 class="widget-title">Collapses</h4>
         <div class="widget-content">
@@ -367,6 +403,9 @@
             </div>
         </div>
     </div>
+    {{ c('Collapses Widget Ends') }}
+
+    {{ c('Tooltip Widget Starts') }}
     <div class="widget">
         <h4 class="widget-title">Tooltip</h4>
         <div class="widget-content">
@@ -381,11 +420,13 @@
             </div>
         </div>
     </div>
+    {{ c('Tooltip Widget Ends') }}
 {% endblock %}
 
 {% block js %}
     <script>
         $(function() {
+            // Initializing the tooltips
             $('.tooltip-btn').tooltip();
         });
     </script>

@@ -1,0 +1,15 @@
+/*
+ * This file contains styles only meant for certain
+ * parts of the theme demonstrating the features and
+ * are not required to be included in your project.
+ *
+ */
+.knobs-widget {
+  text-align: center; }
+  .knobs-widget .widget-content {
+    padding-top: 15px !important;
+    padding-bottom: 20px !important; }
+  .knobs-widget .widget-subtitle {
+    margin: 0 auto 20px !important; }
+  .knobs-widget .widget-title, .knobs-widget .widget-info {
+    text-align: left; }

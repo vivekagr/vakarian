@@ -1,0 +1,25 @@
+/*
+ * This file contains styles only meant for certain
+ * parts of the theme demonstrating the features and
+ * are not required to be included in your project.
+ *
+ */
+
+
+// jQuery Knobs Widget
+.knobs-widget {
+  text-align: center;
+
+  .widget-content {
+    padding-top: 15px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .widget-subtitle {
+    margin: 0 auto 20px !important;
+  }
+
+  .widget-title, .widget-info {
+    text-align: left;
+  }
+}

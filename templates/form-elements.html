@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="{{ static('css/lib/bootstrap-slider.min.css') }}">
     <link rel="stylesheet" href="{{ static('css/lib/bootstrap-switch.min.css') }}">
     <link rel="stylesheet" href="{{ static('css/lib/bootstrap-tagsinput.css') }}">
+
+    <link rel="stylesheet" href="{{ static('css/compiled/template.css') }}">
 {% endblock %}
 
 {% block main %}
@@ -609,6 +611,40 @@
     </div>
     {{ c('Bootstrap Select Widget Ends') }}
 
+    {{ c('jQuery Knob Widget Starts') }}
+    <div class="widget knobs-widget">
+        <h4 class="widget-title">jQuery Knob</h4>
+
+        <div class="widget-content">
+            <div class="row">
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="widget-subtitle">Normal Knob</div>
+                    <input type="text" value="75" class="dial" data-fgColor="#1abc9c">
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="widget-subtitle">Display Input Disabled</div>
+                    <input type="text" value="75" class="dial" data-width="150" data-displayInput=false data-fgColor="#53a5db">
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="widget-subtitle">Display Previous Value</div>
+                    <input type="text" value="75" class="dial" data-width="150" data-displayPrevious=true data-fgColor="#2980b9">
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="widget-subtitle">Cursor Mode</div>
+                    <input type="text" class="dial" data-cursor=true data-min="-50" data-max="50" value="20" data-fgColor="#e74c3c">
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="widget-subtitle">Angle Offset</div>
+                    <input type="text" class="dial" data-angleoffset="90" data-linecap="round" data-min="-50" data-max="50" value="20" data-fgColor="#34495e">
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="widget-subtitle">Angle Offset and Arc</div>
+                    <input type="text" class="dial" data-angleOffset="-125" data-angleArc="250" data-min="-50" data-max="50" value="20" data-fgColor="#bdc3c7">
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ c('jQuery Knob Widget Ends') }}
 
     <div class="row">
 
@@ -867,6 +903,7 @@
     <script src="{{ static('js/bootstrap-slider.min.js') }}"></script>
     <script src="{{ static('js/bootstrap-switch.min.js') }}"></script>
     <script src="{{ static('js/bootstrap-tagsinput.js') }}"></script>
+    <script src="{{ static('js/jquery.knob.js') }}"></script>
 {% endblock %}
 
 {% block js %}
@@ -888,6 +925,12 @@
                 tagClass: function() {
                     return 'label label-primary';
                 }
+            });
+
+            $(".dial").knob({
+                thickness: 0.2,
+                width: 150,
+                height:150
             });
         });
     </script>

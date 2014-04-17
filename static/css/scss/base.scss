@@ -1487,12 +1487,20 @@ div.slider.slider-vertical {
     }
   }
 
+  span {
+    position: relative;
+    left: 1.2857142857142858em;
+  }
+
   span:before {
     @extend .fa-icon;
+    position: absolute;
+    display: inline-block;
     width: 1.2857142857142858em;
     content: '\f10c';
-    font-size: 1.1em;
-    margin-right: -1px;
+    font-size: 1.2em;
+    left: -1.1057142857142858em;
+    top: 2px;
   }
 
   span {
@@ -1513,4 +1521,8 @@ div.slider.slider-vertical {
   span:before {
     content: '\f096';
   }
+}
+
+.radio-inline, .checkbox-inline {
+  margin-right: 12px;
 }

@@ -1246,7 +1246,7 @@ button.btn-navbar {
 }
 
 .form-control {
-  padding: 10px 12px;
+  padding: 7px 12px;
   border-radius: 3px;
   box-shadow: none;
   -webkit-box-shadow: none;
@@ -1539,6 +1539,8 @@ div.slider.slider-vertical {
   &.bootstrap-switch-wrapper {
     border-color: #ecf0f1;
     border-radius: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   .bootstrap-switch-handle-off.bootstrap-switch-default {

@@ -1299,7 +1299,7 @@ button.btn-navbar {
 }
 
 .checkbox {
-  font-size: 0.9em;
+//  font-size: 0.9em;
 }
 
 
@@ -1466,3 +1466,46 @@ div.slider.slider-vertical {
   }
 }
 
+.radio, .radio-inline, .checkbox, .checkbox-inline {
+  padding-left: 0;
+
+  input[type="radio"], input[type="checkbox"] {
+    display: none;
+    margin-left: -12px;
+
+    &:checked + span:before {
+      content: '\f192';
+    }
+
+    &:disabled + span {
+      color: #7f8c8d;
+    }
+  }
+
+  span:before {
+    @extend .fa-icon;
+    width: 1.2857142857142858em;
+    content: '\f10c';
+    font-size: 1.1em;
+    margin-right: -1px;
+  }
+
+  span {
+    font-weight: 400;
+  }
+
+  span:hover {
+    cursor: pointer;
+  }
+
+}
+
+.checkbox, .checkbox-inline {
+  input[type="checkbox"]:checked + span:before {
+    content: '\f046';
+  }
+
+  span:before {
+    content: '\f096';
+  }
+}

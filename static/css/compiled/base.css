@@ -1,4 +1,4 @@
-.fa-icon, .sidebar-search:before, .nav-sidebar li.dropdown span:before, .nav-sidebar > li.dropdown > ul > li > a:before, .widget .widget-footnote:before, .dataTables_wrapper thead > tr > th.sorting_asc:after, .dataTables_wrapper thead > tr > th.sorting_desc:before, .dataTables_wrapper .dataTables_paginate a.paginate_disabled_previous:before, .dataTables_wrapper .dataTables_paginate a.paginate_enabled_previous:before, .dataTables_wrapper .dataTables_paginate a.paginate_disabled_next:after, .dataTables_wrapper .dataTables_paginate a.paginate_enabled_next:after {
+.fa-icon, .sidebar-search:before, .nav-sidebar li.dropdown span:before, .nav-sidebar > li.dropdown > ul > li > a:before, .widget .widget-footnote:before, .dataTables_wrapper thead > tr > th.sorting_asc:after, .dataTables_wrapper thead > tr > th.sorting_desc:before, .dataTables_wrapper .dataTables_paginate a.paginate_disabled_previous:before, .dataTables_wrapper .dataTables_paginate a.paginate_enabled_previous:before, .dataTables_wrapper .dataTables_paginate a.paginate_disabled_next:after, .dataTables_wrapper .dataTables_paginate a.paginate_enabled_next:after, .radio span:before, .radio-inline span:before, .checkbox span:before, .checkbox-inline span:before {
   display: inline-block;
   font-family: FontAwesome;
   font-style: normal;
@@ -948,9 +948,6 @@ button.btn-navbar {
 .form-group.has-error .help-block, .form-group.has-error label {
   color: #E27367; }
 
-.checkbox {
-  font-size: 0.9em; }
-
 div.slider.slider-horizontal .slider-track, div.slider.slider-vertical .slider-track {
   box-shadow: none;
   -webkit-box-shadow: none;
@@ -1049,3 +1046,27 @@ div.slider.slider-vertical {
   padding: 4px; }
 .bootstrap-select .dropdown-menu li a:hover .text-muted, .bootstrap-select .dropdown-menu li a:focus .text-muted {
   color: #95a5a6 !important; }
+
+.radio, .radio-inline, .checkbox, .checkbox-inline {
+  padding-left: 0; }
+  .radio input[type="radio"], .radio input[type="checkbox"], .radio-inline input[type="radio"], .radio-inline input[type="checkbox"], .checkbox input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="radio"], .checkbox-inline input[type="checkbox"] {
+    display: none;
+    margin-left: -12px; }
+    .radio input[type="radio"]:checked + span:before, .radio input[type="checkbox"]:checked + span:before, .radio-inline input[type="radio"]:checked + span:before, .radio-inline input[type="checkbox"]:checked + span:before, .checkbox input[type="radio"]:checked + span:before, .checkbox input[type="checkbox"]:checked + span:before, .checkbox-inline input[type="radio"]:checked + span:before, .checkbox-inline input[type="checkbox"]:checked + span:before {
+      content: '\f192'; }
+    .radio input[type="radio"]:disabled + span, .radio input[type="checkbox"]:disabled + span, .radio-inline input[type="radio"]:disabled + span, .radio-inline input[type="checkbox"]:disabled + span, .checkbox input[type="radio"]:disabled + span, .checkbox input[type="checkbox"]:disabled + span, .checkbox-inline input[type="radio"]:disabled + span, .checkbox-inline input[type="checkbox"]:disabled + span {
+      color: #7f8c8d; }
+  .radio span:before, .radio-inline span:before, .checkbox span:before, .checkbox-inline span:before {
+    width: 1.2857142857142858em;
+    content: '\f10c';
+    font-size: 1.1em;
+    margin-right: -1px; }
+  .radio span, .radio-inline span, .checkbox span, .checkbox-inline span {
+    font-weight: 400; }
+  .radio span:hover, .radio-inline span:hover, .checkbox span:hover, .checkbox-inline span:hover {
+    cursor: pointer; }
+
+.checkbox input[type="checkbox"]:checked + span:before, .checkbox-inline input[type="checkbox"]:checked + span:before {
+  content: '\f046'; }
+.checkbox span:before, .checkbox-inline span:before {
+  content: '\f096'; }

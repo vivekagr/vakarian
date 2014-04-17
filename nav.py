@@ -27,7 +27,7 @@ nav_menu = [
 
     { 'title': 'Forms', 'icon': 'pencil', 'children': [
         { 'title': 'Form Elements', 'template': 'form-elements.html' },
-        { 'title': 'Form Wizards', 'template': '#' },
+        { 'title': 'Form Wizards', 'template': 'form-wizard.html' },
         { 'title': 'WYSIWYG Editors', 'template': '#' },
     ] },
 

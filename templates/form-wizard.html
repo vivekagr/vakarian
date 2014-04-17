@@ -1,0 +1,40 @@
+{% extends '_base.html' %}
+
+{% set page_title = "Form Wizard" %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ static('css/lib/bootstrap-wizard.css') }}">
+
+{#    <link rel="stylesheet" href="{{ static('css/compiled/template.css') }}">#}
+{% endblock %}
+
+{% block main %}
+    <div class="widget">
+        <h4 class="widget-title">Wizard</h4>
+        <div class="widget-content">
+            <div class="wizard" id="some-wizard" data-title="Wizard Title">
+                <div class="wizard-card" data-cardname="card1">
+                    <h3>Card 1</h3>
+                    Some content
+                </div>
+                <div class="wizard-card" data-cardname="card2">
+                    <h3>Card 2</h3>
+                    Some content
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block vendor_js %}
+    <script src="{{ static('js/bootstrap-wizard.min.js') }}"></script>
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(function() {
+            var wizard = $("#some-wizard").wizard({});
+            wizard.show();
+        });
+    </script>
+{% endblock %}

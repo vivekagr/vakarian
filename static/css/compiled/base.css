@@ -935,7 +935,7 @@ button.btn-navbar {
   font-size: 0.9em;
   font-weight: 600;
   color: #34495e; }
-.form-group.has-success .form-control:focus, .form-group.has-warning .form-control:focus, .form-group.has-error .form-control:focus {
+.form-group.has-success .form-control, .form-group.has-warning .form-control, .form-group.has-error .form-control {
   box-shadow: none;
   -webkit-box-shadow: none; }
 .form-group.has-success .form-control {

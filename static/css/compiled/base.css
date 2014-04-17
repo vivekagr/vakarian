@@ -1083,6 +1083,9 @@ div.slider.slider-vertical {
 .radio-inline, .checkbox-inline {
   margin-right: 12px; }
 
+.form-inline .radio, .form-inline .checkbox {
+  margin-right: 16px; }
+
 .bootstrap-switch {
   margin-right: 8px; }
   .bootstrap-switch.bootstrap-switch-wrapper {

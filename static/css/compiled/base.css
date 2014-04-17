@@ -1107,3 +1107,11 @@ div.slider.slider-vertical {
   .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-inverse {
     background-color: #34495e;
     color: #fff; }
+
+.bootstrap-tagsinput {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  border-color: #ccc;
+  border-radius: 3px; }
+  .bootstrap-tagsinput .tag.label {
+    font-weight: 400; }

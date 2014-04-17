@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="{{ static('css/lib/bootstrap-select.min.css') }}">
     <link rel="stylesheet" href="{{ static('css/lib/bootstrap-slider.min.css') }}">
     <link rel="stylesheet" href="{{ static('css/lib/bootstrap-switch.min.css') }}">
+    <link rel="stylesheet" href="{{ static('css/lib/bootstrap-tagsinput.css') }}">
 {% endblock %}
 
 {% block main %}
@@ -291,6 +292,14 @@
             <input type="checkbox" name="my-checkbox" class="switch" data-on-color="warning" checked>
             <input type="checkbox" name="my-checkbox" class="switch" data-on-color="danger" checked>
             <input type="checkbox" name="my-checkbox" class="switch" data-on-color="inverse" checked>
+        </div>
+    </div>
+
+    <div class="widget switch-widget">
+        <h4 class="widget-title">Tags</h4>
+
+        <div class="widget-content">
+            <input type="text" value="Amsterdam,Washington,Sydney,Beijing,Cairo" class="tagsinput" />
         </div>
     </div>
 
@@ -678,20 +687,29 @@
     <script src="{{ static('js/bootstrap-select.min.js') }}"></script>
     <script src="{{ static('js/bootstrap-slider.min.js') }}"></script>
     <script src="{{ static('js/bootstrap-switch.min.js') }}"></script>
+    <script src="{{ static('js/bootstrap-tagsinput.js') }}"></script>
 {% endblock %}
 
 {% block js %}
     <script>
         $(function() {
-            // Initializing Bootstrap Slider
+            // Initialize Bootstrap Slider
             $("input.slider").slider({
                 tooltip_separator: '-'
             });
 
-            // Initializing Bootstrap Select
+            // Initialize Bootstrap Select
             $(".selectpicker").selectpicker();
 
+            // Initialize Bootstrap Switch
             $(".switch").bootstrapSwitch();
+
+            // Initialize Bootstrap Tagsinput
+            $(".tagsinput").tagsinput({
+                tagClass: function() {
+                    return 'label label-primary';
+                }
+            });
         });
     </script>
 {% endblock %}

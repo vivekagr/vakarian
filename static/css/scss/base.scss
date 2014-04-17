@@ -1557,4 +1557,14 @@ div.slider.slider-vertical {
   }
 }
 
+// Bootstrap Tagsinput
+.bootstrap-tagsinput {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  border-color: #ccc;
+  border-radius: 3px;
 
+  .tag.label {
+    font-weight: 400;
+  }
+}

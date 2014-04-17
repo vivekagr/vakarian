@@ -1082,3 +1082,28 @@ div.slider.slider-vertical {
 
 .radio-inline, .checkbox-inline {
   margin-right: 12px; }
+
+.bootstrap-switch {
+  margin-right: 8px; }
+  .bootstrap-switch.bootstrap-switch-wrapper {
+    border-color: #ecf0f1;
+    border-radius: 3px; }
+  .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-default {
+    background-color: #ecf0f1; }
+  .bootstrap-switch.bootstrap-switch-wrapper.bootstrap-switch-focused {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    border-color: #c6d2d5; }
+  .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary {
+    background-color: #3498db; }
+  .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-success {
+    background-color: #16a085; }
+  .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-info {
+    background-color: #53A5DB; }
+  .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-warning {
+    background-color: #F7B650; }
+  .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-danger {
+    background-color: #F55F4F; }
+  .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-inverse {
+    background-color: #34495e;
+    color: #fff; }

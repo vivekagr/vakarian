@@ -363,12 +363,17 @@ button.btn-navbar {
   }
 
   li {
+    // Show empty space for items without dropdown menu
+    span:before {
+      @extend .fa-icon;
+      content: '';
+      margin-right: 8px;
+    }
     // Showing the collapse indicator icon to the left of item name
     &.dropdown span:before {
-      @extend .fa-icon;
       content: '\f138';
-      margin: 0 5px 0 -3px;
-      color: darken($text-color, 50);
+      margin: 0 5px 0 -7px;
+      color: darken($text-color, 55);
     }
 
     // Changing collapse indicator icon to 'fa-chevron-circle-down'

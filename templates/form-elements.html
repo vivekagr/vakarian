@@ -11,6 +11,8 @@
 
 {% block main %}
     <div class="row">
+
+        {{ c('Basic Form Starts') }}
         <div class="col-md-5">
             <div class="widget">
                 <h4 class="widget-title">Basic Form</h4>
@@ -42,6 +44,9 @@
                 </div>
             </div>
         </div>
+        {{ c('Basic Form Ends') }}
+
+        {{ c('Horizontal Form Starts') }}
         <div class="col-md-7">
             <div class="widget">
                 <h4 class="widget-title">Horizontal Form</h4>
@@ -100,7 +105,11 @@
                 </div>
             </div>
         </div>
+        {{ c('Horizontal Form Ends') }}
+
     </div>
+
+    {{ c('Inline Form Starts') }}
     <div class="widget">
         <h4 class="widget-title">Inline Form</h4>
         <div class="widget-content">
@@ -122,7 +131,9 @@
             </form>
         </div>
     </div>
+    {{ c('Inline Form Ends') }}
 
+    {{ c('Form Inputs Widget Starts') }}
     <div class="widget">
         <h4 class="widget-title">Form Inputs</h4>
         <div class="widget-content">
@@ -179,8 +190,11 @@
             </form>
         </div>
     </div>
+    {{ c('Form Inputs Widget Ends') }}
 
     <div class="row">
+
+        {{ c('Radio Widget Starts') }}
         <div class="col-md-6">
             <div class="widget">
                 <h4 class="widget-title">Radio Box</h4>
@@ -230,6 +244,9 @@
                 </div>
             </div>
         </div>
+        {{ c('Radio Widget Ends') }}
+
+        {{ c('Checkbox Widget Starts') }}
         <div class="col-md-6">
             <div class="widget">
                 <h4 class="widget-title">Check Box</h4>
@@ -279,8 +296,11 @@
                 </div>
             </div>
         </div>
+        {{ c('Checkbox Widget Ends') }}
+
     </div>
 
+    {{ c('Bootstrap Switch Widget Starts') }}
     <div class="widget switch-widget">
         <h4 class="widget-title">Switches</h4>
 
@@ -294,7 +314,9 @@
             <input type="checkbox" name="my-checkbox" class="switch" data-on-color="inverse" checked>
         </div>
     </div>
+    {{ c('Bootstrap Switch Widget Ends') }}
 
+    {{ c('Bootstrap Tagsinput Widget Starts') }}
     <div class="widget switch-widget">
         <h4 class="widget-title">Tags</h4>
 
@@ -302,7 +324,9 @@
             <input type="text" value="Amsterdam,Washington,Sydney,Beijing,Cairo" class="tagsinput" />
         </div>
     </div>
+    {{ c('Bootstrap Tagsinput Widget Ends') }}
 
+    {{ c('Bootstrap Slider Widget Starts') }}
     <div class="widget">
         <h4 class="widget-title">Bootstrap Slider</h4>
 
@@ -366,6 +390,7 @@
 
         </div>
     </div>
+    {{ c('Bootstrap Slider Widget Ends') }}
 
     {{ c('Bootstrap Select Widget Starts') }}
     <div class="widget">

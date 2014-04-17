@@ -1118,3 +1118,6 @@ div.slider.slider-vertical {
   border-radius: 3px; }
   .bootstrap-tagsinput .tag.label {
     font-weight: 400; }
+
+.input-group {
+  margin: 5px 0 15px; }

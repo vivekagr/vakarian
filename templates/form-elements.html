@@ -574,7 +574,6 @@
                 </div>
             </form>
 
-            {{ c('Default Bootstrap Selects') }}
             <div class="widget-subtitle">Different Colors</div>
             <select class="selectpicker">
                 <option selected>Mustard</option>
@@ -610,8 +609,159 @@
     </div>
     {{ c('Bootstrap Select Widget Ends') }}
 
-    {{ c('Form Input Validation States Widget Starts') }}
+
     <div class="row">
+
+        {{ c('Input Groups Starts') }}
+        <div class="col-md-6">
+            <div class="widget">
+                <h4 class="widget-title">Input Groups</h4>
+                <div class="widget-content">
+                    <div class="input-group">
+                        <span class="input-group-addon">@</span>
+                        <input type="text" class="form-control" placeholder="Username">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <span class="input-group-addon">.00</span>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">$</span>
+                        <input type="text" class="form-control">
+                        <span class="input-group-addon">.00</span>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <input type="checkbox">
+                        </span>
+                        <input type="text" class="form-control" placeholder="With Checkbox">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <input type="radio">
+                        </span>
+                        <input type="text" class="form-control" placeholder="With Radio">
+                    </div>
+
+                    <div class="widget-subtitle">Input Groups Sizing</div>
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-addon">@</span>
+                        <input type="text" class="form-control" placeholder="Username">
+                    </div>
+
+                    <div class="input-group">
+                        <span class="input-group-addon">@</span>
+                        <input type="text" class="form-control" placeholder="Username">
+                    </div>
+
+                    <div class="input-group input-group-sm">
+                        <span class="input-group-addon">@</span>
+                        <input type="text" class="form-control" placeholder="Username">
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{ c('Input Groups Ends') }}
+
+        {{ c('Input Groups With Buttons Starts') }}
+        <div class="col-md-6">
+            <div class="widget">
+                <h4 class="widget-title">Input Groups With Buttons</h4>
+                <div class="widget-content">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Go!</button>
+                        </span>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Go!</button>
+                        </span>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Save For Later</button>
+                            <button class="btn btn-default" type="button">Go!</button>
+                        </span>
+                    </div>
+
+                    {{ c('Buttons with dropdowns') }}
+                    <div class="widget-subtitle">Buttons With Dropdowns</div>
+                    <div class="input-group">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    {{ c('Segmented buttons') }}
+                    <div class="widget-subtitle">Segmented Buttons</div>
+                    <div class="input-group">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default">Action</button>
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                <span class="caret"></span>
+                                <span class="sr-only">Toggle dropdown</span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                <span class="caret"></span>
+                                <span class="sr-only">Toggle dropdown</span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                            <button type="button" class="btn btn-default">Action</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        {{ c('Input Groups With Buttons Ends') }}
+
+        <div class="clearfix"></div>
+
+        {{ c('Form Input Validation States Widget Starts') }}
         <div class="col-md-6">
             <div class="widget">
                 <h4 class="widget-title">Form Input Validation States</h4>
@@ -639,6 +789,9 @@
                 </div>
             </div>
         </div>
+        {{ c('Form Input Validation States Widget Ends') }}
+
+        {{ c('Control Sizing Widget Starts') }}
         <div class="col-md-6">
             <div class="widget">
                 <h4 class="widget-title">Control Sizing</h4>
@@ -660,8 +813,9 @@
                 </div>
             </div>
         </div>
+        {{ c('Control Sizing Widget Ends') }}
+
     </div>
-    {{ c('Form Input Validation States Widget Ends') }}
 
     {{ c('Column Sizing Widget Starts') }}
     <div class="widget">

@@ -427,7 +427,7 @@ button.btn-navbar {
 
       > li.active > a {
         text-decoration: none;
-        background-color: $sidebar-item-color;
+        background-color: lighten($sidebar-item-color, 3%);
         color: $text-color;
         border-left-color: $sidebar-subitem-border-left-color;
       }
@@ -449,7 +449,7 @@ button.btn-navbar {
 
         &:hover {
           text-decoration: none;
-          background-color: $sidebar-item-color;
+          background-color: lighten($sidebar-item-color, 3%);
           border-left-color: $sidebar-subitem-border-left-color;
         }
       }

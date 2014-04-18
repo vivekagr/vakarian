@@ -361,12 +361,13 @@ button.btn-navbar {
     span:before {
       @extend .fa-icon;
       content: '';
-      margin-right: 3px;
+      margin-right: 6px;
     }
     // Showing the collapse indicator icon to the left of item name
     &.dropdown span:before {
-      content: $collapse-indicator-icon;
       margin: 0 5px 0 -7px;
+      width: 8px;
+      content: $collapse-indicator-icon;
       color: $collapse-indicator-color;
     }
 

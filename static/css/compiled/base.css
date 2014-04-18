@@ -273,10 +273,11 @@ button.btn-navbar {
 
 .nav-sidebar li span:before {
   content: '';
-  margin-right: 3px; }
+  margin-right: 6px; }
 .nav-sidebar li.dropdown span:before {
-  content: "\f105";
   margin: 0 5px 0 -7px;
+  width: 8px;
+  content: "\f105";
   color: #536b71; }
 .nav-sidebar li.dropdown.active span:before {
   content: "\f107"; }

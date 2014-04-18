@@ -2,8 +2,11 @@
 
 {% set page_title = "Morris.js" %}
 
-{% block css %}
+{% block vendor_css %}
     <link rel="stylesheet" href="{{ static('css/lib/morris-0.4.3.min.css') }}">
+{% endblock %}
+
+{% block css %}
     <link rel="stylesheet" href="{{ static('css/compiled/charts.css') }}">
 {%- endblock %}
 

@@ -22,11 +22,15 @@
     {{ c('Vendor CSS') }}
     <link rel="stylesheet" href="{{ static('css/lib/font-awesome.min.css') }}">
 
-    {{ c('Vakarian Page Specific CSS') }}
-    {% block css %}{%- endblock %}
+    {{ c('Page Specific Libraries') }}
+    {% block vendor_css %}{%- endblock %}
 
     {{ c('Vakarian Base CSS') }}
     <link rel="stylesheet" href="{{ static('css/compiled/base.css') }}">
+    <link rel="stylesheet" href="{{ static('css/compiled/template.css') }}">
+
+    {{ c('Page Specific CSS') }}
+    {% block css %}{%- endblock %}
 
     {{ c('Modernizer') }}
     <script src="{{ static('js/common/modernizr-2.6.2-respond-1.1.0.min.js') }}"></script>

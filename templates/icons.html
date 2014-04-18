@@ -2,8 +2,11 @@
 
 {% set page_title = "Icons" %}
 
-{% block css %}
+{% block vendor_css %}
     <link rel="stylesheet" href="{{ static('css/lib/weather-icons.min.css') }}">
+{% endblock %}
+
+{% block css %}
     <link rel="stylesheet" href="{{ static('css/compiled/icons.css') }}">
 {% endblock %}
 

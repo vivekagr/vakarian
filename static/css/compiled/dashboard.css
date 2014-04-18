@@ -56,7 +56,7 @@
       -o-transition: all 0.5s ease;
       transition: all 0.5s ease; }
       .traffic-widget .metric:hover, .traffic-widget .metric:hover .metric-value {
-        color: #2c3e50; }
+        color: #223344; }
 
 .quick-stat-widget {
   padding: 0;

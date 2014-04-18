@@ -1,4 +1,25 @@
-$navbar-color: #394F64;
 $text-color: #ecf0f1;
 
-$sidebar-color: #2c3e50;
+// Top Bar
+
+$topbar-color: #254255;
+
+$topbar-btn-text-color: #8eadcd;
+
+
+// Sidebar
+
+$sidebar-color: #223344;
+
+$collapse-indicator-color: darken($text-color, 55);
+$collapse-indicator-icon: '\f105';
+$collapse-indicator-down-icon: '\f107';
+
+$sidebar-item-color: $sidebar-color;
+$sidebar-subitem-color: lighten($sidebar-item-color, 2);
+
+$sidebar-item-text-color: darken($text-color, 22);
+$sidebar-item-icon-color: darken($text-color, 40);
+
+$sidebar-item-border-left-color: #d35400;
+$sidebar-subitem-border-left-color: #f39c12;

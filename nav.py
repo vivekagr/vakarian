@@ -33,7 +33,7 @@ nav_menu = [
 
     { 'title': 'Gallery', 'icon': 'picture-o', 'template': '#' },
 
-    { 'title': 'Extra Pages', 'icon': 'list-alt', 'children': [
+    { 'title': 'Pages', 'icon': 'list-alt', 'children': [
         { 'title': 'Pricing Table', 'template': '#' },
         { 'title': 'Error Log', 'template': '#' },
         { 'title': 'Calendar', 'template': 'calendar.html' },

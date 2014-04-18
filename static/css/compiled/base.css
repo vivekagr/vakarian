@@ -352,6 +352,7 @@ button.btn-navbar {
       border-left-color: #f39c12; }
 
 .sidebar-profile-wrapper {
+  position: relative;
   cursor: pointer; }
   .sidebar-profile-wrapper .fa {
     position: absolute;
@@ -360,7 +361,7 @@ button.btn-navbar {
     color: #ecf0f1;
     display: none; }
   .sidebar-profile-wrapper:hover {
-    background-color: #293d52; }
+    background-color: #273b4e; }
     .sidebar-profile-wrapper:hover .fa {
       display: block; }
 
@@ -373,6 +374,7 @@ button.btn-navbar {
 
 .sidebar-profile-content {
   float: left;
+  margin-top: 8px;
   margin-left: 10px;
   width: 115px; }
   .sidebar-profile-content .welcome {
@@ -383,12 +385,19 @@ button.btn-navbar {
   .sidebar-profile-content .name {
     margin-top: 2px;
     color: #ecf0f1;
-    font-size: 1.15em;
+    font-size: 1.35em;
     font-weight: 300; }
   .sidebar-profile-content .position {
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    padding: 2px 4px;
+    background-color: #385470;
     margin-top: 2px;
-    color: #476581;
-    font-size: 0.7em; }
+    color: #223344;
+    font-size: 0.68em;
+    font-weight: 600; }
 
 .with-sidebar-slim .content-wrapper {
   margin-left: 75px; }

@@ -460,6 +460,7 @@ button.btn-navbar {
 
 // User profile inside the sidebar
 .sidebar-profile-wrapper {
+  position: relative;
   cursor: pointer;
 
   // 'fa-angle-right' shown in the right on hover
@@ -472,7 +473,7 @@ button.btn-navbar {
   }
 
   &:hover {
-    background-color: lighten($sidebar-color, 4);
+    background-color: lighten($sidebar-color, 3);
 
     .fa {
       display: block;
@@ -491,6 +492,7 @@ button.btn-navbar {
 
 .sidebar-profile-content {
   float: left;
+  margin-top: 8px;
   margin-left: 10px;
   width: 115px;
 
@@ -504,14 +506,21 @@ button.btn-navbar {
   .name {
     margin-top: 2px;
     color: #ecf0f1;
-    font-size: 1.15em;
+    font-size: 1.35em;
     font-weight: 300;
   }
 
   .position {
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    padding: 2px 4px;
+    background-color: lighten($sidebar-color, 13%);
     margin-top: 2px;
-    color: #476581;
-    font-size: 0.7em;
+    color: $sidebar-color;
+    font-size: 0.68em;
+    font-weight: 600;
   }
 }
 

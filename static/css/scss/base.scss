@@ -349,7 +349,7 @@ button.btn-navbar {
 // For making sidebar fixed to the left of the window
 .sidebar-fixed {
   position: fixed;
-  margin-top: 64px;
+  margin-top: 60px;
   overflow-y: scroll;
 }
 
@@ -463,22 +463,6 @@ button.btn-navbar {
   position: relative;
   cursor: pointer;
 
-  .popover.sidebar-profile-popup {
-    display: block;
-    position: absolute;
-    top: 10px;
-    left: 100%;
-    width: 250px;
-
-    text-align: center;
-
-    img { margin: 8px 0 3px; }
-
-    .arrow {
-      top: 30px;
-    }
-  }
-
   // 'fa-angle-right' shown in the right on hover
   .fa {
     position: absolute;
@@ -491,18 +475,6 @@ button.btn-navbar {
   .sidebar-profile {
     padding: 13px 11px;
     @include transition(all 0.2s ease);
-  }
-
-  .sidebar-profile:hover {
-    background-color: lighten($sidebar-color, 3);
-
-    .fa {
-      display: block;
-    }
-
-    .position {
-      background-color: rgba(22, 160, 133, 0.75);
-    }
   }
 
   .sidebar-profile-avatar {
@@ -530,7 +502,7 @@ button.btn-navbar {
       font-weight: 300;
     }
 
-    .position {
+    .job-title {
       display: inline-block;
       position: absolute;
       top: 5px;
@@ -543,6 +515,64 @@ button.btn-navbar {
       font-weight: 600;
 
       @include transition(all 0.2s ease);
+    }
+  }
+
+  .sidebar-profile:hover {
+    background-color: lighten($sidebar-color, 3);
+
+    .fa {
+      display: block;
+    }
+
+    .job-title {
+      background-color: lighten($sidebar-color, 23%);
+    }
+  }
+
+  // Popover that opens on clicking on the profile area
+  .popover {
+    position: absolute;
+    top: 10px !important;
+    left: 100% !important;
+    width: 260px;
+    cursor: default;
+
+    text-align: center;
+
+    form { font-size: 1.1em; }
+
+    img {
+      margin: 3px;
+      width: 130px;
+    }
+
+    .arrow {
+      top: 30px;
+      &:after { border-right-color: #f7f7f7; }
+    }
+
+    .popover-title {
+      padding: 14px;
+    }
+
+    .sidebar-profile-popup-title {
+      font-weight: 300;
+      margin-top: 12px;
+    }
+
+    .form-group {
+      margin: 5px 0 10px 0;
+
+      .checkbox-inline span:before {
+        text-align: left;
+        left: -1.057142857142858em;
+      }
+    }
+
+    span.label.label-default {
+      background-color: darken($background-color, 15%);
+      font-weight: 400;
     }
   }
 }
@@ -562,15 +592,20 @@ button.btn-navbar {
 
 .sidebar-slim {
 
-  .sidebar-search { display: none; }
+  .sidebar-profile { border-bottom: 1px solid lighten($sidebar-color, 3); }
+
+  // Hiding arrow icon from sidebar profile, and search bar
+  .sidebar-profile:hover .fa, .sidebar-search { display: none; }
+
+  .sidebar-profile-avatar { width: 52px; margin: 0 auto; }
 
   // Removing the overflow scroll so that nested lists can open up
-  overflow-y: visible;
+  overflow-y: visible !important;
 
   // Hiding the text
   .nav-sidebar > li > a > span { display: none; }
   .sidebar-profile-content {
-    .welcome, .name, .position { display: none; }
+    .welcome, .name, .job-title { display: none; }
   }
 
   // Positioning the sub-menu towards the right of the icon

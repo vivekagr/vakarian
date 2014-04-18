@@ -118,18 +118,66 @@
             <div class="sidebar-profile-wrapper clearfix">
                 <div class="sidebar-profile clearfix">
                     <i class="fa fa-chevron-right"></i>
-                    <img class="sidebar-profile-avatar img-circle" src="{{ static('img/male_1.jpg') }}">
+                    <img class="sidebar-profile-avatar img-circle" src="{{ static('img/male_2.jpg') }}">
                     <div class="sidebar-profile-content">
                         <div class="welcome">Welcome</div>
                         <div class="name">John Doe</div>
-                        <div class="position">Sales Dept.</div>
+                        <div class="job-title">DevOps Team</div>
                     </div>
                 </div>
                 <div class="popover right fade in sidebar-profile-popup">
                     <div class="arrow"></div>
+                    <div class="popover-title">
+                        <img class="img-circle" src="{{ static('img/male_2.jpg') }}">
+                        <h3 class="sidebar-profile-popup-title">John Doe</h3>
+                        <span class="label label-default">DevOps Engineer</span>
+                    </div>
                     <div class="popover-content">
-                        <img class="img-circle" src="{{ static('img/male_1.jpg') }}">
-                        <h3>John Doe</h3>
+                        <label>Project Progress</label>
+                        <div class="progress progress-slim progress-striped">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                <span class="sr-only">60% Complete</span>
+                            </div>
+                        </div>
+
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="profileName">Subscribed To</label><br>
+                                <div class="checkbox-inline">
+                                    <label>
+                                        <input type="checkbox" name="optionsRadios" id="optionsRadios1" value="option1" checked disabled>
+                                        <span>Critical</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox-inline">
+                                    <label>
+                                        <input type="checkbox" name="optionsRadios" id="optionsRadios4" value="option4" checked>
+                                        <span>Team Updates</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox-inline">
+                                    <label>
+                                        <input type="checkbox" name="optionsRadios" id="optionsRadios2" value="option2" checked>
+                                        <span>Company Operations</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox-inline">
+                                    <label>
+                                        <input type="checkbox" name="optionsRadios" id="optionsRadios3" value="option3">
+                                        <span>Weekly Digest</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox-inline">
+                                    <label>
+                                        <input type="checkbox" name="optionsRadios" id="optionsRadios3" value="option3">
+                                        <span>Stupid Memes</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+
+                        <button class="btn btn-v btn-primary">Performance Report</button>
+                        <button class="btn btn-v btn-info">Bug Review</button>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,34 @@
 $(function () {
 
-    $('.sidebar-profile-wrapper').popover();
+    /*** Setup the profile popover ***/
+
+    var sidebarProfile = $('.sidebar-profile');
+
+    sidebarProfile.popover({
+        html: true,
+        content: function() {
+            return $('.sidebar-profile-wrapper').find('.popover-content').html();
+        },
+        title: function() {
+            return $('.sidebar-profile-wrapper').find('.popover-title').html();
+        }
+    });
+
+    // Setting `overflow-y` of sidebar to `visible` when profile popover
+    // is open. Without it, popover would be essentially hidden from the view.
+    // But as a result of this, sidebar cannot be scrolled when popover is open.
+    sidebarProfile.on('show.bs.popover', function() {
+        $('.sidebar').css('overflow-y', 'visible');
+    });
+
+    // Changing back the `overflow-y` property back to `scroll` when popover
+    // is closed so that sidebar content is scrollable.
+    sidebarProfile.on('hidden.bs.popover', function() {
+        $('.sidebar').css('overflow-y', 'scroll');
+    });
+
+
+    /*** Setup sidebar navigation menu ***/
 
     var navSidebarLi = $(".nav-sidebar > li");
 
@@ -18,6 +46,7 @@ $(function () {
         }
     });
 
+    // Show the sidebar when the nav menu has been setup above
     $('.sidebar').show();
 
     // Closing the collapsed sub-menu when clicking outside of it
@@ -50,6 +79,9 @@ $(function () {
     $(".nav-sidebar > li.dropdown > ul").click(function(e) {
         e.stopPropagation();
     });
+
+
+    /*** Setup sidebar size toggle features. ***/
 
     // Expand Sidebar Navigation
     function expandSidebarNav() {
@@ -125,6 +157,9 @@ $(function () {
 
     // Auto adjust sidebar size on window resize
     $(window).resize(autoAdjustSidebarWidth);
+
+
+    /*** Setup miscellaneous features ***/
 
     // Focusing the search field if empty form being is submitted
     $('#navbarSearchForm').submit(function(e) {

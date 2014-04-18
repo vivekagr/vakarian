@@ -268,7 +268,7 @@ button.btn-navbar {
 
 .sidebar-fixed {
   position: fixed;
-  margin-top: 64px;
+  margin-top: 60px;
   overflow-y: scroll; }
 
 .nav-sidebar li span:before {
@@ -354,17 +354,6 @@ button.btn-navbar {
 .sidebar-profile-wrapper {
   position: relative;
   cursor: pointer; }
-  .sidebar-profile-wrapper .popover.sidebar-profile-popup {
-    display: block;
-    position: absolute;
-    top: 10px;
-    left: 100%;
-    width: 250px;
-    text-align: center; }
-    .sidebar-profile-wrapper .popover.sidebar-profile-popup img {
-      margin: 8px 0 3px; }
-    .sidebar-profile-wrapper .popover.sidebar-profile-popup .arrow {
-      top: 30px; }
   .sidebar-profile-wrapper .fa {
     position: absolute;
     top: 35px;
@@ -378,12 +367,6 @@ button.btn-navbar {
     -ms-transition: all 0.2s ease;
     -o-transition: all 0.2s ease;
     transition: all 0.2s ease; }
-  .sidebar-profile-wrapper .sidebar-profile:hover {
-    background-color: #273b4e; }
-    .sidebar-profile-wrapper .sidebar-profile:hover .fa {
-      display: block; }
-    .sidebar-profile-wrapper .sidebar-profile:hover .position {
-      background-color: rgba(22, 160, 133, 0.75); }
   .sidebar-profile-wrapper .sidebar-profile-avatar {
     float: left;
     width: 55px; }
@@ -402,7 +385,7 @@ button.btn-navbar {
       color: #ecf0f1;
       font-size: 1.35em;
       font-weight: 300; }
-    .sidebar-profile-wrapper .sidebar-profile-content .position {
+    .sidebar-profile-wrapper .sidebar-profile-content .job-title {
       display: inline-block;
       position: absolute;
       top: 5px;
@@ -418,6 +401,41 @@ button.btn-navbar {
       -ms-transition: all 0.2s ease;
       -o-transition: all 0.2s ease;
       transition: all 0.2s ease; }
+  .sidebar-profile-wrapper .sidebar-profile:hover {
+    background-color: #273b4e; }
+    .sidebar-profile-wrapper .sidebar-profile:hover .fa {
+      display: block; }
+    .sidebar-profile-wrapper .sidebar-profile:hover .job-title {
+      background-color: #496e92; }
+  .sidebar-profile-wrapper .popover {
+    position: absolute;
+    top: 10px !important;
+    left: 100% !important;
+    width: 260px;
+    cursor: default;
+    text-align: center; }
+    .sidebar-profile-wrapper .popover form {
+      font-size: 1.1em; }
+    .sidebar-profile-wrapper .popover img {
+      margin: 3px;
+      width: 130px; }
+    .sidebar-profile-wrapper .popover .arrow {
+      top: 30px; }
+      .sidebar-profile-wrapper .popover .arrow:after {
+        border-right-color: #f7f7f7; }
+    .sidebar-profile-wrapper .popover .popover-title {
+      padding: 14px; }
+    .sidebar-profile-wrapper .popover .sidebar-profile-popup-title {
+      font-weight: 300;
+      margin-top: 12px; }
+    .sidebar-profile-wrapper .popover .form-group {
+      margin: 5px 0 10px 0; }
+      .sidebar-profile-wrapper .popover .form-group .checkbox-inline span:before {
+        text-align: left;
+        left: -1.057142857142858em; }
+    .sidebar-profile-wrapper .popover span.label.label-default {
+      background-color: #cfcfcf;
+      font-weight: 400; }
 
 .with-sidebar-slim .content-wrapper {
   margin-left: 75px; }
@@ -426,12 +444,17 @@ button.btn-navbar {
   width: 75px; }
 
 .sidebar-slim {
-  overflow-y: visible; }
-  .sidebar-slim .sidebar-search {
+  overflow-y: visible !important; }
+  .sidebar-slim .sidebar-profile {
+    border-bottom: 1px solid #273b4e; }
+  .sidebar-slim .sidebar-profile:hover .fa, .sidebar-slim .sidebar-search {
     display: none; }
+  .sidebar-slim .sidebar-profile-avatar {
+    width: 52px;
+    margin: 0 auto; }
   .sidebar-slim .nav-sidebar > li > a > span {
     display: none; }
-  .sidebar-slim .sidebar-profile-content .welcome, .sidebar-slim .sidebar-profile-content .name, .sidebar-slim .sidebar-profile-content .position {
+  .sidebar-slim .sidebar-profile-content .welcome, .sidebar-slim .sidebar-profile-content .name, .sidebar-slim .sidebar-profile-content .job-title {
     display: none; }
   .sidebar-slim .nav-sidebar > li > ul {
     position: absolute;

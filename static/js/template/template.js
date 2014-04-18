@@ -1,5 +1,7 @@
 $(function () {
 
+    $('.sidebar-profile-wrapper').popover();
+
     var navSidebarLi = $(".nav-sidebar > li");
 
     navSidebarLi.each(function() {

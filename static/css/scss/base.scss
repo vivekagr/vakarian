@@ -463,6 +463,22 @@ button.btn-navbar {
   position: relative;
   cursor: pointer;
 
+  .popover.sidebar-profile-popup {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 100%;
+    width: 250px;
+
+    text-align: center;
+
+    img { margin: 8px 0 3px; }
+
+    .arrow {
+      top: 30px;
+    }
+  }
+
   // 'fa-angle-right' shown in the right on hover
   .fa {
     position: absolute;
@@ -472,9 +488,12 @@ button.btn-navbar {
     display: none;
   }
 
-  @include transition(all 0.2s ease);
+  .sidebar-profile {
+    padding: 13px 11px;
+    @include transition(all 0.2s ease);
+  }
 
-  &:hover {
+  .sidebar-profile:hover {
     background-color: lighten($sidebar-color, 3);
 
     .fa {
@@ -485,50 +504,46 @@ button.btn-navbar {
       background-color: rgba(22, 160, 133, 0.75);
     }
   }
-}
 
-.sidebar-profile {
-  margin: 13px 11px;
-}
-
-.sidebar-profile-avatar {
-  float: left;
-  width: 55px;
-}
-
-.sidebar-profile-content {
-  float: left;
-  margin-top: 8px;
-  margin-left: 10px;
-  width: 115px;
-
-  .welcome {
-    margin-top: 2px;
-    color: #b3b8bc;
-    font-size: 0.67em;
-    line-height: 1em;
+  .sidebar-profile-avatar {
+    float: left;
+    width: 55px;
   }
 
-  .name {
-    margin-top: 2px;
-    color: #ecf0f1;
-    font-size: 1.35em;
-    font-weight: 300;
-  }
+  .sidebar-profile-content {
+    float: left;
+    margin-top: 8px;
+    margin-left: 10px;
+    width: 115px;
 
-  .position {
-    display: inline-block;
-    position: absolute;
-    top: 5px;
-    right: 0;
-    padding: 2px 4px;
-    background-color: lighten($sidebar-color, 13%);
-    margin-top: 2px;
-    color: $sidebar-color;
-    font-size: 0.68em;
-    font-weight: 600;
+    .welcome {
+      margin-top: 2px;
+      color: #b3b8bc;
+      font-size: 0.67em;
+      line-height: 1em;
+    }
 
-    @include transition(all 0.2s ease);
+    .name {
+      margin-top: 2px;
+      color: #ecf0f1;
+      font-size: 1.35em;
+      font-weight: 300;
+    }
+
+    .position {
+      display: inline-block;
+      position: absolute;
+      top: 5px;
+      right: 0;
+      padding: 2px 4px;
+      background-color: lighten($sidebar-color, 13%);
+      margin-top: 2px;
+      color: $sidebar-color;
+      font-size: 0.68em;
+      font-weight: 600;
+
+      @include transition(all 0.2s ease);
+    }
   }
 }
 
@@ -1449,6 +1464,11 @@ div.slider.slider-vertical {
   -webkit-box-shadow: 0 2px 11px rgba(0,0,0,.1);
 
   .popover-content { font-size: 0.9em; }
+
+  &.right > .arrow { border-right-color: #dce0e1; }
+  &.left > .arrow { border-left-color: #dce0e1; }
+  &.top > .arrow { border-top-color: #dce0e1; }
+  &.bottom > .arrow { border-bottom-color: #dce0e1; }
 }
 
 .bootstrap-select {

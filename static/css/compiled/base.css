@@ -353,7 +353,12 @@ button.btn-navbar {
 
 .sidebar-profile-wrapper {
   position: relative;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
   .sidebar-profile-wrapper .fa {
     position: absolute;
     top: 35px;
@@ -364,6 +369,8 @@ button.btn-navbar {
     background-color: #273b4e; }
     .sidebar-profile-wrapper:hover .fa {
       display: block; }
+    .sidebar-profile-wrapper:hover .position {
+      background-color: rgba(22, 160, 133, 0.75); }
 
 .sidebar-profile {
   margin: 13px 11px; }
@@ -397,7 +404,12 @@ button.btn-navbar {
     margin-top: 2px;
     color: #223344;
     font-size: 0.68em;
-    font-weight: 600; }
+    font-weight: 600;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
 
 .with-sidebar-slim .content-wrapper {
   margin-left: 75px; }

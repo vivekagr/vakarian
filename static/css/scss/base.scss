@@ -472,11 +472,17 @@ button.btn-navbar {
     display: none;
   }
 
+  @include transition(all 0.2s ease);
+
   &:hover {
     background-color: lighten($sidebar-color, 3);
 
     .fa {
       display: block;
+    }
+
+    .position {
+      background-color: rgba(22, 160, 133, 0.75);
     }
   }
 }
@@ -521,6 +527,8 @@ button.btn-navbar {
     color: $sidebar-color;
     font-size: 0.68em;
     font-weight: 600;
+
+    @include transition(all 0.2s ease);
   }
 }
 

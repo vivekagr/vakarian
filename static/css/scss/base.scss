@@ -1048,7 +1048,7 @@ button.btn-navbar {
 
     display: inline-block;
     line-height: $height;
-    background-color: #F7F7F7;
+    background-color: lighten($background-color, 2%);
     color: #95a5a6;
     font-weight: 600;
     padding: 0 11.5px 0 20px;
@@ -1061,7 +1061,7 @@ button.btn-navbar {
     &:after {
       content: '';
       position: absolute;
-      background-color: #F7F7F7;
+      background-color: lighten($background-color, 2%);
       border-top: 2px solid #ecf0f1;
       border-right: 2px solid #ecf0f1;
       margin: 0 0 1px 1px;

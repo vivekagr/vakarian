@@ -774,7 +774,7 @@ button.btn-navbar {
   .breadcrumb-v a {
     display: inline-block;
     line-height: 22px;
-    background-color: #F7F7F7;
+    background-color: #fafafa;
     color: #95a5a6;
     font-weight: 600;
     padding: 0 11.5px 0 20px; }
@@ -784,7 +784,7 @@ button.btn-navbar {
     .breadcrumb-v a:after {
       content: '';
       position: absolute;
-      background-color: #F7F7F7;
+      background-color: #fafafa;
       border-top: 2px solid #ecf0f1;
       border-right: 2px solid #ecf0f1;
       margin: 0 0 1px 1px;

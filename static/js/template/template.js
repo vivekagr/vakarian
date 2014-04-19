@@ -1,5 +1,9 @@
 $(function () {
 
+    var snapper = new Snap({
+      element: document.getElementById('content-wrapper')
+    });
+
     /*
         Animates a an element with animate.css classes.
         First adds the class as required by animate.css
@@ -187,23 +191,43 @@ $(function () {
         });
     }
 
+    function toggleSlimSidebarPeek() {
+        var sidebarEl = $(".sidebar"),
+            pageWrapperEl = $(".page-wrapper");
+
+        sidebarEl.addClass('sidebar-hidden');
+        pageWrapperEl.addClass('with-sidebar-hidden');
+    }
+
     // Toggle sidebar size
     $("#sidebarNavToggle").on('click', function() {
-        var sidebar = $(".sidebar");
+        var sidebar = $(".sidebar"),
+            pageWrapperEl = $(".page-wrapper"),
+            width = $(window).width();
 
-        // Storing the knowledge that user manually toggled the size
-        sidebar.data('manually-toggled', '1');
-
-        if (sidebar.hasClass("sidebar-slim")) {
-            expandSidebarNav();
+        if (width < 500) {
+             if (pageWrapperEl.hasClass('with-sidebar-hidden')) {
+                 console.log('yeah');
+                 pageWrapperEl.removeClass('with-sidebar-hidden');
+                 sidebar.removeClass('sidebar-hidden');
+             } else {
+                 pageWrapperEl.addClass('with-sidebar-hidden');
+                 sidebar.addClass('sidebar-hidden');
+             }
         } else {
-            contractSidebarNav();
+            // Storing the knowledge that user manually toggled the size
+            sidebar.data('manually-toggled', '1');
+
+            if (sidebar.hasClass("sidebar-slim")) {
+                expandSidebarNav();
+            } else {
+                contractSidebarNav();
+            }
+
+            // Triggering windows resize event so that widgets like charts
+            // can re-render themselves according to their new container size
+            $(window).trigger('resize');
         }
-
-        // Triggering windows resize event so that widgets like charts
-        // can re-render themselves according to their new container size
-        $(window).trigger('resize');
-
     });
 
     // Toggle sidebar size according to window width
@@ -211,18 +235,29 @@ $(function () {
         var width = $(window).width(),
             manuallyToggled = $(".sidebar").data('manually-toggled');
 
-        if (!manuallyToggled) {
-            // If user didn't manually toggle the sidebar size
-            // then automatically resize according to window width
-            if (width > 800) {
-                expandSidebarNav();
-            } else {
+        if (width < 500) {
+//            $(".sidebar").removeClass('sidebar-slim');
+            $(".sidebar").addClass('sidebar-hidden');
+            $(".page-wrapper").addClass('with-sidebar-hidden');
+
+        } else {
+
+            $(".sidebar").removeClass('sidebar-hidden');
+            $(".page-wrapper").removeClass('with-sidebar-hidden');
+
+            if (!manuallyToggled) {
+                // If user didn't manually toggle the sidebar size
+                // then automatically resize according to window width
+                if (width > 800) {
+                    expandSidebarNav();
+                } else {
+                    contractSidebarNav();
+                }
+            } else if (width < 800 && width >= 500) {
+                // Else if user did manually toggle the sidebar size,
+                // contract it only when window size is too small
                 contractSidebarNav();
             }
-        } else if (width < 800) {
-            // Else if user did manually toggle the sidebar size,
-            // contract it only when window size is too small
-            contractSidebarNav();
         }
     }
 

@@ -30,7 +30,7 @@
     {% block vendor_css %}{%- endblock %}
 
     {{ c('Vakarian Base CSS') }}
-    <link rel="stylesheet" href="{{ static('css/compiled/base.css') }}">
+    <link rel="stylesheet" href="{{ static('css/compiled/main.css') }}">
     <link rel="stylesheet" href="{{ static('css/compiled/template.css') }}">
 
     {{ c('Page Specific CSS') }}
@@ -48,7 +48,7 @@
         {{ cuh('top navigation bar start') }}
         <nav class="navbar navbar-fixed-top topbar" role="navigation">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html"><i class="fa fa-flash"></i> Vakarian <span class="brand-subtext">Admin Panel</span></a>
+                <a class="navbar-brand" href="index.html"><i class="fa fa-flash"></i> Vakarian <span class="brand-subtext hidden-xs">Admin Panel</span></a>
 
                 <ul class="navbar-items">
                     <li>
@@ -68,7 +68,7 @@
 
                     {{ c('Notifications dropdown') }}
                     <li class="dropdown notifications-dropdown">
-                        <button type="button" class="btn-navbar hidden-xs" data-toggle="dropdown">
+                        <button type="button" class="btn-navbar" data-toggle="dropdown">
                             <span class="events-count">3</span>
                             <i class="fa fa-exclamation-circle fa-fw"></i>
                         </button>
@@ -251,6 +251,7 @@
     <script src="{{ static('js/common/jquery-2.1.0.min.js') }}"></script>
     <script src="{{ static('js/common/jquery-ui.min.js') }}"></script>
     <script src="{{ static('js/common/bootstrap.min.js') }}"></script>
+    <script src="{{ static('plugins/snap_js/snap.min.js') }}"></script>
 
     {{ cu('vendor') }}
     {% block vendor_js %}{% endblock %}

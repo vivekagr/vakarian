@@ -1,0 +1,891 @@
+// Vakarian Admin Template
+// 2013 (c) WoofThemes.com
+//
+// This file contains styles for basic skeleton components
+// of the template like top bar, sidebar and empty content area.
+
+
+
+@import 'helper';
+@import 'vars';
+
+* {
+  box-sizing: border-box;
+
+  // Changing the color of text selection
+  &::selection {
+    background: #1ccfab;
+    color: white;
+  }
+
+  &::-moz-selection {
+    background: #1ccfab;
+    color: white;
+  }
+}
+
+// Disabling safari elastic scrolling
+html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: $background-color;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+// Changing the default anchor link color
+a {
+  color: #3498db;
+}
+
+table {
+  font-size: 0.95em;
+
+  th { font-weight: 600; }
+
+  // Make the table row border color a bit lighter
+  >thead>tr>th, >tbody>tr>td {
+    border-color: #ecf0f1;
+  }
+}
+
+code {
+  color: white;
+  background: #16a085;
+  border-radius: 2px;
+}
+
+kbd {
+  background-color: #34495e;
+}
+
+pre {
+  border: none;
+}
+
+
+/* This encapsulates the entire page */
+
+.page-wrapper {
+  position: relative;
+  min-height:100%;
+
+  @media (max-width: 500px) {
+    overflow-x: hidden;
+  }
+}
+
+/* TOP BAR */
+
+.topbar {
+  border: none;
+  border-radius: 0;
+  background-color: $topbar-color;
+  padding: 5px 8px;
+  margin-bottom: 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.10);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.10);
+
+  @media (max-width: 768px) {
+    padding: 2px 6px;
+  }
+
+  .container-fluid {
+    @media (max-width: 768px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .navbar-brand {
+    display: inline;
+    color: $text-color;
+    font-size: 1.3em;
+    font-weight: 500;
+
+    @media (max-width: 768px) {
+      font-weight: 300;
+    }
+
+    &:hover {
+      color: #fff;
+    }
+
+    .brand-subtext {
+      color: #81979C;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 0.5em;
+    }
+  }
+
+  .navbar-nav {
+    li > a {
+      color: $text-color;
+      &:hover { background-color: transparent; }
+    }
+  }
+
+  // To add any elements, such as buttons to the top bar, add it within a ul.navbar-items
+  .navbar-items {
+    margin: 0;
+    list-style: none;
+    > li {
+      float: left;
+      display: inline-block;
+    }
+  }
+
+  .dropdown {
+    // Keeping the button highlighted when the dropdown menu is open
+    &.open button.btn-navbar {
+      background-color: darken($topbar-color, 4);
+      color: lighten(#81A0C0, 20%);
+    }
+  }
+
+  .dropdown-menu {
+    border: none;
+    border-radius: 2px;
+
+    > li > a {
+      padding-top: 6px;
+      padding-bottom: 6px;
+      padding-left: 10px;
+      vertical-align: middle;
+
+      > i {
+        margin: 4px 4px 0 0;
+        color: #95a5a6;
+      }
+    }
+
+    // Adding the caret above the menu
+    &:before, &:after {
+      position: absolute;
+      display: inline-block;
+      content: '';
+    }
+
+    &:before {
+      top: -7px;
+      right: 1.52em;
+      border-right: 7px solid transparent;
+      border-bottom: 7px solid #ccc;
+      border-left: 7px solid transparent;
+      border-bottom-color: rgba(0, 0, 0, 0.2);
+    }
+
+    &:after {
+      top: -6px;
+      right: 1.5em;
+      border-right: 6px solid transparent;
+      border-bottom: 6px solid #ffffff;
+      border-left: 6px solid transparent;
+    }
+  }
+}
+
+
+
+/* For any button within the top navbar.
+   Used for sidebar size toggle, search, notifications and settings button. */
+button.btn-navbar {
+  position: relative;
+  color: $topbar-btn-text-color;
+  background-color: darken($topbar-color, 3);
+  border: none;
+  border-radius: 0.2em;
+  font-size: 1.3em;
+  margin: 0.55em;
+  @include transition(all 0.15s ease);
+
+  &:hover {
+    background-color: darken($topbar-color, 4);
+    color: lighten($topbar-btn-text-color, 20%);
+    @include transition(all 0.15s ease);
+  }
+
+  &:focus { outline: none; }
+
+  .events-count {
+    $size: 1.5em;
+    $position: -0.2em;
+    position: absolute;
+    top: $position;
+    right: $position;
+    background-color: #1abc9c;
+    font-size: 0.55em;
+    font-weight: 600;
+    vertical-align: middle;
+    color: darken($topbar-color, 3);
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+  }
+}
+
+
+/* Top navbar and sidebar search */
+
+.navbar-search, .sidebar-search {
+  display: inline-block;
+
+  input {
+    display: inline-block;
+    vertical-align: middle;
+    background-color: transparent;
+    border: none;
+    color: #bdc3c7;
+    box-shadow: none;
+    font-size: 0.85em;
+    font-weight: 300;
+    width: 7em;
+    &:hover, &:focus { box-shadow: none; }
+    @include transition(all 0.2s ease);
+
+    // Set a different, less flashy color for always visible placeholder
+    &::-webkit-input-placeholder { color: #81A0C0; }
+    &:-moz-placeholder { color: #81A0C0; }
+    &::-moz-placeholder { color: #81A0C0; }
+    &:-ms-input-placeholder { color: #81A0C0; }
+
+    // Increasing the width of the search field on focus
+    &:focus {
+      width: 12em;
+      @include transition(all 0.4s ease);
+    }
+  }
+}
+
+// Some custom styles for sidebar search
+.sidebar-search {
+  display: block;
+  position: relative;
+  border-top: 1px solid lighten($sidebar-color, 4%);
+  border-bottom: 1px solid lighten($sidebar-color, 4%);
+
+  input {
+    padding: 7px 25px 7px 7px;
+    background-color: #3F566D;
+    color: #2c3e50;
+    font-weight: 600;
+    border-radius: 3px;
+    margin: 10px;
+    width: 90%;
+
+    &:focus {
+      width: 90%;
+      background-color: lighten(#3F566D, 7%);
+      outline: none;
+    }
+  }
+
+  // Add the search icon towards the right
+  &:before {
+    @extend .fa-icon;
+    position: absolute;
+    content: '\f002';
+    color: $sidebar-color;
+    top: 18px;
+    right: 18px;
+  }
+}
+
+
+/* Top Bar Notifications Dropdown */
+
+.notifications-dropdown {
+  ul.dropdown-menu {
+     min-width: 260px;
+
+    .divider { margin: 5px 0; }
+
+    .see-all a {
+      padding: 5px 15px;
+      font-size: 0.88em;
+      font-weight: 400;
+      color: #95a5a6;
+      @include transition(all 0.3s ease);
+
+      &:hover {
+        background-color: transparent;
+        color: #3b526a;
+        @include transition(all 0.3s ease);
+      }
+    }
+
+    > li > a {
+      padding: 10px 15px;
+
+      > i {
+        font-size: 2.2em;
+        margin: 3px 6px 0 0;
+        color: #DDDADA;
+      }
+    }
+  }
+
+  .media-body {
+    font-size: 0.9em;
+    font-weight: 300;
+    color: #bdc3c7;
+    .media-heading {
+      font-size: 1.15em;
+      font-weight: 400;
+      color: #34495e;
+    }
+
+    // Add padding to compensate for the icon element (floated left) occupying the space
+    padding-right: 3.7em;
+  }
+
+  .badge {
+    background-color: #d9ddde;
+  }
+}
+
+
+/*
+
+SIDEBAR
+
+*/
+
+.sidebar {
+  // Hiding the sidebar by default and showing it after page load
+  display: none;
+  padding-bottom: 64px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 210px;
+  height: 100%;
+  background-color: $sidebar-color;
+  z-index: 2;
+}
+
+/* For making sidebar fixed to the left of the window */
+.sidebar-fixed {
+  position: fixed;
+  margin-top: 60px;
+  overflow-y: scroll;
+}
+
+/* For hiding the sidebar
+   Used when screen size is <500px */
+.sidebar-hidden {
+  display: none !important;
+}
+
+/* To make the sidebar peek out
+   Used when screen size is <500px */
+.sidebar-slim-peeking {
+  display: block;
+}
+
+
+/* Navigation menu inside the sidebar */
+.nav-sidebar {
+  li {
+    // Show empty space for items without dropdown menu
+    span:before {
+      @extend .fa-icon;
+      content: '';
+      margin-right: 6px;
+    }
+    // Showing the collapse indicator icon to the left of item name
+    &.dropdown span:before {
+      margin: 0 5px 0 -7px;
+      width: 8px;
+      content: $collapse-indicator-icon;
+      color: $collapse-indicator-color;
+    }
+
+    // Changing collapse indicator icon to 'fa-chevron-circle-down'
+    // on the active item
+    &.dropdown.active span:before {
+      content: $collapse-indicator-down-icon;
+    }
+  }
+
+  li > a {
+    padding: 17px 11px 17px 15px;
+    background-color: $sidebar-item-color;
+    font-size: 0.90em;
+    font-weight: 400;
+    line-height: 1.1em;
+    color: $sidebar-item-text-color;
+    border-left: 3px solid transparent;
+    @include transition((background-color 0.1s ease, color 0.1s ease));
+
+    // Item icon to the right
+    i {
+      margin-right: 6px;
+      color: $sidebar-item-icon-color;
+      float: right;
+      font-size: 1.5em;
+      line-height: 0.9em;
+      @include transition((background-color 0.1s ease, color 0.1s ease));
+    }
+
+    // Making the text and icon brighter on hover
+    &:hover, &:focus {
+      @include transition((background-color 0.1s ease, color 0.1s ease));
+      background-color: lighten($sidebar-item-color, 4);
+      color: $text-color;
+      outline: none;
+      i {
+        color: darken($text-color, 10);
+        @include transition((background-color 0.1s ease, color 0.1s ease));
+      }
+    }
+  }
+
+  // For the active item whose dropdown children's are shown
+  > li.active > a {
+    border-left-color: $sidebar-item-border-left-color;
+    background-color: darken($sidebar-item-color, 4);
+    color: #fff;
+    i { color: darken($text-color, 10); }
+  }
+
+  // For the items which have dropdown child items
+  > li.dropdown {
+    > ul {
+      display: none;
+      padding-left: 0;
+
+      > li.active > a {
+        text-decoration: none;
+        background-color: lighten($sidebar-item-color, 3%);
+        color: $text-color;
+        border-left-color: $sidebar-subitem-border-left-color;
+      }
+
+      > li > a {
+        display: block;
+        padding: 8px 30px;
+        background-color: $sidebar-subitem-color;
+        font-size: 0.85em;
+        font-weight: 400;
+        border-left: 2px solid transparent;
+
+        &:before {
+          @extend .fa-icon;
+          content: '\f105';
+          margin: 0 5px 0 -3px;
+          color: darken($text-color, 50);
+        }
+
+        &:hover {
+          text-decoration: none;
+          background-color: lighten($sidebar-item-color, 3%);
+          border-left-color: $sidebar-subitem-border-left-color;
+        }
+      }
+    }
+  }
+}
+
+
+/* User profile inside the sidebar */
+.sidebar-profile-wrapper {
+  position: relative;
+  cursor: pointer;
+
+  // 'fa-angle-right' shown in the right on hover
+  .fa {
+    position: absolute;
+    top: 35px;
+    right: 15px;
+    color: $text-color;
+    display: none;
+  }
+
+  .sidebar-profile {
+    padding: 13px 11px;
+    @include transition(all 0.2s ease);
+  }
+
+  .sidebar-profile-avatar {
+    float: left;
+    width: 55px;
+  }
+
+  .sidebar-profile-content {
+    float: left;
+    margin-top: 8px;
+    margin-left: 10px;
+    width: 115px;
+
+    .welcome {
+      margin-top: 2px;
+      color: #b3b8bc;
+      font-size: 0.67em;
+      line-height: 1em;
+    }
+
+    .name {
+      margin-top: 2px;
+      color: #ecf0f1;
+      font-size: 1.35em;
+      font-weight: 300;
+    }
+
+    .job-title {
+      display: inline-block;
+      position: absolute;
+      top: 5px;
+      right: 0;
+      padding: 2px 4px;
+      background-color: lighten($sidebar-color, 13%);
+      margin-top: 2px;
+      color: $sidebar-color;
+      font-size: 0.68em;
+      font-weight: 600;
+
+      @include transition(all 0.2s ease);
+    }
+  }
+
+  .sidebar-profile:hover {
+    background-color: lighten($sidebar-color, 3);
+
+    .fa {
+      display: block;
+    }
+
+    .job-title {
+      background-color: lighten($sidebar-color, 23%);
+    }
+  }
+
+  /* Popover that opens on clicking on the profile area */
+  .popover {
+    position: absolute;
+    top: 10px !important;
+    left: 100% !important;
+    width: 260px;
+    cursor: default;
+
+    text-align: center;
+
+    form { font-size: 1.1em; }
+
+    img {
+      margin: 3px;
+      width: 130px;
+    }
+
+    .arrow {
+      top: 30px;
+      &:after { border-right-color: #f7f7f7; }
+    }
+
+    .popover-title {
+      padding: 14px;
+    }
+
+    .sidebar-profile-popup-title {
+      font-weight: 300;
+      margin-top: 12px;
+    }
+
+    .form-group {
+      margin: 5px 0 10px 0;
+
+      .checkbox-inline span:before {
+        text-align: left;
+        left: -1.057142857142858em;
+      }
+    }
+
+    span.label.label-default {
+      background-color: darken($background-color, 15%);
+      font-weight: 400;
+    }
+  }
+}
+
+
+/*
+
+SLIM SIDEBAR
+
+Using separate .sidebar-slim-width and .with-sidebar-slim class
+to preserve the slide animation effect with jQuery
+
+*/
+.with-sidebar-slim {
+  .content-wrapper {
+    margin-left: 75px;
+    margin-top: 54px;
+  }
+}
+
+.with-sidebar-hidden .content-wrapper {
+  margin-left: 0;
+}
+
+.sidebar-slim-width { width: 75px; }
+
+.sidebar-slim {
+
+  .sidebar-profile { border-bottom: 1px solid lighten($sidebar-color, 3); }
+
+  // Hiding arrow icon from sidebar profile, and search bar
+  .sidebar-profile:hover .fa, .sidebar-search { display: none; }
+
+  .sidebar-profile-avatar { width: 52px; margin: 0 auto; }
+
+  // Removing the overflow scroll so that nested lists can open up
+  overflow-y: visible !important;
+
+  // Hiding the text
+  .nav-sidebar > li > a > span { display: none; }
+  .sidebar-profile-content {
+    .welcome, .name, .job-title { display: none; }
+  }
+
+  // Positioning the sub-menu towards the right of the icon
+  .nav-sidebar > li > ul {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 200px;
+  }
+  .nav-sidebar > li > a > i {
+    margin: 0 0 0 0.3em;
+    float: none;
+    font-size: 1.6em;
+  }
+}
+
+
+// Wrapper for the main content area
+.content-wrapper {
+  // Hiding the div by default and fading it in after window load.
+  display: none;
+  margin: 60px 0 0 210px;
+  padding: 0 25px 25px;
+  color: #2c3e50;
+
+  @media (max-width: 500px) {
+    margin: 54px 0 0 210px;
+    padding: 0 10px 10px;
+  }
+}
+
+
+// Page Title
+.page-title {
+  font-size: 1.8em;
+  font-weight: 300;
+  margin-bottom: 15px;
+
+  @media (max-width: 768px) {
+    font-size: 1.5em;
+    margin-bottom: 8px;
+  }
+}
+
+// Page Subtitle
+.page-sub-title {
+  margin-left: 2px;
+  margin-bottom: 20px;
+  color: #95a5a6;
+  font-size: 0.85em;
+  font-weight: 300;
+}
+
+// For button towards the right of the page title
+.btn.btn-v.page-title-btn {
+  margin-top: 35px;
+  font-size: 0.85em;
+}
+
+
+// WIDGET (white panel for placing the content)
+.widget {
+  position: relative;
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding-top: 10px;
+  color: #34495e;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.10);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.10);
+
+  &.row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  // Widget title
+  .widget-title {
+    font-size: 1.15em;
+    font-weight: 500;
+    margin: 5px 15px 18px;
+    color: #bdc3c7;
+  }
+
+  // Widget sub-title
+  .widget-subtitle {
+    margin: 10px 0 3px 4px;
+    font-size: 0.8em;
+    color: #bdc3c7;
+
+    display: table;
+    white-space: nowrap;
+    &:before, &:after {
+      border-top: 1px solid #ecf0f1;
+      content: '';
+      display: table-cell;
+      position: relative;
+      top: 0.6em;
+    }
+    &:before {
+      width: 5px;
+      right: 3px;
+    }
+    &:after {
+      width: 5px;
+      left: 3px;
+    }
+  }
+
+  // All the content within the div (except title and footer) should be within this div
+  .widget-content {
+    padding: 0 15px 10px;
+    blockquote { font-weight: 300; }
+  }
+
+  // Used for showing extra details about the widget
+  .widget-info {
+    margin: 10px 0 5px;
+    padding: 7px 10px;
+    border: 2px solid #f5f5f5;
+    border-radius: 3px;
+    font-size: 0.85em;
+    color: #7f8c8d;
+
+    p {
+      margin: 6px 0;
+      line-height: 1.8em;
+      &:first-child { margin-top: 0; }
+      &:last-child { margin-bottom: 0; }
+      &:only-of-type { margin-bottom: 6px; }
+    }
+
+    pre {
+      margin: 4px 0;
+      font-size: 0.9em;
+      background-color: #f5f5f5;
+    }
+
+    code {
+      background-color: #f5f5f5;
+      color: #16a085;
+    }
+
+  }
+
+  // If there is too much content in the .widget-info,
+  // encapsulate it within this to limit it's size.
+  .widget-info-fixed-size {
+    position: relative;
+
+    .widget-info {
+      overflow: scroll;
+      height: 120px;
+    }
+
+    &.open .widget-info {
+      overflow: visible;
+      height: auto;
+    }
+
+    .expand {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding: 2px 3px;
+      background: #fff;
+      border: 2px solid #ecf0f1;
+      border-top-left-radius: 3px;
+      font-size: 0.8em;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #D0D4D4;
+      @include user-select(none);
+      cursor: pointer;
+
+      &:hover {
+        color: #B0B4B4;
+      }
+    }
+
+  }
+
+  // Show any small text as a footnote with this
+  .widget-footnote {
+    &:before {
+      @extend .fa-icon;
+      content: '\f05a';
+      margin-right: 5px;
+    }
+
+    font-size: 0.9em;
+    font-weight: 300;
+    color: #bdc3c7;
+  }
+
+  // For fixed nav tabs within a widget
+  ul.nav.nav-tabs.fixed {
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 15px;
+
+    li {
+      border: none;
+
+      &:first-child > a { border-bottom-left-radius: 5px; }
+      &:last-child > a { border-bottom-right-radius: 5px; }
+
+      &.active > a {
+        background-color: #3498db;
+        border-color: #3498db;
+
+        &:hover {
+          background-color: #3498db;
+        }
+      }
+
+      a {
+        padding: 5px 12px;
+        margin-right: 1px;
+        border: 1px solid transparent;
+        border-top: none;
+        border-radius: 0;
+        background-color: #2980b9;
+        color: #fff;
+        font-size: 0.85em;
+
+        &:hover {
+          background-color: darken(#2980b9, 3%);
+        }
+      }
+    }
+  }
+
+  // Fixing alert's close icon/btn's position within a widget
+  .alert.alert-dismissable > .close { right: 0; }
+}

@@ -6,10 +6,6 @@
     <link rel="stylesheet" href="{{ static('css/lib/fullcalendar.css') }}">
 {%- endblock %}
 
-{% block css %}
-    <link rel="stylesheet" href="{{ static('css/compiled/lib/fullcalendar.custom.css') }}">
-{% endblock %}
-
 {% block main %}
     <div class="widget">
         <div class="widget-content">
@@ -96,5 +92,7 @@
         },
         events: events
     });
+
+    $(window).trigger('resize');
 </script>
 {% endblock %}

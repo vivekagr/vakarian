@@ -1,4 +1,4 @@
-.fa-icon, table.support-tickets-table tbody > tr > td.status:before, .user-voice .media-body:before {
+.fa-icon, .support-tickets-table > table tbody > tr > td.status:before, .user-voice .media-body:before {
   display: inline-block;
   font-family: FontAwesome;
   font-style: normal;
@@ -129,33 +129,34 @@
   opacity: 0.80;
   filter: alpha(opacity=80); }
 
-table.support-tickets-table {
+.support-tickets-table {
   margin-top: 10px; }
-  table.support-tickets-table thead > tr > th {
-    font-weight: 400;
-    color: #95a5a6;
-    border-bottom-width: 0; }
-  table.support-tickets-table tbody > tr > td {
-    font-size: 0.9em;
-    font-weight: 400;
-    border-top-color: #ecf0f1; }
-    table.support-tickets-table tbody > tr > td span.label {
-      background-color: #bdc3c7;
-      font-size: 0.85em;
-      font-weight: 600; }
-      table.support-tickets-table tbody > tr > td span.label.critical {
-        background-color: #e74c3c; }
-      table.support-tickets-table tbody > tr > td span.label.high {
-        background-color: #f39c12; }
-      table.support-tickets-table tbody > tr > td span.label.normal {
-        background-color: #bdc3c7; }
-      table.support-tickets-table tbody > tr > td span.label.low {
-        background-color: #3498db; }
-    table.support-tickets-table tbody > tr > td.status:before {
-      content: '\f05c';
-      margin-right: 0.4em; }
-    table.support-tickets-table tbody > tr > td.status.answered:before {
-      content: '\f05d'; }
+
+.support-tickets-table > table thead > tr > th {
+  font-weight: 400;
+  color: #95a5a6;
+  border-bottom-width: 0; }
+.support-tickets-table > table tbody > tr > td {
+  font-size: 0.9em;
+  font-weight: 400;
+  border-top-color: #ecf0f1; }
+  .support-tickets-table > table tbody > tr > td span.label {
+    background-color: #bdc3c7;
+    font-size: 0.85em;
+    font-weight: 600; }
+    .support-tickets-table > table tbody > tr > td span.label.critical {
+      background-color: #e74c3c; }
+    .support-tickets-table > table tbody > tr > td span.label.high {
+      background-color: #f39c12; }
+    .support-tickets-table > table tbody > tr > td span.label.normal {
+      background-color: #bdc3c7; }
+    .support-tickets-table > table tbody > tr > td span.label.low {
+      background-color: #3498db; }
+  .support-tickets-table > table tbody > tr > td.status:before {
+    content: '\f05c';
+    margin-right: 0.4em; }
+  .support-tickets-table > table tbody > tr > td.status.answered:before {
+    content: '\f05d'; }
 
 .users-voice-widget .widget-content {
   height: 354px; }

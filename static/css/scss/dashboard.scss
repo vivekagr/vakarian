@@ -147,8 +147,11 @@
   }
 }
 
-table.support-tickets-table {
+.support-tickets-table {
   margin-top: 10px;
+}
+
+.support-tickets-table > table {
 
   thead > tr > th {
     font-weight: 400;

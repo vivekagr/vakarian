@@ -1,5 +1,33 @@
 $(function () {
 
+    function animateDropdownMenu(selector) {
+        // Listen for dropdown show event
+        // and add animation class to it when shown
+        $(selector).on('show.bs.dropdown', function (el) {
+            $(el.target).find('ul.dropdown-menu').addClass('animated flipInY');
+        });
+    }
+
+    // Animate Quick Stat Widget
+    function animateQuickstatWidget() {
+        // Roll the numbers with Odometer
+        $('.odometer').each(function(i, el) {
+            var od = new Odometer({
+                el: el,
+                value: 0,
+                format: $(el).data('format')
+            });
+            od.update($(el).data('value'));
+        });
+        // Bounce in the icon from the left
+        $('.quick-stat-widget').find('.icon-area i').addClass('animated bounceInLeft');
+    }
+
+    // Animating dropdow menus in top bar
+    animateDropdownMenu('.topbar');
+
+    animateQuickstatWidget();
+
     /*** Setup the profile popover ***/
 
     var sidebarProfile = $('.sidebar-profile');

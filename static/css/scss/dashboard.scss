@@ -53,8 +53,9 @@
 // Quick Stat Widget
 .quick-stat-widget {
   padding: 0;
-  margin-bottom: 12px;
   border-radius: 3px;
+  @include user-select(none);
+  cursor:default;
 
   i {
     font-size: 2.5em;
@@ -66,20 +67,28 @@
     max-width: 200px;
     padding: 20px;
     border-radius: 3px 0 0 3px;
+
+    @media (max-width: 1250px) and (min-width: 760px) {
+
+    }
   }
 
   .content-area {
     float: left;
-    padding: 10px 29px 5px 14px;
+    padding: 10px 8px 5px 14px;
     font-weight: 300;
     color: #95a5a6;
 
     .metric-value {
       display: block;
-      font-size: 2.2em;
+      font-size: 1.9em;
       font-weight: 300;
       line-height: 1.1em;
       color: #B8C1CA;
+
+      .odometer {
+        margin-top: -3px;
+      }
     }
   }
 

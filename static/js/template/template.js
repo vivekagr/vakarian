@@ -1,5 +1,34 @@
 $(function () {
 
+    /*
+        Animates a an element with animate.css classes.
+        First adds the class as required by animate.css
+        and then removes them so that they can be animated
+        again in the future.
+
+        Expects:
+            el:         jQuery node object
+            animation:  animate.css effect class
+            callback:   callback function
+
+        Callback is called when the animation is finished.
+    */
+    function animateEl(el, animation, callback) {
+        el.addClass("animated " + animation);
+        el.on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+            el.removeClass("animated " + animation);
+
+            if (typeof(callback) == "function")
+                callback();
+        });
+    }
+
+
+    /*
+        Animates all the dropdown menu within the provided selector.
+
+        Animation is done with the help of animate.css classes
+     */
     function animateDropdownMenu(selector) {
         // Listen for dropdown show event
         // and add animation class to it when shown
@@ -8,19 +37,33 @@ $(function () {
         });
     }
 
-    // Animate Quick Stat Widget
+
+    /*
+        Animates all the quickstat widgets with class `.quick-stat-widget`.
+
+        The icon is bounced in from the left of the screen and numbers are
+        rotated with odometer.
+     */
     function animateQuickstatWidget() {
-        // Roll the numbers with Odometer
-        $('.odometer').each(function(i, el) {
-            var od = new Odometer({
-                el: el,
-                value: 0,
-                format: $(el).data('format')
-            });
-            od.update($(el).data('value'));
+        $('.widget-odometer').each(function(i, el) {
+            // Not animating on mobile/tablets due to performance concerns
+            if (!navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i)) {
+
+                // Roll the numbers with Odometer
+                var od = new Odometer({
+                    el: el,
+                    value: 0,
+                    format: $(el).data('format')
+                });
+                od.update($(el).data('value'));
+
+                // Bounce in the icon from the left
+                $('.quick-stat-widget').find('.icon-area i').addClass('animated bounceInLeft');
+
+            } else {
+                $(el).text(($(el).data('value')));
+            }
         });
-        // Bounce in the icon from the left
-        $('.quick-stat-widget').find('.icon-area i').addClass('animated bounceInLeft');
     }
 
     // Animating dropdow menus in top bar
@@ -93,13 +136,13 @@ $(function () {
         var parent = $(this).parent("li"),
             sidebarSlim = $(".sidebar-slim"),
             dropdownSubList = $(".nav-sidebar > li.dropdown").children("ul");
-        sidebarSlim[0] ? dropdownSubList.hide() : dropdownSubList.slideUp(150);
+        sidebarSlim[0] ? dropdownSubList.hide() : dropdownSubList.slideUp(250);
         if (parent.hasClass("active")) {
             parent.removeClass("active");
         } else {
             navSidebarLi.removeClass("active");
             parent.addClass("active");
-            sidebarSlim[0] ? parent.children("ul").show() : parent.children("ul").slideDown(150);
+            sidebarSlim[0] ? parent.children("ul").show() : parent.children("ul").slideDown(250);
         }
     });
 
@@ -120,9 +163,10 @@ $(function () {
         if (!sidebarEl.hasClass("sidebar-slim-width"))
             return;
 
-        sidebarEl.removeClass("sidebar-slim-width", 150, function() {
-            pageWrapperEl.removeClass("with-sidebar-slim", 150);
-            sidebarEl.removeClass("sidebar-slim", 150);
+        sidebarEl.removeClass("sidebar-slim-width", 250, function() {
+            pageWrapperEl.removeClass("with-sidebar-slim");
+            sidebarEl.removeClass("sidebar-slim", 250);
+            animateEl(sidebarEl.find('.nav.nav-sidebar'), 'fadeInLeft');
         });
     }
 
@@ -135,9 +179,11 @@ $(function () {
         if (sidebarEl.hasClass("sidebar-slim-width"))
             return;
 
-        sidebarEl.addClass("sidebar-slim", 150, function() {
-            pageWrapperEl.addClass("with-sidebar-slim", 150);
-            sidebarEl.addClass("sidebar-slim-width", 150);
+        animateEl(sidebarEl.find('.nav.nav-sidebar'), 'fadeInLeft');
+
+        sidebarEl.addClass("sidebar-slim", 250, function() {
+            pageWrapperEl.addClass("with-sidebar-slim");
+            sidebarEl.addClass("sidebar-slim-width", 250);
         });
     }
 

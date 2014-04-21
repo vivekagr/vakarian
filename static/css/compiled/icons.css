@@ -1,28 +1,38 @@
 .icons-list {
   list-style: none;
-  padding-left: 0; }
+  padding-left: 0;
+}
+.icons-list li {
+  float: left;
+  width: 50%;
+  padding: 10px 5px;
+  border: 2px solid #fff;
+  background-color: #ecf0f1;
+  text-align: center;
+  height: 90px;
+  vertical-align: middle;
+  border-radius: 3px;
+}
+@media (min-width: 768px) {
   .icons-list li {
-    float: left;
-    width: 50%;
-    padding: 10px 5px;
-    border: 2px solid #fff;
-    background-color: #ecf0f1;
-    text-align: center;
-    height: 90px;
-    vertical-align: middle;
-    border-radius: 3px; }
-    @media (min-width: 768px) {
-      .icons-list li {
-        width: 25%; } }
-    @media (min-width: 992px) {
-      .icons-list li {
-        width: 12.5%; } }
-    .icons-list li:hover {
-      background-color: #dde4e6; }
-  .icons-list .glyphicon, .icons-list .fa, .icons-list .icon-class, .icons-list [class^="wi-"], .icons-list [class*=" wi-"] {
-    display: block; }
-  .icons-list .glyphicon, .icons-list .fa, .icons-list [class^="wi-"], .icons-list [class*=" wi-"] {
-    font-size: 1.6em; }
-  .icons-list .icon-class {
-    margin-top: 12px;
-    font-size: 0.84em; }
+    width: 25%;
+  }
+}
+@media (min-width: 992px) {
+  .icons-list li {
+    width: 12.5%;
+  }
+}
+.icons-list li:hover {
+  background-color: #dde4e6;
+}
+.icons-list .glyphicon, .icons-list .fa, .icons-list .icon-class, .icons-list [class^="wi-"], .icons-list [class*=" wi-"] {
+  display: block;
+}
+.icons-list .glyphicon, .icons-list .fa, .icons-list [class^="wi-"], .icons-list [class*=" wi-"] {
+  font-size: 1.6em;
+}
+.icons-list .icon-class {
+  margin-top: 12px;
+  font-size: 0.84em;
+}

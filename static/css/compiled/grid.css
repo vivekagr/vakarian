@@ -5,34 +5,40 @@
   font-weight: normal;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+}
 
 .grid-example > .widget-content > .row {
   margin-left: -10px;
-  margin-right: -10px; }
+  margin-right: -10px;
+}
 
 .grid-example .row {
   margin-left: 5px;
-  margin-right: 5px; }
-  .grid-example .row .col-xs-1, .grid-example .row .col-sm-1, .grid-example .row .col-md-1, .grid-example .row .col-lg-1, .grid-example .row .col-xs-2, .grid-example .row .col-sm-2, .grid-example .row .col-md-2, .grid-example .row .col-lg-2, .grid-example .row .col-xs-3, .grid-example .row .col-sm-3, .grid-example .row .col-md-3, .grid-example .row .col-lg-3, .grid-example .row .col-xs-4, .grid-example .row .col-sm-4, .grid-example .row .col-md-4, .grid-example .row .col-lg-4, .grid-example .row .col-xs-5, .grid-example .row .col-sm-5, .grid-example .row .col-md-5, .grid-example .row .col-lg-5, .grid-example .row .col-xs-6, .grid-example .row .col-sm-6, .grid-example .row .col-md-6, .grid-example .row .col-lg-6, .grid-example .row .col-xs-7, .grid-example .row .col-sm-7, .grid-example .row .col-md-7, .grid-example .row .col-lg-7, .grid-example .row .col-xs-8, .grid-example .row .col-sm-8, .grid-example .row .col-md-8, .grid-example .row .col-lg-8, .grid-example .row .col-xs-9, .grid-example .row .col-sm-9, .grid-example .row .col-md-9, .grid-example .row .col-lg-9, .grid-example .row .col-xs-10, .grid-example .row .col-sm-10, .grid-example .row .col-md-10, .grid-example .row .col-lg-10, .grid-example .row .col-xs-11, .grid-example .row .col-sm-11, .grid-example .row .col-md-11, .grid-example .row .col-lg-11, .grid-example .row .col-xs-12, .grid-example .row .col-sm-12, .grid-example .row .col-md-12, .grid-example .row .col-lg-12 {
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-top: 7px;
-    margin-bottom: 7px; }
-    .grid-example .row .col-xs-1 span, .grid-example .row .col-sm-1 span, .grid-example .row .col-md-1 span, .grid-example .row .col-lg-1 span, .grid-example .row .col-xs-2 span, .grid-example .row .col-sm-2 span, .grid-example .row .col-md-2 span, .grid-example .row .col-lg-2 span, .grid-example .row .col-xs-3 span, .grid-example .row .col-sm-3 span, .grid-example .row .col-md-3 span, .grid-example .row .col-lg-3 span, .grid-example .row .col-xs-4 span, .grid-example .row .col-sm-4 span, .grid-example .row .col-md-4 span, .grid-example .row .col-lg-4 span, .grid-example .row .col-xs-5 span, .grid-example .row .col-sm-5 span, .grid-example .row .col-md-5 span, .grid-example .row .col-lg-5 span, .grid-example .row .col-xs-6 span, .grid-example .row .col-sm-6 span, .grid-example .row .col-md-6 span, .grid-example .row .col-lg-6 span, .grid-example .row .col-xs-7 span, .grid-example .row .col-sm-7 span, .grid-example .row .col-md-7 span, .grid-example .row .col-lg-7 span, .grid-example .row .col-xs-8 span, .grid-example .row .col-sm-8 span, .grid-example .row .col-md-8 span, .grid-example .row .col-lg-8 span, .grid-example .row .col-xs-9 span, .grid-example .row .col-sm-9 span, .grid-example .row .col-md-9 span, .grid-example .row .col-lg-9 span, .grid-example .row .col-xs-10 span, .grid-example .row .col-sm-10 span, .grid-example .row .col-md-10 span, .grid-example .row .col-lg-10 span, .grid-example .row .col-xs-11 span, .grid-example .row .col-sm-11 span, .grid-example .row .col-md-11 span, .grid-example .row .col-lg-11 span, .grid-example .row .col-xs-12 span, .grid-example .row .col-sm-12 span, .grid-example .row .col-md-12 span, .grid-example .row .col-lg-12 span {
-      display: block;
-      padding: 10px 4px;
-      text-align: center;
-      font-weight: 300;
-      font-size: 0.9em;
-      border-radius: 3px;
-      background-color: rgba(236, 240, 241, 0.7);
-      color: #9da2a6;
-      -webkit-transition: all 0.23s ease;
-      -moz-transition: all 0.23s ease;
-      -ms-transition: all 0.23s ease;
-      -o-transition: all 0.23s ease;
-      transition: all 0.23s ease; }
-      .grid-example .row .col-xs-1 span:hover, .grid-example .row .col-sm-1 span:hover, .grid-example .row .col-md-1 span:hover, .grid-example .row .col-lg-1 span:hover, .grid-example .row .col-xs-2 span:hover, .grid-example .row .col-sm-2 span:hover, .grid-example .row .col-md-2 span:hover, .grid-example .row .col-lg-2 span:hover, .grid-example .row .col-xs-3 span:hover, .grid-example .row .col-sm-3 span:hover, .grid-example .row .col-md-3 span:hover, .grid-example .row .col-lg-3 span:hover, .grid-example .row .col-xs-4 span:hover, .grid-example .row .col-sm-4 span:hover, .grid-example .row .col-md-4 span:hover, .grid-example .row .col-lg-4 span:hover, .grid-example .row .col-xs-5 span:hover, .grid-example .row .col-sm-5 span:hover, .grid-example .row .col-md-5 span:hover, .grid-example .row .col-lg-5 span:hover, .grid-example .row .col-xs-6 span:hover, .grid-example .row .col-sm-6 span:hover, .grid-example .row .col-md-6 span:hover, .grid-example .row .col-lg-6 span:hover, .grid-example .row .col-xs-7 span:hover, .grid-example .row .col-sm-7 span:hover, .grid-example .row .col-md-7 span:hover, .grid-example .row .col-lg-7 span:hover, .grid-example .row .col-xs-8 span:hover, .grid-example .row .col-sm-8 span:hover, .grid-example .row .col-md-8 span:hover, .grid-example .row .col-lg-8 span:hover, .grid-example .row .col-xs-9 span:hover, .grid-example .row .col-sm-9 span:hover, .grid-example .row .col-md-9 span:hover, .grid-example .row .col-lg-9 span:hover, .grid-example .row .col-xs-10 span:hover, .grid-example .row .col-sm-10 span:hover, .grid-example .row .col-md-10 span:hover, .grid-example .row .col-lg-10 span:hover, .grid-example .row .col-xs-11 span:hover, .grid-example .row .col-sm-11 span:hover, .grid-example .row .col-md-11 span:hover, .grid-example .row .col-lg-11 span:hover, .grid-example .row .col-xs-12 span:hover, .grid-example .row .col-sm-12 span:hover, .grid-example .row .col-md-12 span:hover, .grid-example .row .col-lg-12 span:hover {
-        background-color: rgba(52, 152, 219, 0.9);
-        color: white; }
+  margin-right: 5px;
+}
+.grid-example .row .col-xs-1, .grid-example .row .col-sm-1, .grid-example .row .col-md-1, .grid-example .row .col-lg-1, .grid-example .row .col-xs-2, .grid-example .row .col-sm-2, .grid-example .row .col-md-2, .grid-example .row .col-lg-2, .grid-example .row .col-xs-3, .grid-example .row .col-sm-3, .grid-example .row .col-md-3, .grid-example .row .col-lg-3, .grid-example .row .col-xs-4, .grid-example .row .col-sm-4, .grid-example .row .col-md-4, .grid-example .row .col-lg-4, .grid-example .row .col-xs-5, .grid-example .row .col-sm-5, .grid-example .row .col-md-5, .grid-example .row .col-lg-5, .grid-example .row .col-xs-6, .grid-example .row .col-sm-6, .grid-example .row .col-md-6, .grid-example .row .col-lg-6, .grid-example .row .col-xs-7, .grid-example .row .col-sm-7, .grid-example .row .col-md-7, .grid-example .row .col-lg-7, .grid-example .row .col-xs-8, .grid-example .row .col-sm-8, .grid-example .row .col-md-8, .grid-example .row .col-lg-8, .grid-example .row .col-xs-9, .grid-example .row .col-sm-9, .grid-example .row .col-md-9, .grid-example .row .col-lg-9, .grid-example .row .col-xs-10, .grid-example .row .col-sm-10, .grid-example .row .col-md-10, .grid-example .row .col-lg-10, .grid-example .row .col-xs-11, .grid-example .row .col-sm-11, .grid-example .row .col-md-11, .grid-example .row .col-lg-11, .grid-example .row .col-xs-12, .grid-example .row .col-sm-12, .grid-example .row .col-md-12, .grid-example .row .col-lg-12 {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+.grid-example .row .col-xs-1 span, .grid-example .row .col-sm-1 span, .grid-example .row .col-md-1 span, .grid-example .row .col-lg-1 span, .grid-example .row .col-xs-2 span, .grid-example .row .col-sm-2 span, .grid-example .row .col-md-2 span, .grid-example .row .col-lg-2 span, .grid-example .row .col-xs-3 span, .grid-example .row .col-sm-3 span, .grid-example .row .col-md-3 span, .grid-example .row .col-lg-3 span, .grid-example .row .col-xs-4 span, .grid-example .row .col-sm-4 span, .grid-example .row .col-md-4 span, .grid-example .row .col-lg-4 span, .grid-example .row .col-xs-5 span, .grid-example .row .col-sm-5 span, .grid-example .row .col-md-5 span, .grid-example .row .col-lg-5 span, .grid-example .row .col-xs-6 span, .grid-example .row .col-sm-6 span, .grid-example .row .col-md-6 span, .grid-example .row .col-lg-6 span, .grid-example .row .col-xs-7 span, .grid-example .row .col-sm-7 span, .grid-example .row .col-md-7 span, .grid-example .row .col-lg-7 span, .grid-example .row .col-xs-8 span, .grid-example .row .col-sm-8 span, .grid-example .row .col-md-8 span, .grid-example .row .col-lg-8 span, .grid-example .row .col-xs-9 span, .grid-example .row .col-sm-9 span, .grid-example .row .col-md-9 span, .grid-example .row .col-lg-9 span, .grid-example .row .col-xs-10 span, .grid-example .row .col-sm-10 span, .grid-example .row .col-md-10 span, .grid-example .row .col-lg-10 span, .grid-example .row .col-xs-11 span, .grid-example .row .col-sm-11 span, .grid-example .row .col-md-11 span, .grid-example .row .col-lg-11 span, .grid-example .row .col-xs-12 span, .grid-example .row .col-sm-12 span, .grid-example .row .col-md-12 span, .grid-example .row .col-lg-12 span {
+  display: block;
+  padding: 10px 4px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 0.9em;
+  border-radius: 3px;
+  background-color: rgba(236, 240, 241, 0.7);
+  color: #9da2a6;
+  -webkit-transition: all 0.23s ease;
+  -moz-transition: all 0.23s ease;
+  -ms-transition: all 0.23s ease;
+  -o-transition: all 0.23s ease;
+  transition: all 0.23s ease;
+}
+.grid-example .row .col-xs-1 span:hover, .grid-example .row .col-sm-1 span:hover, .grid-example .row .col-md-1 span:hover, .grid-example .row .col-lg-1 span:hover, .grid-example .row .col-xs-2 span:hover, .grid-example .row .col-sm-2 span:hover, .grid-example .row .col-md-2 span:hover, .grid-example .row .col-lg-2 span:hover, .grid-example .row .col-xs-3 span:hover, .grid-example .row .col-sm-3 span:hover, .grid-example .row .col-md-3 span:hover, .grid-example .row .col-lg-3 span:hover, .grid-example .row .col-xs-4 span:hover, .grid-example .row .col-sm-4 span:hover, .grid-example .row .col-md-4 span:hover, .grid-example .row .col-lg-4 span:hover, .grid-example .row .col-xs-5 span:hover, .grid-example .row .col-sm-5 span:hover, .grid-example .row .col-md-5 span:hover, .grid-example .row .col-lg-5 span:hover, .grid-example .row .col-xs-6 span:hover, .grid-example .row .col-sm-6 span:hover, .grid-example .row .col-md-6 span:hover, .grid-example .row .col-lg-6 span:hover, .grid-example .row .col-xs-7 span:hover, .grid-example .row .col-sm-7 span:hover, .grid-example .row .col-md-7 span:hover, .grid-example .row .col-lg-7 span:hover, .grid-example .row .col-xs-8 span:hover, .grid-example .row .col-sm-8 span:hover, .grid-example .row .col-md-8 span:hover, .grid-example .row .col-lg-8 span:hover, .grid-example .row .col-xs-9 span:hover, .grid-example .row .col-sm-9 span:hover, .grid-example .row .col-md-9 span:hover, .grid-example .row .col-lg-9 span:hover, .grid-example .row .col-xs-10 span:hover, .grid-example .row .col-sm-10 span:hover, .grid-example .row .col-md-10 span:hover, .grid-example .row .col-lg-10 span:hover, .grid-example .row .col-xs-11 span:hover, .grid-example .row .col-sm-11 span:hover, .grid-example .row .col-md-11 span:hover, .grid-example .row .col-lg-11 span:hover, .grid-example .row .col-xs-12 span:hover, .grid-example .row .col-sm-12 span:hover, .grid-example .row .col-md-12 span:hover, .grid-example .row .col-lg-12 span:hover {
+  background-color: rgba(52, 152, 219, 0.9);
+  color: white;
+}

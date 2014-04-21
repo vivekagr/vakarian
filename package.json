@@ -1,0 +1,12 @@
+{
+  "name": "Vakarian",
+  "author": "Vivek Agarwal",
+  "url": "http://vivek.im/",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-contrib-sass": "~0.7.3",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-prettify": "~0.3.4"
+  }
+}

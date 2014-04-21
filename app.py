@@ -1,8 +1,22 @@
+"""Vakarian Admin Template
+
+Usage:
+    app.py [--build]
+
+Options:
+    -b --build  Build HTML files
+
+"""
+
+import os
+import re
 import yaml
+import shutil
 from werkzeug import serving
 from werkzeug.contrib.fixers import ProxyFix
 from flask import Flask, url_for, render_template, send_file
 from jinja2 import Environment
+from docopt import docopt
 
 from nav import nav_menu
 from data import glyphicons, weather_icons
@@ -68,7 +82,34 @@ def favicon():
     return send_file('templates/favicon.ico')
 
 
+def save_html():
+    path = config.HTML_OUTPUT_DIR
+
+    # Find only the templates names which do not start with `_` and only end with `.html`
+    templates = [x for x in os.listdir('templates') if re.search(r'^[^_].*\.html$', x)]
+
+    if os.path.exists(path):
+        # Deleting all existing files in output directory
+        shutil.rmtree(path)
+
+    # Creating output directory
+    os.mkdir(path)
+
+    with app.app_context():
+        client = app.test_client()
+        for template in templates:
+            get_value = client.get('/' + template)
+            fh = open(path + '/' + template, 'w')
+            fh.write(get_value.data)
+            fh.close()
+
+
 app.wsgi_app = ProxyFix(app.wsgi_app)
 
 if __name__ == '__main__':
-    app.run('0.0.0.0', port=7779)
+    arguments = docopt(__doc__)
+
+    if arguments['--build']:
+        save_html()
+    else:
+        app.run('0.0.0.0', port=7779)

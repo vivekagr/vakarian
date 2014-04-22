@@ -18,7 +18,7 @@ $(function () {
         Callback is called when the animation is finished.
     */
     function animateEl(el, animation, callback) {
-        el.addClass("animated " + animation);
+        el.addClass('animated ' + animation);
         el.on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
             el.removeClass("animated " + animation);
 
@@ -105,14 +105,14 @@ $(function () {
 
     /*** Setup sidebar navigation menu ***/
 
-    var navSidebarLi = $(".nav-sidebar li");
+    var navSidebarLi = $('.nav-sidebar li');
 
     navSidebarLi.each(function() {
         var el = $(this);
 
         // Adding 'dropdown' class to list items with children
-        if (el.children("ul").length > 0) {
-            el.addClass("dropdown");
+        if (el.children('ul').length > 0) {
+            el.addClass('dropdown');
         }
 
         // Display the default active item
@@ -129,12 +129,12 @@ $(function () {
     // from undesired areas (such as sub-menu itself) by using `stopPropagation`
     // method on the event.
     $('html').click(function() {
-        if ($(".sidebar-slim")[0])
-            $(".nav-sidebar > li.dropdown.active").removeClass('active').children("ul").hide();
+        if ($('.sidebar-slim')[0])
+            $('.nav-sidebar > li.dropdown.active').removeClass('active').children('ul').hide();
     });
 
     // Showing and collapsing the children
-    $(".nav-sidebar li.dropdown > a").on('click', function(e) {
+    $('.nav-sidebar li.dropdown > a').on('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
         var parent = $(this).parent('li'),
@@ -155,7 +155,7 @@ $(function () {
     });
 
     // Preventing the collapsed sub-menu from being closed while clicking it
-    $(".nav-sidebar > li.dropdown > ul").click(function(e) {
+    $('.nav-sidebar > li.dropdown > ul').click(function(e) {
         e.stopPropagation();
     });
 
@@ -164,49 +164,49 @@ $(function () {
 
     // Expand Sidebar Navigation
     function expandSidebarNav() {
-        var sidebarEl = $(".sidebar"),
-            pageWrapperEl = $(".page-wrapper");
+        var sidebarEl = $('.sidebar'),
+            pageWrapperEl = $('.page-wrapper');
 
         // If sidebar nav is already expanded, do nothing
-        if (!sidebarEl.hasClass("sidebar-slim-width"))
+        if (!sidebarEl.hasClass('sidebar-slim-width'))
             return;
 
-        sidebarEl.removeClass("sidebar-slim-width", 250, function() {
-            pageWrapperEl.removeClass("with-sidebar-slim");
-            sidebarEl.removeClass("sidebar-slim", 250);
+        sidebarEl.removeClass('sidebar-slim-width', 250, function() {
+            pageWrapperEl.removeClass('with-sidebar-slim');
+            sidebarEl.removeClass('sidebar-slim', 250);
             animateEl(sidebarEl.find('.nav.nav-sidebar'), 'fadeInLeft');
         });
     }
 
     // Contract Sidebar Navigation
     function contractSidebarNav() {
-        var sidebarEl = $(".sidebar"),
-            pageWrapperEl = $(".page-wrapper");
+        var sidebarEl = $('.sidebar'),
+            pageWrapperEl = $('.page-wrapper');
 
         // If sidebar nav is already contracted, do nothing
-        if (sidebarEl.hasClass("sidebar-slim-width"))
+        if (sidebarEl.hasClass('sidebar-slim-width'))
             return;
 
         animateEl(sidebarEl.find('.nav.nav-sidebar'), 'fadeInLeft');
 
-        sidebarEl.addClass("sidebar-slim", 250, function() {
-            pageWrapperEl.addClass("with-sidebar-slim");
-            sidebarEl.addClass("sidebar-slim-width", 250);
+        sidebarEl.addClass('sidebar-slim', 250, function() {
+            pageWrapperEl.addClass('with-sidebar-slim');
+            sidebarEl.addClass('sidebar-slim-width', 250);
         });
     }
 
     function toggleSlimSidebarPeek() {
-        var sidebarEl = $(".sidebar"),
-            pageWrapperEl = $(".page-wrapper");
+        var sidebarEl = $('.sidebar'),
+            pageWrapperEl = $('.page-wrapper');
 
         sidebarEl.addClass('sidebar-hidden');
         pageWrapperEl.addClass('with-sidebar-hidden');
     }
 
     // Toggle sidebar size
-    $("#sidebarNavToggle").on('click', function() {
-        var sidebar = $(".sidebar"),
-            pageWrapperEl = $(".page-wrapper"),
+    $('#sidebarNavToggle').on('click', function() {
+        var sidebar = $('.sidebar'),
+            pageWrapperEl = $('.page-wrapper'),
             width = $(window).width();
 
         if (width < 500) {
@@ -222,7 +222,7 @@ $(function () {
             // Storing the knowledge that user manually toggled the size
             sidebar.data('manually-toggled', '1');
 
-            if (sidebar.hasClass("sidebar-slim")) {
+            if (sidebar.hasClass('sidebar-slim')) {
                 expandSidebarNav();
             } else {
                 contractSidebarNav();
@@ -237,17 +237,17 @@ $(function () {
     // Toggle sidebar size according to window width
     function autoAdjustSidebarWidth() {
         var width = $(window).width(),
-            manuallyToggled = $(".sidebar").data('manually-toggled');
+            manuallyToggled = $('.sidebar').data('manually-toggled');
 
         if (width < 500) {
 //            $(".sidebar").removeClass('sidebar-slim');
-            $(".sidebar").addClass('sidebar-hidden');
+            $('.sidebar').addClass('sidebar-hidden');
             $(".page-wrapper").addClass('with-sidebar-hidden');
 
         } else {
 
-            $(".sidebar").removeClass('sidebar-hidden');
-            $(".page-wrapper").removeClass('with-sidebar-hidden');
+            $('.sidebar').removeClass('sidebar-hidden');
+            $('.page-wrapper').removeClass('with-sidebar-hidden');
 
             if (!manuallyToggled) {
                 // If user didn't manually toggle the sidebar size
@@ -284,7 +284,7 @@ $(function () {
     });
 
     // Control the size of widget info section
-    $(".widget-info-fixed-size").find(".expand").click(function() {
+    $('.widget-info-fixed-size').find('.expand').click(function() {
         var parent = $(this).parent();
         parent.toggleClass('open', 300);
         if (parent.hasClass('open')) {
@@ -317,11 +317,12 @@ $(function () {
     // Show the file name on selection
     $('.file-input-wrapper > input').change(function() {
         var vals = $(this).val(),
-            filename = vals.length ? vals.split('\\').pop() : '';
-        if ($('.file-input-wrapper > .file-name').length === 0) {
+            filename = vals.length ? vals.split('\\').pop() : '',
+            filenameEl = $('.file-input-wrapper > .file-name');
+        if (filenameEl.length === 0) {
             $('.file-input-wrapper').append($('<div class="file-name">' + filename + '</div>'));
         } else {
-            $('.file-input-wrapper > .file-name').html(filename);
+            filenameEl.html(filename);
         }
     });
 

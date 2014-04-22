@@ -4,227 +4,232 @@
 
 {% set title_area_set = True %}
 {% block title_area %}
-    <button class="btn btn-v btn-sm btn-inverse pull-right page-title-btn" id="docToggle"><i class="fa fa-eye-slash"></i> Hide Documentation</button>
+    <button class="btn btn-sm btn-inverse pull-right page-title-btn" id="docToggle"><i class="fa fa-eye-slash"></i> Hide Documentation</button>
 {% endblock %}
 
 {% block main %}
+    <div class="widget">
+        <h4 class="widget-title">Default Buttons</h4>
+        <div class="widget-content">
+            <button class="btn btn-default">Default</button>
+            <button class="btn btn-primary">Primary</button>
+            <button class="btn btn-success">Success</button>
+            <button class="btn btn-info">Info</button>
+            <button class="btn btn-warning">Warning</button>
+            <button class="btn btn-danger">Danger</button>
+            <button class="btn btn-inverse">Inverse</button>
+
+            <div class="widget-info">
+                <p>The default flat button.</p>
+                <pre>&lt;button class="btn btn-primary"&gt;Primary&lt;/button&gt;</pre>
+                <p>Six color schemes are available - <code>.btn-default</code>, <code>.btn-primary</code>, <code>.btn-success</code>, <code>.btn-info</code>, <code>.btn-danger</code> and <code>.btn-inverse</code>.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="widget">
+        <h4 class="widget-title">Rounded Buttons</h4>
+        <div class="widget-content">
+            <button class="btn btn-rounded btn-default">Default</button>
+            <button class="btn btn-rounded btn-primary">Primary</button>
+            <button class="btn btn-rounded btn-success">Success</button>
+            <button class="btn btn-rounded btn-info">Info</button>
+            <button class="btn btn-rounded btn-warning">Warning</button>
+            <button class="btn btn-rounded btn-danger">Danger</button>
+            <button class="btn btn-rounded btn-inverse">Inverse</button>
+
+            <div class="widget-info">
+                <p>A bit rounded button with a gradient. Add <code>.btn-rounded</code> to any <code>.btn</code>.</p>
+                <pre>&lt;button class="btn btn-rounded btn-primary"&gt;Primary&lt;/button&gt;</pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="widget">
+        <h4 class="widget-title">Flat Buttons</h4>
+        <div class="widget-content">
+            <button class="btn btn-flat btn-default">Default</button>
+            <button class="btn btn-flat btn-primary">Primary</button>
+            <button class="btn btn-flat btn-success">Success</button>
+            <button class="btn btn-flat btn-info">Info</button>
+            <button class="btn btn-flat btn-warning">Warning</button>
+            <button class="btn btn-flat btn-danger">Danger</button>
+            <button class="btn btn-flat btn-inverse">Inverse</button>
+
+            <div class="widget-info">
+                <p>Add <code>.btn-flat</code> to make any button flat.</p>
+                <pre>&lt;button class="btn btn-flat btn-primary"&gt;Primary&lt;/button&gt;</pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="widget">
+        <h4 class="widget-title">Wide Buttons</h4>
+        <div class="widget-content">
+            <button class="btn btn-wide btn-default">Default</button>
+            <button class="btn btn-wide btn-primary">Primary</button>
+            <button class="btn btn-wide btn-success">Success</button>
+            <button class="btn btn-wide btn-info">Info</button>
+            <button class="btn btn-wide btn-warning">Warning</button>
+            <button class="btn btn-wide btn-danger">Danger</button>
+            <button class="btn btn-wide btn-inverse">Inverse</button>
+
+            <div class="widget-info">
+                <p>Add <code>.btn-wide</code> class to make any button wide.</p>
+                <pre>&lt;button class="btn btn-wide btn-primary"&gt;Primary&lt;/button&gt;</pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="widget">
+        <h4 class="widget-title">Super Buttons</h4>
+        <div class="widget-content">
+            <button class="btn btn-super btn-default">Default</button>
+            <button class="btn btn-super btn-primary">Primary</button>
+            <button class="btn btn-super btn-success">Success</button>
+            <button class="btn btn-super btn-info">Info</button>
+            <button class="btn btn-super btn-warning">Warning</button>
+            <button class="btn btn-super btn-danger">Danger</button>
+            <button class="btn btn-super btn-inverse">Inverse</button>
+
+            <div class="widget-info">
+                <p>Add <code>.btn-super</code> class to make any button go super. These are bolder and wider than <code>.btn-lg</code>.</p>
+                <pre>&lt;button class="btn btn-super btn-primary"&gt;Primary&lt;/button&gt;</pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="widget">
+        <h4 class="widget-title">Disabled Buttons</h4>
+        <div class="widget-content">
+            <button class="btn btn-default" disabled>Default</button>
+            <button class="btn btn-primary" disabled>Primary</button>
+            <button class="btn btn-success" disabled>Success</button>
+            <button class="btn btn-info" disabled>Info</button>
+            <button class="btn btn-warning" disabled>Warning</button>
+            <button class="btn btn-danger" disabled>Danger</button>
+            <button class="btn btn-inverse" disabled>Inverse</button>
+
+            <div class="widget-info">
+                <p>Buttons can be disabled by adding <code>disabled</code> attribute.</p>
+                <pre>&lt;button class="btn btn-primary" disabled&gt;Primary&lt;/button&gt;</pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="widget">
+        <h4 class="widget-title">Active Buttons</h4>
+        <div class="widget-content">
+            <button class="btn btn-default active">Default</button>
+            <button class="btn btn-primary active">Primary</button>
+            <button class="btn btn-success active">Success</button>
+            <button class="btn btn-info active">Info</button>
+            <button class="btn btn-warning active">Warning</button>
+            <button class="btn btn-danger active">Danger</button>
+            <button class="btn btn-inverse active">Inverse</button>
+
+            <div class="widget-info">
+                <p>Add <code>.active</code> class to change the state of the button to active.</p>
+                <pre>&lt;button class="btn btn-primary active"&gt;Primary&lt;/button&gt;</pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="widget">
+        <h4 class="widget-title">Buttons With Icons</h4>
+        <div class="widget-content">
+            <button class="btn btn-default"><i class="fa fa-desktop"></i> Default</button>
+            <button class="btn btn-primary"><i class="fa fa-bug"></i> Primary</button>
+            <button class="btn btn-success"><i class="fa fa-leaf"></i> Success</button>
+            <button class="btn btn-info"><i class="fa fa-envelope"></i> Info</button>
+            <button class="btn btn-warning"><i class="fa fa-fire"></i> Warning</button>
+            <button class="btn btn-danger"><i class="fa fa-warning"></i> Danger</button>
+            <button class="btn btn-inverse"><i class="fa fa-heart"></i> Inverse</button>
+
+            <div class="widget-info">
+                <p>Icons (for e.g. Font Awesome) can be added to buttons.</p>
+                <pre>&lt;button class=&quot;btn btn-primary&quot;&gt;&lt;i class=&quot;fa fa-bug&quot;&gt;&lt;/i&gt; Primary&lt;/button&gt;</pre>
+            </div>
+        </div>
+    </div>
+
     <div class="row">
-        <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Default Buttons</h4>
-                <div class="widget-content">
-                    <button class="btn btn-v btn-default">Default</button>
-                    <button class="btn btn-v btn-primary">Primary</button>
-                    <button class="btn btn-v btn-success">Success</button>
-                    <button class="btn btn-v btn-info">Info</button>
-                    <button class="btn btn-v btn-warning">Warning</button>
-                    <button class="btn btn-v btn-danger">Danger</button>
-                    <button class="btn btn-v btn-inverse">Inverse</button>
-
-                    <div class="widget-info">
-                        <p>Just add <code>.btn-v</code> class to the regular bootstrap button.</p>
-                        <pre>&lt;button class="btn btn-v btn-primary"&gt;Primary&lt;/button&gt;</pre>
-                        <p>Six color schemes are available - <code>.btn-default</code>, <code>.btn-primary</code>, <code>.btn-success</code>, <code>.btn-info</code>, <code>.btn-danger</code> and <code>.btn-inverse</code>.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Flat Buttons</h4>
-                <div class="widget-content">
-                    <button class="btn btn-v btn-flat btn-default">Default</button>
-                    <button class="btn btn-v btn-flat btn-primary">Primary</button>
-                    <button class="btn btn-v btn-flat btn-success">Success</button>
-                    <button class="btn btn-v btn-flat btn-info">Info</button>
-                    <button class="btn btn-v btn-flat btn-warning">Warning</button>
-                    <button class="btn btn-v btn-flat btn-danger">Danger</button>
-                    <button class="btn btn-v btn-flat btn-inverse">Inverse</button>
-
-                    <div class="widget-info">
-                        <p>Add <code>.btn-flat</code> class to make any button flat.</p>
-                        <pre>&lt;button class="btn btn-v btn-flat btn-primary"&gt;Primary&lt;/button&gt;</pre>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-12">
-            <div class="widget">
-                <h4 class="widget-title">Wide Buttons</h4>
-                <div class="widget-content">
-                    <button class="btn btn-v btn-wide btn-default">Default</button>
-                    <button class="btn btn-v btn-wide btn-primary">Primary</button>
-                    <button class="btn btn-v btn-wide btn-success">Success</button>
-                    <button class="btn btn-v btn-wide btn-info">Info</button>
-                    <button class="btn btn-v btn-wide btn-warning">Warning</button>
-                    <button class="btn btn-v btn-wide btn-danger">Danger</button>
-                    <button class="btn btn-v btn-wide btn-inverse">Inverse</button>
-
-                    <div class="widget-info">
-                        <p>Add <code>.btn-wide</code> class to make any button wide.</p>
-                        <pre>&lt;button class="btn btn-v btn-wide btn-primary"&gt;Primary&lt;/button&gt;</pre>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-12">
-            <div class="widget">
-                <h4 class="widget-title">Super Buttons</h4>
-                <div class="widget-content">
-                    <button class="btn btn-v btn-super btn-default">Default</button>
-                    <button class="btn btn-v btn-super btn-primary">Primary</button>
-                    <button class="btn btn-v btn-super btn-success">Success</button>
-                    <button class="btn btn-v btn-super btn-info">Info</button>
-                    <button class="btn btn-v btn-super btn-warning">Warning</button>
-                    <button class="btn btn-v btn-super btn-danger">Danger</button>
-                    <button class="btn btn-v btn-super btn-inverse">Inverse</button>
-
-                    <div class="widget-info">
-                        <p>Add <code>.btn-super</code> class to make any button go super. These are bolder and wider than <code>.btn-lg</code>.</p>
-                        <pre>&lt;button class="btn btn-v btn-super btn-primary"&gt;Primary&lt;/button&gt;</pre>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-5">
-            <div class="widget">
-                <h4 class="widget-title">Block Buttons</h4>
-                <div class="widget-content">
-                    <button class="btn btn-v btn-block btn-default">Default</button>
-                    <button class="btn btn-v btn-block btn-primary">Primary</button>
-                    <button class="btn btn-v btn-block btn-success">Success</button>
-                    <button class="btn btn-v btn-block btn-info">Info</button>
-                    <button class="btn btn-v btn-block btn-warning">Warning</button>
-                    <button class="btn btn-v btn-block btn-danger">Danger</button>
-                    <button class="btn btn-v btn-block btn-inverse">Inverse</button>
-
-                    <div class="widget-info">
-                        <p>Add <code>.btn-block</code> class to make any button block sized.</p>
-                        <pre>&lt;button class="btn btn-v btn-block btn-primary"&gt;Primary&lt;/button&gt;</pre>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-7">
-            <div class="widget">
-                <h4 class="widget-title">Disabled Buttons</h4>
-                <div class="widget-content">
-                    <button class="btn btn-v btn-default" disabled>Default</button>
-                    <button class="btn btn-v btn-primary" disabled>Primary</button>
-                    <button class="btn btn-v btn-success" disabled>Success</button>
-                    <button class="btn btn-v btn-info" disabled>Info</button>
-                    <button class="btn btn-v btn-warning" disabled>Warning</button>
-                    <button class="btn btn-v btn-danger" disabled>Danger</button>
-                    <button class="btn btn-v btn-inverse" disabled>Inverse</button>
-
-                    <div class="widget-info">
-                        <p>Buttons can be disabled by adding <code>disabled</code> attribute.</p>
-                        <pre>&lt;button class="btn btn-v btn-primary" disabled&gt;Primary&lt;/button&gt;</pre>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-7">
-            <div class="widget">
-                <h4 class="widget-title">Active Buttons</h4>
-                <div class="widget-content">
-                    <button class="btn btn-v btn-default active">Default</button>
-                    <button class="btn btn-v btn-primary active">Primary</button>
-                    <button class="btn btn-v btn-success active">Success</button>
-                    <button class="btn btn-v btn-info active">Info</button>
-                    <button class="btn btn-v btn-warning active">Warning</button>
-                    <button class="btn btn-v btn-danger active">Danger</button>
-                    <button class="btn btn-v btn-inverse active">Inverse</button>
-
-                    <div class="widget-info">
-                        <p>Add <code>.active</code> class to change the state of the button to active.</p>
-                        <pre>&lt;button class="btn btn-v btn-primary active"&gt;Primary&lt;/button&gt;</pre>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-7">
-            <div class="widget">
-                <h4 class="widget-title">Buttons With Icons</h4>
-                <div class="widget-content">
-                    <button class="btn btn-v btn-default"><i class="fa fa-desktop"></i> Default</button>
-                    <button class="btn btn-v btn-primary"><i class="fa fa-bug"></i> Primary</button>
-                    <button class="btn btn-v btn-success"><i class="fa fa-leaf"></i> Success</button>
-                    <button class="btn btn-v btn-info"><i class="fa fa-envelope"></i> Info</button>
-                    <button class="btn btn-v btn-warning"><i class="fa fa-fire"></i> Warning</button>
-                    <button class="btn btn-v btn-danger"><i class="fa fa-warning"></i> Danger</button>
-                    <button class="btn btn-v btn-inverse"><i class="fa fa-heart"></i> Inverse</button>
-
-                    <div class="widget-info">
-                        <p>Icons (for e.g. Font Awesome) can be added to buttons.</p>
-                        <pre>&lt;button class=&quot;btn btn-v btn-primary&quot;&gt;&lt;i class=&quot;fa fa-bug&quot;&gt;&lt;/i&gt; Primary&lt;/button&gt;</pre>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-5">
-            <div class="widget">
-                <h4 class="widget-title">Icon Sizes</h4>
-                <div class="widget-content">
-                    <button class="btn btn-v btn-xs btn-default">Extra Small</button>
-                    <button class="btn btn-v btn-sm btn-default">Small</button>
-                    <button class="btn btn-v btn-default">Default</button>
-                    <button class="btn btn-v btn-lg btn-default">Large</button>
-                    <br>
-                    <button class="btn btn-v btn-lg btn-success">Large</button>
-                    <button class="btn btn-v btn-success">Default</button>
-                    <button class="btn btn-v btn-sm btn-success">Small</button>
-                    <button class="btn btn-v btn-xs btn-success">Extra Small</button>
-
-                    <div class="widget-info">
-                        <p><code>.btn-xs</code>, <code>.btn-sm</code> and <code>.btn-lg</code> can be used to make buttons extra small, small and large sized respectively.</p>
-                        <pre>&lt;button class=&quot;btn btn-v btn-lg btn-default&quot;&gt;Large&lt;/button&gt;</pre>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-5">
             <div class="widget">
                 <h4 class="widget-title">Icon Buttons</h4>
                 <div class="widget-content">
-                    <button class="btn btn-v btn-icon btn-default"><i class="fa fa-comments-o"></i></button>
-                    <button class="btn btn-v btn-icon btn-primary"><i class="fa fa-rocket"></i></button>
-                    <button class="btn btn-v btn-icon btn-success"><i class="fa fa-check"></i></button>
-                    <button class="btn btn-v btn-icon btn-info"><i class="fa fa-flag"></i></button>
-                    <button class="btn btn-v btn-icon btn-warning"><i class="fa fa-unlock-alt"></i></button>
-                    <button class="btn btn-v btn-icon btn-danger"><i class="fa fa-exclamation"></i></button>
-                    <button class="btn btn-v btn-icon btn-inverse"><i class="fa fa-map-marker"></i></button>
+                    <button class="btn btn-icon btn-default"><i class="fa fa-comments-o"></i></button>
+                    <button class="btn btn-icon btn-primary"><i class="fa fa-rocket"></i></button>
+                    <button class="btn btn-icon btn-success"><i class="fa fa-check"></i></button>
+                    <button class="btn btn-icon btn-info"><i class="fa fa-flag"></i></button>
+                    <button class="btn btn-icon btn-warning"><i class="fa fa-unlock-alt"></i></button>
+                    <button class="btn btn-icon btn-danger"><i class="fa fa-exclamation"></i></button>
+                    <button class="btn btn-icon btn-inverse"><i class="fa fa-map-marker"></i></button>
 
                     <div class="widget-info">
                         <p>Only icons can also be used in the buttons with <code>.btn-icon</code> class.</p>
-                        <pre>&lt;button class=&quot;btn btn-v btn-icon btn-primary&quot;&gt;&lt;i class=&quot;fa fa-rocket&quot;&gt;&lt;/i&gt;&lt;/button&gt;</pre>
+                        <pre>&lt;button class=&quot;btn btn-icon btn-primary&quot;&gt;&lt;i class=&quot;fa fa-rocket&quot;&gt;&lt;/i&gt;&lt;/button&gt;</pre>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-7">
+        <div class="col-md-6">
             <div class="widget">
                 <h4 class="widget-title">Social Buttons</h4>
                 <div class="widget-content">
-                    <button class="btn btn-v btn-facebook"><i class="fa fa-facebook"></i> Facebook</button>
-                    <button class="btn btn-v btn-twitter"><i class="fa fa-twitter"></i> Twitter</button>
-                    <button class="btn btn-v btn-google-plus"><i class="fa fa-google-plus"></i> Google+</button>
-                    <button class="btn btn-v btn-icon btn-facebook"><i class="fa fa-facebook"></i></button>
-                    <button class="btn btn-v btn-icon btn-twitter"><i class="fa fa-twitter"></i></button>
-                    <button class="btn btn-v btn-icon btn-google-plus"><i class="fa fa-google-plus"></i></button>
+                    <button class="btn btn-facebook"><i class="fa fa-facebook"></i> Facebook</button>
+                    <button class="btn btn-twitter"><i class="fa fa-twitter"></i> Twitter</button>
+                    <button class="btn btn-google-plus"><i class="fa fa-google-plus"></i> Google+</button>
+                    <button class="btn btn-icon btn-facebook"><i class="fa fa-facebook"></i></button>
+                    <button class="btn btn-icon btn-twitter"><i class="fa fa-twitter"></i></button>
+                    <button class="btn btn-icon btn-google-plus"><i class="fa fa-google-plus"></i></button>
 
                     <div class="widget-info">
                         <p><code>.btn-facebook</code>, <code>.btn-twitter</code> and <code>.btn-google-plus</code> classes can be used to for social buttons.</p>
-                        <pre>&lt;button class=&quot;btn btn-v btn-facebook&quot;&gt;&lt;i class=&quot;fa fa-facebook&quot;&gt;&lt;/i&gt; Facebook&lt;/button&gt;<br><br>&lt;button class=&quot;btn btn-v btn-icon btn-twitter&quot;&gt;&lt;i class=&quot;fa fa-twitter&quot;&gt;&lt;/i&gt;&lt;/button&gt;</pre>
+                        <pre>&lt;button class=&quot;btn btn-facebook&quot;&gt;&lt;i class=&quot;fa fa-facebook&quot;&gt;&lt;/i&gt; Facebook&lt;/button&gt;<br><br>&lt;button class=&quot;btn btn-icon btn-twitter&quot;&gt;&lt;i class=&quot;fa fa-twitter&quot;&gt;&lt;/i&gt;&lt;/button&gt;</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="widget">
+                <h4 class="widget-title">Block Buttons</h4>
+                <div class="widget-content">
+                    <button class="btn btn-block btn-default">Default</button>
+                    <button class="btn btn-block btn-primary">Primary</button>
+                    <button class="btn btn-block btn-success">Success</button>
+                    <button class="btn btn-block btn-info">Info</button>
+                    <button class="btn btn-block btn-warning">Warning</button>
+                    <button class="btn btn-block btn-danger">Danger</button>
+                    <button class="btn btn-block btn-inverse">Inverse</button>
+
+                    <div class="widget-info">
+                        <p>Add <code>.btn-block</code> class to make any button block sized.</p>
+                        <pre>&lt;button class="btn btn-block btn-primary"&gt;Primary&lt;/button&gt;</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="widget">
+                <h4 class="widget-title">Icon Sizes</h4>
+                <div class="widget-content">
+                    <button class="btn btn-xs btn-default">Extra Small</button>
+                    <button class="btn btn-sm btn-default">Small</button>
+                    <button class="btn btn-default">Default</button>
+                    <button class="btn btn-lg btn-default">Large</button>
+                    <br>
+                    <button class="btn btn-lg btn-success">Large</button>
+                    <button class="btn btn-success">Default</button>
+                    <button class="btn btn-sm btn-success">Small</button>
+                    <button class="btn btn-xs btn-success">Extra Small</button>
+
+                    <div class="widget-info">
+                        <p><code>.btn-xs</code>, <code>.btn-sm</code> and <code>.btn-lg</code> can be used to make buttons extra small, small and large sized respectively.</p>
+                        <pre>&lt;button class=&quot;btn btn-lg btn-default&quot;&gt;Large&lt;/button&gt;</pre>
                     </div>
                 </div>
             </div>
@@ -235,35 +240,35 @@
                 <h4 class="widget-title">Buttons Groups</h4>
                 <div class="widget-content">
                     <div class="btn-group">
-                        <button class="btn btn-v btn-success">Left</button>
-                        <button class="btn btn-v btn-success">Middle</button>
-                        <button class="btn btn-v btn-success">Right</button>
+                        <button class="btn btn-success">Left</button>
+                        <button class="btn btn-success">Middle</button>
+                        <button class="btn btn-success">Right</button>
                     </div>
                     <br>
 
                     <div class="widget-subtitle">Large Sized</div>
                     <div class="btn-group btn-group-lg">
-                        <button class="btn btn-v btn-primary">Left</button>
-                        <button class="btn btn-v btn-primary">Middle</button>
-                        <button class="btn btn-v btn-primary">Right</button>
+                        <button class="btn btn-primary">Left</button>
+                        <button class="btn btn-primary">Middle</button>
+                        <button class="btn btn-primary">Right</button>
                     </div>
                     <br>
 
                     <div class="widget-subtitle">Button Toolbar</div>
                     <div class="btn-toolbar" role="toolbar">
                         <div class="btn-group">
-                            <button class="btn btn-v btn-default">1</button>
-                            <button class="btn btn-v btn-default">2</button>
-                            <button class="btn btn-v btn-default">3</button>
-                            <button class="btn btn-v btn-default">4</button>
+                            <button class="btn btn-default">1</button>
+                            <button class="btn btn-default">2</button>
+                            <button class="btn btn-default">3</button>
+                            <button class="btn btn-default">4</button>
                         </div>
                         <div class="btn-group">
-                            <button class="btn btn-v btn-default">5</button>
-                            <button class="btn btn-v btn-default">6</button>
-                            <button class="btn btn-v btn-default">7</button>
+                            <button class="btn btn-default">5</button>
+                            <button class="btn btn-default">6</button>
+                            <button class="btn btn-default">7</button>
                         </div>
                         <div class="btn-group">
-                            <button class="btn btn-v btn-default">8</button>
+                            <button class="btn btn-default">8</button>
                         </div>
                     </div>
 
@@ -271,7 +276,7 @@
                         <div class="widget-info">
                             <p>Enclose a group of buttons within <code>.btn-group</code> class to make a button group.</p>
                         <pre>&lt;div class=&quot;btn-group&quot;&gt;
-    &lt;button class=&quot;btn btn-v btn-default&quot;&gt;Button 1&lt;/button&gt;
+    &lt;button class=&quot;btn btn-default&quot;&gt;Button 1&lt;/button&gt;
     ...more buttons here...
 &lt;/div&gt;</pre>
                             <p>To make a different sized button block, add <code>.btn-group-xs</code>, <code>.btn-group-sm</code> or <code>.btn-group-lg</code> class to <code>.btn-group</code> to make a button group extra small, small or large respectively.</p>
@@ -300,11 +305,11 @@
                         <div class="col-sm-6">
                             <div class="widget-subtitle">Horizontal Variation</div>
                             <div class="btn-group">
-                                <button type="button" class="btn btn-v btn-default">1</button>
-                                <button type="button" class="btn btn-v btn-default">2</button>
+                                <button type="button" class="btn btn-default">1</button>
+                                <button type="button" class="btn btn-default">2</button>
 
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-v btn-default dropdown-toggle" data-toggle="dropdown">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                                         Dropdown
                                         <span class="caret"></span>
                                     </button>
@@ -318,11 +323,11 @@
                         <div class="col-sm-6">
                             <div class="widget-subtitle">Vertical Variation</div>
                             <div class="btn-group-vertical">
-                                <button type="button" class="btn btn-v btn-default">1</button>
-                                <button type="button" class="btn btn-v btn-default">2</button>
+                                <button type="button" class="btn btn-default">1</button>
+                                <button type="button" class="btn btn-default">2</button>
 
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-v btn-default dropdown-toggle" data-toggle="dropdown">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                                         Dropdown
                                         <span class="caret"></span>
                                     </button>
@@ -338,11 +343,11 @@
                         <div class="widget-info">
                             <p>A <code>.btn-group</code> can be nested inside other as a dropdown menu.</p>
                             <pre>&lt;div class=&quot;btn-group&quot;&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btn btn-v btn-default&quot;&gt;1&lt;/button&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btn btn-v btn-default&quot;&gt;2&lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;1&lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;2&lt;/button&gt;
 
         &lt;div class=&quot;btn-group&quot;&gt;
-            &lt;button type=&quot;button&quot; class=&quot;btn btn-v btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
                 Dropdown
                 &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
             &lt;/button&gt;
@@ -365,18 +370,18 @@
                 <h4 class="widget-title">Justified Button Groups</h4>
                 <div class="widget-content">
                     <div class="btn-group btn-group-justified">
-                        <div class="btn-group"><button class="btn btn-v btn-default">Left</button></div>
-                        <div class="btn-group"><button class="btn btn-v btn-default">Middle</button></div>
-                        <div class="btn-group"><button class="btn btn-v btn-default">Right</button></div>
+                        <div class="btn-group"><button class="btn btn-default">Left</button></div>
+                        <div class="btn-group"><button class="btn btn-default">Middle</button></div>
+                        <div class="btn-group"><button class="btn btn-default">Right</button></div>
                     </div>
 
                     <div class="widget-subtitle">With Dropdown</div>
 
                     <div class="btn-group btn-group-justified">
-                        <div class="btn-group"><button class="btn btn-v btn-primary">Left</button></div>
-                        <div class="btn-group"><button class="btn btn-v btn-primary">Middle</button></div>
+                        <div class="btn-group"><button class="btn btn-primary">Left</button></div>
+                        <div class="btn-group"><button class="btn btn-primary">Middle</button></div>
                         <div class="btn-group">
-                            <button type="button" class="btn btn-v btn-primary dropdown-toggle" data-toggle="dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
                                 Right Dropdown
                                 <span class="caret"></span>
                             </button>
@@ -408,7 +413,7 @@
                 <div class="widget-content">
 
                     <div class="btn-group">
-                        <button type="button" class="btn btn-v btn-default dropdown-toggle" data-toggle="dropdown">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                             Default <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
@@ -419,7 +424,7 @@
                         </ul>
                     </div>
                     <div class="btn-group">
-                        <button type="button" class="btn btn-v btn-primary dropdown-toggle" data-toggle="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
                             Primary <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
@@ -430,7 +435,7 @@
                         </ul>
                     </div>
                     <div class="btn-group">
-                        <button type="button" class="btn btn-v btn-success dropdown-toggle" data-toggle="dropdown">
+                        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
                             Success <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
@@ -441,7 +446,7 @@
                         </ul>
                     </div>
                     <div class="btn-group">
-                        <button type="button" class="btn btn-v btn-info dropdown-toggle" data-toggle="dropdown">
+                        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
                             Info <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
@@ -452,7 +457,7 @@
                         </ul>
                     </div>
                     <div class="btn-group dropup">
-                        <button type="button" class="btn btn-v btn-warning dropdown-toggle" data-toggle="dropdown">
+                        <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
                             Warning <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
@@ -463,7 +468,7 @@
                         </ul>
                     </div>
                     <div class="btn-group dropup">
-                        <button type="button" class="btn btn-v btn-danger dropdown-toggle" data-toggle="dropdown">
+                        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
                             Danger <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
@@ -474,7 +479,7 @@
                         </ul>
                     </div>
                     <div class="btn-group dropup">
-                        <button type="button" class="btn btn-v btn-inverse dropdown-toggle" data-toggle="dropdown">
+                        <button type="button" class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">
                             Inverse <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
@@ -489,8 +494,8 @@
                     <div class="widget-subtitle">Split Button Dropdowns</div>
 
                     <div class="btn-group">
-                        <button type="button" class="btn btn-v btn-default">Default</button>
-                        <button type="button" class="btn btn-v btn-default dropdown-toggle" data-toggle="dropdown">
+                        <button type="button" class="btn btn-default">Default</button>
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                             <span class="caret"></span>
                             <span class="sr-only">Toggle Dropdown</span>
                         </button>
@@ -502,8 +507,8 @@
                         </ul>
                     </div>
                     <div class="btn-group">
-                        <button type="button" class="btn btn-v btn-primary">Primary</button>
-                        <button type="button" class="btn btn-v btn-primary dropdown-toggle" data-toggle="dropdown">
+                        <button type="button" class="btn btn-primary">Primary</button>
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
                             <span class="caret"></span>
                             <span class="sr-only">Toggle Dropdown</span>
                         </button>
@@ -515,8 +520,8 @@
                         </ul>
                     </div>
                     <div class="btn-group">
-                        <button type="button" class="btn btn-v btn-success">Success</button>
-                        <button type="button" class="btn btn-v btn-success dropdown-toggle" data-toggle="dropdown">
+                        <button type="button" class="btn btn-success">Success</button>
+                        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
                             <span class="caret"></span>
                             <span class="sr-only">Toggle Dropdown</span>
                         </button>
@@ -528,8 +533,8 @@
                         </ul>
                     </div>
                     <div class="btn-group">
-                        <button type="button" class="btn btn-v btn-info">Info</button>
-                        <button type="button" class="btn btn-v btn-info dropdown-toggle" data-toggle="dropdown">
+                        <button type="button" class="btn btn-info">Info</button>
+                        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
                             <span class="caret"></span>
                             <span class="sr-only">Toggle Dropdown</span>
                         </button>
@@ -541,8 +546,8 @@
                         </ul>
                     </div>
                     <div class="btn-group dropup">
-                        <button type="button" class="btn btn-v btn-warning">Warning</button>
-                        <button type="button" class="btn btn-v btn-warning dropdown-toggle" data-toggle="dropdown">
+                        <button type="button" class="btn btn-warning">Warning</button>
+                        <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
                             <span class="caret"></span>
                             <span class="sr-only">Toggle Dropdown</span>
                         </button>
@@ -554,8 +559,8 @@
                         </ul>
                     </div>
                     <div class="btn-group dropup">
-                        <button type="button" class="btn btn-v btn-danger">Danger</button>
-                        <button type="button" class="btn btn-v btn-danger dropdown-toggle" data-toggle="dropdown">
+                        <button type="button" class="btn btn-danger">Danger</button>
+                        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
                             <span class="caret"></span>
                             <span class="sr-only">Toggle Dropdown</span>
                         </button>
@@ -567,8 +572,8 @@
                         </ul>
                     </div>
                     <div class="btn-group dropup">
-                        <button type="button" class="btn btn-v btn-inverse">Inverse</button>
-                        <button type="button" class="btn btn-v btn-inverse dropdown-toggle" data-toggle="dropdown">
+                        <button type="button" class="btn btn-inverse">Inverse</button>
+                        <button type="button" class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">
                             <span class="caret"></span>
                             <span class="sr-only">Toggle Dropdown</span>
                         </button>
@@ -584,7 +589,7 @@
                     <div class="widget-subtitle">Size Variations</div>
 
                     <div class="btn-group">
-                        <button type="button" class="btn btn-v btn-xs btn-default dropdown-toggle" data-toggle="dropdown">
+                        <button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown">
                             Extra Small <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
@@ -595,7 +600,7 @@
                         </ul>
                     </div>
                     <div class="btn-group">
-                        <button type="button" class="btn btn-v btn-sm btn-default dropdown-toggle" data-toggle="dropdown">
+                        <button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown">
                             Small <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
@@ -606,7 +611,7 @@
                         </ul>
                     </div>
                     <div class="btn-group">
-                        <button type="button" class="btn btn-v btn-default dropdown-toggle" data-toggle="dropdown">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                             Default <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
@@ -617,7 +622,7 @@
                         </ul>
                     </div>
                     <div class="btn-group">
-                        <button type="button" class="btn btn-v btn-lg btn-default dropdown-toggle" data-toggle="dropdown">
+                        <button type="button" class="btn btn-lg btn-default dropdown-toggle" data-toggle="dropdown">
                             Large <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
@@ -632,7 +637,7 @@
                         <div class="widget-info">
                             <p>Turn a button into a dropdown toggle with some basic markup changes.</p>
                             <pre>&lt;div class=&quot;btn-group&quot;&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btn btn-v btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
             Default &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
         &lt;/button&gt;
         &lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot;&gt;
@@ -642,8 +647,8 @@
     &lt;/div&gt;</pre>
                             <p>Similarly, split button dropdowns can be created with the same markup changes, only with a separate button.</p>
                             <pre>&lt;div class=&quot;btn-group&quot;&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btn btn-v btn-default&quot;&gt;Default&lt;/button&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btn btn-v btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;Default&lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
             &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
             &lt;span class=&quot;sr-only&quot;&gt;Toggle Dropdown&lt;/span&gt;
         &lt;/button&gt;

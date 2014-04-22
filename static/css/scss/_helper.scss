@@ -21,6 +21,13 @@
   transform: $val;
 }
 
+@mixin linear-gradient($val...) {
+  background: -webkit-linear-gradient($val);
+  background: -moz-linear-gradient($val);
+  background: -o-linear-gradient($val);
+  background: linear-gradient($val);
+}
+
 // Extend this class and set a font awesome
 // icon with it's hex code in `content` property
 .fa-icon {

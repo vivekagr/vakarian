@@ -850,127 +850,373 @@ to preserve the slide animation effect with jQuery
   right: 0;
 }
 
-.btn.btn-v, .bootstrap-select > .btn {
+.btn {
   border: none;
   font-size: 0.9em;
   font-weight: 400;
   margin: 5px 2px;
   border-radius: 2px;
+  -webkit-transition: all 80ms ease;
+  -moz-transition: all 80ms ease;
+  -ms-transition: all 80ms ease;
+  -o-transition: all 80ms ease;
+  transition: all 80ms ease;
 }
-.btn.btn-v:focus, .bootstrap-select > .btn:focus {
+.btn:focus {
   outline: none;
 }
-.btn.btn-v:active, .bootstrap-select > .btn:active, .btn.btn-v.active, .bootstrap-select > .btn.active {
+.btn:active, .btn.active {
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.125);
   -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.125);
+  outline: none !important;
 }
-.btn.btn-v.btn-default, .bootstrap-select > .btn.btn-default {
+.btn.btn-default {
   background-color: #ecf0f1;
 }
-.btn.btn-v.btn-default:hover, .bootstrap-select > .btn.btn-default:hover {
+.btn.btn-default:hover {
+  background-color: #f8f9fa;
+}
+.btn.btn-default:active, .btn.btn-default.active {
   background-color: #e0e7e8;
 }
-.btn.btn-v.btn-primary, .bootstrap-select > .btn.btn-primary {
+.btn.btn-default.btn-rounded {
+  background: -webkit-linear-gradient(top, #f5f7f7, #dde4e6);
+  background: -moz-linear-gradient(top, #f5f7f7, #dde4e6);
+  background: -o-linear-gradient(top, #f5f7f7, #dde4e6);
+  background: linear-gradient(top, #f5f7f7, #dde4e6);
+  border: 1px solid #dde4e6;
+}
+.btn.btn-default.btn-rounded:hover {
+  background: -webkit-linear-gradient(top, #f5f7f7, #e9eeef);
+  background: -moz-linear-gradient(top, #f5f7f7, #e9eeef);
+  background: -o-linear-gradient(top, #f5f7f7, #e9eeef);
+  background: linear-gradient(top, #f5f7f7, #e9eeef);
+}
+.btn.btn-default.btn-rounded:active, .btn.btn-default.btn-rounded.active {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  background: -webkit-linear-gradient(top, #f2f5f5, #dae2e4);
+  background: -moz-linear-gradient(top, #f2f5f5, #dae2e4);
+  background: -o-linear-gradient(top, #f2f5f5, #dae2e4);
+  background: linear-gradient(top, #f2f5f5, #dae2e4);
+}
+.btn.btn-primary {
   background-color: #2980b9;
 }
-.btn.btn-v.btn-primary:hover, .bootstrap-select > .btn.btn-primary:hover {
+.btn.btn-primary:hover {
+  background-color: #2d8cca;
+}
+.btn.btn-primary:active, .btn.btn-primary.active {
   background-color: #2574a8;
 }
-.btn.btn-v.btn-success, .bootstrap-select > .btn.btn-success {
+.btn.btn-primary.btn-rounded {
+  background: -webkit-linear-gradient(top, #2c89c6, #2472a4);
+  background: -moz-linear-gradient(top, #2c89c6, #2472a4);
+  background: -o-linear-gradient(top, #2c89c6, #2472a4);
+  background: linear-gradient(top, #2c89c6, #2472a4);
+  border: 1px solid #2472a4;
+}
+.btn.btn-primary.btn-rounded:hover {
+  background: -webkit-linear-gradient(top, #2c89c6, #287db5);
+  background: -moz-linear-gradient(top, #2c89c6, #287db5);
+  background: -o-linear-gradient(top, #2c89c6, #287db5);
+  background: linear-gradient(top, #2c89c6, #287db5);
+}
+.btn.btn-primary.btn-rounded:active, .btn.btn-primary.btn-rounded.active {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  background: -webkit-linear-gradient(top, #2b86c1, #236fa0);
+  background: -moz-linear-gradient(top, #2b86c1, #236fa0);
+  background: -o-linear-gradient(top, #2b86c1, #236fa0);
+  background: linear-gradient(top, #2b86c1, #236fa0);
+}
+.btn.btn-success {
   background-color: #16a085;
 }
-.btn.btn-v.btn-success:hover, .bootstrap-select > .btn.btn-success:hover {
+.btn.btn-success:hover {
+  background-color: #18b294;
+}
+.btn.btn-success:active, .btn.btn-success.active {
   background-color: #148e76;
 }
-.btn.btn-v.btn-info, .bootstrap-select > .btn.btn-info {
+.btn.btn-success.btn-rounded {
+  background: -webkit-linear-gradient(top, #18ad90, #138a72);
+  background: -moz-linear-gradient(top, #18ad90, #138a72);
+  background: -o-linear-gradient(top, #18ad90, #138a72);
+  background: linear-gradient(top, #18ad90, #138a72);
+  border: 1px solid #138a72;
+}
+.btn.btn-success.btn-rounded:hover {
+  background: -webkit-linear-gradient(top, #18ad90, #159c81);
+  background: -moz-linear-gradient(top, #18ad90, #159c81);
+  background: -o-linear-gradient(top, #18ad90, #159c81);
+  background: linear-gradient(top, #18ad90, #159c81);
+}
+.btn.btn-success.btn-rounded:active, .btn.btn-success.btn-rounded.active {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  background: -webkit-linear-gradient(top, #17a98c, #12856f);
+  background: -moz-linear-gradient(top, #17a98c, #12856f);
+  background: -o-linear-gradient(top, #17a98c, #12856f);
+  background: linear-gradient(top, #17a98c, #12856f);
+}
+.btn.btn-info {
   background-color: #53a5db;
 }
-.btn.btn-v.btn-info:hover, .bootstrap-select > .btn.btn-info:hover {
+.btn.btn-info:hover {
+  background-color: #64aedf;
+}
+.btn.btn-info:active, .btn.btn-info.active {
   background-color: #429cd7;
 }
-.btn.btn-v.btn-warning, .bootstrap-select > .btn.btn-warning {
+.btn.btn-info.btn-rounded {
+  background: -webkit-linear-gradient(top, #60acde, #3e9ad7);
+  background: -moz-linear-gradient(top, #60acde, #3e9ad7);
+  background: -o-linear-gradient(top, #60acde, #3e9ad7);
+  background: linear-gradient(top, #60acde, #3e9ad7);
+  border: 1px solid #3e9ad7;
+}
+.btn.btn-info.btn-rounded:hover {
+  background: -webkit-linear-gradient(top, #60acde, #4fa3da);
+  background: -moz-linear-gradient(top, #60acde, #4fa3da);
+  background: -o-linear-gradient(top, #60acde, #4fa3da);
+  background: linear-gradient(top, #60acde, #4fa3da);
+}
+.btn.btn-info.btn-rounded:active, .btn.btn-info.btn-rounded.active {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  background: -webkit-linear-gradient(top, #5ba9dd, #3a98d6);
+  background: -moz-linear-gradient(top, #5ba9dd, #3a98d6);
+  background: -o-linear-gradient(top, #5ba9dd, #3a98d6);
+  background: linear-gradient(top, #5ba9dd, #3a98d6);
+}
+.btn.btn-warning {
   background-color: #f7b650;
 }
-.btn.btn-v.btn-warning:hover, .bootstrap-select > .btn.btn-warning:hover {
+.btn.btn-warning:hover {
+  background-color: #f8be64;
+}
+.btn.btn-warning:active, .btn.btn-warning.active {
   background-color: #f6ae3c;
 }
-.btn.btn-v.btn-danger, .bootstrap-select > .btn.btn-danger {
+.btn.btn-warning.btn-rounded {
+  background: -webkit-linear-gradient(top, #f8bc5f, #f6ac38);
+  background: -moz-linear-gradient(top, #f8bc5f, #f6ac38);
+  background: -o-linear-gradient(top, #f8bc5f, #f6ac38);
+  background: linear-gradient(top, #f8bc5f, #f6ac38);
+  border: 1px solid #f6ac38;
+}
+.btn.btn-warning.btn-rounded:hover {
+  background: -webkit-linear-gradient(top, #f8bc5f, #f7b44b);
+  background: -moz-linear-gradient(top, #f8bc5f, #f7b44b);
+  background: -o-linear-gradient(top, #f8bc5f, #f7b44b);
+  background: linear-gradient(top, #f8bc5f, #f7b44b);
+}
+.btn.btn-warning.btn-rounded:active, .btn.btn-warning.btn-rounded.active {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  background: -webkit-linear-gradient(top, #f7ba5a, #f6aa33);
+  background: -moz-linear-gradient(top, #f7ba5a, #f6aa33);
+  background: -o-linear-gradient(top, #f7ba5a, #f6aa33);
+  background: linear-gradient(top, #f7ba5a, #f6aa33);
+}
+.btn.btn-danger {
   background-color: #f55f4f;
 }
-.btn.btn-v.btn-danger:hover, .bootstrap-select > .btn.btn-danger:hover {
+.btn.btn-danger:hover {
+  background-color: #f67162;
+}
+.btn.btn-danger:active, .btn.btn-danger.active {
   background-color: #f44d3c;
 }
-.btn.btn-v.btn-inverse, .bootstrap-select > .btn.btn-inverse {
+.btn.btn-danger.btn-rounded {
+  background: -webkit-linear-gradient(top, #f66c5d, #f44937);
+  background: -moz-linear-gradient(top, #f66c5d, #f44937);
+  background: -o-linear-gradient(top, #f66c5d, #f44937);
+  background: linear-gradient(top, #f66c5d, #f44937);
+  border: 1px solid #f44937;
+}
+.btn.btn-danger.btn-rounded:hover {
+  background: -webkit-linear-gradient(top, #f66c5d, #f55b4a);
+  background: -moz-linear-gradient(top, #f66c5d, #f55b4a);
+  background: -o-linear-gradient(top, #f66c5d, #f55b4a);
+  background: linear-gradient(top, #f66c5d, #f55b4a);
+}
+.btn.btn-danger.btn-rounded:active, .btn.btn-danger.btn-rounded.active {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  background: -webkit-linear-gradient(top, #f66859, #f34532);
+  background: -moz-linear-gradient(top, #f66859, #f34532);
+  background: -o-linear-gradient(top, #f66859, #f34532);
+  background: linear-gradient(top, #f66859, #f34532);
+}
+.btn.btn-inverse {
   background-color: #34495e;
 }
-.btn.btn-v.btn-inverse:hover, .bootstrap-select > .btn.btn-inverse:hover {
+.btn.btn-inverse:hover {
+  background-color: #3b536b;
+}
+.btn.btn-inverse:active, .btn.btn-inverse.active {
   background-color: #2d3f51;
 }
-.btn.btn-v.btn-facebook, .bootstrap-select > .btn.btn-facebook {
+.btn.btn-inverse.btn-rounded {
+  background: -webkit-linear-gradient(top, #395168, #2b3c4e);
+  background: -moz-linear-gradient(top, #395168, #2b3c4e);
+  background: -o-linear-gradient(top, #395168, #2b3c4e);
+  background: linear-gradient(top, #395168, #2b3c4e);
+  border: 1px solid #2b3c4e;
+}
+.btn.btn-inverse.btn-rounded:hover {
+  background: -webkit-linear-gradient(top, #395168, #32465b);
+  background: -moz-linear-gradient(top, #395168, #32465b);
+  background: -o-linear-gradient(top, #395168, #32465b);
+  background: linear-gradient(top, #395168, #32465b);
+}
+.btn.btn-inverse.btn-rounded:active, .btn.btn-inverse.btn-rounded.active {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  background: -webkit-linear-gradient(top, #384e65, #293a4a);
+  background: -moz-linear-gradient(top, #384e65, #293a4a);
+  background: -o-linear-gradient(top, #384e65, #293a4a);
+  background: linear-gradient(top, #384e65, #293a4a);
+}
+.btn.btn-facebook {
   background-color: #3b5998;
 }
-.btn.btn-v.btn-facebook:hover, .bootstrap-select > .btn.btn-facebook:hover {
+.btn.btn-facebook:hover {
+  background-color: #4162a7;
+}
+.btn.btn-facebook:active, .btn.btn-facebook.active {
   background-color: #355089;
 }
-.btn.btn-v.btn-twitter, .bootstrap-select > .btn.btn-twitter {
+.btn.btn-facebook.btn-rounded {
+  background: -webkit-linear-gradient(top, #3f5fa3, #344e86);
+  background: -moz-linear-gradient(top, #3f5fa3, #344e86);
+  background: -o-linear-gradient(top, #3f5fa3, #344e86);
+  background: linear-gradient(top, #3f5fa3, #344e86);
+  border: 1px solid #344e86;
+}
+.btn.btn-facebook.btn-rounded:hover {
+  background: -webkit-linear-gradient(top, #3f5fa3, #3a5794);
+  background: -moz-linear-gradient(top, #3f5fa3, #3a5794);
+  background: -o-linear-gradient(top, #3f5fa3, #3a5794);
+  background: linear-gradient(top, #3f5fa3, #3a5794);
+}
+.btn.btn-facebook.btn-rounded:active, .btn.btn-facebook.btn-rounded.active {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  background: -webkit-linear-gradient(top, #3e5d9f, #324c82);
+  background: -moz-linear-gradient(top, #3e5d9f, #324c82);
+  background: -o-linear-gradient(top, #3e5d9f, #324c82);
+  background: linear-gradient(top, #3e5d9f, #324c82);
+}
+.btn.btn-twitter {
   background-color: #4099ff;
 }
-.btn.btn-v.btn-twitter:hover, .bootstrap-select > .btn.btn-twitter:hover {
+.btn.btn-twitter:hover {
+  background-color: #54a4ff;
+}
+.btn.btn-twitter:active, .btn.btn-twitter.active {
   background-color: #2c8eff;
 }
-.btn.btn-v.btn-google-plus, .bootstrap-select > .btn.btn-google-plus {
+.btn.btn-twitter.btn-rounded {
+  background: -webkit-linear-gradient(top, #4fa1ff, #268bff);
+  background: -moz-linear-gradient(top, #4fa1ff, #268bff);
+  background: -o-linear-gradient(top, #4fa1ff, #268bff);
+  background: linear-gradient(top, #4fa1ff, #268bff);
+  border: 1px solid #268bff;
+}
+.btn.btn-twitter.btn-rounded:hover {
+  background: -webkit-linear-gradient(top, #4fa1ff, #3b96ff);
+  background: -moz-linear-gradient(top, #4fa1ff, #3b96ff);
+  background: -o-linear-gradient(top, #4fa1ff, #3b96ff);
+  background: linear-gradient(top, #4fa1ff, #3b96ff);
+}
+.btn.btn-twitter.btn-rounded:active, .btn.btn-twitter.btn-rounded.active {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  background: -webkit-linear-gradient(top, #4a9eff, #2189ff);
+  background: -moz-linear-gradient(top, #4a9eff, #2189ff);
+  background: -o-linear-gradient(top, #4a9eff, #2189ff);
+  background: linear-gradient(top, #4a9eff, #2189ff);
+}
+.btn.btn-google-plus {
   background-color: #dd4b39;
 }
-.btn.btn-v.btn-google-plus:hover, .bootstrap-select > .btn.btn-google-plus:hover {
+.btn.btn-google-plus:hover {
+  background-color: #e05b4a;
+}
+.btn.btn-google-plus:active, .btn.btn-google-plus.active {
   background-color: #da3b28;
 }
-.btn.btn-v.btn-xs, .bootstrap-select > .btn.btn-xs {
+.btn.btn-google-plus.btn-rounded {
+  background: -webkit-linear-gradient(top, #df5746, #d73925);
+  background: -moz-linear-gradient(top, #df5746, #d73925);
+  background: -o-linear-gradient(top, #df5746, #d73925);
+  background: linear-gradient(top, #df5746, #d73925);
+  border: 1px solid #d73925;
+}
+.btn.btn-google-plus.btn-rounded:hover {
+  background: -webkit-linear-gradient(top, #df5746, #dc4735);
+  background: -moz-linear-gradient(top, #df5746, #dc4735);
+  background: -o-linear-gradient(top, #df5746, #dc4735);
+  background: linear-gradient(top, #df5746, #dc4735);
+}
+.btn.btn-google-plus.btn-rounded:active, .btn.btn-google-plus.btn-rounded.active {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  background: -webkit-linear-gradient(top, #de5342, #d33724);
+  background: -moz-linear-gradient(top, #de5342, #d33724);
+  background: -o-linear-gradient(top, #de5342, #d33724);
+  background: linear-gradient(top, #de5342, #d33724);
+}
+.btn.btn-xs {
   font-size: 0.85em;
 }
-.btn.btn-v.btn-lg, .bootstrap-select > .btn.btn-lg, .btn-group-lg > .btn.btn-v, .bootstrap-select.btn-group-lg > .btn {
+.btn.btn-lg, .btn-group-lg > .btn {
   font-size: 1.2em;
 }
-.btn.btn-v.btn-flat, .bootstrap-select > .btn.btn-flat {
+.btn.btn-flat {
   border-radius: 0;
 }
-.btn.btn-v.btn-default, .bootstrap-select > .btn.btn-default {
+.btn.btn-default {
   color: #34495e;
 }
-.btn.btn-v.btn-inverse, .bootstrap-select > .btn.btn-inverse {
+.btn.btn-inverse {
   color: #ecf0f1;
 }
-.btn.btn-v.btn-facebook, .bootstrap-select > .btn.btn-facebook, .btn.btn-v.btn-twitter, .bootstrap-select > .btn.btn-twitter, .btn.btn-v.btn-google-plus, .bootstrap-select > .btn.btn-google-plus {
+.btn.btn-facebook, .btn.btn-twitter, .btn.btn-google-plus {
   color: #fff;
 }
-.btn.btn-v.btn-wide, .bootstrap-select > .btn.btn-wide {
+.btn.btn-wide {
   font-weight: 600;
   margin-left: 3px;
   margin-right: 3px;
   padding-left: 30px;
   padding-right: 30px;
 }
-.btn.btn-v.btn-super, .bootstrap-select > .btn.btn-super {
+.btn.btn-super {
   font-weight: 600;
   text-transform: uppercase;
   padding: 10px 25px;
 }
-.btn.btn-v i, .bootstrap-select > .btn i {
+.btn i {
   margin-right: 5px;
 }
-.btn.btn-v.btn-icon, .bootstrap-select > .btn.btn-icon {
+.btn.btn-icon {
   font-size: 1em;
   width: 2.6em;
   height: 2.6em;
   border-radius: 50%;
   text-align: center;
 }
-.btn.btn-v.btn-icon i, .bootstrap-select > .btn.btn-icon i {
+.btn.btn-icon i {
   margin-right: 0;
 }
-.btn-group-vertical .btn.btn-v, .btn-group-vertical .bootstrap-select > .btn, .btn.btn-v .btn-group-vertical .btn-group, .bootstrap-select > .btn .btn-group-vertical .btn-group {
+.btn-group-vertical .btn, .btn .btn-group-vertical .btn-group {
   margin: 1px 0;
 }
-.btn-group-justified .btn.btn-v, .btn-group-justified .bootstrap-select > .btn {
+.btn-group-justified .btn {
   border: 1px solid white;
 }
 
@@ -1213,7 +1459,7 @@ to preserve the slide animation effect with jQuery
 .modal .modal-content p {
   font-size: 0.9em;
 }
-.modal .modal-footer .btn.btn-v, .modal .modal-footer .bootstrap-select > .btn {
+.modal .modal-footer .btn {
   margin-bottom: 0;
 }
 

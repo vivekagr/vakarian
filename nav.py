@@ -35,6 +35,7 @@ nav_menu = [
 
     { 'title': 'Pages', 'icon': 'ion-beer', 'children': [
         { 'title': 'Pricing Table', 'template': '#' },
+        { 'title': 'Blog Post', 'template': '#' },
         { 'title': 'Error Log', 'template': '#' },
         { 'title': 'Calendar', 'template': 'calendar.html' },
         { 'title': 'Login', 'template': '#' },

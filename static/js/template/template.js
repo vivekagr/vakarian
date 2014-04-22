@@ -133,26 +133,80 @@ $(function () {
             $('.nav-sidebar > li.dropdown.active').removeClass('active').children('ul').hide();
     });
 
-    // Showing and collapsing the children
-    $('.nav-sidebar li.dropdown > a').on('click', function(e) {
+    var interval = 0;
+
+    // Collapsing the sidebar navigation
+    // This function should be bound to the hover and click events on sidebar element
+    function sidebarCollapse (e) {
         e.preventDefault();
         e.stopPropagation();
+
         var parent = $(this).parent('li'),
-            sidebarSlim = $('.sidebar-slim'),
-            dropdownSubList = $(this).parent().siblings('li').children('ul');
-        // Closing all the other items on the same level
-        sidebarSlim[0] ? dropdownSubList.hide() : dropdownSubList.slideUp(250);
-        if (parent.hasClass('active')) {
-            // If the item is already active, then close it down
-            parent.removeClass('active');
-            sidebarSlim[0] ? $(this).siblings('ul').hide() : $(this).siblings('ul').slideUp(250);
-        } else {
-            // First remove .active class from all the items on same level
-            $(this).parent().siblings('li').removeClass('active');
-            parent.addClass('active');
-            sidebarSlim[0] ? parent.children('ul').show() : parent.children('ul').slideDown(250);
+            sidebarSlimEl = $('.sidebar-slim'),
+            dropdownSubList = $(this).parent().siblings('li').children('ul'),
+            isLevelOne = $($(this).parents()[2]).hasClass('sidebar');
+
+        // Animated collapse when either the item is on the top (level 1)
+        // or it a sub-item of a slim sidebar
+        if (e.type === 'click' && (!sidebarSlimEl.length || (sidebarSlimEl.length && !isLevelOne) )) {
+            // Closing all the other items on the same level
+            dropdownSubList.slideUp(250);
+            if (parent.hasClass('active')) {
+                // If the item is already active, then close it down
+                parent.removeClass('active');
+                $(this).siblings('ul').slideUp(250);
+            } else {
+                // First remove .active class from all the items on same level
+                $(this).parent().siblings('li').removeClass('active');
+                parent.addClass('active');
+                parent.children('ul').slideDown(250);
+            }
         }
-    });
+
+        // Plain hide/show when collapsed in the slim sidebar
+        else if ((e.type == 'mouseenter' || e.type == 'click') && sidebarSlimEl.length && isLevelOne) {
+            // Closing all the other items on the same level
+            dropdownSubList.hide();
+            if (parent.hasClass('active')) {
+                // If the item is already active, then close it down
+                parent.removeClass('active');
+                $(this).siblings('ul').hide();
+            } else {
+                // First remove .active class from all the items on same level
+                $(this).parent().siblings('li').removeClass('active');
+                parent.addClass('active');
+                parent.children('ul').show();
+            }
+        }
+
+        // When the user moves the mouse pointer away from the dropdown list
+        // hide it after one second
+        else if (e.type == 'mouseleave' && sidebarSlimEl.length) {
+            var checkSlimSidebarState = function (el) {
+                var childNav = el.siblings('ul');
+                return function() {
+                    if (!isHovered(el) && !isHovered(childNav)) {
+                        el.parent().removeClass('active');
+                        el.siblings('ul').hide();
+                    } else {
+                        clearTimeout(interval);
+                        interval = setTimeout(checkSlimSidebarState(el), 1000);
+                    }
+                }
+            };
+
+            interval = setTimeout(checkSlimSidebarState($(this)), 1000);
+        }
+
+    }
+
+    // Checks whether the provided jQuery element is hovered
+    function isHovered(el) {
+        return !!el.filter(function() { return $(this).is(":hover"); }).length;
+    }
+
+
+    $('.nav-sidebar li.dropdown > a').hover(sidebarCollapse).click(sidebarCollapse);
 
     // Preventing the collapsed sub-menu from being closed while clicking it
     $('.nav-sidebar > li.dropdown > ul').click(function(e) {

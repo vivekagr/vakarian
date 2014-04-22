@@ -393,15 +393,23 @@ SIDEBAR
 
 /* Navigation menu inside the sidebar */
 .nav-sidebar {
-  li {
+  // Setting color on all sidebar nav items
+  li > a {
+    color: $sidebar-item-text-color;
+  }
+
+  // These styles apply only on the first level items
+  > li {
+
     // Show empty space for items without dropdown menu
     span:before {
       @extend .fa-icon;
       content: '';
       margin-right: 6px;
     }
+
     // Showing the collapse indicator icon to the left of item name
-    &.dropdown span:before {
+    &.dropdown > a > span:before {
       margin: 0 5px 0 -7px;
       width: 8px;
       content: $collapse-indicator-icon;
@@ -410,63 +418,70 @@ SIDEBAR
 
     // Changing collapse indicator icon to 'fa-chevron-circle-down'
     // on the active item
-    &.dropdown.active span:before {
+    &.dropdown.active > a > span:before {
       content: $collapse-indicator-down-icon;
     }
-  }
 
-  li > a {
-    padding: 17px 11px 17px 15px;
-    background-color: $sidebar-item-color;
-    font-size: 0.90em;
-    font-weight: 400;
-    line-height: 1.1em;
-    color: $sidebar-item-text-color;
-    border-left: 3px solid transparent;
-    @include transition((background-color 0.1s ease, color 0.1s ease));
-
-    // Item icon to the right
-    i {
-      margin-right: 6px;
-      color: $sidebar-item-icon-color;
-      float: right;
-      font-size: 1.5em;
-      line-height: 0.9em;
+    > a {
+      padding: 17px 11px 17px 15px;
+      background-color: $sidebar-item-color;
+      font-size: 0.90em;
+      font-weight: 400;
+      line-height: 1.1em;
+      border-left: 3px solid transparent;
       @include transition((background-color 0.1s ease, color 0.1s ease));
-    }
 
-    // Making the text and icon brighter on hover
-    &:hover, &:focus {
-      @include transition((background-color 0.1s ease, color 0.1s ease));
-      background-color: lighten($sidebar-item-color, 4);
-      color: $text-color;
-      outline: none;
-      i {
-        color: darken($text-color, 10);
+      // Item icon to the right
+      > i {
+        margin-right: 5px;
+        color: $sidebar-item-icon-color;
+        float: right;
+        font-size: 1.7em;
+        line-height: 0.75em;
+        width: 1em;
+        text-align: center;
         @include transition((background-color 0.1s ease, color 0.1s ease));
       }
-    }
-  }
 
-  // For the active item whose dropdown children's are shown
-  > li.active > a {
-    border-left-color: $sidebar-item-border-left-color;
-    background-color: darken($sidebar-item-color, 4);
-    color: #fff;
-    i { color: darken($text-color, 10); }
+      // Making the text and icon brighter on hover
+      &:hover, &:focus {
+        @include transition((background-color 0.1s ease, color 0.1s ease));
+        background-color: lighten($sidebar-item-color, 4);
+        color: $text-color;
+        outline: none;
+        i {
+          color: darken($text-color, 10);
+          @include transition((background-color 0.1s ease, color 0.1s ease));
+        }
+      }
+    }
+
+    // For the active item whose dropdown children's are shown
+    &.active > a {
+      border-left-color: $sidebar-item-border-left-color;
+      background-color: darken($sidebar-item-color, 4);
+      color: #fff;
+      i { color: #fff; }
+    }
   }
 
   // For the items which have dropdown child items
-  > li.dropdown {
+  li.dropdown {
     > ul {
       display: none;
       padding-left: 0;
 
+      li.active > a {
+        background-color: darken($sidebar-subitem-color, 4%);
+      }
+
       > li.active > a {
         text-decoration: none;
-        background-color: lighten($sidebar-item-color, 3%);
         color: $text-color;
         border-left-color: $sidebar-subitem-border-left-color;
+        &:before {
+          content: '-';
+        }
       }
 
       > li > a {
@@ -478,10 +493,13 @@ SIDEBAR
         border-left: 2px solid transparent;
 
         &:before {
-          @extend .fa-icon;
-          content: '\f105';
+          content: '–';
           margin: 0 5px 0 -3px;
           color: darken($text-color, 50);
+        }
+
+        > i {
+          float: none;
         }
 
         &:hover {
@@ -490,6 +508,26 @@ SIDEBAR
           border-left-color: $sidebar-subitem-border-left-color;
         }
       }
+
+      > li.dropdown > a:before {
+
+      }
+
+      > li.dropdown {
+        > a:before {
+          @extend .fa-icon;
+          content: $collapse-indicator-icon;
+        }
+        &.active > a:before {
+          content: $collapse-indicator-down-icon;
+        }
+      }
+
+      // Left Padding for multi level navigation
+      > li > ul > li > a { padding-left: 50px; }
+      > li > ul > li > ul > li > a { padding-left: 70px; }
+      > li > ul > li > ul > li > ul > li > a { padding-left: 90px; }
+      > li > ul > li > ul > li > ul > li > ul > li > a { padding-left: 110px; }
     }
   }
 }

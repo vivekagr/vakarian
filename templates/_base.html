@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="{{ static('css/lib/bootstrap.min.css') }}">
 
     {{ c('Vendor CSS') }}
+    <link rel="stylesheet" href="{{ static('css/lib/ionicons.min.css') }}">
     <link rel="stylesheet" href="{{ static('css/lib/font-awesome.min.css') }}">
 
     {{ c('animate.css') }}
@@ -203,7 +204,7 @@
                     {% endif %}
                 {% endfor %}
                 <li{% if active %} class="active"{% endif %}>
-                    <a href="#"><i class="fa fa-{{ item.icon }} fa-fw"></i> <span>{{ item.title }}</span></a>
+                    <a href="#"><i class="{{ item.icon }}"></i> <span>{{ item.title }}</span></a>
                     <ul>
                         {% for child in item.children %}
                         <li{% if child.template == template %} class="active"{% endif %}><a href="{{ child.template }}">{{ child.title }}</a></li>
@@ -211,9 +212,39 @@
                     </ul>
                 </li>
                 {% else %}{# Childless item #}
-                <li{% if item.template == template %} class="active"{% endif %}><a href="{{ item.template }}"><i class="fa fa-{{ item.icon }} fa-fw"></i> <span>{{ item.title }}</span></a></li>
+                <li{% if item.template == template %} class="active"{% endif %}><a href="{{ item.template }}"><i class="{{ item.icon }}"></i> <span>{{ item.title }}</span></a></li>
                 {% endif %}
                 {% endfor %}
+                <li class="dropdown">
+                    <a href="#"><i class="ion-android-sort"></i> <span>Multi-Level Menu</span></a>
+                    <ul>
+                        <li><a href="#">Item</a></li>
+                        <li>
+                            <a href="#">2nd Level</a>
+                            <ul>
+                                <li><a href="#">Item</a></li>
+                                <li>
+                                    <a href="#">3rd Level</a>
+                                    <ul>
+                                        <li><a href="#">Item</a></li>
+                                        <li>
+                                            <a href="#">4th Level</a>
+                                            <ul>
+                                                <li><a href="#">Item</a></li>
+                                                <li>
+                                                    <a href="#">5th Level</a>
+                                                    <ul>
+                                                        <li><a href="#">Item</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
             </ul>
 
         </div>{{ cu('Sidebar finish') }}
@@ -222,7 +253,7 @@
         <div class="content-wrapper">
             <div class="row">
                 <div class="{% if title_area_set %}col-sm-8{% else %}col-sm-12{% endif %}">
-                    <h3 class="page-title">{{ page_title }}</h3>
+                    <h3 class="page-title"><i class="ion-earth"></i> {{ page_title }}</h3>
                     {% if active_parent_title %}
                     <ul class="breadcrumb-v">
                         <li class="highlight"><a href="#">You are here</a></li>

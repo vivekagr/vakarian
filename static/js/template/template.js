@@ -1,8 +1,8 @@
 $(function () {
 
-    var snapper = new Snap({
-      element: document.getElementById('content-wrapper')
-    });
+//    var snapper = new Snap({
+//      element: document.getElementById('content-wrapper')
+//    });
 
     /*
         Animates a an element with animate.css classes.
@@ -105,7 +105,7 @@ $(function () {
 
     /*** Setup sidebar navigation menu ***/
 
-    var navSidebarLi = $(".nav-sidebar > li");
+    var navSidebarLi = $(".nav-sidebar li");
 
     navSidebarLi.each(function() {
         var el = $(this);
@@ -134,19 +134,23 @@ $(function () {
     });
 
     // Showing and collapsing the children
-    $(".nav-sidebar > li.dropdown > a").on('click', function(e) {
+    $(".nav-sidebar li.dropdown > a").on('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
-        var parent = $(this).parent("li"),
-            sidebarSlim = $(".sidebar-slim"),
-            dropdownSubList = $(".nav-sidebar > li.dropdown").children("ul");
+        var parent = $(this).parent('li'),
+            sidebarSlim = $('.sidebar-slim'),
+            dropdownSubList = $(this).parent().siblings('li').children('ul');
+        // Closing all the other items on the same level
         sidebarSlim[0] ? dropdownSubList.hide() : dropdownSubList.slideUp(250);
-        if (parent.hasClass("active")) {
-            parent.removeClass("active");
+        if (parent.hasClass('active')) {
+            // If the item is already active, then close it down
+            parent.removeClass('active');
+            sidebarSlim[0] ? $(this).siblings('ul').hide() : $(this).siblings('ul').slideUp(250);
         } else {
-            navSidebarLi.removeClass("active");
-            parent.addClass("active");
-            sidebarSlim[0] ? parent.children("ul").show() : parent.children("ul").slideDown(250);
+            // First remove .active class from all the items on same level
+            $(this).parent().siblings('li').removeClass('active');
+            parent.addClass('active');
+            sidebarSlim[0] ? parent.children('ul').show() : parent.children('ul').slideDown(250);
         }
     });
 

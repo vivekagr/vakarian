@@ -23,6 +23,7 @@ nav_menu = [
     { 'title': 'Tables', 'icon': 'ion-clipboard', 'children': [
         { 'title': 'Static Tables', 'template': 'tables-static.html' },
         { 'title': 'DataTables', 'template': 'tables-datatables.html' },
+        { 'title': 'EditableGrid', 'template': '#' },
     ] },
 
     { 'title': 'Forms', 'icon': 'ion-ios7-compose-outline', 'children': [
@@ -30,13 +31,18 @@ nav_menu = [
         { 'title': 'Layouts', 'template': 'form-layouts.html' },
         { 'title': 'Validation', 'template': 'form-validation.html' },
         { 'title': 'Wizards', 'template': 'form-wizard.html' },
-        { 'title': 'WYSIWYG Editors', 'template': '#' },
+        { 'title': 'File Upload', 'template': '#' },
+    ] },
+
+    { 'title': 'Editors', 'icon': 'ion-document-text', 'children': [
+        { 'title': 'EpicEditor', 'template': '#' },
+        { 'title': 'jQuery Notebook', 'template': '#' },
     ] },
 
     { 'title': 'Gallery', 'icon': 'ion-images', 'template': '#' },
 
     { 'title': 'Pages', 'icon': 'ion-beer', 'children': [
-        { 'title': 'Pricing Table', 'template': '#' },
+        { 'title': 'Social Activity', 'template': '#' },
         { 'title': 'Blog Post', 'template': '#' },
         { 'title': 'Error Log', 'template': '#' },
         { 'title': 'Calendar', 'template': 'calendar.html' },

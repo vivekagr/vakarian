@@ -26,9 +26,10 @@ nav_menu = [
     ] },
 
     { 'title': 'Forms', 'icon': 'ion-ios7-compose-outline', 'children': [
-        { 'title': 'Form Elements', 'template': 'form-elements.html' },
-        { 'title': 'Form Layouts', 'template': 'form-layouts.html' },
-        { 'title': 'Form Wizards', 'template': 'form-wizard.html' },
+        { 'title': 'Elements', 'template': 'form-elements.html' },
+        { 'title': 'Layouts', 'template': 'form-layouts.html' },
+        { 'title': 'Validation', 'template': 'form-validation.html' },
+        { 'title': 'Wizards', 'template': 'form-wizard.html' },
         { 'title': 'WYSIWYG Editors', 'template': '#' },
     ] },
 

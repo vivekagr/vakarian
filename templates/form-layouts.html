@@ -13,18 +13,18 @@
                 <div class="widget-content">
                     <form role="form">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                            <label for="basicFormEmail">Email address</label>
+                            <input type="email" class="form-control" id="basicFormEmail" name="email" placeholder="Enter email">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            <label for="basicFormPassword">Password</label>
+                            <input type="password" class="form-control" id="basicFormPassword" name="password" placeholder="Password">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputFile">File input</label>
+                            <label for="basicFormFile">File input</label>
                             <div class="file-input-wrapper">
                                 <div class="btn btn-v btn-default"><i class="fa fa-file"></i> Choose File</div>
-                                <input type="file" id="exampleInputFile">
+                                <input type="file" name="some-file" id="basicFormFile">
                             </div>
                             <p class="help-block">Example block-level help text here.</p>
                         </div>
@@ -43,26 +43,26 @@
                 <div class="widget-content">
                     <form role="form">
                         <div class="form-group">
-                            <label class="sr-only" for="exampleInputEmail1">Name</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Name">
+                            <label class="sr-only" for="placeholderOnlyName">Name</label>
+                            <input type="text" class="form-control" id="placeholderOnlyName" name="name" placeholder="Name">
                         </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label class="sr-only" for="exampleInputPassword1">Email</label>
-                                    <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Email">
+                                    <label class="sr-only" for="placeholderOnlyEmail">Email</label>
+                                    <input type="email" class="form-control" id="placeholderOnlyEmail" name="email" placeholder="Email">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label class="sr-only" for="exampleInputPassword1">Website</label>
-                                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Website">
+                                    <label class="sr-only" for="placeholderOnlyWebsite">Website</label>
+                                    <input type="text" class="form-control" id="placeholderOnlyWebsite" name="website" placeholder="Website">
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="sr-only" for="exampleInputFile">Comment</label>
-                            <textarea class="form-control" rows="6" placeholder="Comment"></textarea>
+                            <label class="sr-only" for="placeholderOnlyComment">Comment</label>
+                            <textarea class="form-control" rows="6" id="placeholderOnlyComment" name="comment" placeholder="Comment"></textarea>
                         </div>
                         <button type="submit" class="btn btn-v btn-primary">Submit</button>
                     </form>
@@ -80,16 +80,16 @@
         <div class="widget-content">
             <form class="form-inline" role="form">
                 <div class="form-group">
-                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Enter email">
+                    <label class="sr-only" for="inlineFormEmail">Email address</label>
+                    <input type="email" class="form-control" id="inlineFormEmail" name="email" placeholder="Enter email">
                 </div>
                 <div class="form-group">
-                    <label class="sr-only" for="exampleInputPassword3">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+                    <label class="sr-only" for="inlineFormPassword">Password</label>
+                    <input type="password" class="form-control" id="inlineFormPassword" name="password" placeholder="Password">
                 </div>
                 <div class="checkbox">
                     <label>
-                      <input type="checkbox"> <span>Remember me</span>
+                      <input name="remember" type="checkbox"> <span>Remember me</span>
                     </label>
                 </div>
                 <button type="submit" class="btn btn-v btn-default">Sign in</button>
@@ -105,35 +105,35 @@
         <div class="widget-content">
             <form class="form-horizontal" role="form">
                 <div class="form-group">
-                    <label class="col-sm-3 col-md-2 control-label" for="exampleInputName2">Full Name</label>
+                    <label class="col-sm-3 col-md-2 control-label" for="horizontalFormName">Full Name</label>
                     <div class="col-sm-9  col-md-10">
-                        <input type="email" class="form-control" id="exampleInputName2" placeholder="Full name">
+                        <input type="email" class="form-control" id="horizontalFormName" name="name" placeholder="Full name">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-3 col-md-2 control-label" for="exampleInputEmail2">Email address</label>
+                    <label class="col-sm-3 col-md-2 control-label" for="horizontalFormEmail">Email address</label>
                     <div class="col-sm-9 col-md-10">
-                        <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address">
+                        <input type="email" class="form-control" id="horizontalFormEmail" name="email" placeholder="Email address">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-3 col-md-2 control-label" for="exampleInputPassword2">Password</label>
+                    <label class="col-sm-3 col-md-2 control-label" for="horizontalFormPassword">Password</label>
                     <div class="col-sm-9 col-md-10">
-                        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+                        <input type="password" class="form-control" id="horizontalFormPassword" name="password" placeholder="Password">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-3 col-md-2 control-label" for="exampleInputPassword2">Plan</label>
+                    <label class="col-sm-3 col-md-2 control-label" for="horizontalFormPlan">Plan</label>
                     <div class="col-sm-9 col-md-10">
                         <div class="btn-group" data-toggle="buttons">
                             <label class="btn btn-v btn-default active">
-                                <input type="radio" name="options" id="option1"> Free
+                                <input type="radio" name="options" id="option1" value="free"> Free
                             </label>
                             <label class="btn btn-v btn-default">
-                                <input type="radio" name="options" id="option2"> Basic
+                                <input type="radio" name="options" id="option2" value="basic"> Basic
                             </label>
                             <label class="btn btn-v btn-default">
-                                <input type="radio" name="options" id="option3"> Premium
+                                <input type="radio" name="options" id="option3" value="premium"> Premium
                             </label>
                         </div>
                     </div>
@@ -142,7 +142,7 @@
                     <div class="col-sm-offset-3 col-md-offset-2 col-sm-9 col-md-10">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox">
+                                <input type="checkbox" name="terms-n-conditions">
                                 <span>I agree to the terms & conditions</span>
                             </label>
                         </div>

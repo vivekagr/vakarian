@@ -1,9 +1,5 @@
 $(function () {
 
-//    var snapper = new Snap({
-//      element: document.getElementById('content-wrapper')
-//    });
-
     /*
         Animates a an element with animate.css classes.
         First adds the class as required by animate.css

@@ -441,6 +441,18 @@
   }
 }
 
+.input-group-btn {
+  font-size: 1.1em;
+  .btn {
+    margin: 0;
+    border: 1px solid #ccc;
+
+    & + .btn {
+      margin-left: -5px;
+    }
+  }
+}
+
 // Accordion
 .panel-group .panel {
   font-size: 0.9em;

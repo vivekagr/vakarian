@@ -5,31 +5,29 @@
 {% block vendor_css %}
     <link rel="stylesheet" href="{{ static('css/lib/bootstrap-select.min.css') }}">
     <link rel="stylesheet" href="{{ static('css/lib/fuelux-wizard.css') }}">
+    <link rel="stylesheet" href="{{ static('css/lib/bootstrapValidator.min.css') }}">
 {% endblock %}
 
 {% block main %}
-    <div class="widget">
-        <h4 class="widget-title">Wizard</h4>
-        <div class="widget-content">
             <div class="fuelux">
                 <div id="serverOrderWizard" class="wizard">
                     <ul class="steps">
-                        <li data-target="#step1" class="active"><span class="badge badge-info">1</span>Step 1<span class="chevron"></span></li>
-                        <li data-target="#step2"><span class="badge">2</span>Step 2<span class="chevron"></span></li>
-                        <li data-target="#step3"><span class="badge">3</span>Step 3<span class="chevron"></span></li>
-                        <li data-target="#step4"><span class="badge">4</span>Step 4<span class="chevron"></span></li>
-                        <li data-target="#step5"><span class="badge">5</span>Step 5<span class="chevron"></span></li>
+                        <li data-target="#step1" class="active"><span class="badge badge-info">1</span>Server Config<span class="chevron"></span></li>
+                        <li data-target="#step2"><span class="badge">2</span>Registration<span class="chevron"></span></li>
+                        <li data-target="#step3"><span class="badge">3</span>Payment<span class="chevron"></span></li>
                     </ul>
                     <div class="actions">
                         <button type="button" class="btn btn-v btn-primary btn-prev"><i class="fa fa-arrow-left"></i> Prev</button>
                         <button type="button" class="btn btn-v btn-primary btn-next" data-last="Finish">Next <i class="fa fa-arrow-right"></i></button>
                     </div>
                 </div>
+
                 <div class="step-content">
+                    <form id="serverOrderForm" name="serverOrderForm" class="form-horizontal"></form>
                     <div class="step-pane active" id="step1">
-                        <h4>Vakarian Servers <small>Server Confirguration</small></h4>
+                        <h4>Vakarian Servers <small>Server Configuration</small></h4>
                         <hr>
-                        <form class="form-horizontal">
+                        <form id="serverConfigForm" class="form-horizontal">
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group">
@@ -169,37 +167,47 @@
                     <div class="step-pane" id="step2">
                         <h4>Vakarian Servers <small>Customer Information</small></h4>
                         <hr>
-                        <form class="form-horizontal">
+                        <form id="customerInfoForm" class="form-horizontal">
                             <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label class="control-label col-lg-3 col-sm-2">First Name</label>
-                                        <div class="col-lg-9 col-sm-10">
-                                            <input class="form-control" name="first-name" tabindex="1">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label class="control-label col-lg-3 col-sm-2">Last Name</label>
-                                        <div class="col-lg-9 col-sm-10">
-                                            <input class="form-control" name="last-name" tabindex="2">
-                                        </div>
-                                    </div>
-                                </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label class="control-label col-lg-3 col-sm-2">Email Address</label>
                                         <div class="col-lg-9 col-sm-10">
-                                            <input class="form-control" name="email" tabindex="3">
+                                            <input class="form-control" name="email" tabindex="5" type="email" required>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
+                                        <label class="control-label col-lg-3 col-sm-2">Password</label>
+                                        <div class="col-lg-9 col-sm-10">
+                                            <input class="form-control" name="password" tabindex="5" type="password" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-lg-3 col-sm-2">First Name</label>
+                                        <div class="col-lg-9 col-sm-10">
+                                            <input class="form-control" name="first-name" tabindex="3" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label for="last-name" class="control-label col-lg-3 col-sm-2">Last Name</label>
+                                        <div class="col-lg-9 col-sm-10">
+                                            <input class="form-control" id="last-name" name="last-name" tabindex="4" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
                                         <label class="control-label col-lg-3 col-sm-2">Phone Number</label>
                                         <div class="col-lg-9 col-sm-10">
-                                            <input class="form-control" name="phone" tabindex="4">
+                                            <input class="form-control" name="phone" tabindex="6">
                                         </div>
                                     </div>
                                 </div>
@@ -207,24 +215,16 @@
                                     <div class="form-group">
                                         <label class="control-label col-lg-3 col-sm-2">Street Address</label>
                                         <div class="col-lg-9 col-sm-10">
-                                            <input class="form-control" name="street" tabindex="5">
+                                            <input class="form-control" name="street" tabindex="7" required>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="clearfix"></div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label class="control-label col-lg-3 col-sm-2">City</label>
                                         <div class="col-lg-9 col-sm-10">
-                                            <input class="form-control" name="city" tabindex="6">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label class="control-label col-lg-3 col-sm-2">Country</label>
-                                        <div class="col-lg-9 col-sm-10">
-                                            <select class="selectpicker" data-style="btn-primary" id="country">
-                                            </select>
+                                            <input class="form-control" name="city" tabindex="8" required>
                                         </div>
                                     </div>
                                 </div>
@@ -232,30 +232,65 @@
                                     <div class="form-group">
                                         <label class="control-label col-lg-3 col-sm-2">ZIP</label>
                                         <div class="col-lg-9 col-sm-10">
-                                            <input class="form-control" name="zip" tabindex="7">
+                                            <input class="form-control" name="zip" tabindex="10" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-lg-3 col-sm-2">Country</label>
+                                        <div class="col-lg-9 col-sm-10">
+                                            <select class="selectpicker" data-style="btn-primary" id="country" tabindex="9" required>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </form>
                     </div>
-                    <div class="step-pane" id="step3">This is step 3</div>
-                    <div class="step-pane" id="step4">This is step 4</div>
-                    <div class="step-pane" id="step5">This is step 5</div>
+                    <div class="step-pane" id="step3">
+                        <h4>Vakarian Servers <small>Payment</small></h4>
+                        <hr>
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h4 class="text-center">Credit Card</h4>
+                                <form id="customerInfoForm" class="form-horizontal">
+                                    <div class="form-group">
+                                        <label class="control-label col-lg-3 col-sm-2">Email Address</label>
+                                        <div class="col-lg-9 col-sm-10">
+                                            <input class="form-control" name="email" tabindex="5" type="email" required>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="control-label col-lg-3 col-sm-2">Password</label>
+                                    <div class="col-lg-9 col-sm-10">
+                                        <input class="form-control" name="password" tabindex="5" type="password" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+
             </div>
-        </div>
-    </div>
 {% endblock %}
 
 {% block vendor_js %}
     <script src="{{ static('js/bootstrap-select.min.js') }}"></script>
+    <script src="{{ static('js/bootstrapValidator.min.js') }}"></script>
     <script src="{{ static('js/fuelux-loader.js') }}"></script>
 {% endblock %}
 
 {% block js %}
     <script>
         $(function() {
+            // All the country codes and countries
             var countries = [
                 {name: 'Afghanistan', code: 'AF'},
                 {name: 'Åland Islands', code: 'AX'},
@@ -512,11 +547,46 @@
             // Initialize Bootstrap Select
             $(".selectpicker").selectpicker();
 
-            // Setup Wizard
-            var wizard = $('#serverOrderWizard');
+            var wizard = $('#serverOrderWizard'),
+                customerInfoForm = $('#customerInfoForm');
+
+            // Customer Info Form
+            customerInfoForm.bootstrapValidator({
+                feedbackIcons: {
+                    valid: 'ion-ios7-checkmark-outline',
+                    invalid: 'ion-ios7-close-outline',
+                    validating: 'ion-ios7-reloading'
+                },
+                fields: {
+                    'first-name': { message: 'Please enter your first name' },
+                    'last-name': { message: 'Please enter your last name' },
+                    'email': {
+                        validators: {
+                            emailAddress: { message: 'The is not a valid email address' },
+                            notEmpty: { message: 'Please enter your email address' }
+                        }
+                    },
+                    'street': { message: 'Please enter your street address' },
+                    'city': { message: 'Please enter your city' },
+                    'zip': { message: 'Please enter your ZIP code' },
+                }
+            });
+
+            // Initialize the wizard
             wizard.wizard();
+            $('.wizard .actions .btn-prev').attr('disabled', 'disabled');
+
+            // Customer Information Form
             wizard.on('change', function(e, data) {
-                console.log('clicked');
+                if (data.step === 2 && data.direction == 'next') {
+                    customerInfoForm.data('bootstrapValidator').validate();
+
+                    if (customerInfoForm.data('bootstrapValidator').isValid()) {
+                        wizard.next();
+                    } else {
+                        //e.preventDefault();
+                    }
+                }
             });
         });
     </script>

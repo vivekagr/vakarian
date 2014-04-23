@@ -10,182 +10,7 @@
 {% endblock %}
 
 {% block main %}
-    <div class="row">
 
-        {{ c('Basic Form Starts') }}
-        <div class="col-md-5">
-            <div class="widget">
-                <h4 class="widget-title">Basic Form</h4>
-                <div class="widget-content">
-                    <form role="form">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputFile">File input</label>
-                            <div class="file-input-wrapper">
-                                <div class="btn btn-v btn-default"><i class="fa fa-file"></i> Choose File</div>
-                                <input type="file" id="exampleInputFile">
-                            </div>
-                            <p class="help-block">Example block-level help text here.</p>
-                        </div>
-                        <button type="submit" class="btn btn-v btn-primary">Submit</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-        {{ c('Basic Form Ends') }}
-
-        {{ c('Horizontal Form Starts') }}
-        <div class="col-md-7">
-            <div class="widget">
-                <h4 class="widget-title">Horizontal Form</h4>
-                <div class="widget-content">
-                    <form class="form-horizontal" role="form">
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label" for="exampleInputName2">Full Name</label>
-                            <div class="col-sm-9">
-                                <input type="email" class="form-control" id="exampleInputName2" placeholder="Full name">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label" for="exampleInputEmail2">Email address</label>
-                            <div class="col-sm-9">
-                                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label" for="exampleInputPassword2">Password</label>
-                            <div class="col-sm-9">
-                                <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label" for="exampleInputPassword2">Plan</label>
-                            <div class="col-sm-9">
-                                <div class="btn-group" data-toggle="buttons">
-                                    <label class="btn btn-v btn-default active">
-                                        <input type="radio" name="options" id="option1"> Free
-                                    </label>
-                                    <label class="btn btn-v btn-default">
-                                        <input type="radio" name="options" id="option2"> Basic
-                                    </label>
-                                    <label class="btn btn-v btn-default">
-                                        <input type="radio" name="options" id="option3"> Premium
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-offset-3 col-sm-9">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox">
-                                        <span>I agree to the terms & conditions</span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-offset-3 col-sm-9">
-                                <button type="submit" class="btn btn-v btn-primary">Sign up</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-        {{ c('Horizontal Form Ends') }}
-
-    </div>
-
-    {{ c('Inline Form Starts') }}
-    <div class="widget">
-        <h4 class="widget-title">Inline Form</h4>
-        <div class="widget-content">
-            <form class="form-inline" role="form">
-                <div class="form-group">
-                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Enter email">
-                </div>
-                <div class="form-group">
-                    <label class="sr-only" for="exampleInputPassword3">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
-                </div>
-                <div class="checkbox">
-                    <label>
-                      <input type="checkbox"> <span>Remember me</span>
-                    </label>
-                </div>
-                <button type="submit" class="btn btn-v btn-default">Sign in</button>
-            </form>
-        </div>
-    </div>
-    {{ c('Inline Form Ends') }}
-
-    {{ c('Form Inputs Widget Starts') }}
-    <div class="widget">
-        <h4 class="widget-title">Form Inputs</h4>
-        <div class="widget-content">
-            <form class="form-horizontal" role="form">
-                <div class="form-group">
-                    <label class="col-sm-2 control-label" for="simpleInputField">Simple Input Field</label>
-                    <div class="col-sm-10">
-                        <input type="email" class="form-control" id="simpleInputField">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-2 control-label" for="passwordField">Password Field</label>
-                    <div class="col-sm-10">
-                        <input type="password" class="form-control" id="passwordField" value="password">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-2 control-label" for="simpleInputFieldWithPlaceholder">Placeholder</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="simpleInputFieldWithPlaceholder" placeholder="Some Placeholder">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-2 control-label" for="simpleInputFieldWithHelpText">Help Text</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="simpleInputFieldWithHelpText">
-                        <div class="help-block">This text is supposed to help you</div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-2 control-label" for="simpleInputFieldWithPredefinedText">Predefined Text</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="simpleInputFieldWithPredefinedText" value="Oh hello!">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">Static Control</label>
-                    <div class="col-sm-10">
-                        <p class="form-control-static">email@example.com</p>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-2 control-label" for="disabledInputField">Disabled</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="disabledInputField" disabled>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-2 control-label" for="simpleTextArea">Text Area</label>
-                    <div class="col-sm-10">
-                        <textarea class="form-control" rows="3" id="simpleTextArea"></textarea>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-    {{ c('Form Inputs Widget Ends') }}
 
     <div class="row">
 
@@ -638,6 +463,65 @@
         </div>
     </div>
     {{ c('jQuery Knob Widget Ends') }}
+
+    {{ c('Form Inputs Widget Starts') }}
+    <div class="widget">
+        <h4 class="widget-title">Form Inputs</h4>
+        <div class="widget-content">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="simpleInputField">Simple Input Field</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="simpleInputField">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="passwordField">Password Field</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="passwordField" value="password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="simpleInputFieldWithPlaceholder">Placeholder</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="simpleInputFieldWithPlaceholder" placeholder="Some Placeholder">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="simpleInputFieldWithHelpText">Help Text</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="simpleInputFieldWithHelpText">
+                        <div class="help-block">This text is supposed to help you</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="simpleInputFieldWithPredefinedText">Predefined Text</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="simpleInputFieldWithPredefinedText" value="Oh hello!">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Static Control</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static">email@example.com</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="disabledInputField">Disabled</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="disabledInputField" disabled>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="simpleTextArea">Text Area</label>
+                    <div class="col-sm-10">
+                        <textarea class="form-control" rows="3" id="simpleTextArea"></textarea>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    {{ c('Form Inputs Widget Ends') }}
 
     <div class="row">
 

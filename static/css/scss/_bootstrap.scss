@@ -383,6 +383,7 @@
 }
 
 .form-control {
+  font-size: 0.9em;
   padding: 7px 12px;
   border-radius: 3px;
   box-shadow: none;
@@ -440,11 +441,6 @@
   }
 }
 
-.checkbox {
-//  font-size: 0.9em;
-}
-
-
 // Accordion
 .panel-group .panel {
   font-size: 0.9em;
@@ -492,6 +488,10 @@
 
 .radio, .radio-inline, .checkbox, .checkbox-inline {
   padding-left: 0;
+
+  label {
+    font-size: 0.9em;
+  }
 
   input[type="radio"], input[type="checkbox"] {
     display: none;

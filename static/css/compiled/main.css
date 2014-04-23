@@ -1537,11 +1537,14 @@ to preserve the slide animation effect with jQuery
   box-shadow: none;
   -webkit-box-shadow: none;
 }
-.panel-group .panel .panel-heading {
+.panel-group .panel.panel-default .panel-heading {
   background-color: #ecf0f1;
 }
 .panel-group .panel .panel-title {
-  font-size: 1.2em;
+  font-size: 1.1em;
+}
+.panel-group .panel .panel-title a:hover {
+  text-decoration: none;
 }
 
 .tooltip .tooltip-inner {

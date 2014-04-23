@@ -461,12 +461,14 @@
   box-shadow: none;
   -webkit-box-shadow: none;
 
-  .panel-heading {
+  &.panel-default .panel-heading {
     background-color: #ecf0f1;
   }
 
   .panel-title {
-    font-size: 1.2em;
+    font-size: 1.1em;
+
+    a:hover { text-decoration: none; }
   }
 }
 

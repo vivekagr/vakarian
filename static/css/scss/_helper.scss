@@ -13,6 +13,14 @@
   transition: $val;
 }
 
+@mixin transition-duration($val) {
+  -webkit-transition-duration: $val;
+  -moz-transition-duration: $val;
+  -ms-transition-duration: $val;
+  -o-transition-duration: $val;
+  transition-duration: $val;
+}
+
 @mixin transform($val...) {
   -webkit-transform: $val;
   -moz-transform: $val;

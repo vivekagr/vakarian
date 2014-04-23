@@ -856,11 +856,11 @@ to preserve the slide animation effect with jQuery
   font-weight: 400;
   margin: 5px 2px;
   border-radius: 2px;
-  -webkit-transition: all 80ms ease;
-  -moz-transition: all 80ms ease;
-  -ms-transition: all 80ms ease;
-  -o-transition: all 80ms ease;
-  transition: all 80ms ease;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
 }
 .btn:focus {
   outline: none;
@@ -869,6 +869,11 @@ to preserve the slide animation effect with jQuery
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.125);
   -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.125);
   outline: none !important;
+  -webkit-transition-duration: 0;
+  -moz-transition-duration: 0;
+  -ms-transition-duration: 0;
+  -o-transition-duration: 0;
+  transition-duration: 0;
 }
 .btn.btn-default {
   background-color: #ecf0f1;

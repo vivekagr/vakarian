@@ -811,29 +811,144 @@ to preserve the slide animation effect with jQuery
   content: '\f05a';
   margin-right: 5px;
 }
-.widget ul.nav.nav-tabs.fixed {
+.widget .alert.alert-dismissable > .close {
+  right: 0;
+}
+
+.panel {
+  position: relative;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.panel, .panel .panel-heading {
+  border: none;
+}
+.panel p {
+  font-size: 0.9em;
+}
+.panel.panel-default .panel-heading {
+  background-color: #EBEBEB;
+}
+.panel.panel-clean .panel-heading {
+  color: #bdc3c7;
+  border-bottom-color: whitesmoke;
+}
+.panel.panel-clean .panel-body {
+  padding-top: 10px;
+}
+.panel.panel-clean.tabs-fixed .panel-body {
+  border-top: 1px solid #e3e3e3;
+}
+.panel.panel-dark .panel-heading {
+  background-color: #3E5166;
+  color: #ecf0f1;
+}
+.panel.panel-dark.tabs-fixed .nav.nav-tabs > li > a {
+  color: #3E5166;
+}
+.panel.panel-primary {
+  border-color: #4CA5DF;
+}
+.panel.panel-primary .panel-heading {
+  background-color: #4CA5DF;
+  border-bottom-color: #4CA5DF;
+}
+.panel.panel-primary.tabs-fixed .nav.nav-tabs > li > a {
+  color: #4CA5DF;
+}
+.panel.panel-success {
+  border-color: #1abc9c;
+}
+.panel.panel-success .panel-heading {
+  background-color: #1abc9c;
+  border-bottom-color: #1abc9c;
+  color: #fff;
+}
+.panel.panel-success.tabs-fixed .nav.nav-tabs > li > a {
+  color: #1abc9c;
+}
+.panel.panel-info.tabs-fixed .nav.nav-tabs > li > a {
+  color: #87BEDA;
+}
+.panel.panel-warning.tabs-fixed .nav.nav-tabs > li > a {
+  color: #F0CF4A;
+}
+.panel.panel-danger.tabs-fixed .nav.nav-tabs > li > a {
+  color: #E4A0A0;
+}
+.panel.tabs-fixed .panel-heading {
+  padding: 11px;
+}
+.panel.tabs-fixed ul.nav.nav-tabs {
+  border: none;
+  position: absolute;
+  top: 1.11em;
+  right: 1.11em;
+}
+.panel.tabs-fixed ul.nav.nav-tabs li {
+  border: none;
+}
+.panel.tabs-fixed ul.nav.nav-tabs li a {
+  padding: 5px 12px;
+  margin-right: 1px;
+  border: 1px solid transparent;
+  border-top: none;
+  border-radius: 0;
+  background-color: #ebebeb;
+  color: #7f8c8d;
+  font-size: 0.9em;
+}
+.panel.tabs-fixed ul.nav.nav-tabs li a:hover {
+  background-color: #e1e1e1;
+}
+.panel.tabs-fixed ul.nav.nav-tabs li.active > a {
+  background-color: #dedede;
+  border-color: #dedede;
+}
+.panel.tabs-fixed ul.nav.nav-tabs li.active > a:hover {
+  background-color: #dedede;
+}
+.panel.tabs-fixed.panel-dark ul.nav.nav-tabs > li > a, .panel.tabs-fixed.panel-dark ul.nav.nav-tabs > li > a:hover, .panel.tabs-fixed.panel-primary ul.nav.nav-tabs > li > a, .panel.tabs-fixed.panel-primary ul.nav.nav-tabs > li > a:hover, .panel.tabs-fixed.panel-success ul.nav.nav-tabs > li > a, .panel.tabs-fixed.panel-success ul.nav.nav-tabs > li > a:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.panel.tabs-fixed.panel-dark ul.nav.nav-tabs > li.active > a, .panel.tabs-fixed.panel-primary ul.nav.nav-tabs > li.active > a, .panel.tabs-fixed.panel-success ul.nav.nav-tabs > li.active > a {
+  border-color: white;
+}
+.panel.tabs-fixed.panel-dark ul.nav.nav-tabs > li.active > a, .panel.tabs-fixed.panel-dark ul.nav.nav-tabs > li.active > a:hover, .panel.tabs-fixed.panel-primary ul.nav.nav-tabs > li.active > a, .panel.tabs-fixed.panel-primary ul.nav.nav-tabs > li.active > a:hover, .panel.tabs-fixed.panel-success ul.nav.nav-tabs > li.active > a, .panel.tabs-fixed.panel-success ul.nav.nav-tabs > li.active > a:hover {
+  background-color: white;
+}
+.panel.tabs-fixed.panel-info ul.nav.nav-tabs > li > a, .panel.tabs-fixed.panel-info ul.nav.nav-tabs > li > a:hover, .panel.tabs-fixed.panel-warning ul.nav.nav-tabs > li > a, .panel.tabs-fixed.panel-warning ul.nav.nav-tabs > li > a:hover, .panel.tabs-fixed.panel-danger ul.nav.nav-tabs > li > a, .panel.tabs-fixed.panel-danger ul.nav.nav-tabs > li > a:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.panel.tabs-fixed.panel-info ul.nav.nav-tabs > li.active > a, .panel.tabs-fixed.panel-warning ul.nav.nav-tabs > li.active > a, .panel.tabs-fixed.panel-danger ul.nav.nav-tabs > li.active > a {
+  border-color: white;
+}
+.panel.tabs-fixed.panel-info ul.nav.nav-tabs > li.active > a, .panel.tabs-fixed.panel-info ul.nav.nav-tabs > li.active > a:hover, .panel.tabs-fixed.panel-warning ul.nav.nav-tabs > li.active > a, .panel.tabs-fixed.panel-warning ul.nav.nav-tabs > li.active > a:hover, .panel.tabs-fixed.panel-danger ul.nav.nav-tabs > li.active > a, .panel.tabs-fixed.panel-danger ul.nav.nav-tabs > li.active > a:hover {
+  background-color: white;
+}
+.panel.tabs-fixed-slim ul.nav.nav-tabs {
   border: none;
   position: absolute;
   top: 0;
   right: 15px;
 }
-.widget ul.nav.nav-tabs.fixed li {
+.panel.tabs-fixed-slim ul.nav.nav-tabs li {
   border: none;
 }
-.widget ul.nav.nav-tabs.fixed li:first-child > a {
+.panel.tabs-fixed-slim ul.nav.nav-tabs li:first-child > a {
   border-bottom-left-radius: 5px;
 }
-.widget ul.nav.nav-tabs.fixed li:last-child > a {
+.panel.tabs-fixed-slim ul.nav.nav-tabs li:last-child > a {
   border-bottom-right-radius: 5px;
 }
-.widget ul.nav.nav-tabs.fixed li.active > a {
+.panel.tabs-fixed-slim ul.nav.nav-tabs li.active > a {
   background-color: #3498db;
   border-color: #3498db;
 }
-.widget ul.nav.nav-tabs.fixed li.active > a:hover {
+.panel.tabs-fixed-slim ul.nav.nav-tabs li.active > a:hover {
   background-color: #3498db;
 }
-.widget ul.nav.nav-tabs.fixed li a {
+.panel.tabs-fixed-slim ul.nav.nav-tabs li a {
   padding: 5px 12px;
   margin-right: 1px;
   border: 1px solid transparent;
@@ -843,11 +958,32 @@ to preserve the slide animation effect with jQuery
   color: #fff;
   font-size: 0.85em;
 }
-.widget ul.nav.nav-tabs.fixed li a:hover {
+.panel.tabs-fixed-slim ul.nav.nav-tabs li a:hover {
   background-color: #2677ac;
 }
-.widget .alert.alert-dismissable > .close {
-  right: 0;
+.panel.panel-primary.tabs-fixed-slim .nav.nav-tabs > li > a {
+  color: #4CA5DF;
+}
+.panel.panel-success.tabs-fixed-slim .nav.nav-tabs > li > a {
+  color: #1abc9c;
+}
+.panel.panel-info.tabs-fixed-slim .nav.nav-tabs > li > a {
+  color: #87BEDA;
+}
+.panel.panel-warning.tabs-fixed-slim .nav.nav-tabs > li > a {
+  color: #f1c40f;
+}
+.panel.panel-danger.tabs-fixed-slim .nav.nav-tabs > li > a {
+  color: #E4A0A0;
+}
+.panel.tabs-fixed-slim.panel-primary ul.nav.nav-tabs > li > a, .panel.tabs-fixed-slim.panel-primary ul.nav.nav-tabs > li > a:hover, .panel.tabs-fixed-slim.panel-success ul.nav.nav-tabs > li > a, .panel.tabs-fixed-slim.panel-success ul.nav.nav-tabs > li > a:hover, .panel.tabs-fixed-slim.panel-info ul.nav.nav-tabs > li > a, .panel.tabs-fixed-slim.panel-info ul.nav.nav-tabs > li > a:hover, .panel.tabs-fixed-slim.panel-warning ul.nav.nav-tabs > li > a, .panel.tabs-fixed-slim.panel-warning ul.nav.nav-tabs > li > a:hover, .panel.tabs-fixed-slim.panel-danger ul.nav.nav-tabs > li > a, .panel.tabs-fixed-slim.panel-danger ul.nav.nav-tabs > li > a:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.panel.tabs-fixed-slim.panel-primary ul.nav.nav-tabs > li.active > a, .panel.tabs-fixed-slim.panel-success ul.nav.nav-tabs > li.active > a, .panel.tabs-fixed-slim.panel-info ul.nav.nav-tabs > li.active > a, .panel.tabs-fixed-slim.panel-warning ul.nav.nav-tabs > li.active > a, .panel.tabs-fixed-slim.panel-danger ul.nav.nav-tabs > li.active > a {
+  border-color: white;
+}
+.panel.tabs-fixed-slim.panel-primary ul.nav.nav-tabs > li.active > a, .panel.tabs-fixed-slim.panel-primary ul.nav.nav-tabs > li.active > a:hover, .panel.tabs-fixed-slim.panel-success ul.nav.nav-tabs > li.active > a, .panel.tabs-fixed-slim.panel-success ul.nav.nav-tabs > li.active > a:hover, .panel.tabs-fixed-slim.panel-info ul.nav.nav-tabs > li.active > a, .panel.tabs-fixed-slim.panel-info ul.nav.nav-tabs > li.active > a:hover, .panel.tabs-fixed-slim.panel-warning ul.nav.nav-tabs > li.active > a, .panel.tabs-fixed-slim.panel-warning ul.nav.nav-tabs > li.active > a:hover, .panel.tabs-fixed-slim.panel-danger ul.nav.nav-tabs > li.active > a, .panel.tabs-fixed-slim.panel-danger ul.nav.nav-tabs > li.active > a:hover {
+  background-color: white;
 }
 
 .btn {

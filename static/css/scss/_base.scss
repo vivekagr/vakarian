@@ -886,43 +886,9 @@ to preserve the slide animation effect with jQuery
   }
 
   // For fixed nav tabs within a widget
-  ul.nav.nav-tabs.fixed {
-    border: none;
-    position: absolute;
-    top: 0;
-    right: 15px;
 
-    li {
-      border: none;
 
-      &:first-child > a { border-bottom-left-radius: 5px; }
-      &:last-child > a { border-bottom-right-radius: 5px; }
 
-      &.active > a {
-        background-color: #3498db;
-        border-color: #3498db;
-
-        &:hover {
-          background-color: #3498db;
-        }
-      }
-
-      a {
-        padding: 5px 12px;
-        margin-right: 1px;
-        border: 1px solid transparent;
-        border-top: none;
-        border-radius: 0;
-        background-color: #2980b9;
-        color: #fff;
-        font-size: 0.85em;
-
-        &:hover {
-          background-color: darken(#2980b9, 3%);
-        }
-      }
-    }
-  }
 
   // Fixing alert's close icon/btn's position within a widget
   .alert.alert-dismissable > .close { right: 0; }

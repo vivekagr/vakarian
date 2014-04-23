@@ -1,0 +1,559 @@
+{% extends '_base.html' %}
+
+{% set page_title = "Panels" %}
+
+{% block main %}
+
+    <div class="row">
+
+        {{ c('Clean Panel') }}
+        <div class="col-md-6 col-lg-4">
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Clean Panel</div></div>
+
+                <div class="panel-body">
+                    <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+                    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                </div>
+            </div>
+        </div>{{ c('Clean Panel Ends') }}
+
+        {{ c('Dark Panel') }}
+        <div class="col-md-6 col-lg-4">
+            <div class="panel panel-dark">
+                <div class="panel-heading"><div class="panel-title">Dark Panel</div></div>
+
+                <div class="panel-body">
+                    <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+                    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                </div>
+            </div>
+        </div>{{ c('Dark Panel Ends') }}
+
+        {{ c('Default Panel') }}
+        <div class="col-md-6 col-lg-4">
+            <div class="panel panel-default">
+                <div class="panel-heading"><div class="panel-title">Default Panel</div> </div>
+
+                <div class="panel-body">
+                    <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+                    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                </div>
+            </div>
+        </div>{{ c('Default Panel Ends') }}
+
+        {{ c('Primary Panel') }}
+        <div class="col-md-6 col-lg-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading"><div class="panel-title">Primary Panel</div> </div>
+
+                <div class="panel-body">
+                    <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+                    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                </div>
+            </div>
+        </div>{{ c('Primary Panel Ends') }}
+
+        {{ c('Success Panel') }}
+        <div class="col-md-6 col-lg-4">
+            <div class="panel panel-success">
+                <div class="panel-heading"><div class="panel-title">Success Panel</div> </div>
+
+                <div class="panel-body">
+                    <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+                    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                </div>
+            </div>
+        </div>{{ c('Success Panel Ends') }}
+
+        {{ c('Info Panel') }}
+        <div class="col-md-6 col-lg-4">
+            <div class="panel panel-info">
+                <div class="panel-heading"><div class="panel-title">Info Panel</div> </div>
+
+                <div class="panel-body">
+                    <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+                    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                </div>
+            </div>
+        </div>{{ c('Info Panel Ends') }}
+
+        {{ c('Warning Panel') }}
+        <div class="col-md-6 col-lg-4">
+            <div class="panel panel-warning">
+                <div class="panel-heading"><div class="panel-title">Warning Panel</div> </div>
+
+                <div class="panel-body">
+                    <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+                    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                </div>
+            </div>
+        </div>{{ c('Warning Panel Ends') }}
+
+        {{ c('Danger Panel') }}
+        <div class="col-md-6 col-lg-4">
+            <div class="panel panel-danger">
+                <div class="panel-heading"><div class="panel-title">Danger Panel</div> </div>
+
+                <div class="panel-body">
+                    <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+                    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                </div>
+            </div>
+        </div>{{ c('Danger Panel Ends') }}
+
+        <div class="clearfix"></div>
+
+
+        {{ cu('panels with tabs start') }}
+
+        {{ c('Clean Panel With Tabs') }}
+        <div class="col-md-6">
+            <div class="panel panel-clean tabs-fixed">
+                <div class="panel-heading"><div class="panel-title">With Tabs</div></div>
+
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#home1" data-toggle="tab">Home</a></li>
+                    <li><a href="#profile1" data-toggle="tab">Profile</a></li>
+                    <li><a href="#messages1" data-toggle="tab">Messages</a></li>
+                </ul>
+
+                <div class="panel-body">
+                    <div class="tab-content">
+                      <div class="tab-pane active" id="home1">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel purus eget orci scelerisque euismod non ut ipsum. Vivamus pellentesque auctor eros sed varius. Donec elementum ligula nec tempus elementum. In bibendum hendrerit porttitor. Nulla at nisl et ligula luctus semper quis a nisl.</p>
+                          <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                      </div>
+                      <div class="tab-pane" id="profile1">
+                          <p>Donec et neque ut nisl convallis faucibus rutrum sed urna. Phasellus tincidunt nisl justo, sed vestibulum sapien varius a. Pellentesque scelerisque posuere eleifend. Praesent eget porttitor metus. Sed hendrerit hendrerit quam vitae cursus.</p>
+                          <p>Quisque consequat vitae justo ac ornare. Cras facilisis tellus sed risus eleifend, ac iaculis mi commodo. Praesent vel quam in tellus viverra tincidunt.</p>
+                      </div>
+                      <div class="tab-pane" id="messages1">
+                          <p>Fusce in nibh lorem. Integer scelerisque feugiat pulvinar. Pellentesque rutrum metus lectus, quis porta lorem lobortis sit amet. Praesent in condimentum purus. In hac habitasse platea dictumst.</p>
+                          <p>Nulla facilisis tempus mi, nec dignissim tortor posuere eget. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut ipsum odio, eleifend ultricies ante pharetra, luctus sagittis purus. Donec vestibulum condimentum lectus volutpat congue. Sed egestas ante eget pellentesque euismod. Nullam iaculis vulputate volutpat.</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>{{ c('Clean Panel With Tabs End') }}
+
+        {{ c('Clean Panel With Slim Tabs') }}
+        <div class="col-md-6">
+            <div class="panel panel-clean tabs-fixed-slim">
+                <div class="panel-heading"><div class="panel-title">With Slim Tabs</div></div>
+
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#home1s" data-toggle="tab">Home</a></li>
+                    <li><a href="#profile1s" data-toggle="tab">Profile</a></li>
+                    <li><a href="#messages1s" data-toggle="tab">Messages</a></li>
+                </ul>
+
+                <div class="panel-body">
+                    <div class="tab-content">
+                      <div class="tab-pane active" id="home1s">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel purus eget orci scelerisque euismod non ut ipsum. Vivamus pellentesque auctor eros sed varius. Donec elementum ligula nec tempus elementum. In bibendum hendrerit porttitor. Nulla at nisl et ligula luctus semper quis a nisl.</p>
+                          <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                      </div>
+                      <div class="tab-pane" id="profile1s">
+                          <p>Donec et neque ut nisl convallis faucibus rutrum sed urna. Phasellus tincidunt nisl justo, sed vestibulum sapien varius a. Pellentesque scelerisque posuere eleifend. Praesent eget porttitor metus. Sed hendrerit hendrerit quam vitae cursus.</p>
+                          <p>Quisque consequat vitae justo ac ornare. Cras facilisis tellus sed risus eleifend, ac iaculis mi commodo. Praesent vel quam in tellus viverra tincidunt.</p>
+                      </div>
+                      <div class="tab-pane" id="messages1s">
+                          <p>Fusce in nibh lorem. Integer scelerisque feugiat pulvinar. Pellentesque rutrum metus lectus, quis porta lorem lobortis sit amet. Praesent in condimentum purus. In hac habitasse platea dictumst.</p>
+                          <p>Nulla facilisis tempus mi, nec dignissim tortor posuere eget. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut ipsum odio, eleifend ultricies ante pharetra, luctus sagittis purus. Donec vestibulum condimentum lectus volutpat congue. Sed egestas ante eget pellentesque euismod. Nullam iaculis vulputate volutpat.</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>{{ c('Clean Panel With Slim Tabs End') }}
+
+        <div class="clearfix"></div>
+
+        {{ c('Dark Panel With Tabs') }}
+        <div class="col-md-6">
+            <div class="panel panel-dark tabs-fixed">
+                <div class="panel-heading"><div class="panel-title">Dark Panel With Tabs</div></div>
+
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#home2" data-toggle="tab">Home</a></li>
+                    <li><a href="#profile2" data-toggle="tab">Profile</a></li>
+                    <li><a href="#messages2" data-toggle="tab">Messages</a></li>
+                </ul>
+
+                <div class="panel-body">
+                    <div class="tab-content">
+                      <div class="tab-pane active" id="home2">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel purus eget orci scelerisque euismod non ut ipsum. Vivamus pellentesque auctor eros sed varius. Donec elementum ligula nec tempus elementum. In bibendum hendrerit porttitor. Nulla at nisl et ligula luctus semper quis a nisl.</p>
+                          <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                      </div>
+                      <div class="tab-pane" id="profile2">
+                          <p>Donec et neque ut nisl convallis faucibus rutrum sed urna. Phasellus tincidunt nisl justo, sed vestibulum sapien varius a. Pellentesque scelerisque posuere eleifend. Praesent eget porttitor metus. Sed hendrerit hendrerit quam vitae cursus.</p>
+                          <p>Quisque consequat vitae justo ac ornare. Cras facilisis tellus sed risus eleifend, ac iaculis mi commodo. Praesent vel quam in tellus viverra tincidunt.</p>
+                      </div>
+                      <div class="tab-pane" id="messages2">
+                          <p>Fusce in nibh lorem. Integer scelerisque feugiat pulvinar. Pellentesque rutrum metus lectus, quis porta lorem lobortis sit amet. Praesent in condimentum purus. In hac habitasse platea dictumst.</p>
+                          <p>Nulla facilisis tempus mi, nec dignissim tortor posuere eget. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut ipsum odio, eleifend ultricies ante pharetra, luctus sagittis purus. Donec vestibulum condimentum lectus volutpat congue. Sed egestas ante eget pellentesque euismod. Nullam iaculis vulputate volutpat.</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>{{ c('Dark Panel With Tabs End') }}
+
+        {{ c('Dark Panel With Slim Tabs') }}
+        <div class="col-md-6">
+            <div class="panel panel-dark tabs-fixed-slim">
+                <div class="panel-heading"><div class="panel-title">Dark Panel With Tabs</div></div>
+
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#home2s" data-toggle="tab">Home</a></li>
+                    <li><a href="#profile2s" data-toggle="tab">Profile</a></li>
+                    <li><a href="#messages2s" data-toggle="tab">Messages</a></li>
+                </ul>
+
+                <div class="panel-body">
+                    <div class="tab-content">
+                      <div class="tab-pane active" id="home2s">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel purus eget orci scelerisque euismod non ut ipsum. Vivamus pellentesque auctor eros sed varius. Donec elementum ligula nec tempus elementum. In bibendum hendrerit porttitor. Nulla at nisl et ligula luctus semper quis a nisl.</p>
+                          <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                      </div>
+                      <div class="tab-pane" id="profile2s">
+                          <p>Donec et neque ut nisl convallis faucibus rutrum sed urna. Phasellus tincidunt nisl justo, sed vestibulum sapien varius a. Pellentesque scelerisque posuere eleifend. Praesent eget porttitor metus. Sed hendrerit hendrerit quam vitae cursus.</p>
+                          <p>Quisque consequat vitae justo ac ornare. Cras facilisis tellus sed risus eleifend, ac iaculis mi commodo. Praesent vel quam in tellus viverra tincidunt.</p>
+                      </div>
+                      <div class="tab-pane" id="messages2s">
+                          <p>Fusce in nibh lorem. Integer scelerisque feugiat pulvinar. Pellentesque rutrum metus lectus, quis porta lorem lobortis sit amet. Praesent in condimentum purus. In hac habitasse platea dictumst.</p>
+                          <p>Nulla facilisis tempus mi, nec dignissim tortor posuere eget. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut ipsum odio, eleifend ultricies ante pharetra, luctus sagittis purus. Donec vestibulum condimentum lectus volutpat congue. Sed egestas ante eget pellentesque euismod. Nullam iaculis vulputate volutpat.</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>{{ c('Dark Panel With Slim Tabs End') }}
+
+        <div class="clearfix"></div>
+
+        {{ c('Primary Panel With Tabs') }}
+        <div class="col-md-6">
+            <div class="panel panel-primary tabs-fixed">
+                <div class="panel-heading"><div class="panel-title">Primary Panel With Tabs</div></div>
+
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#home3" data-toggle="tab">Home</a></li>
+                    <li><a href="#profile3" data-toggle="tab">Profile</a></li>
+                    <li><a href="#messages3" data-toggle="tab">Messages</a></li>
+                </ul>
+
+                <div class="panel-body">
+                    <div class="tab-content">
+                      <div class="tab-pane active" id="home3">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel purus eget orci scelerisque euismod non ut ipsum. Vivamus pellentesque auctor eros sed varius. Donec elementum ligula nec tempus elementum. In bibendum hendrerit porttitor. Nulla at nisl et ligula luctus semper quis a nisl.</p>
+                          <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                      </div>
+                      <div class="tab-pane" id="profile3">
+                          <p>Donec et neque ut nisl convallis faucibus rutrum sed urna. Phasellus tincidunt nisl justo, sed vestibulum sapien varius a. Pellentesque scelerisque posuere eleifend. Praesent eget porttitor metus. Sed hendrerit hendrerit quam vitae cursus.</p>
+                          <p>Quisque consequat vitae justo ac ornare. Cras facilisis tellus sed risus eleifend, ac iaculis mi commodo. Praesent vel quam in tellus viverra tincidunt.</p>
+                      </div>
+                      <div class="tab-pane" id="messages3">
+                          <p>Fusce in nibh lorem. Integer scelerisque feugiat pulvinar. Pellentesque rutrum metus lectus, quis porta lorem lobortis sit amet. Praesent in condimentum purus. In hac habitasse platea dictumst.</p>
+                          <p>Nulla facilisis tempus mi, nec dignissim tortor posuere eget. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut ipsum odio, eleifend ultricies ante pharetra, luctus sagittis purus. Donec vestibulum condimentum lectus volutpat congue. Sed egestas ante eget pellentesque euismod. Nullam iaculis vulputate volutpat.</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>{{ c('Primary Panel With Tabs End') }}
+
+        {{ c('Primary Panel With Slim Tabs') }}
+        <div class="col-md-6">
+            <div class="panel panel-primary tabs-fixed-slim">
+                <div class="panel-heading"><div class="panel-title">Primary Panel With Tabs</div></div>
+
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#home3s" data-toggle="tab">Home</a></li>
+                    <li><a href="#profile3s" data-toggle="tab">Profile</a></li>
+                    <li><a href="#messages3s" data-toggle="tab">Messages</a></li>
+                </ul>
+
+                <div class="panel-body">
+                    <div class="tab-content">
+                      <div class="tab-pane active" id="home3s">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel purus eget orci scelerisque euismod non ut ipsum. Vivamus pellentesque auctor eros sed varius. Donec elementum ligula nec tempus elementum. In bibendum hendrerit porttitor. Nulla at nisl et ligula luctus semper quis a nisl.</p>
+                          <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                      </div>
+                      <div class="tab-pane" id="profile3s">
+                          <p>Donec et neque ut nisl convallis faucibus rutrum sed urna. Phasellus tincidunt nisl justo, sed vestibulum sapien varius a. Pellentesque scelerisque posuere eleifend. Praesent eget porttitor metus. Sed hendrerit hendrerit quam vitae cursus.</p>
+                          <p>Quisque consequat vitae justo ac ornare. Cras facilisis tellus sed risus eleifend, ac iaculis mi commodo. Praesent vel quam in tellus viverra tincidunt.</p>
+                      </div>
+                      <div class="tab-pane" id="messages3s">
+                          <p>Fusce in nibh lorem. Integer scelerisque feugiat pulvinar. Pellentesque rutrum metus lectus, quis porta lorem lobortis sit amet. Praesent in condimentum purus. In hac habitasse platea dictumst.</p>
+                          <p>Nulla facilisis tempus mi, nec dignissim tortor posuere eget. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut ipsum odio, eleifend ultricies ante pharetra, luctus sagittis purus. Donec vestibulum condimentum lectus volutpat congue. Sed egestas ante eget pellentesque euismod. Nullam iaculis vulputate volutpat.</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>{{ c('Primary Panel With Slim Tabs End') }}
+
+        <div class="clearfix"></div>
+
+        {{ c('Success Panel With Tabs') }}
+        <div class="col-md-6">
+            <div class="panel panel-success tabs-fixed">
+                <div class="panel-heading"><div class="panel-title">Success Panel With Tabs</div></div>
+
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#home4" data-toggle="tab">Home</a></li>
+                    <li><a href="#profile4" data-toggle="tab">Profile</a></li>
+                    <li><a href="#messages4" data-toggle="tab">Messages</a></li>
+                </ul>
+
+                <div class="panel-body">
+                    <div class="tab-content">
+                      <div class="tab-pane active" id="home4">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel purus eget orci scelerisque euismod non ut ipsum. Vivamus pellentesque auctor eros sed varius. Donec elementum ligula nec tempus elementum. In bibendum hendrerit porttitor. Nulla at nisl et ligula luctus semper quis a nisl.</p>
+                          <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                      </div>
+                      <div class="tab-pane" id="profile4">
+                          <p>Donec et neque ut nisl convallis faucibus rutrum sed urna. Phasellus tincidunt nisl justo, sed vestibulum sapien varius a. Pellentesque scelerisque posuere eleifend. Praesent eget porttitor metus. Sed hendrerit hendrerit quam vitae cursus.</p>
+                          <p>Quisque consequat vitae justo ac ornare. Cras facilisis tellus sed risus eleifend, ac iaculis mi commodo. Praesent vel quam in tellus viverra tincidunt.</p>
+                      </div>
+                      <div class="tab-pane" id="messages4">
+                          <p>Fusce in nibh lorem. Integer scelerisque feugiat pulvinar. Pellentesque rutrum metus lectus, quis porta lorem lobortis sit amet. Praesent in condimentum purus. In hac habitasse platea dictumst.</p>
+                          <p>Nulla facilisis tempus mi, nec dignissim tortor posuere eget. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut ipsum odio, eleifend ultricies ante pharetra, luctus sagittis purus. Donec vestibulum condimentum lectus volutpat congue. Sed egestas ante eget pellentesque euismod. Nullam iaculis vulputate volutpat.</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>{{ c('Success Panel With Tabs End') }}
+
+        {{ c('Success Panel With Slim Tabs') }}
+        <div class="col-md-6">
+            <div class="panel panel-success tabs-fixed-slim">
+                <div class="panel-heading"><div class="panel-title">Success Panel With Tabs</div></div>
+
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#home4s" data-toggle="tab">Home</a></li>
+                    <li><a href="#profile4s" data-toggle="tab">Profile</a></li>
+                    <li><a href="#messages4s" data-toggle="tab">Messages</a></li>
+                </ul>
+
+                <div class="panel-body">
+                    <div class="tab-content">
+                      <div class="tab-pane active" id="home4s">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel purus eget orci scelerisque euismod non ut ipsum. Vivamus pellentesque auctor eros sed varius. Donec elementum ligula nec tempus elementum. In bibendum hendrerit porttitor. Nulla at nisl et ligula luctus semper quis a nisl.</p>
+                          <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                      </div>
+                      <div class="tab-pane" id="profile4s">
+                          <p>Donec et neque ut nisl convallis faucibus rutrum sed urna. Phasellus tincidunt nisl justo, sed vestibulum sapien varius a. Pellentesque scelerisque posuere eleifend. Praesent eget porttitor metus. Sed hendrerit hendrerit quam vitae cursus.</p>
+                          <p>Quisque consequat vitae justo ac ornare. Cras facilisis tellus sed risus eleifend, ac iaculis mi commodo. Praesent vel quam in tellus viverra tincidunt.</p>
+                      </div>
+                      <div class="tab-pane" id="messages4s">
+                          <p>Fusce in nibh lorem. Integer scelerisque feugiat pulvinar. Pellentesque rutrum metus lectus, quis porta lorem lobortis sit amet. Praesent in condimentum purus. In hac habitasse platea dictumst.</p>
+                          <p>Nulla facilisis tempus mi, nec dignissim tortor posuere eget. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut ipsum odio, eleifend ultricies ante pharetra, luctus sagittis purus. Donec vestibulum condimentum lectus volutpat congue. Sed egestas ante eget pellentesque euismod. Nullam iaculis vulputate volutpat.</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{ c('Success Panel With Slim Tabs End') }}
+
+        <div class="clearfix"></div>
+
+        {{ c('Info Panel With Tabs') }}
+        <div class="col-md-6">
+            <div class="panel panel-info tabs-fixed">
+                <div class="panel-heading"><div class="panel-title">Info Panel With Tabs</div></div>
+
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#home5" data-toggle="tab">Home</a></li>
+                    <li><a href="#profile5" data-toggle="tab">Profile</a></li>
+                    <li><a href="#messages5" data-toggle="tab">Messages</a></li>
+                </ul>
+
+                <div class="panel-body">
+                    <div class="tab-content">
+                      <div class="tab-pane active" id="home5">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel purus eget orci scelerisque euismod non ut ipsum. Vivamus pellentesque auctor eros sed varius. Donec elementum ligula nec tempus elementum. In bibendum hendrerit porttitor. Nulla at nisl et ligula luctus semper quis a nisl.</p>
+                          <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                      </div>
+                      <div class="tab-pane" id="profile5">
+                          <p>Donec et neque ut nisl convallis faucibus rutrum sed urna. Phasellus tincidunt nisl justo, sed vestibulum sapien varius a. Pellentesque scelerisque posuere eleifend. Praesent eget porttitor metus. Sed hendrerit hendrerit quam vitae cursus.</p>
+                          <p>Quisque consequat vitae justo ac ornare. Cras facilisis tellus sed risus eleifend, ac iaculis mi commodo. Praesent vel quam in tellus viverra tincidunt.</p>
+                      </div>
+                      <div class="tab-pane" id="messages5">
+                          <p>Fusce in nibh lorem. Integer scelerisque feugiat pulvinar. Pellentesque rutrum metus lectus, quis porta lorem lobortis sit amet. Praesent in condimentum purus. In hac habitasse platea dictumst.</p>
+                          <p>Nulla facilisis tempus mi, nec dignissim tortor posuere eget. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut ipsum odio, eleifend ultricies ante pharetra, luctus sagittis purus. Donec vestibulum condimentum lectus volutpat congue. Sed egestas ante eget pellentesque euismod. Nullam iaculis vulputate volutpat.</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>{{ c('Info Panel With Tabs End') }}
+
+        {{ c('Info Panel With Slim Tabs') }}
+        <div class="col-md-6">
+            <div class="panel panel-info tabs-fixed-slim">
+                <div class="panel-heading"><div class="panel-title">Info Panel With Tabs</div></div>
+
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#home5s" data-toggle="tab">Home</a></li>
+                    <li><a href="#profile5s" data-toggle="tab">Profile</a></li>
+                    <li><a href="#messages5s" data-toggle="tab">Messages</a></li>
+                </ul>
+
+                <div class="panel-body">
+                    <div class="tab-content">
+                      <div class="tab-pane active" id="home5s">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel purus eget orci scelerisque euismod non ut ipsum. Vivamus pellentesque auctor eros sed varius. Donec elementum ligula nec tempus elementum. In bibendum hendrerit porttitor. Nulla at nisl et ligula luctus semper quis a nisl.</p>
+                          <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                      </div>
+                      <div class="tab-pane" id="profile5s">
+                          <p>Donec et neque ut nisl convallis faucibus rutrum sed urna. Phasellus tincidunt nisl justo, sed vestibulum sapien varius a. Pellentesque scelerisque posuere eleifend. Praesent eget porttitor metus. Sed hendrerit hendrerit quam vitae cursus.</p>
+                          <p>Quisque consequat vitae justo ac ornare. Cras facilisis tellus sed risus eleifend, ac iaculis mi commodo. Praesent vel quam in tellus viverra tincidunt.</p>
+                      </div>
+                      <div class="tab-pane" id="messages5s">
+                          <p>Fusce in nibh lorem. Integer scelerisque feugiat pulvinar. Pellentesque rutrum metus lectus, quis porta lorem lobortis sit amet. Praesent in condimentum purus. In hac habitasse platea dictumst.</p>
+                          <p>Nulla facilisis tempus mi, nec dignissim tortor posuere eget. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut ipsum odio, eleifend ultricies ante pharetra, luctus sagittis purus. Donec vestibulum condimentum lectus volutpat congue. Sed egestas ante eget pellentesque euismod. Nullam iaculis vulputate volutpat.</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>{{ c('Info Panel With Slim Tabs End') }}
+
+        <div class="clearfix"></div>
+
+        {{ c('Warning Panel With Tabs') }}
+        <div class="col-md-6">
+            <div class="panel panel-warning tabs-fixed">
+                <div class="panel-heading"><div class="panel-title">Warning Panel With Tabs</div></div>
+
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#home6" data-toggle="tab">Home</a></li>
+                    <li><a href="#profile6" data-toggle="tab">Profile</a></li>
+                    <li><a href="#messages6" data-toggle="tab">Messages</a></li>
+                </ul>
+
+                <div class="panel-body">
+                    <div class="tab-content">
+                      <div class="tab-pane active" id="home6">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel purus eget orci scelerisque euismod non ut ipsum. Vivamus pellentesque auctor eros sed varius. Donec elementum ligula nec tempus elementum. In bibendum hendrerit porttitor. Nulla at nisl et ligula luctus semper quis a nisl.</p>
+                          <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                      </div>
+                      <div class="tab-pane" id="profile6">
+                          <p>Donec et neque ut nisl convallis faucibus rutrum sed urna. Phasellus tincidunt nisl justo, sed vestibulum sapien varius a. Pellentesque scelerisque posuere eleifend. Praesent eget porttitor metus. Sed hendrerit hendrerit quam vitae cursus.</p>
+                          <p>Quisque consequat vitae justo ac ornare. Cras facilisis tellus sed risus eleifend, ac iaculis mi commodo. Praesent vel quam in tellus viverra tincidunt.</p>
+                      </div>
+                      <div class="tab-pane" id="messages6">
+                          <p>Fusce in nibh lorem. Integer scelerisque feugiat pulvinar. Pellentesque rutrum metus lectus, quis porta lorem lobortis sit amet. Praesent in condimentum purus. In hac habitasse platea dictumst.</p>
+                          <p>Nulla facilisis tempus mi, nec dignissim tortor posuere eget. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut ipsum odio, eleifend ultricies ante pharetra, luctus sagittis purus. Donec vestibulum condimentum lectus volutpat congue. Sed egestas ante eget pellentesque euismod. Nullam iaculis vulputate volutpat.</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>{{ c('Warning Panel With Tabs End') }}
+
+        {{ c('Warning Panel With Slim Tabs') }}
+        <div class="col-md-6">
+            <div class="panel panel-warning tabs-fixed-slim">
+                <div class="panel-heading"><div class="panel-title">With Slim Tabs</div></div>
+
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#home6s" data-toggle="tab">Home</a></li>
+                    <li><a href="#profile6s" data-toggle="tab">Profile</a></li>
+                    <li><a href="#messages6s" data-toggle="tab">Messages</a></li>
+                </ul>
+
+                <div class="panel-body">
+                    <div class="tab-content">
+                      <div class="tab-pane active" id="home6s">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel purus eget orci scelerisque euismod non ut ipsum. Vivamus pellentesque auctor eros sed varius. Donec elementum ligula nec tempus elementum. In bibendum hendrerit porttitor. Nulla at nisl et ligula luctus semper quis a nisl.</p>
+                          <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                      </div>
+                      <div class="tab-pane" id="profile6s">
+                          <p>Donec et neque ut nisl convallis faucibus rutrum sed urna. Phasellus tincidunt nisl justo, sed vestibulum sapien varius a. Pellentesque scelerisque posuere eleifend. Praesent eget porttitor metus. Sed hendrerit hendrerit quam vitae cursus.</p>
+                          <p>Quisque consequat vitae justo ac ornare. Cras facilisis tellus sed risus eleifend, ac iaculis mi commodo. Praesent vel quam in tellus viverra tincidunt.</p>
+                      </div>
+                      <div class="tab-pane" id="messages6s">
+                          <p>Fusce in nibh lorem. Integer scelerisque feugiat pulvinar. Pellentesque rutrum metus lectus, quis porta lorem lobortis sit amet. Praesent in condimentum purus. In hac habitasse platea dictumst.</p>
+                          <p>Nulla facilisis tempus mi, nec dignissim tortor posuere eget. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut ipsum odio, eleifend ultricies ante pharetra, luctus sagittis purus. Donec vestibulum condimentum lectus volutpat congue. Sed egestas ante eget pellentesque euismod. Nullam iaculis vulputate volutpat.</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>{{ c('Warning Panel With Slim Tabs End') }}
+
+        <div class="clearfix"></div>
+
+        {{ c('Danger Panel With Tabs') }}
+        <div class="col-md-6">
+            <div class="panel panel-danger tabs-fixed">
+                <div class="panel-heading"><div class="panel-title">Warning Panel With Tabs</div></div>
+
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#home7" data-toggle="tab">Home</a></li>
+                    <li><a href="#profile7" data-toggle="tab">Profile</a></li>
+                    <li><a href="#messages7" data-toggle="tab">Messages</a></li>
+                </ul>
+
+                <div class="panel-body">
+                    <div class="tab-content">
+                      <div class="tab-pane active" id="home7">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel purus eget orci scelerisque euismod non ut ipsum. Vivamus pellentesque auctor eros sed varius. Donec elementum ligula nec tempus elementum. In bibendum hendrerit porttitor. Nulla at nisl et ligula luctus semper quis a nisl.</p>
+                          <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                      </div>
+                      <div class="tab-pane" id="profile7">
+                          <p>Donec et neque ut nisl convallis faucibus rutrum sed urna. Phasellus tincidunt nisl justo, sed vestibulum sapien varius a. Pellentesque scelerisque posuere eleifend. Praesent eget porttitor metus. Sed hendrerit hendrerit quam vitae cursus.</p>
+                          <p>Quisque consequat vitae justo ac ornare. Cras facilisis tellus sed risus eleifend, ac iaculis mi commodo. Praesent vel quam in tellus viverra tincidunt.</p>
+                      </div>
+                      <div class="tab-pane" id="messages7">
+                          <p>Fusce in nibh lorem. Integer scelerisque feugiat pulvinar. Pellentesque rutrum metus lectus, quis porta lorem lobortis sit amet. Praesent in condimentum purus. In hac habitasse platea dictumst.</p>
+                          <p>Nulla facilisis tempus mi, nec dignissim tortor posuere eget. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut ipsum odio, eleifend ultricies ante pharetra, luctus sagittis purus. Donec vestibulum condimentum lectus volutpat congue. Sed egestas ante eget pellentesque euismod. Nullam iaculis vulputate volutpat.</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>{{ c('Danger Panel With Tabs End') }}
+
+        {{ c('Danger Panel With Slim Tabs') }}
+        <div class="col-md-6">
+            <div class="panel panel-danger tabs-fixed-slim">
+                <div class="panel-heading"><div class="panel-title">With Slim Tabs</div></div>
+
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#home7s" data-toggle="tab">Home</a></li>
+                    <li><a href="#profile7s" data-toggle="tab">Profile</a></li>
+                    <li><a href="#messages7s" data-toggle="tab">Messages</a></li>
+                </ul>
+
+                <div class="panel-body">
+                    <div class="tab-content">
+                      <div class="tab-pane active" id="home7s">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel purus eget orci scelerisque euismod non ut ipsum. Vivamus pellentesque auctor eros sed varius. Donec elementum ligula nec tempus elementum. In bibendum hendrerit porttitor. Nulla at nisl et ligula luctus semper quis a nisl.</p>
+                          <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                      </div>
+                      <div class="tab-pane" id="profile7s">
+                          <p>Donec et neque ut nisl convallis faucibus rutrum sed urna. Phasellus tincidunt nisl justo, sed vestibulum sapien varius a. Pellentesque scelerisque posuere eleifend. Praesent eget porttitor metus. Sed hendrerit hendrerit quam vitae cursus.</p>
+                          <p>Quisque consequat vitae justo ac ornare. Cras facilisis tellus sed risus eleifend, ac iaculis mi commodo. Praesent vel quam in tellus viverra tincidunt.</p>
+                      </div>
+                      <div class="tab-pane" id="messages7s">
+                          <p>Fusce in nibh lorem. Integer scelerisque feugiat pulvinar. Pellentesque rutrum metus lectus, quis porta lorem lobortis sit amet. Praesent in condimentum purus. In hac habitasse platea dictumst.</p>
+                          <p>Nulla facilisis tempus mi, nec dignissim tortor posuere eget. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut ipsum odio, eleifend ultricies ante pharetra, luctus sagittis purus. Donec vestibulum condimentum lectus volutpat congue. Sed egestas ante eget pellentesque euismod. Nullam iaculis vulputate volutpat.</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>{{ c('Danger Panel With Slim Tabs End') }}
+
+        {{ cu('panels with tabs end') }}
+
+    </div>
+
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(function() {
+            // Initializing the tooltips
+            $('.tooltip-btn').tooltip();
+
+            // Initializing the popovers
+            $('.popover-btn').popover();
+        });
+    </script>
+{% endblock %}

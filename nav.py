@@ -6,6 +6,7 @@ nav_menu = [
         { 'title': 'Buttons', 'template': 'buttons.html' },
         { 'title': 'Grid', 'template': 'grid.html' },
         { 'title': 'Components', 'template': 'components.html' },
+        { 'title': 'Panels', 'template': 'panels.html' },
         { 'title': 'Alerts', 'template': 'alerts.html' },
         { 'title': 'Progress Bars', 'template': 'progress-bars.html' },
         { 'title': 'Widgets', 'template': '#' },

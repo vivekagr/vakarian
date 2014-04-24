@@ -10,12 +10,11 @@
 {% block main %}
     <div class="row">
 
-        {{ c('Breadcrumbs Starts') }}
+        {{ s('Breadcrumbs') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Breadcrumb</h4>
-
-                <div class="widget-content">
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Breadcrumb</div></div>
+                <div class="panel-body">
                     <ul class="breadcrumb-v">
                         <li class="highlight"><a href="#">You are here</a></li>
                         <li><a href="#">UI Elements</a></li>
@@ -33,15 +32,13 @@
                     </div>
                 </div>
             </div>
-        </div>
-        {{ c('Breadcrumbs Ends') }}
+        </div>{{ e('Breadcrumbs') }}
 
-        {{ c('Plain Breadcrumbs Starts') }}
+        {{ s('Plain Breadcrumbs') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Plain Breadcrumb</h4>
-
-                <div class="widget-content">
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Plain Breadcrumb</div></div>
+                <div class="panel-body">
                     <ul class="breadcrumb breadcrumb-plain">
                         <li><a href="#">UI Elements</a></li>
                         <li class="active">Typography</li>
@@ -57,15 +54,13 @@
                     </div>
                 </div>
             </div>
-        </div>
-        {{ c('Plain Breadcrumbs Ends') }}
+        </div>{{ e('Plain Breadcrumbs') }}
 
-        {{ c('Pagination Starts') }}
+        {{ s('Pagination') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Pagination</h4>
-
-                <div class="widget-content">
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Pagination</div></div>
+                <div class="panel-body">
                     <ul class="pagination">
                         <li class="disabled"><a href="#"><i class="fa fa-angle-left"></i></a></li>
                         <li class="active"><a href="#">1</a></li>
@@ -99,13 +94,13 @@
                 </div>
             </div>
         </div>
-        {{ c('Pagination Ends') }}
+        {{ e('Pagination') }}
 
-        {{ c('Pagination Sizes Starts') }}
+        {{ s('Pagination Sizes') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Pagination Sizes</h4>
-                <div class="widget-content">
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Pagination Sizes</div></div>
+                <div class="panel-body">
                     <ul class="pagination pagination-sm">
                         <li class="disabled"><a href="#"><i class="fa fa-angle-left"></i></a></li>
                         <li class="active"><a href="#">1</a></li>
@@ -145,13 +140,13 @@
                 </div>
             </div>
         </div>
-        {{ c('Pagination Sizes Ends') }}
+        {{ e('Pagination Sizes') }}
 
-        {{ c('Pager Starts') }}
+        {{ s('Pager') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Pager</h4>
-                <div class="widget-content">
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Pager</div></div>
+                <div class="panel-body">
                     <ul class="pager">
                         <li><a href="#">Previous</a></li>
                         <li><a href="#">Next</a></li>
@@ -169,13 +164,13 @@
                 </div>
             </div>
         </div>
-        {{ c('Pager Ends') }}
+        {{ e('Pager') }}
 
-        {{ c('Pager Alignment and State Widget Starts') }}
+        {{ s('Pager Alignment and State') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Pager Alignment and State</h4>
-                <div class="widget-content">
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Pager Alignment and State</div></div>
+                <div class="panel-body">
                     <ul class="pager">
                         <li class="previous disabled"><a href="#">&larr; Older</a></li>
                         <li class="next"><a href="#">Newer &rarr;</a></li>
@@ -193,17 +188,15 @@
                 </div>
             </div>
         </div>
-        {{ c('Pager Alignment and State Widget Ends') }}
+        {{ e('Pager Alignment and State') }}
 
-        {{ c('Adding clearfix to prevent columns from mis-aligning') }}
         <div class="clearfix"></div>
 
-        {{ c('Labels Starts') }}
+        {{ s('Labels') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Labels</h4>
-
-                <div class="widget-content">
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Labels</div></div>
+                <div class="panel-body">
                     <h1>Example heading <span class="label label-default">New</span></h1>
                     <h2>Example heading <span class="label label-default">New</span></h2>
                     <h3>Example heading <span class="label label-default">New</span></h3>
@@ -218,14 +211,13 @@
                 </div>
             </div>
         </div>
-        {{ c('Labels Ends') }}
+        {{ e('Labels') }}
 
-        {{ c('Label Colors Widget Starts') }}
+        {{ s('Label Colors') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Label Colors</h4>
-
-                <div class="widget-content">
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Label Colors</div></div>
+                <div class="panel-body">
                     <span class="label label-default">Default</span>
                     <span class="label label-primary">Primary</span>
                     <span class="label label-success">Success</span>
@@ -245,16 +237,14 @@
                     </div>
                 </div>
             </div>
-        </div>
-        {{ c('Label Colors Widget Ends') }}
+        </div>{{ e('Label Colors') }}
 
     </div>
 
-    {{ c('Badge Widget Starts') }}
-    <div class="widget">
-        <h4 class="widget-title">Badge</h4>
-
-        <div class="widget-content">
+    {{ s('Badge') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">Badge</div></div>
+        <div class="panel-body">
             <a href="#">Inbox <span class="badge">42</span></a>
 
             <div class="widget-info">
@@ -262,14 +252,12 @@
                 <pre>&lt;a href=&quot;#&quot;&gt;Inbox &lt;span class=&quot;badge&quot;&gt;42&lt;/span&gt;&lt;/a&gt;</pre>
             </div>
         </div>
-    </div>
-    {{ c('Badge Widget Ends') }}
+    </div>{{ e('Badge') }}
 
-    {{ c('Modals Starts') }}
-    <div class="widget">
-        <h4 class="widget-title">Modals</h4>
-
-        <div class="widget-content">
+    {{ s('Modals') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">Modals</div></div>
+        <div class="panel-body">
             <button class="btn btn-v btn-wide btn-primary" data-toggle="modal" data-target="#modalDemo">Launch demo modal</button>
             <button class="btn btn-v btn-wide btn-success" data-toggle="modal" data-target="#modalDemoLarge">Launch large demo modal</button>
             <button class="btn btn-v btn-wide btn-info" data-toggle="modal" data-target="#modalDemoSmall">Launch small demo modal</button>
@@ -343,12 +331,12 @@
             </div>
         </div>
     </div>
-    {{ c('Modals Ends') }}
+    {{ e('Modals') }}
 
-    {{ c('Collapses Widget Starts') }}
-    <div class="widget">
-        <h4 class="widget-title">Collapses</h4>
-        <div class="widget-content">
+    {{ s('Collapses') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">Collapses</div></div>
+        <div class="panel-body">
             <div class="panel-group" id="accordion">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -403,12 +391,12 @@
             </div>
         </div>
     </div>
-    {{ c('Collapses Widget Ends') }}
+    {{ e('Collapses') }}
 
-    {{ c('Tooltip Widget Starts') }}
-    <div class="widget">
-        <h4 class="widget-title">Tooltip</h4>
-        <div class="widget-content">
+    {{ s('Tooltip') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">Tooltip</div></div>
+        <div class="panel-body">
             <button type="button" class="btn btn-v btn-primary tooltip-btn" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
             <button type="button" class="btn btn-v btn-primary tooltip-btn" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
             <button type="button" class="btn btn-v btn-primary tooltip-btn" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
@@ -420,12 +408,12 @@
             </div>
         </div>
     </div>
-    {{ c('Tooltip Widget Ends') }}
+    {{ e('Tooltip') }}
 
-    {{ c('Popover Widget Starts') }}
-    <div class="widget">
-        <h4 class="widget-title">Popover</h4>
-        <div class="widget-content">
+    {{ s('Popover') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">Popover</div></div>
+        <div class="panel-body">
             <div class="text-center">
                 <button type="button" class="btn btn-v btn-success popover-btn" data-container="body" data-toggle="popover" data-placement="left" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">Popover on left</button>
                 <button type="button" class="btn btn-v btn-success popover-btn" data-container="body" data-toggle="popover" data-placement="top" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">Popover on top</button>
@@ -439,7 +427,7 @@
             </div>
         </div>
     </div>
-    {{ c('Popover Widget Ends') }}
+    {{ e('Popover') }}
 {% endblock %}
 
 {% block js %}

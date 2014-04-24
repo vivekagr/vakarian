@@ -219,7 +219,10 @@
 }
 
 .users-voice-widget .panel-body {
-  height: 354px;
+  height: 390px;
+}
+.users-voice-widget .nano-content {
+  padding-top: 20px;
 }
 
 .user-voice {

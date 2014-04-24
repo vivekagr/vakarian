@@ -98,8 +98,9 @@ pre {
 .topbar .navbar-brand {
   display: inline;
   color: #ecf0f1;
+  font-family: 'Raleway', sans-serif;
   font-size: 1.3em;
-  font-weight: 500;
+  font-weight: 300;
 }
 @media (max-width: 768px) {
   .topbar .navbar-brand {
@@ -537,8 +538,9 @@ SIDEBAR
 .sidebar-profile-wrapper .sidebar-profile-content .name {
   margin-top: 2px;
   color: #ecf0f1;
+  font-family: 'Raleway', sans-serif;
   font-size: 1.35em;
-  font-weight: 300;
+  font-weight: 100;
 }
 .sidebar-profile-wrapper .sidebar-profile-content .job-title {
   display: inline-block;
@@ -591,6 +593,7 @@ SIDEBAR
   padding: 14px;
 }
 .sidebar-profile-wrapper .popover .sidebar-profile-popup-title {
+  font-family: 'Raleway', sans-serif;
   font-weight: 300;
   margin-top: 12px;
 }
@@ -680,6 +683,7 @@ to preserve the slide animation effect with jQuery
 }
 
 .page-title {
+  font-family: 'Raleway', sans-serif;
   font-size: 1.8em;
   font-weight: 300;
   margin-bottom: 15px;
@@ -751,6 +755,9 @@ to preserve the slide animation effect with jQuery
 .panel, .panel .panel-heading {
   border: none;
 }
+.panel .panel-heading {
+  font-family: 'Raleway', sans-serif;
+}
 .panel p {
   font-size: 0.9em;
 }
@@ -803,6 +810,17 @@ to preserve the slide animation effect with jQuery
 }
 .panel.panel-success.tabs-fixed .nav.nav-tabs > li > a {
   color: #1abc9c;
+}
+.panel.panel-info .panel-heading {
+  background-color: #BDE4FF;
+}
+.panel.panel-warning .panel-heading {
+  background-color: #FFEFAD;
+  color: #C3A36A;
+}
+.panel.panel-danger .panel-heading {
+  background-color: #F17366;
+  color: #fff;
 }
 .panel.panel-info.tabs-fixed .nav.nav-tabs > li > a {
   color: #87BEDA;
@@ -1706,6 +1724,9 @@ to preserve the slide animation effect with jQuery
 }
 .panel-group .panel.panel-default .panel-heading {
   background-color: #ecf0f1;
+}
+.panel-group .panel .panel-heading + .panel-collapse .panel-body {
+  border: none;
 }
 .panel-group .panel .panel-title {
   font-size: 1.1em;

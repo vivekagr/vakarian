@@ -200,8 +200,9 @@
   }
 }
 
-.users-voice-widget .panel-body {
-  height: 354px;
+.users-voice-widget {
+  .panel-body { height: 390px; }
+  .nano-content { padding-top: 20px; }
 }
 
 .user-voice {

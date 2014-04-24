@@ -106,8 +106,9 @@ pre {
   .navbar-brand {
     display: inline;
     color: $text-color;
+    font-family: 'Raleway', sans-serif;
     font-size: 1.3em;
-    font-weight: 500;
+    font-weight: 300;
 
     @media (max-width: 768px) {
       font-weight: 300;
@@ -574,8 +575,9 @@ SIDEBAR
     .name {
       margin-top: 2px;
       color: #ecf0f1;
+      font-family: 'Raleway', sans-serif;
       font-size: 1.35em;
-      font-weight: 300;
+      font-weight: 100;
     }
 
     .job-title {
@@ -633,6 +635,7 @@ SIDEBAR
     }
 
     .sidebar-profile-popup-title {
+      font-family: 'Raleway', sans-serif;
       font-weight: 300;
       margin-top: 12px;
     }
@@ -733,6 +736,7 @@ to preserve the slide animation effect with jQuery
 
 // Page Title
 .page-title {
+  font-family: 'Raleway', sans-serif;
   font-size: 1.8em;
   font-weight: 300;
   margin-bottom: 15px;

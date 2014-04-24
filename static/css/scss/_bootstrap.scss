@@ -15,6 +15,10 @@
     border: none;
   }
 
+  .panel-heading {
+    font-family: 'Raleway', sans-serif;
+  }
+
   p {
     font-size: 0.9em;
     &.lead { font-size: 1.5em; }
@@ -26,7 +30,9 @@
   }
 
   &.panel-default {
-    .panel-heading { background-color: #EBEBEB; }
+    .panel-heading {
+      background-color: #EBEBEB;
+    }
   }
 
   &.panel-clean {
@@ -65,6 +71,26 @@
       color: #fff;
     }
     &.tabs-fixed .nav.nav-tabs > li > a { color: #1abc9c; }
+  }
+
+  &.panel-info {
+    .panel-heading {
+      background-color: #BDE4FF;
+    }
+  }
+
+  &.panel-warning {
+    .panel-heading {
+      background-color: #FFEFAD;
+      color: #C3A36A;
+    }
+  }
+
+  &.panel-danger {
+    .panel-heading {
+      background-color: #F17366;
+      color: #fff;
+    }
   }
 
   &.panel-info.tabs-fixed .nav.nav-tabs > li > a { color: #87BEDA; }
@@ -759,6 +785,10 @@
 
   &.panel-default .panel-heading {
     background-color: #ecf0f1;
+  }
+
+  .panel-heading+.panel-collapse .panel-body {
+    border: none;
   }
 
   .panel-title {

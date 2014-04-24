@@ -15,96 +15,112 @@
 {%- endblock %}
 
 {% block main %}
+    {{ s('Quick Stat Widgets') }}
     <div class="row">
+
         <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="widget quick-stat-widget facebook clearfix">
+            <div class="panel panel-clean quick-stat-widget facebook clearfix">
                 <div class="icon-area"><i class="fa fa-facebook fa-fw"></i></div>
-                <div class="content-area">
+                <div class="panel-body">
                     <span class="metric-value widget-odometer" data-value="32,278">0</span>
                     <span class="metric-desc">likes</span>
                 </div>
             </div>
         </div>
         <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="widget quick-stat-widget twitter clearfix">
+            <div class="panel panel-clean quick-stat-widget twitter clearfix">
                 <div class="icon-area"><i class="fa fa-twitter fa-fw"></i></div>
-                <div class="content-area">
+                <div class="panel-body">
                     <span class="metric-value widget-odometer" data-value="7,026">0</span>
                     <span class="metric-desc">followers</span>
                 </div>
             </div>
         </div>
         <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="widget quick-stat-widget sales clearfix">
+            <div class="panel panel-clean quick-stat-widget sales clearfix">
                 <div class="icon-area"><i class="fa fa-dollar fa-fw"></i></div>
-                <div class="content-area">
+                <div class="panel-body">
                     <span class="metric-value dollar">$<span class="widget-odometer" data-value="78,892">0</span></span>
                     <span class="metric-desc">in sales</span>
                 </div>
             </div>
         </div>
         <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="widget quick-stat-widget errors clearfix">
+            <div class="panel panel-clean quick-stat-widget errors clearfix">
                 <div class="icon-area"><i class="fa fa-exclamation fa-fw"></i></div>
-                <div class="content-area">
+                <div class="panel-body">
                     <span class="metric-value widget-odometer" data-value="29">0</span>
                     <span class="metric-desc">critical errors</span>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row widget traffic-widget">
-        <h4 class="widget-title">Traffic Statistics {{ globals }}</h4>
-        <div class="col-md-8">
-            <div id="trafficChart"></div>
-        </div>
-        <div class="col-md-4">
-            <h4 class="traffic-widget-subtitle">Highlight of Last 30 Days</h4>
-            <div class="row">
-                <div class="col-md-6 col-sm-3 col-xs-6 metric">
-                    <span id="visitsPiety" class="line"></span>
-                    <span class="metric-value">21,361</span> Visits
-                </div>
-                <div class="col-md-6 col-sm-3 col-xs-6 metric">
-                    <span id="uniquesPiety" class="line"></span>
-                    <span class="metric-value">16,875</span> Unique Visitors
-                </div>
-                <div class="col-md-6 col-sm-3 col-xs-6 metric">
-                    <span id="pageviewsPiety" class="line"></span>
-                    <span class="metric-value">48,773</span> Page Views
-                </div>
-                <div class="col-md-6 col-sm-3 col-xs-6 metric">
-                    <span id="bouncePiety" class="line"></span>
-                    <span class="metric-value">72.45%</span> Bounce Rate
+    </div>{{ e('Quick Stat Widgets') }}
+
+    {{ s('Traffic Statistics') }}
+    <div class="panel panel-clean traffic-widget">
+        <div class="panel-heading"><div class="panel-title">Traffic Statistics</div></div>
+        <div class="panel-body row">
+            <div class="col-md-8">
+                <div id="trafficChart"></div>
+            </div>
+            <div class="col-md-4">
+                <h4 class="traffic-widget-subtitle">Highlight of Last 30 Days</h4>
+                <div class="row">
+                    <div class="col-md-6 col-sm-3 col-xs-6 metric">
+                        <span id="visitsPiety" class="line"></span>
+                        <span class="metric-value">21,361</span> Visits
+                    </div>
+                    <div class="col-md-6 col-sm-3 col-xs-6 metric">
+                        <span id="uniquesPiety" class="line"></span>
+                        <span class="metric-value">16,875</span> Unique Visitors
+                    </div>
+                    <div class="col-md-6 col-sm-3 col-xs-6 metric">
+                        <span id="pageviewsPiety" class="line"></span>
+                        <span class="metric-value">48,773</span> Page Views
+                    </div>
+                    <div class="col-md-6 col-sm-3 col-xs-6 metric">
+                        <span id="bouncePiety" class="line"></span>
+                        <span class="metric-value">72.45%</span> Bounce Rate
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div>{{ e('Traffic Statistics') }}
+
     <div class="row">
+
+        {{ s('Subscriber Base Map') }}
         <div class="col-md-4 col-sm-6">
-            <div class="widget">
-                <h4 class="widget-title">Subscriber Base</h4>
-                <div id="us-subscribers-map" class="widget-content">
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Subscriber Base</div></div>
+                <div id="us-subscribers-map" class="panel-body">
                     <div class="map"></div>
                     <div class="areaLegend"></div>
                 </div>
             </div>
-        </div>
+        </div>{{ e('Subscriber Base Map') }}
+
+        {{ s('Browsers Donut Chart') }}
         <div class="col-md-4 col-sm-6">
-            <div class="widget">
-                <h4 class="widget-title">Browsers</h4>
-                <div id="browser-donut"></div>
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Browsers</div></div>
+                <div class="panel-body">
+                    <div id="browser-donut"></div>
+                </div>
             </div>
-        </div>
+        </div>{{ e('Browsers Donut Chart') }}
+
         <div class="col-md-4 col-sm-12">
 
         </div>
-    </div>
-    <div class="row">
+
+        <div class="clearfix"></div>
+
+        {{ s("User\'s Voice Widget") }}
         <div class="col-md-5">
-            <div class="widget users-voice-widget">
-                <h4 class="widget-title">What users are saying</h4>
-                <div class="widget-content nano">
+            <div class="panel panel-clean users-voice-widget">
+                <div class="panel-heading"><div class="panel-title">What users are saying</div></div>
+                <div class="panel-body nano">
                     <div class="nano-content">
                         <div class="media user-voice twitter">
                             <img class="pull-left media-object img-circle" src="{{ static('img/male_2.jpg') }}">
@@ -179,79 +195,80 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>{{ e("User\'s Voice Widget") }}
+
+        {{ s("Calendar") }}
         <div class="col-md-7">
-            <div class="widget">
-                <h4 class="widget-title">Calendar</h4>
-                <div class="widget-content fullcalendar" id="calendar"></div>
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Calendar</div></div>
+                <div class="panel-body fullcalendar" id="calendar"></div>
+            </div>
+        </div>{{ e("Calendar") }}
+
+    </div>
+
+    {{ s('Support Tickets Table') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">Support Tickets</div></div>
+        <div class="panel-body">
+            <div class="table-responsive support-tickets-table">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Department</th>
+                        <th>Assignee</th>
+                        <th>Priority</th>
+                        <th>Status</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>#3784</td>
+                        <td><a href="#">I can't message other users</a></td>
+                        <td>Technical</td>
+                        <td>Jennifer</td>
+                        <td><span class="label normal">Normal</span></td>
+                        <td class="status answered">Answered</td>
+                    </tr>
+                    <tr>
+                        <td>#3783</td>
+                        <td><a href="#">Can I use Paypal?</a></td>
+                        <td>Sales</td>
+                        <td>Tom</td>
+                        <td><span class="label critical">Critical</span></td>
+                        <td class="status">Unanswered</td>
+                    </tr>
+                    <tr>
+                        <td>#3782</td>
+                        <td><a href="#">App crashes on Mac OS X</a></td>
+                        <td>Technical</td>
+                        <td>Jennifer</td>
+                        <td><span class="label high">High</span></td>
+                        <td class="status">Unanswered</td>
+                    </tr>
+                    <tr>
+                        <td>#3781</td>
+                        <td><a href="#">Not getting the confirmation email</a></td>
+                        <td>Technical</td>
+                        <td>Jennifer</td>
+                        <td><span class="label normal">Normal</span></td>
+                        <td class="status answered">Answered</td>
+                    </tr>
+                    <tr>
+                        <td>#3780</td>
+                        <td><a href="#">Is there a discount coupon?</a></td>
+                        <td>Sales</td>
+                        <td>Tom</td>
+                        <td><span class="label low">Low</span></td>
+                        <td class="status answered">Answered</td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="widget">
-                <h4 class="widget-title">Support Tickets</h4>
-                <div class="widget-content">
-                    <div class="table-responsive support-tickets-table">
-                        <table class="table">
-                            <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Title</th>
-                                <th>Department</th>
-                                <th>Assignee</th>
-                                <th>Priority</th>
-                                <th>Status</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>#3784</td>
-                                <td><a href="#">I can't message other users</a></td>
-                                <td>Technical</td>
-                                <td>Jennifer</td>
-                                <td><span class="label normal">Normal</span></td>
-                                <td class="status answered">Answered</td>
-                            </tr>
-                            <tr>
-                                <td>#3783</td>
-                                <td><a href="#">Can I use Paypal?</a></td>
-                                <td>Sales</td>
-                                <td>Tom</td>
-                                <td><span class="label critical">Critical</span></td>
-                                <td class="status">Unanswered</td>
-                            </tr>
-                            <tr>
-                                <td>#3782</td>
-                                <td><a href="#">App crashes on Mac OS X</a></td>
-                                <td>Technical</td>
-                                <td>Jennifer</td>
-                                <td><span class="label high">High</span></td>
-                                <td class="status">Unanswered</td>
-                            </tr>
-                            <tr>
-                                <td>#3781</td>
-                                <td><a href="#">Not getting the confirmation email</a></td>
-                                <td>Technical</td>
-                                <td>Jennifer</td>
-                                <td><span class="label normal">Normal</span></td>
-                                <td class="status answered">Answered</td>
-                            </tr>
-                            <tr>
-                                <td>#3780</td>
-                                <td><a href="#">Is there a discount coupon?</a></td>
-                                <td>Sales</td>
-                                <td>Tom</td>
-                                <td><span class="label low">Low</span></td>
-                                <td class="status answered">Answered</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    </div>{{ e('Support Tickets Table') }}
 {% endblock %}
 
 {% block vendor_js %}

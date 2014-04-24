@@ -97,30 +97,30 @@
     padding: 15px;
   }
 }
-.quick-stat-widget .content-area {
+.quick-stat-widget .panel-body {
   float: left;
   padding: 10px 8px 5px 10px;
   font-weight: 300;
   color: #95a5a6;
 }
 @media (max-width: 768px) {
-  .quick-stat-widget .content-area {
+  .quick-stat-widget .panel-body {
     padding: 8px 8px 5px 10px;
     font-size: 0.9em;
   }
 }
-.quick-stat-widget .content-area .metric-value {
+.quick-stat-widget .panel-body .metric-value {
   display: block;
   font-size: 1.9em;
   font-weight: 300;
   line-height: 1.1em;
   color: #B8C1CA;
 }
-.quick-stat-widget .content-area .metric-value .odometer {
+.quick-stat-widget .panel-body .metric-value .odometer {
   margin-top: -3px;
 }
 @media (max-width: 768px) {
-  .quick-stat-widget .content-area .metric-value {
+  .quick-stat-widget .panel-body .metric-value {
     font-size: 1.6em;
   }
 }
@@ -218,7 +218,7 @@
   content: '\f05d';
 }
 
-.users-voice-widget .widget-content {
+.users-voice-widget .panel-body {
   height: 354px;
 }
 

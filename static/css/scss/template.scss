@@ -10,12 +10,12 @@
 .knobs-widget {
   text-align: center;
 
-  .widget-content {
+  .panel-body {
     padding-top: 15px !important;
     padding-bottom: 20px !important;
   }
 
-  .widget-subtitle {
+  .subtitle {
     margin: 0 auto 20px !important;
 
     @media (max-width: 992px) {
@@ -23,7 +23,7 @@
     }
   }
 
-  .widget-title, .widget-info {
+  .panel-heading, .widget-info {
     text-align: left;
   }
 }

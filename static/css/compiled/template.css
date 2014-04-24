@@ -7,19 +7,19 @@
 .knobs-widget {
   text-align: center;
 }
-.knobs-widget .widget-content {
+.knobs-widget .panel-body {
   padding-top: 15px !important;
   padding-bottom: 20px !important;
 }
-.knobs-widget .widget-subtitle {
+.knobs-widget .subtitle {
   margin: 0 auto 20px !important;
 }
 @media (max-width: 992px) {
-  .knobs-widget .widget-subtitle {
+  .knobs-widget .subtitle {
     margin-top: 20px !important;
   }
 }
-.knobs-widget .widget-title, .knobs-widget .widget-info {
+.knobs-widget .panel-heading, .knobs-widget .widget-info {
   text-align: left;
 }
 

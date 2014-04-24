@@ -14,12 +14,11 @@
 
     <div class="row">
 
-        {{ c('Radio Widget Starts') }}
+        {{ s('Radio Widget') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Radio Box</h4>
-                <div class="widget-content">
-
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Radio Box</div></div>
+                <div class="panel-body">
                     <div class="radio">
                         <label>
                             <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
@@ -33,7 +32,7 @@
                         </label>
                     </div>
 
-                    <div class="widget-subtitle">Inline</div>
+                    <div class="subtitle">Inline</div>
                     <div class="radio-inline">
                         <label>
                             <input type="radio" name="optionsRadios2" id="optionsRadios1" value="option1">
@@ -47,7 +46,7 @@
                         </label>
                     </div>
 
-                    <div class="widget-subtitle">Disabled</div>
+                    <div class="subtitle">Disabled</div>
                     <div class="radio-inline">
                         <label>
                             <input type="radio" name="optionsRadios3" id="optionsRadios1" value="option1" checked disabled>
@@ -60,18 +59,15 @@
                             <span>Option Two</span>
                         </label>
                     </div>
-
                 </div>
             </div>
-        </div>
-        {{ c('Radio Widget Ends') }}
+        </div>{{ e('Radio Widget') }}
 
-        {{ c('Checkbox Widget Starts') }}
+        {{ s('Checkbox Widget') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Check Box</h4>
-                <div class="widget-content">
-
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Check Box</div></div>
+                <div class="panel-body">
                     <div class="checkbox">
                         <label>
                             <input type="checkbox" name="optionsRadios2" id="optionsRadios1" value="option1" checked>
@@ -85,7 +81,7 @@
                         </label>
                     </div>
 
-                    <div class="widget-subtitle">Inline</div>
+                    <div class="subtitle">Inline</div>
                     <div class="checkbox-inline">
                         <label>
                             <input type="checkbox" name="optionsRadios" id="optionsRadios1" value="option1">
@@ -99,7 +95,7 @@
                         </label>
                     </div>
 
-                    <div class="widget-subtitle">Disabled</div>
+                    <div class="subtitle">Disabled</div>
                     <div class="checkbox-inline">
                         <label>
                             <input type="checkbox" name="optionsRadios" id="optionsRadios1" value="option1" checked disabled>
@@ -112,19 +108,16 @@
                             <span>Option Two</span>
                         </label>
                     </div>
-
                 </div>
             </div>
-        </div>
-        {{ c('Checkbox Widget Ends') }}
+        </div>{{ e('Checkbox Widget') }}
 
     </div>
 
-    {{ c('Bootstrap Switch Widget Starts') }}
-    <div class="widget switch-widget">
-        <h4 class="widget-title">Switches</h4>
-
-        <div class="widget-content">
+    {{ s('Bootstrap Switch Widget') }}
+    <div class="panel panel-clean switch-widget">
+        <div class="panel-heading"><div class="panel-title">Switches</div></div>
+        <div class="panel-body">
             <input type="checkbox" name="my-checkbox" class="switch">
             <input type="checkbox" name="my-checkbox" class="switch" checked>
             <input type="checkbox" name="my-checkbox" class="switch" data-on-color="success" checked>
@@ -133,29 +126,27 @@
             <input type="checkbox" name="my-checkbox" class="switch" data-on-color="danger" checked>
             <input type="checkbox" name="my-checkbox" class="switch" data-on-color="inverse" checked>
         </div>
-    </div>
-    {{ c('Bootstrap Switch Widget Ends') }}
+    </div>{{ e('Bootstrap Switch Widget') }}
 
-    {{ c('Bootstrap Tagsinput Widget Starts') }}
-    <div class="widget switch-widget">
-        <h4 class="widget-title">Tags</h4>
-
-        <div class="widget-content">
+    {{ s('Bootstrap Tagsinput Widget') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">Tags</div></div>
+        <div class="panel-body">
             <input type="text" value="Amsterdam,Washington,Sydney,Beijing,Cairo" class="tagsinput" />
         </div>
-    </div>
-    {{ c('Bootstrap Tagsinput Widget Ends') }}
+    </div>{{ e('Bootstrap Tagsinput Widget') }}
 
-    {{ c('Bootstrap Slider Widget Starts') }}
-    <div class="widget">
-        <h4 class="widget-title">Bootstrap Slider</h4>
+    {{ s('Bootstrap Slider Widget') }}
+    <div class="panel panel-clean tabs-fixed-slim">
+        <div class="panel-heading"><div class="panel-title">Bootstrap Slider</div></div>
+
 
         <ul class="nav nav-tabs fixed">
             <li class="active"><a href="#horizontalSliders" data-toggle="tab">Horizontal Sliders</a></li>
             <li><a href="#verticalSliders" data-toggle="tab">Vertical Sliders</a></li>
         </ul>
 
-        <div class="widget-content">
+        <div class="panel-body">
             <div class="tab-content">
                 <div class="tab-pane active" id="horizontalSliders">
                     <div class="form-horizontal">
@@ -209,14 +200,12 @@
             </div>
 
         </div>
-    </div>
-    {{ c('Bootstrap Slider Widget Ends') }}
+    </div>{{ e('Bootstrap Slider Widget') }}
 
-    {{ c('Bootstrap Select Widget Starts') }}
-    <div class="widget">
-        <h4 class="widget-title">Bootstrap Select</h4>
-
-        <div class="widget-content">
+    {{ s('Bootstrap Select Widget') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">Bootstrap Select</div></div>
+        <div class="panel-body">
 
             <form class="form-horizontal">
                 <div class="form-group">
@@ -394,7 +383,7 @@
                 </div>
             </form>
 
-            <div class="widget-subtitle">Different Colors</div>
+            <div class="subtitle">Different Colors</div>
             <select class="selectpicker">
                 <option selected>Mustard</option>
                 <option>Ketchup</option>
@@ -426,48 +415,45 @@
                 <option selected>Relish</option>
             </select>
         </div>
-    </div>
-    {{ c('Bootstrap Select Widget Ends') }}
+    </div>{{ e('Bootstrap Select Widget') }}
 
-    {{ c('jQuery Knob Widget Starts') }}
-    <div class="widget knobs-widget">
-        <h4 class="widget-title">jQuery Knob</h4>
-
-        <div class="widget-content">
+    {{ s('jQuery Knob Widget') }}
+    <div class="panel panel-clean knobs-widget">
+        <div class="panel-heading"><div class="panel-title">jQuery Knob</div></div>
+        <div class="panel-body">
             <div class="row">
                 <div class="col-lg-2 col-md-4 col-sm-6">
-                    <div class="widget-subtitle">Normal Knob</div>
+                    <div class="subtitle">Normal Knob</div>
                     <input type="text" value="75" class="dial" data-fgColor="#1abc9c">
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6">
-                    <div class="widget-subtitle">Display Input Disabled</div>
+                    <div class="subtitle">Display Input Disabled</div>
                     <input type="text" value="60" class="dial" data-displayInput=false data-fgColor="#53a5db">
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6">
-                    <div class="widget-subtitle">Display Previous Value</div>
+                    <div class="subtitle">Display Previous Value</div>
                     <input type="text" value="45" class="dial" data-displayPrevious=true data-fgColor="#2980b9">
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6">
-                    <div class="widget-subtitle">Cursor Mode</div>
+                    <div class="subtitle">Cursor Mode</div>
                     <input type="text" class="dial" value="23" data-cursor=true data-min="-50" data-max="50" value="20" data-fgColor="#e74c3c">
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6">
-                    <div class="widget-subtitle">Angle Offset</div>
+                    <div class="subtitle">Angle Offset</div>
                     <input type="text" class="dial" data-angleoffset="90" data-linecap="round" data-min="0" data-max="100" value="39" data-fgColor="#34495e">
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6">
-                    <div class="widget-subtitle">Angle Offset and Arc</div>
+                    <div class="subtitle">Angle Offset and Arc</div>
                     <input type="text" class="dial" data-angleOffset="-125" data-angleArc="250" data-min="0" data-max="120" value="78" data-fgColor="#bdc3c7">
                 </div>
             </div>
         </div>
-    </div>
-    {{ c('jQuery Knob Widget Ends') }}
+    </div>{{ e('jQuery Knob Widget') }}
 
-    {{ c('Form Inputs Widget Starts') }}
-    <div class="widget">
-        <h4 class="widget-title">Form Inputs</h4>
-        <div class="widget-content">
+    {{ s('Form Inputs Widget') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">Form Inputs</div></div>
+        <div class="panel-body">
             <form class="form-horizontal" role="form">
                 <div class="form-group">
                     <label class="col-sm-2 control-label" for="simpleInputField">Simple Input Field</label>
@@ -520,16 +506,15 @@
                 </div>
             </form>
         </div>
-    </div>
-    {{ c('Form Inputs Widget Ends') }}
+    </div>{{ e('Form Inputs Widget') }}
 
     <div class="row">
 
-        {{ c('Input Groups Starts') }}
+        {{ s('Input Groups') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Input Groups</h4>
-                <div class="widget-content">
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Input Groups</div></div>
+                <div class="panel-body">
                     <div class="input-group">
                         <span class="input-group-addon">@</span>
                         <input type="text" class="form-control" placeholder="Username">
@@ -556,7 +541,7 @@
                         <input type="text" class="form-control" placeholder="With Radio">
                     </div>
 
-                    <div class="widget-subtitle">Input Groups Sizing</div>
+                    <div class="subtitle">Input Groups Sizing</div>
                     <div class="input-group input-group-lg">
                         <span class="input-group-addon">@</span>
                         <input type="text" class="form-control" placeholder="Username">
@@ -573,14 +558,13 @@
                     </div>
                 </div>
             </div>
-        </div>
-        {{ c('Input Groups Ends') }}
+        </div>{{ e('Input Groups') }}
 
-        {{ c('Input Groups With Buttons Starts') }}
+        {{ s('Input Groups With Buttons') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Input Groups With Buttons</h4>
-                <div class="widget-content">
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Input Groups With Buttons</div></div>
+                <div class="panel-body">
                     <div class="input-group">
                         <span class="input-group-btn">
                             <button class="btn btn-default" type="button">Go!</button>
@@ -602,7 +586,7 @@
                     </div>
 
                     {{ c('Buttons with dropdowns') }}
-                    <div class="widget-subtitle">Buttons With Dropdowns</div>
+                    <div class="subtitle">Buttons With Dropdowns</div>
                     <div class="input-group">
                         <div class="input-group-btn">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
@@ -631,7 +615,7 @@
                     </div>
 
                     {{ c('Segmented buttons') }}
-                    <div class="widget-subtitle">Segmented Buttons</div>
+                    <div class="subtitle">Segmented Buttons</div>
                     <div class="input-group">
                         <div class="input-group-btn">
                             <button type="button" class="btn btn-default">Action</button>
@@ -669,16 +653,15 @@
 
                 </div>
             </div>
-        </div>
-        {{ c('Input Groups With Buttons Ends') }}
+        </div>{{ e('Input Groups With Buttons') }}
 
         <div class="clearfix"></div>
 
-        {{ c('Form Input Validation States Widget Starts') }}
+        {{ s('Form Input Validation States Widget') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Form Input Validation States</h4>
-                <div class="widget-content">
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Form Input Validation States</div></div>
+                <div class="panel-body">
                     <form class="form-horizontal" role="form">
                         <div class="form-group has-success">
                             <label class="col-sm-2 control-label" for="successField">Success</label>
@@ -701,14 +684,13 @@
                     </form>
                 </div>
             </div>
-        </div>
-        {{ c('Form Input Validation States Widget Ends') }}
+        </div>{{ e('Form Input Validation States Widget') }}
 
-        {{ c('Control Sizing Widget Starts') }}
+        {{ s('Control Sizing Widget') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Control Sizing</h4>
-                <div class="widget-content">
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Control Sizing</div></div>
+                <div class="panel-body">
                     <form role="form">
                         <div class="form-group">
                             <label  class="sr-only control-label" for="inputFieldSmall">Small</label>
@@ -725,15 +707,14 @@
                     </form>
                 </div>
             </div>
-        </div>
-        {{ c('Control Sizing Widget Ends') }}
+        </div>{{ e('Control Sizing Widget') }}
 
     </div>
 
-    {{ c('Column Sizing Widget Starts') }}
-    <div class="widget column-sizing-widget">
-        <h4 class="widget-title">Column Sizing</h4>
-        <div class="widget-content">
+    {{ s('Column Sizing Widget') }}
+    <div class="panel panel-clean column-sizing-widget">
+        <div class="panel-heading"><div class="panel-title">Column Sizing</div></div>
+        <div class="panel-body">
             <div class="form-group">
                 <div class="row">
                     <div class="col-md-1"><input type="text" class="form-control" placeholder=".col-md-1"></div>
@@ -771,8 +752,7 @@
                 </div>
             </div>
         </div>
-    </div>
-    {{ c('Column Sizing Widget Ends') }}
+    </div>{{ e('Column Sizing Widget') }}
 {% endblock %}
 
 {% block vendor_js %}

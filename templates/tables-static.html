@@ -7,9 +7,10 @@
 {%- endblock %}
 
 {% block main %}
-    <div class="widget">
-        <h4 class="widget-title">Basic Table</h4>
-        <div class="widget-content">
+    {{ s('Basic Table') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">Basic Table</div></div>
+        <div class="panel-body">
             <table class="table">
                 <thead>
                 <tr>
@@ -41,12 +42,15 @@
                 </tbody>
             </table>
         </div>
-    </div>
+    </div>{{ e('Basic Table') }}
+
     <div class="row">
+
+        {{ s('Striped Table') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Striped Table</h4>
-                <div class="widget-content">
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Striped Table</div></div>
+                <div class="panel-body">
                     <table class="table table-striped">
                         <thead>
                         <tr>
@@ -79,11 +83,13 @@
                     </table>
                 </div>
             </div>
-        </div>
+        </div>{{ e('Striped Table') }}
+
+        {{ s('Bordered Table') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Bordered Table</h4>
-                <div class="widget-content">
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Bordered Table</div></div>
+                <div class="panel-body">
                     <table class="table table-bordered">
                         <thead>
                         <tr>
@@ -116,11 +122,13 @@
                     </table>
                 </div>
             </div>
-        </div>
+        </div>{{ e('Bordered Table') }}
+
+        {{ s('Hover Rows Table') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Hover Rows Table</h4>
-                <div class="widget-content">
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Hover Rows Table</div></div>
+                <div class="panel-body">
                     <table class="table table-hover">
                         <thead>
                         <tr>
@@ -153,11 +161,13 @@
                     </table>
                 </div>
             </div>
-        </div>
+        </div>{{ e('Hover Rows Table') }}
+
+        {{ s('Condensed Table') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Condensed Table</h4>
-                <div class="widget-content">
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Condensed Table</div></div>
+                <div class="panel-body">
                     <table class="table table-condensed">
                         <thead>
                         <tr>
@@ -191,10 +201,12 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="widget">
-        <h4 class="widget-title">Basic Table</h4>
-        <div class="widget-content">
+    </div>{{ e('Condensed Table') }}
+
+    {{ s('Colored Rows') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">Colored Rows</div></div>
+        <div class="panel-body">
             <table class="table">
                 <thead>
                 <tr>
@@ -262,10 +274,12 @@
                 </tbody>
             </table>
         </div>
-    </div>
-    <div class="widget">
-        <h1 class="widget-title">Responsive Table</h1>
-        <div class="widget-content">
+    </div>{{ e('Colored Rows') }}
+
+    {{ s('Responsive Table') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">Responsive Table</div></div>
+        <div class="panel-body">
             <div class="table-responsive">
                 <table class="table">
                     <thead>
@@ -312,5 +326,5 @@
             </div>
             <div class="widget-footnote">This table will scroll horizontally in small devices (under 768px). When viewing on anything larger than 768px wide, you will not see any difference.</div>
         </div>
-    </div>
+    </div>{{ e('Responsive Table') }}
 {% endblock %}

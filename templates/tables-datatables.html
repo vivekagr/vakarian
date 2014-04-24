@@ -3,9 +3,10 @@
 {% set page_title = "DataTables" %}
 
 {% block main %}
-    <div class="widget">
-        <h4 class="widget-title">DataTables</h4>
-        <div class="widget-content">
+    {{ s('DataTables') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">DataTables</div></div>
+        <div class="panel-body">
             <table class="table table-responsive" id="datatableExample">
                 <thead>
                     <tr>
@@ -431,7 +432,7 @@
             </table>
             <div class="clearfix"></div>
         </div>
-    </div>
+    </div>{{ e('DataTables') }}
 {% endblock %}
 
 {% block vendor_js %}

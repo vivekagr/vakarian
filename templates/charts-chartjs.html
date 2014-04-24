@@ -7,43 +7,72 @@
 {%- endblock %}
 
 {% block main %}
-    <div class="row widget">
-        <h4 class="widget-title">Line Chart</h4>
-        <div class="col-md-12">
+
+    <!--
+
+    //    Please see '{{ static('js/template/charts-chartjs.js') }}' for javascript code
+    //    that is used to setup the charts below.
+
+    -->
+
+    {{ s('Line Chart') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">Line Chart</div></div>
+        <div class="panel-body">
             <canvas class="chartjs-chart" id="lineChart"></canvas>
         </div>
-    </div>
-    <div class="row widget">
-        <h4 class="widget-title">Bar Chart</h4>
-        <div class="col-md-12">
+    </div>{{ e('Line Chart') }}
+
+    {{ s('Bar Chart') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">Bar Chart</div></div>
+        <div class="panel-body">
             <canvas class="chartjs-chart" id="barChart"></canvas>
         </div>
-    </div>
+    </div>{{ e('Bar Chart') }}
+
     <div class="row">
+
+        {{ s('Radar Chart') }}
         <div class="col-sm-6">
-            <div class="widget">
-                <h4 class="widget-title">Radar Chart</h4>
-                <canvas class="chartjs-chart chartjs-chart-circular" id="radarChart"></canvas>
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Radar Chart</div></div>
+                    <div class="panel-body">
+                    <canvas class="chartjs-chart chartjs-chart-circular" id="radarChart"></canvas>
+                </div>
             </div>
-        </div>
+        </div>{{ e('Radar Chart') }}
+
+        {{ s('Polar Chart') }}
         <div class="col-sm-6">
-            <div class="widget">
-                <h4 class="widget-title">Polar Chart</h4>
-                <canvas class="chartjs-chart chartjs-chart-circular" id="polarChart"></canvas>
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Polar Chart</div></div>
+                    <div class="panel-body">
+                    <canvas class="chartjs-chart chartjs-chart-circular" id="polarChart"></canvas>
+                </div>
             </div>
-        </div>
+        </div>{{ e('Polar Chart') }}
+
+        {{ s('Pie Chart') }}
         <div class="col-sm-6">
-            <div class="widget">
-                <h4 class="widget-title">Pie Chart</h4>
-                <canvas class="chartjs-chart chartjs-chart-circular" id="pieChart"></canvas>
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Pie Chart</div></div>
+                    <div class="panel-body">
+                    <canvas class="chartjs-chart chartjs-chart-circular" id="pieChart"></canvas>
+                </div>
             </div>
-        </div>
+        </div>{{ e('Pie Chart') }}
+
+        {{ s('Doughnut Chart') }}
         <div class="col-sm-6">
-            <div class="widget">
-                <h4 class="widget-title">Doughnut Chart</h4>
-                <canvas class="chartjs-chart chartjs-chart-circular" id="doughnutChart"></canvas>
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Doughnut Chart</div></div>
+                    <div class="panel-body">
+                    <canvas class="chartjs-chart chartjs-chart-circular" id="doughnutChart"></canvas>
+                </div>
             </div>
-        </div>
+        </div>{{ e('Doughnut Chart') }}
+
     </div>
 {% endblock %}
 

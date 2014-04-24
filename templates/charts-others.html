@@ -14,16 +14,18 @@
 
     <div class="alert alert-page alert-success">This page also features <a class="alert-link" href="https://github.com/lipka/piecon">Piecon</a> generating progress pie charts in your favicon.</div>
 
-    <div class="widget">
-        <h4 class="widget-title">xCharts</h4>
-        <div class="widget-content">
+    {{ s('xCharts') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">xCharts</div></div>
+        <div class="panel-body">
             <figure id="xchart"></figure>
         </div>
-    </div>
+    </div>{{ e('xCharts') }}
 
-    <div class="widget">
-        <h4 class="widget-title">Peity Charts</h4>
-        <div class="widget-content peity-charts">
+    {{ s('Peity Charts') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">Peity Charts</div></div>
+        <div class="panel-body peity-charts">
             <p>Peity (sounds like deity) is a simple <a href="http://jquery.com/">jQuery</a> plugin that converts an element's content into a simple <code>&lt;svg&gt;</code> mini pie <span class="pie">2/5</span> line <span class="line">5,3,9,6,5,9,7,3,5,2</span> or bar chart <span class="bar">5,3,9,6,5,9,7,3,5,2</span> and is compatible with any browser that supports <code>&lt;svg&gt;</code>: Chrome, Firefox, IE9+, Opera, Safari.</p>
             <dl class="dl-horizontal">
                 <dt>Pie Charts</dt>
@@ -50,11 +52,12 @@
                 </dd>
             </dl>
         </div>
-    </div>
+    </div>{{ e('Peity Charts') }}
 
-    <div class="widget">
-        <h4 class="widget-title">Sparkline</h4>
-        <div class="widget-content sparkline-charts">
+    {{ s('Sparkline') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">Sparkline</div></div>
+        <div class="panel-body sparkline-charts">
             <p>Sparklines can generate small inline charts using the data supplied either inline in the HTML, or via Javascript.</p>
             <div class="row">
                 <div class="col-md-6">
@@ -84,7 +87,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>{{ e('Sparkline') }}
 
 {% endblock %}
 

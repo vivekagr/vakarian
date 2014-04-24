@@ -36,7 +36,7 @@
 // Morris charts
 
 .morris-chart {
-  margin: 20px 12px;
+  margin: 6px;
   &#morrisDonut text > tspan {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300 !important;
@@ -46,7 +46,7 @@
 // Flotr2 charts
 
 .flotr2-chart {
-  margin: 35px 20px 20px;
+  margin: 25px 15px 10px;
 
   > .chart {
     width: 100%;
@@ -93,7 +93,7 @@
   font-weight: 300;
 
   p {
-    margin: 20px 0;
+    margin-bottom: 20px;
   }
 
   dl {

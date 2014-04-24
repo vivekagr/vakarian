@@ -7,85 +7,114 @@
 {%- endblock %}
 
 {% block main %}
+    {{ s('Basic Axis Example') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">Basic Axis Example</div></div>
+        <div class="panel-body">
+            <div class="flotr2-chart">
+                <div class="chart" id="flotr2BasicAxis"></div>
+            </div>
+        </div>
+    </div>{{ e('Basic Axis Example') }}
+
     <div class="row">
-        <div class="col-md-12">
-            <div class="widget">
-                <h4 class="widget-title">Basic Axis Example</h4>
-                <div class="flotr2-chart">
-                    <div class="chart" id="flotr2BasicAxis"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
+
+        {{ s('Line Chart') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Line Chart</h4>
-                <div class="flotr2-chart">
-                    <div class="chart" id="flotr2Line"></div>
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Line Chart</div></div>
+                <div class="panel-body">
+                    <div class="flotr2-chart">
+                        <div class="chart" id="flotr2Line"></div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </div>{{ e('Line Chart') }}
+
+        {{ s('Candle Chart') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Candle Chart</h4>
-                <div class="flotr2-chart">
-                    <div class="chart" id="flotr2Candle"></div>
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Candle Chart</div></div>
+                <div class="panel-body">
+                    <div class="flotr2-chart">
+                        <div class="chart" id="flotr2Candle"></div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="row">
+        </div>{{ e('Line Chart') }}
+
+        {{ s('Bar Chart') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Bar Chart</h4>
-                <div class="flotr2-chart">
-                    <div class="chart" id="flotr2Bar"></div>
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Bar Chart</div></div>
+                <div class="panel-body">
+                    <div class="flotr2-chart">
+                        <div class="chart" id="flotr2Bar"></div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </div>{{ e('Bar Chart') }}
+
+        {{ s('Stacked Chart') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Stacked Bar Chart</h4>
-                <div class="flotr2-chart">
-                    <div class="chart" id="flotr2Stacked"></div>
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Stacked Bar Chart</div></div>
+                <div class="panel-body">
+                    <div class="flotr2-chart">
+                        <div class="chart" id="flotr2Stacked"></div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="row">
+        </div>{{ e('Stacked Chart') }}
+
+        {{ s('Pie Chart') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Pie Chart</h4>
-                <div class="flotr2-chart">
-                    <div class="chart" id="flotr2Pie"></div>
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Pie Chart</div></div>
+                <div class="panel-body">
+                    <div class="flotr2-chart">
+                        <div class="chart" id="flotr2Pie"></div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </div>{{ e('Pie Chart') }}
+
+        {{ s('Radar Chart') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Radar Chart</h4>
-                <div class="flotr2-chart">
-                    <div class="chart" id="flotr2Radar"></div>
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Radar Chart</div></div>
+                <div class="panel-body">
+                    <div class="flotr2-chart">
+                        <div class="chart" id="flotr2Radar"></div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </div>{{ e('Radar Chart') }}
+
+        {{ s('Bubble Chart') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Bubble Chart</h4>
-                <div class="flotr2-chart">
-                    <div class="chart" id="flotr2Bubble"></div>
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Bubble Chart</div></div>
+                <div class="panel-body">
+                    <div class="flotr2-chart">
+                        <div class="chart" id="flotr2Bubble"></div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </div>{{ e('Bubble Chart') }}
+
+        {{ s('Time Series') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Time Series</h4>
-                <div class="flotr2-chart">
-                    <div class="chart" id="flotr2Time"></div>
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Time Series</div></div>
+                <div class="panel-body">
+                    <div class="flotr2-chart">
+                        <div class="chart" id="flotr2Time"></div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </div>{{ e('Time Series') }}
+
     </div>
 {% endblock %}
 

@@ -33,7 +33,7 @@
 }
 
 .morris-chart {
-  margin: 20px 12px;
+  margin: 6px;
 }
 .morris-chart#morrisDonut text > tspan {
   font-family: 'Open Sans', sans-serif;
@@ -41,7 +41,7 @@
 }
 
 .flotr2-chart {
-  margin: 35px 20px 20px;
+  margin: 25px 15px 10px;
 }
 .flotr2-chart > .chart {
   width: 100%;
@@ -74,7 +74,7 @@
   font-weight: 300;
 }
 .peity-charts p {
-  margin: 20px 0;
+  margin-bottom: 20px;
 }
 .peity-charts dl {
   margin: 35px 0 10px;

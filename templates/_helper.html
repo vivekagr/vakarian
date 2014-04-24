@@ -2,6 +2,14 @@
 {%- if not disable_comments %}<!-- {{ content }} -->{%- endif %}
 {%- endmacro %}
 
+{%- macro s(content) %}
+{%- if not disable_comments %}<!-- {{ content }} Starts -->{%- endif %}
+{%- endmacro %}
+
+{%- macro e(content) %}
+{%- if not disable_comments %}<!-- /{{ content }}{% if not 'End' in content %} Ends{% endif %} -->{%- endif %}
+{%- endmacro %}
+
 {%- macro cu(content) %}
 {%- if not disable_comments %}<!-- {{ content|upper }} -->{%- endif %}
 {%- endmacro %}

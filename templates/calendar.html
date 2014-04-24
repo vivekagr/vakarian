@@ -7,8 +7,9 @@
 {%- endblock %}
 
 {% block main %}
-    <div class="widget">
-        <div class="widget-content">
+    {{ s('Calendar') }}
+    <div class="panel panel-clean">
+        <div class="panel-body">
             <div class="fullcalendar fullcalendar-lg" id="calendar"></div>
             <div class="widget-info">
                 <p>Note: The events above are drag-and-droppbable.</p>
@@ -16,7 +17,7 @@
                 <p>This calendar was rendered using <a href="http://arshaw.com/fullcalendar/" target="_blank">FullCalendar</a> which supports extensive customization. For more details please have a look at the <a href="http://arshaw.com/fullcalendar/docs/" target="_blank">documentation</a> .</p>
             </div>
         </div>
-    </div>
+    </div>{{ e('Calendar') }}
 {% endblock %}
 
 {% block vendor_js %}

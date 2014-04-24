@@ -7,33 +7,48 @@
 {%- endblock %}
 
 {% block main %}
-    <div class="row widget">
-        <h4 class="widget-title">Realtime Graph</h4>
-        <div class="col-md-12">
+    {{ s('Realtime Graph') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">Realtime Graph</div></div>
+        <div class="panel-body">
             <div class="flot-chart" id="realtime"></div>
         </div>
-    </div>
-    <div class="row widget">
-        <h4 class="widget-title">Stacked Chart</h4>
-        <div class="col-md-12">
+    </div>{{ e('Realtime Graph') }}
+
+    {{ s('Stacked Chart') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">Stacked Chart</div></div>
+        <div class="panel-body">
             <div class="flot-chart" id="stacked"></div>
         </div>
-    </div>
+    </div>{{ e('Stacked Chart') }}
+
     <div class="row">
+
+        {{ s('Interactive Chart') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Interactive Chart</h4>
-                <div class="flot-chart-container">
-                    <div class="flot-chart" id="interactive"></div>
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Interactive Chart</div></div>
+                <div class="panel-body">
+                    <div class="flot-chart-container">
+                        <div class="flot-chart" id="interactive"></div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </div>{{ e('Interactive Chart') }}
+
+        {{ s('Donut Chart') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Donut Chart</h4>
-                <div class="flot-chart" id="flotDonutChart"></div>
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Donut Chart</div></div>
+                <div class="panel-body">
+                    <div class="flot-chart-container">
+                        <div class="flot-chart" id="flotDonutChart"></div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </div>{{ e('Donut Chart') }}
+
     </div>
 {% endblock %}
 

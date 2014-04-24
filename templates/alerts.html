@@ -8,7 +8,7 @@
 {% endblock %}
 
 {% block main %}
-    {{ c('Page Level Notifications') }}
+    {{ s('Page Level Notifications') }}
     <div class="alert alert-page alert-success">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
         <strong>Well done!</strong> You successfully read this important alert message.
@@ -24,10 +24,10 @@
     <div class="alert alert-page alert-danger">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
         <strong>Oh snap!</strong> Change a few things up and try submitting again.
-    </div>{{ c('Page Level Notifications End') }}
+    </div>{{ e('Page Level Notifications') }}
 
 
-    {{ c('Panel Level Notifications') }}
+    {{ s('Panel Level Notifications') }}
     <div class="panel panel-clean">
         <div class="panel-heading"><div class="panel-title">Alerts</div></div>
 
@@ -45,9 +45,9 @@
                 <pre>&lt;div class=&quot;alert alert-page alert-success&quot;&gt;...&lt;/div&gt;</pre>
             </div>
         </div>
-    </div>{{ c('Panel Level Notifications End') }}
+    </div>{{ e('Panel Level Notifications') }}
 
-    {{ c('Dismissible Notifications') }}
+    {{ s('Dismissible Notifications') }}
     <div class="panel panel-clean">
         <div class="panel-heading"><div class="panel-title">Dismissible Alerts</div></div>
 
@@ -62,9 +62,9 @@
                 <pre>&lt;div class=&quot;alert alert-warning alert-dismissable&quot;&gt;<br/>    &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/button&gt;<br/>    &lt;strong&gt;Warning!&lt;/strong&gt; Better check yourself, you're not looking too good.<br/>&lt;/div&gt;</pre>
             </div>
         </div>
-    </div>{{ c('Dismissible Notifications End') }}
+    </div>{{ e('Dismissible Notifications') }}
 
-    {{ c('Links in Alerts') }}
+    {{ s('Links in Alerts') }}
     <div class="panel panel-clean">
         <div class="panel-heading"><div class="panel-title">Links In Alerts</div></div>
 
@@ -94,5 +94,5 @@
                 <pre>&lt;div class=&quot;alert alert-success&quot;&gt;<br/>  &lt;a href=&quot;#&quot; class=&quot;alert-link&quot;&gt;...&lt;/a&gt;<br/>&lt;/div&gt;</pre>
             </div>
         </div>
-    </div>{{ c('Links in Alerts End') }}
+    </div>{{ e('Links in Alerts') }}
 {% endblock %}

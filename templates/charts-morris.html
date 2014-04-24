@@ -11,36 +11,45 @@
 {%- endblock %}
 
 {% block main %}
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="widget">
-                <h4 class="widget-title">Area Chart</h4>
-                <div class="morris-chart" id="morrisArea"></div>
-            </div>
+    {{ s('Area Chart') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">Area Chart</div></div>
+        <div class="panel-body">
+            <div class="morris-chart" id="morrisArea"></div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="widget">
-                <h4 class="widget-title">Line Chart</h4>
-                <div class="morris-chart" id="morrisLine"></div>
-            </div>
+    </div>{{ e('Area Chart') }}
+
+    {{ s('Line Chart') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">Line Chart</div></div>
+        <div class="panel-body">
+            <div class="morris-chart" id="morrisLine"></div>
         </div>
-    </div>
+    </div>{{ e('Line Chart') }}
+
     <div class="row">
+
+        {{ s('Donut Chart') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Donut Chart</h4>
-                <div class="morris-chart" id="morrisDonut"></div>
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Donut Chart</div></div>
+                <div class="panel-body">
+                    <div class="morris-chart" id="morrisDonut"></div>
+                </div>
             </div>
-        </div>
+        </div>{{ e('Donut Chart') }}
+
+        {{ s('Bar Chart') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Bar Chart</h4>
-                <div class="morris-chart" id="morrisBar"></div>
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Bar Chart</div></div>
+                <div class="panel-body">
+                    <div class="morris-chart" id="morrisBar"></div>
+                </div>
             </div>
-        </div>
-    </div>
+        </div>{{ e('Bar Chart') }}
+
+    </div>{{ c('/.row') }}
 {% endblock %}
 
 {% block vendor_js %}

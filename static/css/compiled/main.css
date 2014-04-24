@@ -497,6 +497,10 @@ SIDEBAR
 .sidebar-profile-wrapper {
   position: relative;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   /* Popover that opens on clicking on the profile area */
 }
 .sidebar-profile-wrapper .fa {
@@ -520,7 +524,7 @@ SIDEBAR
 }
 .sidebar-profile-wrapper .sidebar-profile-content {
   float: left;
-  margin-top: 8px;
+  margin-top: 5px;
   margin-left: 10px;
   width: 115px;
 }
@@ -589,6 +593,14 @@ SIDEBAR
 .sidebar-profile-wrapper .popover .sidebar-profile-popup-title {
   font-weight: 300;
   margin-top: 12px;
+}
+.sidebar-profile-wrapper .popover .sidebar-profile-popup-location {
+  font-size: 0.85em;
+  margin-top: 10px;
+  color: #95a5a6;
+}
+.sidebar-profile-wrapper .popover .sidebar-profile-popup-location i {
+  color: #3498db;
 }
 .sidebar-profile-wrapper .popover .form-group {
   margin: 5px 0 10px 0;

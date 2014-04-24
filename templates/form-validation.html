@@ -348,8 +348,10 @@
                     'registration-name': { message: 'Please enter your full name' },
                     'registration-username': { message: 'Please enter your desired username' },
                     'registration-email': {
-                        notEmpty: { message: 'Email address is required' },
-                        emailAddress: { message: 'This is not a valid email address' }
+                        validators: {
+                            notEmpty: { message: 'Email address is required' },
+                            emailAddress: { message: 'This is not a valid email address' }
+                        }
                     },
                     'registration-password': {
                         validators: {

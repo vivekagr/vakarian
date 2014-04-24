@@ -53,21 +53,23 @@
 
                 <ul class="navbar-items">
                     <li>
+                        {{ c('Sidebar size toggle button') }}
                         <button type="button" class="btn-navbar" id="sidebarNavToggle"><i class="fa fa-bars fa-fw"></i></button>
                     </li>
                 </ul>
 
+                {{ c('Items towards the right of the top bar') }}
                 <ul class="navbar-items pull-right">
 
-                    {{ c('Search field') }}
+                    {{ c('Top Bar Search Field') }}
                     <li class="hidden-xs">
                         <form class="navbar-search" id="navbarSearchForm">
                             <input class="form-control" type="text" placeholder="Search...">
                             <button type="submit" class="btn-navbar"><i class="fa fa-search fa-fw"></i></button>
                         </form>
-                    </li>
+                    </li>{{ e('Top Bar Search Field') }}
 
-                    {{ c('Notifications dropdown') }}
+                    {{ c('Notifications Dropdown') }}
                     <li class="dropdown notifications-dropdown">
                         <button type="button" class="btn-navbar" data-toggle="dropdown">
                             <span class="events-count">3</span>
@@ -98,9 +100,9 @@
                             <li role="presentation" class="divider"></li>
                             <li class="see-all"><a href="#">See all notifications</a></li>
                         </ul>
-                    </li>
+                    </li>{{ e('Notifications Dropdown') }}
 
-                    {{ c('Settings dropdown') }}
+                    {{ c('Settings Dropdown') }}
                     <li class="dropdown">
                         <button type="button" class="btn-navbar" data-toggle="dropdown"><i class="fa fa-gears fa-fw"></i></button>
                         <ul class="dropdown-menu dropdown-menu-right" role="menu">
@@ -110,16 +112,18 @@
                             <li role="presentation" class="divider"></li>
                             <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
                         </ul>
-                    </li>
+                    </li>{{ e('Settings Dropdown') }}
 
                 </ul>
             </div>
         </nav>
 
-        {{ cuh('Sidebar Start') }}
+        {{ cuh('Sidebar Starts') }}
+
         {{ c('Add .sidebar-fixed below to make the sidebar fixed to the window') }}
         <div class="sidebar sidebar-fixed">
 
+            {{ s('Sidebar Profile') }}
             <div class="sidebar-profile-wrapper clearfix">
                 <div class="sidebar-profile clearfix">
                     <i class="fa fa-chevron-right"></i>
@@ -130,6 +134,7 @@
                         <div class="job-title">DevOps Team</div>
                     </div>
                 </div>
+                {{ s('Sidebar Profile Popup') }}
                 <div class="popover right fade in sidebar-profile-popup">
                     <div class="arrow"></div>
                     <div class="popover-title">
@@ -184,11 +189,15 @@
                         <button class="btn btn-v btn-primary">Performance Report</button>
                         <button class="btn btn-v btn-info">Bug Review</button>
                     </div>
-                </div>
-            </div>
+                </div>{{ e('Sidebar Profile Popup') }}
+            </div>{{ s('Sidebar Profile') }}
+
+            {{ s('Sidebar Search Field') }}
             <div class="sidebar-search">
                 <input type="text">
-            </div>
+            </div>{{ e('Sidebar Search Field') }}
+
+            {{ s('Sidebar Navigation Starts') }}
             {% set active_parent_title=[] %}
             {% set active_page_title = [] %}
             <ul class="nav nav-sidebar">
@@ -245,7 +254,7 @@
                         </li>
                     </ul>
                 </li>
-            </ul>
+            </ul>{{ e('Sidebar Navigation Starts') }}
 
         </div>{{ cu('Sidebar finish') }}
 

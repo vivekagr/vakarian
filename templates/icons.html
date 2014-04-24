@@ -11,16 +11,16 @@
 {% endblock %}
 
 {% block main %}
-    <div class="widget">
-        <h4 class="widget-title">Icons</h4>
+    <div class="panel panel-clean tabs-fixed-slim">
+        <div class="panel-heading"><div class="panel-title">Icons</div></div>
 
-        <ul class="nav nav-tabs fixed">
+        <ul class="nav nav-tabs">
             <li class="active"><a href="#glyphicon" data-toggle="tab">Glyphicons</a></li>
             <li><a href="#fontawesome" data-toggle="tab">Font Awesome</a></li>
             <li><a href="#weatherIcons" data-toggle="tab">Weather Icons</a></li>
         </ul>
 
-        <div class="widget-content">
+        <div class="panel-body">
             <div class="tab-content">
                 <div class="tab-pane active" id="glyphicon">
                     <ul class="icons-list clearfix">
@@ -39,7 +39,7 @@
                 </div>
                 <div class="tab-pane" id="fontawesome">
                     {% for cat, icons in fa_icons.iteritems() %}
-                    <div class="widget-subtitle">{{ cat }}</div>
+                    <div class="subtitle">{{ cat }}</div>
                     <ul class="icons-list clearfix">
                         {% for icon in icons %}
                         <li>
@@ -57,7 +57,7 @@
                 </div>
                 <div class="tab-pane" id="weatherIcons">
                     {% for cat, icons in weather_icons.iteritems() %}
-                    <div class="widget-subtitle">{{ cat }}</div>
+                    <div class="subtitle">{{ cat }}</div>
                     <ul class="icons-list clearfix">
                         {% for icon in icons %}
                         <li>

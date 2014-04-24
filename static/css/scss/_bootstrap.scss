@@ -188,6 +188,98 @@
     }
   }
 
+  // Used for showing extra details in the panel
+  .widget-info {
+    margin: 10px 0 5px;
+    padding: 7px 10px;
+    border: 2px solid #f5f5f5;
+    border-radius: 3px;
+    font-size: 0.85em;
+    color: #7f8c8d;
+
+    p {
+      margin: 6px 0;
+      line-height: 1.8em;
+      &:first-child { margin-top: 0; }
+      &:last-child { margin-bottom: 0; }
+      &:only-of-type { margin-bottom: 6px; }
+    }
+
+    pre {
+      margin: 4px 0;
+      font-size: 0.9em;
+      background-color: #f5f5f5;
+    }
+
+    code {
+      background-color: #f5f5f5;
+      color: #16a085;
+    }
+
+  }
+
+  // Widget sub-title
+  .subtitle {
+    margin: 10px 0 3px 4px;
+    font-size: 0.8em;
+    color: #bdc3c7;
+
+    display: table;
+    white-space: nowrap;
+    &:before, &:after {
+      border-top: 1px solid #ecf0f1;
+      content: '';
+      display: table-cell;
+      position: relative;
+      top: 0.6em;
+    }
+    &:before {
+      width: 5px;
+      right: 3px;
+    }
+    &:after {
+      width: 5px;
+      left: 3px;
+    }
+  }
+
+  // If there is too much content in the .widget-info,
+  // encapsulate it within this to limit it's size.
+  .widget-info-fixed-size {
+    position: relative;
+
+    .widget-info {
+      overflow: scroll;
+      height: 120px;
+    }
+
+    &.open .widget-info {
+      overflow: visible;
+      height: auto;
+    }
+
+    .expand {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding: 2px 3px;
+      background: #fff;
+      border: 2px solid #ecf0f1;
+      border-top-left-radius: 3px;
+      font-size: 0.8em;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #D0D4D4;
+      @include user-select(none);
+      cursor: pointer;
+
+      &:hover {
+        color: #B0B4B4;
+      }
+    }
+
+  }
+
 }
 
 
@@ -232,7 +324,6 @@
     &.btn-#{$btn} {
       background-color: $col;
       &:hover { background-color: lighten($col, $hoverLightenPercent); }
-//      &:focus { background-color: lighten($col, $hoverLightenPercent); }
       &:active, &.active { background-color: darken($col, $hoverLightenPercent); }
 
       &.btn-rounded {
@@ -251,6 +342,11 @@
       }
 
     }
+  }
+
+  &.btn-default {
+    &:hover{ background-color: lighten(#ecf0f1, 2%); }
+    &:active:hover, &.active:hover { background-color: lighten(#ecf0f1, 2%); }
   }
 
   &.btn-xs { font-size: 0.85em; }
@@ -296,9 +392,14 @@
     i { margin-right: 0; }
   }
 
+  .btn-group.open & .dropdown-toggle {
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .125);
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .125);
+  }
+
   // Fixing margin for vertical button groups
-  .btn-group-vertical &, .btn-group-vertical .btn-group {
-    margin: 1px 0;
+  .btn-group-vertical & {
+    margin: 0 0 2px 0;
   }
 
   .btn-group-justified & {
@@ -319,8 +420,8 @@
 }
 
 
-// Styles for the alerts within a widget
-.widget .alert {
+// Styles for the alerts within a panel
+.panel .alert {
   padding: 12px 15px;
   border: none;
   font-size: 0.9em;
@@ -334,7 +435,7 @@
   }
 }
 
-// Use this when creating alert on the page level (not inside any widget)
+// Use this when creating alert on the page level (not inside any panel)
 .alert.alert-page {
   background-color: #fff;
   border-top: none;
@@ -497,7 +598,7 @@
     }
   }
 
-  .widget & {
+  .panel & {
     margin: 7px 0;
   }
 }

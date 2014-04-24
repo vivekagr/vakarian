@@ -774,103 +774,15 @@ to preserve the slide animation effect with jQuery
     color: #bdc3c7;
   }
 
-  // Widget sub-title
-  .widget-subtitle {
-    margin: 10px 0 3px 4px;
-    font-size: 0.8em;
-    color: #bdc3c7;
-
-    display: table;
-    white-space: nowrap;
-    &:before, &:after {
-      border-top: 1px solid #ecf0f1;
-      content: '';
-      display: table-cell;
-      position: relative;
-      top: 0.6em;
-    }
-    &:before {
-      width: 5px;
-      right: 3px;
-    }
-    &:after {
-      width: 5px;
-      left: 3px;
-    }
-  }
-
   // All the content within the div (except title and footer) should be within this div
   .widget-content {
     padding: 0 15px 10px;
     blockquote { font-weight: 300; }
   }
 
-  // Used for showing extra details about the widget
-  .widget-info {
-    margin: 10px 0 5px;
-    padding: 7px 10px;
-    border: 2px solid #f5f5f5;
-    border-radius: 3px;
-    font-size: 0.85em;
-    color: #7f8c8d;
 
-    p {
-      margin: 6px 0;
-      line-height: 1.8em;
-      &:first-child { margin-top: 0; }
-      &:last-child { margin-bottom: 0; }
-      &:only-of-type { margin-bottom: 6px; }
-    }
 
-    pre {
-      margin: 4px 0;
-      font-size: 0.9em;
-      background-color: #f5f5f5;
-    }
 
-    code {
-      background-color: #f5f5f5;
-      color: #16a085;
-    }
-
-  }
-
-  // If there is too much content in the .widget-info,
-  // encapsulate it within this to limit it's size.
-  .widget-info-fixed-size {
-    position: relative;
-
-    .widget-info {
-      overflow: scroll;
-      height: 120px;
-    }
-
-    &.open .widget-info {
-      overflow: visible;
-      height: auto;
-    }
-
-    .expand {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      padding: 2px 3px;
-      background: #fff;
-      border: 2px solid #ecf0f1;
-      border-top-left-radius: 3px;
-      font-size: 0.8em;
-      font-weight: 600;
-      text-transform: uppercase;
-      color: #D0D4D4;
-      @include user-select(none);
-      cursor: pointer;
-
-      &:hover {
-        color: #B0B4B4;
-      }
-    }
-
-  }
 
   // Show any small text as a footnote with this
   .widget-footnote {
@@ -884,10 +796,6 @@ to preserve the slide animation effect with jQuery
     font-weight: 300;
     color: #bdc3c7;
   }
-
-  // For fixed nav tabs within a widget
-
-
 
 
   // Fixing alert's close icon/btn's position within a widget

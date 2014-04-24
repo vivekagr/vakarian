@@ -8,9 +8,10 @@
 {% endblock %}
 
 {% block main %}
-    <div class="widget">
-        <h4 class="widget-title">Default Buttons</h4>
-        <div class="widget-content">
+    {{ c('Default Buttons Start') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">Default Buttons</div></div>
+        <div class="panel-body">
             <button class="btn btn-default">Default</button>
             <button class="btn btn-primary">Primary</button>
             <button class="btn btn-success">Success</button>
@@ -25,11 +26,12 @@
                 <p>Six color schemes are available - <code>.btn-default</code>, <code>.btn-primary</code>, <code>.btn-success</code>, <code>.btn-info</code>, <code>.btn-danger</code> and <code>.btn-inverse</code>.</p>
             </div>
         </div>
-    </div>
+    </div>{{ c('Default Buttons End') }}
 
-    <div class="widget">
-        <h4 class="widget-title">Rounded Buttons</h4>
-        <div class="widget-content">
+    {{ c('Rounded Buttons Start') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">Rounded Buttons</div></div>
+        <div class="panel-body">
             <button class="btn btn-rounded btn-default">Default</button>
             <button class="btn btn-rounded btn-primary">Primary</button>
             <button class="btn btn-rounded btn-success">Success</button>
@@ -43,11 +45,12 @@
                 <pre>&lt;button class="btn btn-rounded btn-primary"&gt;Primary&lt;/button&gt;</pre>
             </div>
         </div>
-    </div>
+    </div>{{ c('Rounded Buttons End') }}
 
-    <div class="widget">
-        <h4 class="widget-title">Flat Buttons</h4>
-        <div class="widget-content">
+    {{ c('Flat Buttons Start') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">Flat Buttons</div></div>
+        <div class="panel-body">
             <button class="btn btn-flat btn-default">Default</button>
             <button class="btn btn-flat btn-primary">Primary</button>
             <button class="btn btn-flat btn-success">Success</button>
@@ -61,11 +64,12 @@
                 <pre>&lt;button class="btn btn-flat btn-primary"&gt;Primary&lt;/button&gt;</pre>
             </div>
         </div>
-    </div>
+    </div>{{ c('Flat Buttons End') }}
 
-    <div class="widget">
-        <h4 class="widget-title">Wide Buttons</h4>
-        <div class="widget-content">
+    {{ c('Wide Buttons Start') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">Wide Buttons</div></div>
+        <div class="panel-body">
             <button class="btn btn-wide btn-default">Default</button>
             <button class="btn btn-wide btn-primary">Primary</button>
             <button class="btn btn-wide btn-success">Success</button>
@@ -79,11 +83,12 @@
                 <pre>&lt;button class="btn btn-wide btn-primary"&gt;Primary&lt;/button&gt;</pre>
             </div>
         </div>
-    </div>
+    </div>{{ c('Wide Buttons End') }}
 
-    <div class="widget">
-        <h4 class="widget-title">Super Buttons</h4>
-        <div class="widget-content">
+    {{ c('Super Buttons Start') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">Super Buttons</div></div>
+        <div class="panel-body">
             <button class="btn btn-super btn-default">Default</button>
             <button class="btn btn-super btn-primary">Primary</button>
             <button class="btn btn-super btn-success">Success</button>
@@ -97,11 +102,12 @@
                 <pre>&lt;button class="btn btn-super btn-primary"&gt;Primary&lt;/button&gt;</pre>
             </div>
         </div>
-    </div>
+    </div>{{ c('Super Buttons End') }}
 
-    <div class="widget">
-        <h4 class="widget-title">Disabled Buttons</h4>
-        <div class="widget-content">
+    {{ c('Disabled Buttons Start') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">Disabled Buttons</div></div>
+        <div class="panel-body">
             <button class="btn btn-default" disabled>Default</button>
             <button class="btn btn-primary" disabled>Primary</button>
             <button class="btn btn-success" disabled>Success</button>
@@ -115,11 +121,12 @@
                 <pre>&lt;button class="btn btn-primary" disabled&gt;Primary&lt;/button&gt;</pre>
             </div>
         </div>
-    </div>
+    </div>{{ c('Disabled Buttons End') }}
 
-    <div class="widget">
-        <h4 class="widget-title">Active Buttons</h4>
-        <div class="widget-content">
+    {{ c('Active Buttons Start') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">Active Buttons</div></div>
+        <div class="panel-body">
             <button class="btn btn-default active">Default</button>
             <button class="btn btn-primary active">Primary</button>
             <button class="btn btn-success active">Success</button>
@@ -133,11 +140,12 @@
                 <pre>&lt;button class="btn btn-primary active"&gt;Primary&lt;/button&gt;</pre>
             </div>
         </div>
-    </div>
+    </div>{{ c('Active Buttons End') }}
 
-    <div class="widget">
-        <h4 class="widget-title">Buttons With Icons</h4>
-        <div class="widget-content">
+    {{ c('Buttons With Icons Start') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">Buttons With Icons</div></div>
+        <div class="panel-body">
             <button class="btn btn-default"><i class="fa fa-desktop"></i> Default</button>
             <button class="btn btn-primary"><i class="fa fa-bug"></i> Primary</button>
             <button class="btn btn-success"><i class="fa fa-leaf"></i> Success</button>
@@ -151,14 +159,15 @@
                 <pre>&lt;button class=&quot;btn btn-primary&quot;&gt;&lt;i class=&quot;fa fa-bug&quot;&gt;&lt;/i&gt; Primary&lt;/button&gt;</pre>
             </div>
         </div>
-    </div>
+    </div>{{ c('Buttons With Icons End') }}
 
     <div class="row">
 
+        {{ c('Icon Buttons Start') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Icon Buttons</h4>
-                <div class="widget-content">
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Icon Buttons</div></div>
+                <div class="panel-body">
                     <button class="btn btn-icon btn-default"><i class="fa fa-comments-o"></i></button>
                     <button class="btn btn-icon btn-primary"><i class="fa fa-rocket"></i></button>
                     <button class="btn btn-icon btn-success"><i class="fa fa-check"></i></button>
@@ -173,11 +182,13 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>{{ c('Icon Buttons End') }}
+
+        {{ c('Social Buttons Start') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Social Buttons</h4>
-                <div class="widget-content">
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Social Buttons</div></div>
+                <div class="panel-body">
                     <button class="btn btn-facebook"><i class="fa fa-facebook"></i> Facebook</button>
                     <button class="btn btn-twitter"><i class="fa fa-twitter"></i> Twitter</button>
                     <button class="btn btn-google-plus"><i class="fa fa-google-plus"></i> Google+</button>
@@ -191,12 +202,13 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>{{ c('Social Buttons End') }}
 
+        {{ c('Block Buttons Start') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Block Buttons</h4>
-                <div class="widget-content">
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Block Buttons</div></div>
+                <div class="panel-body">
                     <button class="btn btn-block btn-default">Default</button>
                     <button class="btn btn-block btn-primary">Primary</button>
                     <button class="btn btn-block btn-success">Success</button>
@@ -211,12 +223,13 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>{{ c('Block Buttons End') }}
 
+        {{ c('Buttons Sizes Start') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Icon Sizes</h4>
-                <div class="widget-content">
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Button Sizes</div></div>
+                <div class="panel-body">
                     <button class="btn btn-xs btn-default">Extra Small</button>
                     <button class="btn btn-sm btn-default">Small</button>
                     <button class="btn btn-default">Default</button>
@@ -233,12 +246,13 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>{{ c('Buttons Sizes End') }}
 
+        {{ c('Buttons Groups Start') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Buttons Groups</h4>
-                <div class="widget-content">
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Buttons Groups</div></div>
+                <div class="panel-body">
                     <div class="btn-group">
                         <button class="btn btn-success">Left</button>
                         <button class="btn btn-success">Middle</button>
@@ -246,7 +260,7 @@
                     </div>
                     <br>
 
-                    <div class="widget-subtitle">Large Sized</div>
+                    <div class="subtitle">Large Sized</div>
                     <div class="btn-group btn-group-lg">
                         <button class="btn btn-primary">Left</button>
                         <button class="btn btn-primary">Middle</button>
@@ -254,7 +268,7 @@
                     </div>
                     <br>
 
-                    <div class="widget-subtitle">Button Toolbar</div>
+                    <div class="subtitle">Button Toolbar</div>
                     <div class="btn-toolbar" role="toolbar">
                         <div class="btn-group">
                             <button class="btn btn-default">1</button>
@@ -294,16 +308,17 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>{{ c('Buttons Groups End') }}
 
+        {{ c('Nested Buttons Groups Start') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Nested Button Groups</h4>
-                <div class="widget-content">
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Nested Button Groups</div></div>
+                <div class="panel-body">
 
                     <div class="row">
                         <div class="col-sm-6">
-                            <div class="widget-subtitle">Horizontal Variation</div>
+                            <div class="subtitle">Horizontal Variation</div>
                             <div class="btn-group">
                                 <button type="button" class="btn btn-default">1</button>
                                 <button type="button" class="btn btn-default">2</button>
@@ -321,7 +336,7 @@
                             </div>
                         </div>
                         <div class="col-sm-6">
-                            <div class="widget-subtitle">Vertical Variation</div>
+                            <div class="subtitle">Vertical Variation</div>
                             <div class="btn-group-vertical">
                                 <button type="button" class="btn btn-default">1</button>
                                 <button type="button" class="btn btn-default">2</button>
@@ -363,19 +378,20 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>{{ c('Nested Buttons Groups End') }}
 
+        {{ c('Justified Buttons Groups Start') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Justified Button Groups</h4>
-                <div class="widget-content">
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Justified Button Groups</div></div>
+                <div class="panel-body">
                     <div class="btn-group btn-group-justified">
                         <div class="btn-group"><button class="btn btn-default">Left</button></div>
                         <div class="btn-group"><button class="btn btn-default">Middle</button></div>
                         <div class="btn-group"><button class="btn btn-default">Right</button></div>
                     </div>
 
-                    <div class="widget-subtitle">With Dropdown</div>
+                    <div class="subtitle">With Dropdown</div>
 
                     <div class="btn-group btn-group-justified">
                         <div class="btn-group"><button class="btn btn-primary">Left</button></div>
@@ -405,265 +421,265 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="col-md-12">
-            <div class="widget">
-                <h4 class="widget-title">Single Button Dropdowns</h4>
-                <div class="widget-content">
-
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                            Default <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                        </ul>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                            Primary <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                        </ul>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
-                            Success <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                        </ul>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
-                            Info <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                        </ul>
-                    </div>
-                    <div class="btn-group dropup">
-                        <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
-                            Warning <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                        </ul>
-                    </div>
-                    <div class="btn-group dropup">
-                        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
-                            Danger <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                        </ul>
-                    </div>
-                    <div class="btn-group dropup">
-                        <button type="button" class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">
-                            Inverse <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                        </ul>
-                    </div>
-
-                    <br> {{ c('Split Button Dropdowns') }}
-                    <div class="widget-subtitle">Split Button Dropdowns</div>
-
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-default">Default</button>
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                            <span class="caret"></span>
-                            <span class="sr-only">Toggle Dropdown</span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                        </ul>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-primary">Primary</button>
-                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                            <span class="caret"></span>
-                            <span class="sr-only">Toggle Dropdown</span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                        </ul>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-success">Success</button>
-                        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
-                            <span class="caret"></span>
-                            <span class="sr-only">Toggle Dropdown</span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                        </ul>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-info">Info</button>
-                        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
-                            <span class="caret"></span>
-                            <span class="sr-only">Toggle Dropdown</span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                        </ul>
-                    </div>
-                    <div class="btn-group dropup">
-                        <button type="button" class="btn btn-warning">Warning</button>
-                        <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
-                            <span class="caret"></span>
-                            <span class="sr-only">Toggle Dropdown</span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                        </ul>
-                    </div>
-                    <div class="btn-group dropup">
-                        <button type="button" class="btn btn-danger">Danger</button>
-                        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
-                            <span class="caret"></span>
-                            <span class="sr-only">Toggle Dropdown</span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                        </ul>
-                    </div>
-                    <div class="btn-group dropup">
-                        <button type="button" class="btn btn-inverse">Inverse</button>
-                        <button type="button" class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">
-                            <span class="caret"></span>
-                            <span class="sr-only">Toggle Dropdown</span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                        </ul>
-                    </div>
-
-                    <br> {{ c('Button dropdown size variations') }}
-                    <div class="widget-subtitle">Size Variations</div>
-
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown">
-                            Extra Small <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                        </ul>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown">
-                            Small <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                        </ul>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                            Default <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                        </ul>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-lg btn-default dropdown-toggle" data-toggle="dropdown">
-                            Large <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="widget-info-fixed-size">
-                        <div class="widget-info">
-                            <p>Turn a button into a dropdown toggle with some basic markup changes.</p>
-                            <pre>&lt;div class=&quot;btn-group&quot;&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
-            Default &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
-        &lt;/button&gt;
-        &lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot;&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
-            ...more dropdown links...
-        &lt;/ul&gt;
-    &lt;/div&gt;</pre>
-                            <p>Similarly, split button dropdowns can be created with the same markup changes, only with a separate button.</p>
-                            <pre>&lt;div class=&quot;btn-group&quot;&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;Default&lt;/button&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
-            &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
-            &lt;span class=&quot;sr-only&quot;&gt;Toggle Dropdown&lt;/span&gt;
-        &lt;/button&gt;
-        &lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot;&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
-            ...more dropdown links...
-        &lt;/ul&gt;
-    &lt;/div&gt;</pre>
-                            <p>Button dropdowns work with buttons of all sizes and can be set with <code>.btn-xs</code>, <code>.btn-sm</code> and <code>.btn-lg</code>.</p>
-                        </div>
-                        <div class="expand">Expand</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </div>{{ c('Justified Buttons Groups End') }}
 
     </div>
+
+    {{ c('Single Buttons Dropdown Start') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">Single Button Dropdowns</div></div>
+        <div class="panel-body">
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    Default <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                    Primary <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                    Success <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                    Info <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div>
+            <div class="btn-group dropup">
+                <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+                    Warning <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div>
+            <div class="btn-group dropup">
+                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+                    Danger <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div>
+            <div class="btn-group dropup">
+                <button type="button" class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">
+                    Inverse <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div>
+
+            <br> {{ c('Split Button Dropdowns') }}
+            <div class="subtitle">Split Button Dropdowns</div>
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-default">Default</button>
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary">Primary</button>
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-success">Success</button>
+                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-info">Info</button>
+                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div>
+            <div class="btn-group dropup">
+                <button type="button" class="btn btn-warning">Warning</button>
+                <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div>
+            <div class="btn-group dropup">
+                <button type="button" class="btn btn-danger">Danger</button>
+                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div>
+            <div class="btn-group dropup">
+                <button type="button" class="btn btn-inverse">Inverse</button>
+                <button type="button" class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div>
+
+            <br> {{ c('Button dropdown size variations') }}
+            <div class="subtitle">Size Variations</div>
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown">
+                    Extra Small <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown">
+                    Small <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    Default <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-lg btn-default dropdown-toggle" data-toggle="dropdown">
+                    Large <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div>
+
+            <div class="widget-info-fixed-size">
+                <div class="widget-info">
+                    <p>Turn a button into a dropdown toggle with some basic markup changes.</p>
+                    <pre>&lt;div class=&quot;btn-group&quot;&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+    Default &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    ...more dropdown links...
+&lt;/ul&gt;
+&lt;/div&gt;</pre>
+                    <p>Similarly, split button dropdowns can be created with the same markup changes, only with a separate button.</p>
+                    <pre>&lt;div class=&quot;btn-group&quot;&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;Default&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+    &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;Toggle Dropdown&lt;/span&gt;
+&lt;/button&gt;
+&lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    ...more dropdown links...
+&lt;/ul&gt;
+&lt;/div&gt;</pre>
+                    <p>Button dropdowns work with buttons of all sizes and can be set with <code>.btn-xs</code>, <code>.btn-sm</code> and <code>.btn-lg</code>.</p>
+                </div>
+                <div class="expand">Expand</div>
+            </div>
+        </div>
+    </div>{{ c('Single Buttons Dropdown End') }}
+
 {% endblock %}

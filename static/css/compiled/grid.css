@@ -8,7 +8,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.grid-example > .widget-content > .row {
+.grid-example > .panel-body > .row {
   margin-left: -10px;
   margin-right: -10px;
 }

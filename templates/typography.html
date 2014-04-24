@@ -4,10 +4,12 @@
 
 {% block main %}
     <div class="row">
+
+        {{ c('Headings Start') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Headings</h4>
-                <div class="widget-content">
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Headings</div></div>
+                <div class="panel-body">
                     <h6>Heading 6 <small>Secondary text</small></h6>
                     <h5>Heading 5 <small>Secondary text</small></h5>
                     <h4>Heading 4 <small>Secondary text</small></h4>
@@ -16,11 +18,13 @@
                     <h1>Heading 1 <small>Secondary text</small></h1>
                 </div>
             </div>
-        </div>
+        </div>{{ c('Headings End') }}
+
+        {{ c('Paragraphs Start') }}
         <div class="col-md-6">
-            <div class="widget">
-                <h4 class="widget-title">Paragraphs</h4>
-                <div class="widget-content">
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Paragraphs</div></div>
+                <div class="panel-body">
                     <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
 
                     <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
@@ -28,45 +32,56 @@
                     <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
                 </div>
             </div>
-        </div>
+        </div>{{ c('Paragraphs End') }}
+
     </div>
-    <div class="widget">
-        <h4 class="widget-title">Text Color Classes</h4>
-        <div class="widget-content">
+
+    {{ c('Text Color Classes Start') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">Text Color Classes</div></div>
+        <div class="panel-body">
             <p class="text-muted">Elitr complectitur te nam, nam veniam constituam ei. Pro id novum partem, has quod persius no.</p>
             <p class="text-primary">An vis solum reque, an pri lorem laoreet conclusionemque. Alterum referrentur duo ad, oporteat eu nec.</p>
             <p class="text-success">Cu usu wisi probatus. Debet dolores ad quo, lorem definitiones at cum, vim salutandi inciderint ne.</p>
             <p class="text-warning">Pri consul persius adversarium eu, nonumes principes definiebas et sea, in est laoreet pertinacia.</p>
             <p class="text-danger">Porro habemus vel eu, malis suavitate ei pri. Vis tollit argumentum at, cum in paulo sonet habemus.</p>
         </div>
-    </div>
+    </div>{{ c('Text Color Classes End') }}
+
     <div class="row">
+
+        {{ c('Other Paragraph Elements Start') }}
         <div class="col-md-7">
-            <div class="widget">
-                <h4 class="widget-title">Other Elements</h4>
-                <div class="widget-content">
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Other Elements</div></div>
+                <div class="panel-body">
                     <p class="lead">This is an example of lead text.</p>
                     <p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
                     <p>The following snippet of text is <em>rendered as italicized text</em>.</p>
                     <p><small>This line of text is meant to be treated as fine print.</small></p>
                 </div>
             </div>
-        </div>
+        </div>{{ c('Other Paragraph Elements End') }}
+
+        {{ c('Alignment Start') }}
         <div class="col-md-5">
-            <div class="widget">
-                <h4 class="widget-title">Alignment</h4>
-                <div class="widget-content">
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Alignment</div></div>
+                <div class="panel-body">
                     <p class="text-left">Left aligned text.</p>
                     <p class="text-center">Center aligned text.</p>
                     <p class="text-right">Right aligned text.</p>
                     <p class="text-justify">Justified text.</p>
                 </div>
             </div>
-        </div>
+        </div>{{ c('Alignment End') }}
+
     </div>
-    <div class="widget">
-        <h4 class="widget-title">Blockquote</h4>
-        <div class="widget-content">
+
+    {{ c('Blockquote Start') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">Blockquote</div></div>
+        <div class="panel-body">
             <blockquote>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
             </blockquote>
@@ -75,20 +90,25 @@
                 <footer>Bill Gates</footer>
             </blockquote>
         </div>
-    </div>
-    <div class="widget">
-        <h4 class="widget-title">Code</h4>
-        <div class="widget-content">
+    </div>{{ c('Blockquote End') }}
+
+    {{ c('Code Blocks Start') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">Code</div></div>
+        <div class="panel-body">
             <p>Inline snippets of code can wrapped with <code>&lt;code&gt;</code></p>
             <p>To switch directories, type <kbd>cd</kbd> followed by the name of the directory.</p>
             <pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>
         </div>
-    </div>
+    </div>{{ c('Code Blocks End') }}
+
     <div class="row">
+
+        {{ c('Unordered List Start') }}
         <div class="col-md-4">
-            <div class="widget">
-                <h4 class="widget-title">Unordered List</h4>
-                <div class="widget-content">
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Unordered List</div></div>
+                <div class="panel-body">
                     <ul>
                         <li>Lorem ipsum dolor sit amet</li>
                         <li>Consectetur adipiscing elit</li>
@@ -108,11 +128,13 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </div>{{ c('Unordered List End') }}
+
+        {{ c('Ordered List Start') }}
         <div class="col-md-4">
-            <div class="widget">
-                <h4 class="widget-title">Ordered List</h4>
-                <div class="widget-content">
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Ordered List</div></div>
+                <div class="panel-body">
                     <ol>
                         <li>Lorem ipsum dolor sit amet</li>
                         <li>Consectetur adipiscing elit</li>
@@ -128,11 +150,13 @@
                     </ol>
                 </div>
             </div>
-        </div>
+        </div>{{ c('Ordered List End') }}
+
+        {{ c('Unstyled List Start') }}
         <div class="col-md-4">
-            <div class="widget">
-                <h4 class="widget-title">Unstyled List</h4>
-                <div class="widget-content">
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Unstyled List</div></div>
+                <div class="panel-body">
                     <ul class="list-unstyled">
                         <li>Lorem ipsum dolor sit amet</li>
                         <li>Consectetur adipiscing elit</li>
@@ -152,11 +176,14 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </div>{{ c('Unstyled List End') }}
+
     </div>
-    <div class="widget">
-        <h4 class="widget-title">Inline List</h4>
-        <div class="widget-content">
+
+    {{ c('Inline List Start') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">Inline List</div></div>
+        <div class="panel-body">
             <ul class="list-inline">
                 <li>Lorem ipsum</li>
                 <li>Phasellus iaculis</li>
@@ -166,12 +193,15 @@
                 <li>Nulla volutpat</li>
             </ul>
         </div>
-    </div>
+    </div>{{ c('Inline List End') }}
+
     <div class="row">
+
+        {{ c('Description Start') }}
         <div class="col-md-5">
-            <div class="widget">
-                <h4 class="widget-title">Description</h4>
-                <div class="widget-content">
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Description</div></div>
+                <div class="panel-body">
                     <dl>
                       <dt>Description lists</dt>
                       <dd>A description list is perfect for defining terms.</dd>
@@ -183,11 +213,13 @@
                     </dl>
                 </div>
             </div>
-        </div>
+        </div>{{ c('Description End') }}
+
+        {{ c('Horizontal Description Start') }}
         <div class="col-md-7">
-            <div class="widget">
-                <h4 class="widget-title">Horizontal Description</h4>
-                <div class="widget-content">
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Horizontal Description</div></div>
+                <div class="panel-body">
                     <dl class="dl-horizontal">
                       <dt>Description lists</dt>
                       <dd>A description list is perfect for defining terms.</dd>
@@ -201,6 +233,7 @@
                     </dl>
                 </div>
             </div>
-        </div>
+        </div>{{ c('Horizontal Description End') }}
+
     </div>
 {% endblock %}

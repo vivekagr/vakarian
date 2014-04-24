@@ -15,7 +15,15 @@
     border: none;
   }
 
-  p { font-size: 0.9em; }
+  p {
+    font-size: 0.9em;
+    &.lead { font-size: 1.5em; }
+  }
+
+  blockquote  {
+    p { font-size: 1.05em; }
+    p, footer { font-weight: 300; }
+  }
 
   &.panel-default {
     .panel-heading { background-color: #EBEBEB; }
@@ -194,7 +202,7 @@
     padding: 7px 10px;
     border: 2px solid #f5f5f5;
     border-radius: 3px;
-    font-size: 0.85em;
+    font-size: 0.9em;
     color: #7f8c8d;
 
     p {
@@ -207,7 +215,7 @@
 
     pre {
       margin: 4px 0;
-      font-size: 0.9em;
+      font-size: 0.85em;
       background-color: #f5f5f5;
     }
 

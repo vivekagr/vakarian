@@ -327,6 +327,28 @@
     color: #bdc3c7;
   }
 
+  .panel-toolbar {
+    position: absolute;
+    top: 6px;
+    right: 11px;
+    @include user-select(none);
+    cursor: default;
+
+    a {
+      display: inline-block;
+      font-size: 0.95em;
+      color: #CFD7DA;
+      text-align: center;
+      vertical-align: middle;
+      margin-left: 5px;
+      @include transition(all 0.2s ease);
+
+      &:hover {
+        color: darken(#CFD7DA, 10%);
+      }
+    }
+  }
+
 }
 
 
@@ -373,7 +395,7 @@
       &:hover { background-color: lighten($col, $hoverLightenPercent); }
       &:active, &.active { background-color: darken($col, $hoverLightenPercent); }
 
-      &.btn-rounded {
+      &.btn-alt {
         @include linear-gradient(top, lighten($col, 3%), darken($col, 5%));
         border: 1px solid darken($col, 5%);
 
@@ -386,6 +408,12 @@
           -webkit-box-shadow: none;
           @include linear-gradient(top, lighten($col, 2%), darken($col, 6%));
         }
+      }
+
+      &.btn-rounded {
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        border-radius: 20px;
       }
 
     }
@@ -447,6 +475,10 @@
     table & {
       margin: 0 5px;
     }
+
+    &.btn-alt {
+
+    }
   }
 
   .btn-group.open & .dropdown-toggle {
@@ -492,7 +524,7 @@
   }
 }
 
-// Use this when creating alert on the page level (not inside any panel)
+// Use .alert-page when creating alert on the page level (not inside any panel)
 .alert.alert-page, .alert.alert-top {
   background-color: #fff;
   border-top: none;
@@ -516,6 +548,13 @@
   &.alert-danger { border-color: #F87F73; }
 }
 
+
+/*
+// Use .alert-top for top-of-the-page notification
+// Can be combined with animate.css classes for
+// nice effects!
+*/
+
 .alert.alert-top {
   position: relative;
   margin-bottom: 10px;
@@ -524,6 +563,8 @@
   padding-left: 45px;
   font-size: 0.9em;
   font-weight: 600;
+  color: #95a5a6;
+  border-bottom: 2px solid #7f8c8d;
 
   .alert-icon {
     display: inline-block;
@@ -532,6 +573,30 @@
     top: 12px;
     left: 13px;
   }
+
+  $alertTopColors: (
+    primary: #3498db,
+    success: #16a085,
+    info: #60B2E9,
+    warning: #f1c40f,
+    danger: #e74c3c
+  );
+
+  &.alert-primary i { color: #3498db; }
+  &.alert-success i { color: #16a085; }
+  &.alert-info i { color: #60B2E9; }
+  &.alert-warning i { color: #f1c40f; }
+  &.alert-danger i { color: #e74c3c; }
+
+  // Generating class for each notification type
+  // with respective icon and bottom border color
+  @each $btn, $col in $alertTopColors {
+    &.alert-#{$btn} {
+      i { color: $col; }
+      border-bottom-color: $col;
+    }
+  }
+
 }
 
 

@@ -5,10 +5,18 @@
 {% block main %}
     <div class="row">
 
+        <!-- todo: finish panel toolbar -->
+
         {{ c('Headings Start') }}
         <div class="col-md-6">
             <div class="panel panel-clean">
-                <div class="panel-heading"><div class="panel-title">Headings</div></div>
+                <div class="panel-heading">
+                    <div class="panel-title">Headings</div>
+                    <div class="panel-toolbar">
+                        <a href="#" class="panel-size"><i class="fa fa-chevron-down"></i></a>
+                        <a href="#" class="panel-close"><i class="fa fa-times"></i></a>
+                    </div>
+                </div>
                 <div class="panel-body">
                     <h6>Heading 6 <small>Secondary text</small></h6>
                     <h5>Heading 5 <small>Secondary text</small></h5>

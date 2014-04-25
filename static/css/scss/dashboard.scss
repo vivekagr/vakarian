@@ -30,7 +30,7 @@
     svg { float: right; }
 
     @include user-select(none);
-    cursor:default;
+    cursor: default;
     margin: 12px 0;
     font-size: 0.85em;
     font-weight: 300;

@@ -28,6 +28,25 @@
         </div>
     </div>{{ e('Default Buttons') }}
 
+    {{ s('Alt Buttons') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">Alt Buttons</div></div>
+        <div class="panel-body">
+            <button class="btn btn-alt btn-default">Default</button>
+            <button class="btn btn-alt btn-primary">Primary</button>
+            <button class="btn btn-alt btn-success">Success</button>
+            <button class="btn btn-alt btn-info">Info</button>
+            <button class="btn btn-alt btn-warning">Warning</button>
+            <button class="btn btn-alt btn-danger">Danger</button>
+            <button class="btn btn-alt btn-inverse">Inverse</button>
+
+            <div class="widget-info">
+                <p>A bit rounded button with a gradient. Add <code>.btn-rounded</code> to any <code>.btn</code>.</p>
+                <pre>&lt;button class="btn btn-rounded btn-primary"&gt;Primary&lt;/button&gt;</pre>
+            </div>
+        </div>
+    </div>{{ e('Alt Buttons') }}
+
     {{ s('Rounded Buttons') }}
     <div class="panel panel-clean">
         <div class="panel-heading"><div class="panel-title">Rounded Buttons</div></div>
@@ -153,6 +172,14 @@
             <button class="btn btn-warning"><i class="fa fa-fire"></i> Warning</button>
             <button class="btn btn-danger"><i class="fa fa-warning"></i> Danger</button>
             <button class="btn btn-inverse"><i class="fa fa-heart"></i> Inverse</button>
+            <br>
+            <button class="btn btn-default btn-rounded"><i class="fa fa-desktop"></i> Default</button>
+            <button class="btn btn-primary btn-rounded"><i class="fa fa-bug"></i> Primary</button>
+            <button class="btn btn-success btn-rounded"><i class="fa fa-leaf"></i> Success</button>
+            <button class="btn btn-info btn-rounded"><i class="fa fa-envelope"></i> Info</button>
+            <button class="btn btn-warning btn-rounded"><i class="fa fa-fire"></i> Warning</button>
+            <button class="btn btn-danger btn-rounded"><i class="fa fa-warning"></i> Danger</button>
+            <button class="btn btn-inverse btn-rounded"><i class="fa fa-heart"></i> Inverse</button>
 
             <div class="widget-info">
                 <p>Icons (for e.g. Font Awesome) can be added to buttons.</p>
@@ -161,28 +188,35 @@
         </div>
     </div>{{ e('Buttons With Icons') }}
 
-    <div class="row">
+    {{ s('Icon Buttons') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">Icon Buttons</div></div>
+        <div class="panel-body">
+            <button class="btn btn-icon btn-default"><i class="fa fa-comments-o"></i></button>
+            <button class="btn btn-icon btn-primary"><i class="fa fa-rocket"></i></button>
+            <button class="btn btn-icon btn-success"><i class="fa fa-check"></i></button>
+            <button class="btn btn-icon btn-info"><i class="fa fa-flag"></i></button>
+            <button class="btn btn-icon btn-warning"><i class="fa fa-unlock-alt"></i></button>
+            <button class="btn btn-icon btn-danger"><i class="fa fa-exclamation"></i></button>
+            <button class="btn btn-icon btn-inverse"><i class="fa fa-map-marker"></i></button>
 
-        {{ s('Icon Buttons') }}
-        <div class="col-md-6">
-            <div class="panel panel-clean">
-                <div class="panel-heading"><div class="panel-title">Icon Buttons</div></div>
-                <div class="panel-body">
-                    <button class="btn btn-icon btn-default"><i class="fa fa-comments-o"></i></button>
-                    <button class="btn btn-icon btn-primary"><i class="fa fa-rocket"></i></button>
-                    <button class="btn btn-icon btn-success"><i class="fa fa-check"></i></button>
-                    <button class="btn btn-icon btn-info"><i class="fa fa-flag"></i></button>
-                    <button class="btn btn-icon btn-warning"><i class="fa fa-unlock-alt"></i></button>
-                    <button class="btn btn-icon btn-danger"><i class="fa fa-exclamation"></i></button>
-                    <button class="btn btn-icon btn-inverse"><i class="fa fa-map-marker"></i></button>
+            <!-- todo: fix buttons -->
+            <button class="btn btn-alt btn-icon btn-default"><i class="fa fa-flask"></i></button>
+            <button class="btn btn-alt btn-icon btn-primary"><i class="fa fa-star"></i></button>
+            <button class="btn btn-alt btn-icon btn-success"><i class="fa fa-phone"></i></button>
+            <button class="btn btn-alt btn-icon btn-info"><i class="fa fa-question-circle"></i></button>
+            <button class="btn btn-alt btn-icon btn-warning"><i class="fa fa-leaf"></i></button>
+            <button class="btn btn-alt btn-icon btn-danger"><i class="fa fa-heart"></i></button>
+            <button class="btn btn-alt btn-icon btn-inverse"><i class="fa fa-coffee"></i></button>
 
-                    <div class="widget-info">
-                        <p>Only icons can also be used in the buttons with <code>.btn-icon</code> class.</p>
-                        <pre>&lt;button class=&quot;btn btn-icon btn-primary&quot;&gt;&lt;i class=&quot;fa fa-rocket&quot;&gt;&lt;/i&gt;&lt;/button&gt;</pre>
-                    </div>
-                </div>
+            <div class="widget-info">
+                <p>Only icons can also be used in the buttons with <code>.btn-icon</code> class.</p>
+                <pre>&lt;button class=&quot;btn btn-icon btn-primary&quot;&gt;&lt;i class=&quot;fa fa-rocket&quot;&gt;&lt;/i&gt;&lt;/button&gt;</pre>
             </div>
-        </div>{{ e('Icon Buttons') }}
+        </div>
+    </div>{{ e('Icon Buttons') }}
+
+    <div class="row">
 
         {{ s('Social Buttons') }}
         <div class="col-md-6">
@@ -192,9 +226,22 @@
                     <button class="btn btn-facebook"><i class="fa fa-facebook"></i> Facebook</button>
                     <button class="btn btn-twitter"><i class="fa fa-twitter"></i> Twitter</button>
                     <button class="btn btn-google-plus"><i class="fa fa-google-plus"></i> Google+</button>
+                    <button class="btn btn-default"><i class="fa fa-github-alt"></i> Github</button>
+                    <br>
+                    <button class="btn btn-alt btn-facebook"><i class="fa fa-facebook"></i> Facebook</button>
+                    <button class="btn btn-alt btn-twitter"><i class="fa fa-twitter"></i> Twitter</button>
+                    <button class="btn btn-alt btn-google-plus"><i class="fa fa-google-plus"></i> Google+</button>
+                    <button class="btn btn-alt btn-default"><i class="fa fa-github-alt"></i> Github</button>
+                    <br>
+                    <button class="btn btn-rounded btn-facebook"><i class="fa fa-facebook"></i> Facebook</button>
+                    <button class="btn btn-rounded btn-twitter"><i class="fa fa-twitter"></i> Twitter</button>
+                    <button class="btn btn-rounded btn-google-plus"><i class="fa fa-google-plus"></i> Google+</button>
+                    <button class="btn btn-rounded btn-default"><i class="fa fa-github-alt"></i> Github</button>
+                    <br>
                     <button class="btn btn-icon btn-facebook"><i class="fa fa-facebook"></i></button>
                     <button class="btn btn-icon btn-twitter"><i class="fa fa-twitter"></i></button>
                     <button class="btn btn-icon btn-google-plus"><i class="fa fa-google-plus"></i></button>
+                    <button class="btn btn-icon btn-default"><i class="fa fa-github-alt"></i></button>
 
                     <div class="widget-info">
                         <p><code>.btn-facebook</code>, <code>.btn-twitter</code> and <code>.btn-google-plus</code> classes can be used to for social buttons.</p>

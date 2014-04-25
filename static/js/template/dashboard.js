@@ -3,7 +3,7 @@
 $(function () {
 
     setTimeout(function() {
-        app.animateEl($('.alert-top').slideDown(), 'bounceInRight');
+        app.animateEl($('.alert-top').slideDown(), 'bounceInLeft');
     }, 5000);
 
     var pageviews, visits, uniques, bounce, pageviewsDs, visitsDs, data, options, date, d, m, y, events;

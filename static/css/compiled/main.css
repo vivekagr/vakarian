@@ -356,6 +356,11 @@ SIDEBAR
   margin-top: 60px;
   overflow-y: scroll;
 }
+@media (max-width: 768px) {
+  .sidebar-fixed {
+    margin-top: 54px;
+  }
+}
 
 /* For hiding the sidebar
    Used when screen size is <500px */
@@ -627,7 +632,12 @@ to preserve the slide animation effect with jQuery
 */
 .with-sidebar-slim .page-content-wrapper {
   margin-left: 75px;
-  margin-top: 54px;
+  margin-top: 60px;
+}
+@media (max-width: 768px) {
+  .with-sidebar-slim .page-content-wrapper {
+    margin-top: 54px;
+  }
 }
 
 .with-sidebar-hidden .page-content-wrapper {

@@ -377,6 +377,9 @@ SIDEBAR
   position: fixed;
   margin-top: 60px;
   overflow-y: scroll;
+  @media (max-width: 768px) {
+    margin-top: 54px;
+  }
 }
 
 /* For hiding the sidebar
@@ -676,7 +679,10 @@ to preserve the slide animation effect with jQuery
 .with-sidebar-slim {
   .page-content-wrapper {
     margin-left: 75px;
-    margin-top: 54px;
+    margin-top: 60px;
+    @media (max-width: 768px) {
+      margin-top: 54px;
+    }
   }
 }
 

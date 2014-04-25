@@ -1471,7 +1471,7 @@ to preserve the slide animation effect with jQuery
   margin-bottom: 10px;
   border: none;
   border-radius: 0;
-  padding-left: 50px;
+  padding-left: 45px;
   font-size: 0.9em;
   font-weight: 600;
 }
@@ -1479,11 +1479,8 @@ to preserve the slide animation effect with jQuery
   display: inline-block;
   font-size: 2em;
   position: absolute;
-  top: 25px;
-  left: 15px;
-}
-.alert.alert-top .btn i {
-  margin-right: 0.3em;
+  top: 12px;
+  left: 13px;
 }
 
 .breadcrumb-v {
@@ -1923,28 +1920,42 @@ to preserve the slide animation effect with jQuery
   color: #34495e;
 }
 .fullcalendar .fc-event {
-  background-color: #1abc9c;
   border: none;
   border-radius: 0 !important;
   font-size: 0.8em;
   padding: 2px;
+  border-left: 3px solid #1abc9c !important;
+  background-color: #F5F8F8;
+  color: #16a085;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.fc-cell-overlay .fullcalendar .fc-event {
+  background-color: #d7e3e3;
 }
 .fullcalendar a.fc-event:hover {
   color: white;
   background-color: #2980b9;
 }
 .fullcalendar .fc-cell-overlay {
-  background-color: #D1D1D1;
+  background-color: #ECECEC;
+}
+.fullcalendar .fc-today {
+  background-color: #fff;
+  color: #3498db;
 }
 .fullcalendar.fullcalendar-lg .fc-event {
-  background-color: #16a085;
   margin-left: 3px;
   margin-right: 3px;
   padding: 3px;
   font-size: 0.9em;
+  border-left-width: 5px;
 }
 .fullcalendar.fullcalendar-lg .fc-state-highlight {
-  background-color: #fff7c3;
+  background-color: #98f1df;
 }
 
 /* Custom styles for datatables */

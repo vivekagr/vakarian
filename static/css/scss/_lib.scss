@@ -68,11 +68,18 @@
 
   // Event
   .fc-event {
-    background-color: #1abc9c;
     border: none;
     border-radius: 0 !important;
     font-size: 0.8em;
     padding: 2px;
+    border-left: 3px solid #1abc9c !important;
+    background-color: #F5F8F8;
+    color: #16a085;
+    @include transition(all 0.2s ease);
+
+    .fc-cell-overlay & {
+      background-color: darken(#F5F8F8, 10%);
+    }
   }
 
   a.fc-event:hover {
@@ -81,22 +88,26 @@
   }
 
   .fc-cell-overlay {
-    background-color: #D1D1D1;
+    background-color: #ECECEC;
+  }
+
+  .fc-today {
+    background-color: #fff;
+    color: #3498db;
   }
 
   &.fullcalendar-lg {
     .fc-event {
-      background-color: #16a085;
       margin-left: 3px;
       margin-right: 3px;
       padding: 3px;
       font-size: 0.9em;
+      border-left-width: 5px;
     }
 
     .fc-state-highlight {
-      background-color: #fff7c3;
+      background-color: lighten(#1abc9c, 35%);
     }
-
   }
 
 }

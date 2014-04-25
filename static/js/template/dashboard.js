@@ -2,6 +2,10 @@
 
 $(function () {
 
+    setTimeout(function() {
+        app.animateEl($('.alert-top').slideDown(), 'bounceInDown');
+    }, 5000);
+
     var pageviews, visits, uniques, bounce, pageviewsDs, visitsDs, data, options, date, d, m, y, events;
 
     function randrange (min, max) { return Math.random() * (max - min) + min; }
@@ -58,13 +62,13 @@ $(function () {
     options = {
         // These are the colors used in the traffic flot chart
         // They are in the order of - line-color-1, point-color-1, line-color-2, point-color-2, ...
-        colors: ['#ecf0f1', '#bdc3c7', '#bdc3c7', '#95a5a6'],
+        colors: ['#ecf0f1', '#bdc3c7', '#3498db', '#2980b9'],
         series: {
             curvedLines: { active: true },
             lines: {
                 fill: true,
                 fillColor: {
-                    colors: [{ opacity: 0.3 }, { opacity: 0.3 }]
+                    colors: [{ opacity: 0.6 }, { opacity: 0.6 }]
                 }
             }
         },

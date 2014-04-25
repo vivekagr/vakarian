@@ -1,3 +1,5 @@
+window.app = {};
+
 $(function () {
 
     /*
@@ -13,7 +15,7 @@ $(function () {
 
         Callback is called when the animation is finished.
     */
-    function animateEl(el, animation, callback) {
+    window.app.animateEl =  function(el, animation, callback) {
         el.addClass('animated ' + animation);
         el.on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
             el.removeClass("animated " + animation);
@@ -21,7 +23,7 @@ $(function () {
             if (typeof(callback) == "function")
                 callback();
         });
-    }
+    };
 
 
     /*
@@ -224,7 +226,7 @@ $(function () {
         sidebarEl.removeClass('sidebar-slim-width', 250, function() {
             pageWrapperEl.removeClass('with-sidebar-slim');
             sidebarEl.removeClass('sidebar-slim', 250);
-            animateEl(sidebarEl.find('.nav.nav-sidebar'), 'fadeInLeft');
+            app.animateEl(sidebarEl.find('.nav.nav-sidebar'), 'fadeInLeft');
         });
     }
 
@@ -237,7 +239,7 @@ $(function () {
         if (sidebarEl.hasClass('sidebar-slim-width'))
             return;
 
-        animateEl(sidebarEl.find('.nav.nav-sidebar'), 'fadeInLeft');
+        app.animateEl(sidebarEl.find('.nav.nav-sidebar'), 'fadeInLeft');
 
         sidebarEl.addClass('sidebar-slim', 250, function() {
             pageWrapperEl.addClass('with-sidebar-slim');
@@ -377,6 +379,6 @@ $(function () {
     });
 
     // Fade in the content wrapper
-    $('.content-wrapper').fadeIn();
+    $('.page-content').fadeIn();
 
 });

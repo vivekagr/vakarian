@@ -259,28 +259,42 @@
 
         </div>{{ cu('Sidebar finish') }}
 
-        {{ cuh('content wrapper start') }}
-        <div class="content-wrapper">
-            <div class="row">
-                <div class="{% if title_area_set %}col-sm-8{% else %}col-sm-12{% endif %}">
-                    <h3 class="page-title"><i class="ion-earth"></i> {{ page_title }}</h3>
-                    {% if active_parent_title %}
-                    <ul class="breadcrumb-v">
-                        <li class="highlight"><a href="#">You are here</a></li>
-                        <li><a href="#">{{ active_parent_title[0] }}</a></li>
-                        <li><a href="#">{{ active_page_title[0] }}</a></li>
-                    </ul>
-                    {% endif %}
-                    {% if page_subtitle %}
-                    <div class="page-sub-title">{{ page_subtitle }}</div>
-                    {% endif %}
+        {{ cuh('page content wrapper') }}
+        <div class="page-content-wrapper">
+            <div class="alert-top-container">
+                <div class="alert alert-top" style="display: none;">
+                    <i class="fa fa-check-circle-o alert-icon"></i>
+                    Your account has been successfully verified and you can begin using the service now!
+                    <br>
+                    <button class="btn btn-sm btn-primary"><i class="fa fa-pencil"></i> Edit Account</button>
+                    <button class="btn btn-sm btn-default" data-dismiss="alert"><i class="fa fa-times-circle"></i> Close</button>
                 </div>
-                {% if title_area_set %}<div class="col-sm-4">
-                    {% block title_area %}{% endblock %}
-                </div>{% endif %}
             </div>
-            {% block main %}{% endblock %}
-        </div>{{ c('/content wrapper') }}
+
+            <div class="page-content">
+
+                <div class="row">
+                    <div class="{% if title_area_set %}col-sm-8{% else %}col-sm-12{% endif %}">
+                        <h3 class="page-title"><i class="ion-earth"></i> {{ page_title }}</h3>
+                        {% if active_parent_title %}
+                            <ul class="breadcrumb-v">
+                                <li class="highlight"><a href="#">You are here</a></li>
+                                <li><a href="#">{{ active_parent_title[0] }}</a></li>
+                                <li><a href="#">{{ active_page_title[0] }}</a></li>
+                            </ul>
+                        {% endif %}
+                        {% if page_subtitle %}
+                            <div class="page-sub-title">{{ page_subtitle }}</div>
+                        {% endif %}
+                    </div>
+                    {% if title_area_set %}<div class="col-sm-4">
+                        {% block title_area %}{% endblock %}
+                        </div>{% endif %}
+                </div>
+                {% block main %}{% endblock %}
+            </div>{{ c('/page content') }}
+
+        </div>{{ c('/page content wrapper') }}
 
     </div>{{ c('/page wrapper') }}
 

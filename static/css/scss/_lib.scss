@@ -68,10 +68,11 @@
 
   // Event
   .fc-event {
-    background-color: #485A6D;
+    background-color: #1abc9c;
     border: none;
+    border-radius: 0 !important;
     font-size: 0.8em;
-    padding: 1px;
+    padding: 2px;
   }
 
   a.fc-event:hover {

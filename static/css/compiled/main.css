@@ -625,12 +625,12 @@ Using separate .sidebar-slim-width and .with-sidebar-slim class
 to preserve the slide animation effect with jQuery
 
 */
-.with-sidebar-slim .content-wrapper {
+.with-sidebar-slim .page-content-wrapper {
   margin-left: 75px;
   margin-top: 54px;
 }
 
-.with-sidebar-hidden .content-wrapper {
+.with-sidebar-hidden .page-content-wrapper {
   margin-left: 0;
 }
 
@@ -669,16 +669,23 @@ to preserve the slide animation effect with jQuery
   font-size: 1.6em;
 }
 
-.content-wrapper {
+.page-content {
   display: none;
-  margin: 60px 0 0 210px;
   padding: 0 25px 25px;
+}
+@media (max-width: 500px) {
+  .page-content {
+    padding: 0 10px 10px;
+  }
+}
+
+.page-content-wrapper {
+  margin: 60px 0 0 210px;
   color: #2c3e50;
 }
 @media (max-width: 500px) {
-  .content-wrapper {
+  .page-content-wrapper {
     margin: 54px 0 0 210px;
-    padding: 0 10px 10px;
   }
 }
 
@@ -1432,7 +1439,7 @@ to preserve the slide animation effect with jQuery
   color: #7f8c8d;
 }
 
-.alert.alert-page {
+.alert.alert-page, .alert.alert-top {
   background-color: #fff;
   border-top: none;
   border-right: none;
@@ -1442,18 +1449,41 @@ to preserve the slide animation effect with jQuery
   font-family: 'Raleway', sans-serif;
   font-size: 1.07em;
 }
-.alert.alert-page .btn {
+.alert.alert-page .btn, .alert.alert-top .btn {
   margin-top: 10px;
   font-weight: 600;
 }
-.alert.alert-page.alert-info {
+.alert.alert-page.alert-success, .alert.alert-top.alert-success {
+  border-color: #1abc9c;
+}
+.alert.alert-page.alert-info, .alert.alert-top.alert-info {
   border-color: #60B2E9;
 }
-.alert.alert-page.alert-warning {
+.alert.alert-page.alert-warning, .alert.alert-top.alert-warning {
   border-color: #FFE373;
 }
-.alert.alert-page.alert-danger {
+.alert.alert-page.alert-danger, .alert.alert-top.alert-danger {
   border-color: #F87F73;
+}
+
+.alert.alert-top {
+  position: relative;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 0;
+  padding-left: 50px;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+.alert.alert-top .alert-icon {
+  display: inline-block;
+  font-size: 2em;
+  position: absolute;
+  top: 25px;
+  left: 15px;
+}
+.alert.alert-top .btn i {
+  margin-right: 0.3em;
 }
 
 .breadcrumb-v {
@@ -1893,10 +1923,11 @@ to preserve the slide animation effect with jQuery
   color: #34495e;
 }
 .fullcalendar .fc-event {
-  background-color: #485A6D;
+  background-color: #1abc9c;
   border: none;
+  border-radius: 0 !important;
   font-size: 0.8em;
-  padding: 1px;
+  padding: 2px;
 }
 .fullcalendar a.fc-event:hover {
   color: white;

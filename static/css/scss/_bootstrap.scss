@@ -470,7 +470,7 @@
 }
 
 // Use this when creating alert on the page level (not inside any panel)
-.alert.alert-page {
+.alert.alert-page, .alert.alert-top {
   background-color: #fff;
   border-top: none;
   border-right: none;
@@ -482,9 +482,30 @@
 
   .btn { margin-top: 10px; font-weight: 600; }
 
+  &.alert-success { border-color: #1abc9c; }
   &.alert-info { border-color: #60B2E9; }
   &.alert-warning { border-color: #FFE373; }
   &.alert-danger { border-color: #F87F73; }
+}
+
+.alert.alert-top {
+  position: relative;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 0;
+  padding-left: 50px;
+  font-size: 0.9em;
+  font-weight: 600;
+
+  .alert-icon {
+    display: inline-block;
+    font-size: 2em;
+    position: absolute;
+    top: 25px;
+    left: 15px;
+  }
+
+  .btn i { margin-right: 0.3em; }
 }
 
 

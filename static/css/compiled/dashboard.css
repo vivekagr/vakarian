@@ -24,7 +24,8 @@
 }
 .traffic-widget .traffic-widget-subtitle {
   font-size: 0.9em;
-  font-weight: 300;
+  font-weight: 400;
+  color: #7f8c8d;
   margin: 0 0 20px;
   text-align: center;
 }

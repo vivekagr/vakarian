@@ -1439,6 +1439,21 @@ to preserve the slide animation effect with jQuery
   border-bottom: none;
   border-left-width: 6px;
   border-radius: 0;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.07em;
+}
+.alert.alert-page .btn {
+  margin-top: 10px;
+  font-weight: 600;
+}
+.alert.alert-page.alert-info {
+  border-color: #60B2E9;
+}
+.alert.alert-page.alert-warning {
+  border-color: #FFE373;
+}
+.alert.alert-page.alert-danger {
+  border-color: #F87F73;
 }
 
 .breadcrumb-v {

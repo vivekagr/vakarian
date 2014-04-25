@@ -2,13 +2,13 @@
 
 $(function () {
 
-    var pageviews, visits, uniques, bounce, df, data, options, date, d, m, y, events;
+    var pageviews, visits, uniques, bounce, pageviewsDs, visitsDs, data, options, date, d, m, y, events;
 
     function randrange (min, max) { return Math.random() * (max - min) + min; }
 
     // Traffic data points
-    pageviews = [3478,5340,8993,7837,12454,17495,22434,23453,25445,22455,28995,32957,30445,37953,46497,44286];
-    visits = pageviews.map(function(x) { return Math.floor(x * randrange(0.29, 0.39)); });
+    pageviews = [11726,8340,9993,7837,6454,9495,13434,12453,14445,18455,19995,18957,17445,20953,24497,22886];
+    visits = pageviews.map(function(x) { return Math.floor(x * randrange(0.39, 0.5)); });
     uniques = pageviews.map(function(x) { return Math.floor(x * randrange(0.16, 0.25)); });
     bounce = (function() {
         var val = [];
@@ -18,35 +18,53 @@ $(function () {
     })();
 
     // Creating out dataset in format [ [timestamp, value],... ] with values from above array
-    df = [];
+    pageviewsDs = [];
+    visitsDs=[];
     for (var i=1; i<=pageviews.length; i++) {
         var x = new Date();
         x.setDate(1);
         x.setMonth(x.getMonth()-(pageviews.length-i));
-        df.push([x.getTime() , pageviews[i-1]]);
+        pageviewsDs.push([x.getTime() , pageviews[i-1]]);
+        visitsDs.push([x.getTime() , visits[i-1]]);
     }
 
     data = [
         {
-            data: df,
-            lines: { show: true, lineWidth: 2},
+            data: pageviewsDs,
+
+            lines: { show: true, lineWidth: 1},
             curvedLines: { apply:true },
             hoverable: false
         },
         {
-            data: df,
+            label: 'Pageviews',
+            data: pageviewsDs,
+            points: { show: true }
+        },
+        {
+            data: visitsDs,
+            lines: { show: true, lineWidth: 1},
+
+            curvedLines: { apply:true },
+            hoverable: false
+        },
+        {
+            data: visitsDs,
+            label: 'Visits',
             points: { show: true }
         }
     ];
 
     options = {
-        colors: ['#2c3e50'],
+        // These are the colors used in the traffic flot chart
+        // They are in the order of - line-color-1, point-color-1, line-color-2, point-color-2, ...
+        colors: ['#ecf0f1', '#bdc3c7', '#bdc3c7', '#95a5a6'],
         series: {
             curvedLines: { active: true },
             lines: {
                 fill: true,
                 fillColor: {
-                    colors: [{ opacity: 0.2 }, { opacity: 0.2 }]
+                    colors: [{ opacity: 0.3 }, { opacity: 0.3 }]
                 }
             }
         },
@@ -77,7 +95,7 @@ $(function () {
         },
         tooltip: true,
         tooltipOpts: {
-            content: "%y pageviews in %x.1",
+            content: "%y in %x.1",
             defaultTheme: false,
             shifts: {
                 x: 0,

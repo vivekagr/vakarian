@@ -505,6 +505,11 @@
 
   .btn { margin-top: 10px; font-weight: 600; }
 
+  .close {
+    line-height: 0.65;
+    font-size: 25px;
+  }
+
   &.alert-success { border-color: #1abc9c; }
   &.alert-info { border-color: #60B2E9; }
   &.alert-warning { border-color: #FFE373; }
@@ -719,24 +724,30 @@
   &.label-danger { background-color: #e74c3c; }
 }
 
-
-.progress-bar {
-  &.progress-bar-success { background-color: #1abc9c; }
-  &.progress-bar-warning { background-color: #f1c40f; }
-  &.progress-bar-danger { background-color: #c0392b; }
+.progress {
+  background-color: #ECECEC;
+  height: 15px;
+  border-radius: 3px;
 }
 
+.progress, .progress-bar {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
 
-.progress {
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .05);
-  -webkir-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .05);
+.progress-bar {
+  font-size: 11px;
+  line-height: 15px;
+
+  &.progress-bar-success { background-color: #2BC7A8; }
+  &.progress-bar-info { background-color: #7AD0E9; }
+  &.progress-bar-warning { background-color: #F7D757; }
+  &.progress-bar-danger { background-color: #E06763; }
 }
 
 .progress-slim {
-  height: 6px;
+  height: 5px;
   border-radius: 2px;
-  box-shadow: none;
-  -webkit-box-shadow: none;
   > .progress-bar > span { display: none; }
 
   table & {

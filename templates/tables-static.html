@@ -7,38 +7,113 @@
 {%- endblock %}
 
 {% block main %}
+    {{ s('Table With Icons and Progress Bars') }}
+    <div class="panel panel-primary">
+        <div class="panel-heading"><div class="panel-title">With Icons & Progress</div></div>
+        <div class="panel-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Username</th>
+                        <th>Progress</th>
+                        <th class="text-center">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>
+                            <div class="progress progress-slim progress-striped active">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+                                    <span class="sr-only">80% Complete</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <button class="btn btn-icon btn-xs btn-success"><i class="fa fa-envelope"></i></button>
+                            <button class="btn btn-icon btn-xs btn-primary"><i class="fa fa-pencil"></i></button>
+                            <button class="btn btn-icon btn-xs btn-danger"><i class="fa fa-times"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        <td>
+                            <div class="progress progress-slim progress-striped active">
+                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+                                    <span class="sr-only">30% Complete</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <button class="btn btn-icon btn-xs btn-success"><i class="fa fa-envelope"></i></button>
+                            <button class="btn btn-icon btn-xs btn-primary"><i class="fa fa-pencil"></i></button>
+                            <button class="btn btn-icon btn-xs btn-danger"><i class="fa fa-times"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                        <td>
+                            <div class="progress progress-slim progress-striped active">
+                                <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="52" aria-valuemin="0" aria-valuemax="100" style="width: 52%;">
+                                    <span class="sr-only">52% Complete</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <button class="btn btn-icon btn-xs btn-success"><i class="fa fa-envelope"></i></button>
+                            <button class="btn btn-icon btn-xs btn-primary"><i class="fa fa-pencil"></i></button>
+                            <button class="btn btn-icon btn-xs btn-danger"><i class="fa fa-times"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>{{ e('Table With Icons and Progress Bars') }}
+
     {{ s('Basic Table') }}
     <div class="panel panel-clean">
         <div class="panel-heading"><div class="panel-title">Basic Table</div></div>
         <div class="panel-body">
             <table class="table">
                 <thead>
-                <tr>
-                    <th>#</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Username</th>
-                </tr>
+                    <tr>
+                        <th>#</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Username</th>
+                    </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -48,7 +123,7 @@
 
         {{ s('Striped Table') }}
         <div class="col-md-6">
-            <div class="panel panel-clean">
+            <div class="panel panel-success">
                 <div class="panel-heading"><div class="panel-title">Striped Table</div></div>
                 <div class="panel-body">
                     <table class="table table-striped">
@@ -87,7 +162,7 @@
 
         {{ s('Bordered Table') }}
         <div class="col-md-6">
-            <div class="panel panel-clean">
+            <div class="panel panel-danger">
                 <div class="panel-heading"><div class="panel-title">Bordered Table</div></div>
                 <div class="panel-body">
                     <table class="table table-bordered">
@@ -126,7 +201,7 @@
 
         {{ s('Hover Rows Table') }}
         <div class="col-md-6">
-            <div class="panel panel-clean">
+            <div class="panel panel-warning">
                 <div class="panel-heading"><div class="panel-title">Hover Rows Table</div></div>
                 <div class="panel-body">
                     <table class="table table-hover">
@@ -165,7 +240,7 @@
 
         {{ s('Condensed Table') }}
         <div class="col-md-6">
-            <div class="panel panel-clean">
+            <div class="panel panel-info">
                 <div class="panel-heading"><div class="panel-title">Condensed Table</div></div>
                 <div class="panel-body">
                     <table class="table table-condensed">
@@ -203,81 +278,8 @@
         </div>
     </div>{{ e('Condensed Table') }}
 
-    {{ s('Colored Rows') }}
-    <div class="panel panel-clean">
-        <div class="panel-heading"><div class="panel-title">Colored Rows</div></div>
-        <div class="panel-body">
-            <table class="table">
-                <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Column heading</th>
-                    <th>Column heading</th>
-                    <th>Column heading</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr class="active">
-                    <td>1</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                </tr>
-                <tr class="success">
-                    <td>3</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                </tr>
-                <tr class="info">
-                    <td>5</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                </tr>
-                <tr class="warning">
-                    <td>7</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                </tr>
-                <tr class="danger">
-                    <td>9</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>{{ e('Colored Rows') }}
-
     {{ s('Responsive Table') }}
-    <div class="panel panel-clean">
+    <div class="panel panel-dark">
         <div class="panel-heading"><div class="panel-title">Responsive Table</div></div>
         <div class="panel-body">
             <div class="table-responsive">

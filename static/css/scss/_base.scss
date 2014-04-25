@@ -808,18 +808,7 @@ to preserve the slide animation effect with jQuery
 
 
 
-  // Show any small text as a footnote with this
-  .widget-footnote {
-    &:before {
-      @extend .fa-icon;
-      content: '\f05a';
-      margin-right: 5px;
-    }
 
-    font-size: 0.9em;
-    font-weight: 300;
-    color: #bdc3c7;
-  }
 
 
   // Fixing alert's close icon/btn's position within a widget

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.fa-icon, .sidebar-search:before, .nav-sidebar > li span:before, .nav-sidebar li.dropdown > ul > li.dropdown > a:before, .widget .widget-footnote:before, .radio span:before, .radio-inline span:before, .checkbox span:before, .checkbox-inline span:before, .dataTables_wrapper thead > tr > th.sorting_asc:after, .dataTables_wrapper thead > tr > th.sorting_desc:before, .dataTables_wrapper .dataTables_paginate a.paginate_disabled_previous:before, .dataTables_wrapper .dataTables_paginate a.paginate_enabled_previous:before, .dataTables_wrapper .dataTables_paginate a.paginate_disabled_next:after, .dataTables_wrapper .dataTables_paginate a.paginate_enabled_next:after {
+.fa-icon, .sidebar-search:before, .nav-sidebar > li span:before, .nav-sidebar li.dropdown > ul > li.dropdown > a:before, .panel .widget-footnote:before, .radio span:before, .radio-inline span:before, .checkbox span:before, .checkbox-inline span:before, .dataTables_wrapper thead > tr > th.sorting_asc:after, .dataTables_wrapper thead > tr > th.sorting_desc:before, .dataTables_wrapper .dataTables_paginate a.paginate_disabled_previous:before, .dataTables_wrapper .dataTables_paginate a.paginate_enabled_previous:before, .dataTables_wrapper .dataTables_paginate a.paginate_disabled_next:after, .dataTables_wrapper .dataTables_paginate a.paginate_enabled_next:after {
   display: inline-block;
   font-family: FontAwesome;
   font-style: normal;
@@ -751,15 +751,6 @@ to preserve the slide animation effect with jQuery
 .widget .widget-content blockquote {
   font-weight: 300;
 }
-.widget .widget-footnote {
-  font-size: 0.9em;
-  font-weight: 300;
-  color: #bdc3c7;
-}
-.widget .widget-footnote:before {
-  content: '\f05a';
-  margin-right: 5px;
-}
 .widget .alert.alert-dismissable > .close {
   right: 0;
 }
@@ -1040,6 +1031,15 @@ to preserve the slide animation effect with jQuery
 }
 .panel .widget-info-fixed-size .expand:hover {
   color: #B0B4B4;
+}
+.panel .widget-footnote {
+  font-size: 0.9em;
+  font-weight: 300;
+  color: #bdc3c7;
+}
+.panel .widget-footnote:before {
+  content: '\f05a';
+  margin-right: 5px;
 }
 
 .btn {
@@ -1416,6 +1416,14 @@ to preserve the slide animation effect with jQuery
 .btn.btn-icon i {
   margin-right: 0;
 }
+.btn.btn-icon.btn-xs {
+  font-size: 0.85em;
+  width: 2.1em;
+  height: 2.1em;
+}
+table .btn.btn-icon {
+  margin: 0 5px;
+}
 .btn-group.open .btn .dropdown-toggle {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.125);
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.125);
@@ -1690,6 +1698,10 @@ to preserve the slide animation effect with jQuery
 }
 .progress-slim > .progress-bar > span {
   display: none;
+}
+table .progress-slim {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .modal .modal-content {
@@ -2198,4 +2210,9 @@ div.slider.slider-vertical .tooltip .tooltip-arrow {
 /* FuelUX Wizard */
 .fuelux .step-content {
   background-color: #fff;
+}
+
+/* Nano Scroller */
+.nano > .nano-content:focus {
+  outline: none;
 }

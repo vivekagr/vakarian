@@ -1,34 +1,37 @@
-var logWrapper = function (f) {
-    return function (a) {
-        console.log('calling "' + f.name + '" with argument "' + a);
-        return f(a);
-    };
-};
+/*
+    Simple jQuery plugin for animating an element with
+    animate.css classes. First adds the class as required
+    by animate.css and then removes them so that they
+    can be animated again in the future.
 
-var App = {
+    Params:
+        animation:  animate.css effect class
+        callback:   callback function
 
-    /*
-        Animates a an element with animate.css classes.
-        First adds the class as required by animate.css
-        and then removes them so that they can be animated
-        again in the future.
+    callback is called when the animation is finished.
 
-        Expects:
-            el:         jQuery node object
-            animation:  animate.css effect class
-            callback:   callback function
+    Example:
 
-        Callback is called when the animation is finished.
-    */
-    animateEl:  function(el, animation, callback) {
-        el.addClass('animated ' + animation);
-        el.on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-            el.removeClass("animated " + animation);
+    $('.sidebar').animate('bounce');
+    $('.notification-icon').animate('flash', function() {
+        console.log('animation done');
+    });
+*/
+(function($) {
+    $.fn.animateCss = function(animation, callback) {
+        var that = this;
+        this.addClass('animated ' + animation);
+        this.on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+            that.removeClass("animated " + animation);
 
             if (typeof(callback) == "function")
                 callback();
         });
-    },
+    };
+})(jQuery);
+
+
+var App = {
 
     /*
         Animates all the dropdown menu within the provided selector.
@@ -70,8 +73,6 @@ var App = {
             }
         });
     },
-
-
 
     init: function() {
         // Animating dropdow menus in top bar
@@ -238,7 +239,7 @@ var Sidebar = {
         sidebarEl.removeClass('sidebar-slim-width', 250, function() {
             pageWrapperEl.removeClass('with-sidebar-slim');
             sidebarEl.removeClass('sidebar-slim', 250);
-            App.animateEl(sidebarEl.find('.nav.nav-sidebar'), 'fadeInLeft');
+            sidebarEl.find('.nav.nav-sidebar').animateCss('fadeInLeft');
         });
     },
 
@@ -251,7 +252,7 @@ var Sidebar = {
         if (sidebarEl.hasClass('sidebar-slim-width'))
             return;
 
-        App.animateEl(sidebarEl.find('.nav.nav-sidebar'), 'fadeInLeft');
+        sidebarEl.find('.nav.nav-sidebar').animateCss('fadeInLeft');
 
         sidebarEl.addClass('sidebar-slim', 250, function() {
             pageWrapperEl.addClass('with-sidebar-slim');

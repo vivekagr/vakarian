@@ -1,6 +1,11 @@
-window.app = {};
+var logWrapper = function (f) {
+    return function (a) {
+        console.log('calling "' + f.name + '" with argument "' + a);
+        return f(a);
+    };
+};
 
-$(function () {
+var App = {
 
     /*
         Animates a an element with animate.css classes.
@@ -15,7 +20,7 @@ $(function () {
 
         Callback is called when the animation is finished.
     */
-    window.app.animateEl =  function(el, animation, callback) {
+    animateEl:  function(el, animation, callback) {
         el.addClass('animated ' + animation);
         el.on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
             el.removeClass("animated " + animation);
@@ -23,22 +28,20 @@ $(function () {
             if (typeof(callback) == "function")
                 callback();
         });
-    };
-
+    },
 
     /*
         Animates all the dropdown menu within the provided selector.
 
         Animation is done with the help of animate.css classes
      */
-    function animateDropdownMenu(selector) {
+    animateDropdownMenu: function (selector) {
         // Listen for dropdown show event
         // and add animation class to it when shown
         $(selector).on('show.bs.dropdown', function (el) {
             $(el.target).find('ul.dropdown-menu').addClass('animated flipInY');
         });
-    }
-
+    },
 
     /*
         Animates all the quickstat widgets with class `.quick-stat-widget`.
@@ -46,7 +49,7 @@ $(function () {
         The icon is bounced in from the left of the screen and numbers are
         rotated with odometer.
      */
-    function animateQuickstatWidget() {
+    animateQuickstatWidget: function () {
         $('.widget-odometer').each(function(i, el) {
             // Not animating on mobile/tablets due to performance concerns
             if (!navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i)) {
@@ -66,80 +69,105 @@ $(function () {
                 $(el).text(($(el).data('value')));
             }
         });
+    },
+
+
+
+    init: function() {
+        // Animating dropdow menus in top bar
+        this.animateDropdownMenu('.topbar');
+
+        this.animateQuickstatWidget();
     }
 
-    // Animating dropdow menus in top bar
-    animateDropdownMenu('.topbar');
-
-    animateQuickstatWidget();
-
-    /*** Setup the profile popover ***/
-
-    var sidebarProfile = $('.sidebar-profile');
-
-    sidebarProfile.popover({
-        html: true,
-        content: function() {
-            return $('.sidebar-profile-wrapper').find('.popover-content').html();
-        },
-        title: function() {
-            return $('.sidebar-profile-wrapper').find('.popover-title').html();
-        }
-    });
-
-    // Setting `overflow-y` of sidebar to `visible` when profile popover
-    // is open. Without it, popover would be essentially hidden from the view.
-    // But as a result of this, sidebar cannot be scrolled when popover is open.
-    sidebarProfile.on('show.bs.popover', function() {
-        $('.sidebar').css('overflow-y', 'visible');
-    });
-
-    // Changing back the `overflow-y` property back to `scroll` when popover
-    // is closed so that sidebar content is scrollable.
-    sidebarProfile.on('hidden.bs.popover', function() {
-        $('.sidebar').css('overflow-y', 'scroll');
-    });
+};
 
 
-    /*** Setup sidebar navigation menu ***/
+var Sidebar = {
+    options: {},
 
-    var navSidebarLi = $('.nav-sidebar li');
+    /*
+        Caching the frequently accessed elements
+    */
+    el: {
+        pageWrapper: $('.page-wrapper'),
+        sidebar : $('.sidebar'),
+        sidebarProfile : $('.sidebar-profile'),
+        sidebarProfileWrapper : $('.sidebar-profile-wrapper'),
+        navSidebarLi: $('.nav-sidebar li')
+    },
 
-    navSidebarLi.each(function() {
-        var el = $(this);
+    /*
+        Adds initially required classes to the nav items
+    */
+    initialNavSetup: function() {
+        this.el.navSidebarLi.each(function() {
+            var item = $(this);
 
-        // Adding 'dropdown' class to list items with children
-        if (el.children('ul').length > 0) {
-            el.addClass('dropdown');
-        }
+            // Adding 'dropdown' class to list items with children
+            if (item.children('ul').length > 0) {
+                item.addClass('dropdown');
+            }
 
-        // Display the default active item
-        if (el.hasClass('active')) {
-            el.find('ul').show();
-        }
-    });
+            // Display the default active item
+            // We're not using CSS for showing the the children items of an active
+            // item because we control the animation (slideDown/Up) with jQuery
+            if (item.hasClass('active')) {
+                item.find('ul').show();
+            }
+        });
 
-    // Show the sidebar when the nav menu has been setup above
-    $('.sidebar').show();
+        this.autoAdjustSidebarWidth();
 
-    // Closing the collapsed sub-menu when clicking outside of it
-    // We are binding this over the entire html tag and are preventing the trigger
-    // from undesired areas (such as sub-menu itself) by using `stopPropagation`
-    // method on the event.
-    $('html').click(function() {
-        if ($('.sidebar-slim')[0])
-            $('.nav-sidebar > li.dropdown.active').removeClass('active').children('ul').hide();
-    });
+        // Show the sidebar when the nav menu has been setup above
+        this.el.sidebar.show();
+    },
 
-    var interval = 0;
+    /*
+        Setup the profile popover
+    */
+    setupProfile: function() {
+        var that = this;
+        this.el.sidebarProfile.popover({
+            html: true,
+            content: function() {
+                return that.el.sidebarProfileWrapper.find('.popover-content').html();
+            },
+            title: function() {
+                return that.el.sidebarProfileWrapper.find('.popover-title').html();
+            }
+        });
+
+        // Setting `overflow-y` of sidebar to `visible` when profile popover
+        // is open. Without it, popover would be essentially hidden from the view.
+        // But as a result of this, sidebar cannot be scrolled when popover is open.
+        this.el.sidebarProfile.on('show.bs.popover', function() {
+            that.el.sidebar.css('overflow-y', 'visible');
+        });
+
+        // Changing back the `overflow-y` property back to `scroll` when popover
+        // is closed so that sidebar content is scrollable.
+        this.el.sidebarProfile.on('hidden.bs.popover', function() {
+            that.el.sidebar.css('overflow-y', 'scroll');
+        });
+    },
+
+    // Used by `sidebarCollapse` method
+    collapseTimeout: 0,
+
+    // Checks whether the provided jQuery element is hovered
+    isHovered: function (el) {
+        return !!el.filter(function() { return $(this).is(":hover"); }).length;
+    },
 
     // Collapsing the sidebar navigation
     // This function should be bound to the hover and click events on sidebar element
-    function sidebarCollapse (e) {
+    sidebarCollapse: function(e) {
         e.preventDefault();
         e.stopPropagation();
 
-        var parent = $(this).parent('li'),
+        var that = e.data.that,
+            parent = $(this).parent('li'),
             sidebarSlimEl = $('.sidebar-slim'),
             dropdownSubList = $(this).parent().siblings('li').children('ul'),
             isLevelOne = $($(this).parents()[2]).hasClass('sidebar');
@@ -183,39 +211,23 @@ $(function () {
             var checkSlimSidebarState = function (el) {
                 var childNav = el.siblings('ul');
                 return function() {
-                    if (!isHovered(el) && !isHovered(childNav)) {
+                    if (!that.isHovered(el) && !that.isHovered(childNav)) {
                         el.parent().removeClass('active');
                         el.siblings('ul').hide();
                     } else {
-                        clearTimeout(interval);
-                        interval = setTimeout(checkSlimSidebarState(el), 1000);
+                        clearTimeout(that.collapseTimeout);
+                        that.collapseTimeout = setTimeout(checkSlimSidebarState(el), 1000);
                     }
                 }
             };
 
-            interval = setTimeout(checkSlimSidebarState($(this)), 1000);
+            this.collapseTimeout = setTimeout(checkSlimSidebarState($(this)), 1000);
         }
 
-    }
-
-    // Checks whether the provided jQuery element is hovered
-    function isHovered(el) {
-        return !!el.filter(function() { return $(this).is(":hover"); }).length;
-    }
-
-
-    $('.nav-sidebar li.dropdown > a').hover(sidebarCollapse).click(sidebarCollapse);
-
-    // Preventing the collapsed sub-menu from being closed while clicking it
-    $('.nav-sidebar > li.dropdown > ul').click(function(e) {
-        e.stopPropagation();
-    });
-
-
-    /*** Setup sidebar size toggle features. ***/
+    },
 
     // Expand Sidebar Navigation
-    function expandSidebarNav() {
+    expandSidebar: function() {
         var sidebarEl = $('.sidebar'),
             pageWrapperEl = $('.page-wrapper');
 
@@ -226,12 +238,12 @@ $(function () {
         sidebarEl.removeClass('sidebar-slim-width', 250, function() {
             pageWrapperEl.removeClass('with-sidebar-slim');
             sidebarEl.removeClass('sidebar-slim', 250);
-            app.animateEl(sidebarEl.find('.nav.nav-sidebar'), 'fadeInLeft');
+            App.animateEl(sidebarEl.find('.nav.nav-sidebar'), 'fadeInLeft');
         });
-    }
+    },
 
     // Contract Sidebar Navigation
-    function contractSidebarNav() {
+    contractSidebar: function() {
         var sidebarEl = $('.sidebar'),
             pageWrapperEl = $('.page-wrapper');
 
@@ -239,13 +251,117 @@ $(function () {
         if (sidebarEl.hasClass('sidebar-slim-width'))
             return;
 
-        app.animateEl(sidebarEl.find('.nav.nav-sidebar'), 'fadeInLeft');
+        App.animateEl(sidebarEl.find('.nav.nav-sidebar'), 'fadeInLeft');
 
         sidebarEl.addClass('sidebar-slim', 250, function() {
             pageWrapperEl.addClass('with-sidebar-slim');
             sidebarEl.addClass('sidebar-slim-width', 250);
         });
+    },
+
+    /*
+        Toggles the sidebar size by calling the expand or contract
+        function, whichever is required
+        Should be bound to the click event on toggle button
+    */
+    toggleSidebarSize: function(e) {
+        var that = e.data.that;
+
+        if ($(window).width() < 500) {
+             if (that.el.pageWrapper.hasClass('with-sidebar-hidden')) {
+                 that.el.pageWrapper.removeClass('with-sidebar-hidden');
+                 that.el.sidebar.removeClass('sidebar-hidden');
+             } else {
+                 that.el.pageWrapper.addClass('with-sidebar-hidden');
+                 that.el.sidebar.addClass('sidebar-hidden');
+             }
+        } else {
+            // Storing the knowledge that user manually toggled the size
+            that.el.sidebar.data('manually-toggled', '1');
+
+            if (that.el.sidebar.hasClass('sidebar-slim')) {
+                that.expandSidebar();
+            } else {
+                that.contractSidebar();
+            }
+
+            // Triggering windows resize event so that widgets like charts
+            // can re-render themselves according to their new container size
+            $(window).trigger('resize');
+        }
+    },
+
+    /*
+        Adjust sidebar size once on document load
+    */
+    autoAdjustSidebarWidth: function(e) {
+        var that = e ? e.data.that : this,
+            width = $(window).width();
+
+        if (width < 500) {
+            // that.el.sidebar.removeClass('sidebar-slim');
+            that.el.sidebar.addClass('sidebar-hidden');
+            that.el.pageWrapper('with-sidebar-hidden');
+
+        } else {
+
+            that.el.sidebar.removeClass('sidebar-hidden');
+            that.el.pageWrapper.removeClass('with-sidebar-hidden');
+
+            if (!that.el.sidebar.data('manually-toggled')) {
+                // If user didn't manually toggle the sidebar size
+                // then automatically resize according to window width
+                if (width > 800) {
+                    that.expandSidebar();
+                } else {
+                    that.contractSidebar();
+                }
+            } else if (width < 800 && width >= 500) {
+                // Else if user did manually toggle the sidebar size,
+                // contract it only when window size is too small
+                that.contractSidebar();
+            }
+        }
+    },
+
+    bindEvents: function() {
+        // Closing the collapsed sub-menu when clicking outside of it
+        // We are binding this over the entire html tag and are preventing the trigger
+        // from undesired areas (such as sub-menu itself) by using `stopPropagation`
+        // method on the event.
+        $('html').click(function() {
+            if ($('.sidebar-slim')[0])
+                $('.nav-sidebar > li.dropdown.active').removeClass('active').children('ul').hide();
+        });
+
+        $('.nav-sidebar li.dropdown > a').on('click mouseenter mouseleave', {that: this} ,this.sidebarCollapse);
+
+        // Preventing the collapsed sub-menu from being closed while clicking it
+        $('.nav-sidebar > li.dropdown > ul').click(function(e) {
+            e.stopPropagation();
+        });
+
+        // Toggle sidebar size
+        $('#sidebarNavToggle').on('click', {that: this}, this.toggleSidebarSize);
+
+        // Auto adjust sidebar size on window resize
+        $(window).on('resize', {that: this}, this.autoAdjustSidebarWidth);
+    },
+
+    init: function() {
+
+        this.initialNavSetup();
+        this.setupProfile();
+        this.bindEvents();
+
     }
+};
+
+
+$(function () {
+
+    App.init();
+    Sidebar.init();
 
     function toggleSlimSidebarPeek() {
         var sidebarEl = $('.sidebar'),
@@ -254,75 +370,6 @@ $(function () {
         sidebarEl.addClass('sidebar-hidden');
         pageWrapperEl.addClass('with-sidebar-hidden');
     }
-
-    // Toggle sidebar size
-    $('#sidebarNavToggle').on('click', function() {
-        var sidebar = $('.sidebar'),
-            pageWrapperEl = $('.page-wrapper'),
-            width = $(window).width();
-
-        if (width < 500) {
-             if (pageWrapperEl.hasClass('with-sidebar-hidden')) {
-                 console.log('yeah');
-                 pageWrapperEl.removeClass('with-sidebar-hidden');
-                 sidebar.removeClass('sidebar-hidden');
-             } else {
-                 pageWrapperEl.addClass('with-sidebar-hidden');
-                 sidebar.addClass('sidebar-hidden');
-             }
-        } else {
-            // Storing the knowledge that user manually toggled the size
-            sidebar.data('manually-toggled', '1');
-
-            if (sidebar.hasClass('sidebar-slim')) {
-                expandSidebarNav();
-            } else {
-                contractSidebarNav();
-            }
-
-            // Triggering windows resize event so that widgets like charts
-            // can re-render themselves according to their new container size
-            $(window).trigger('resize');
-        }
-    });
-
-    // Toggle sidebar size according to window width
-    function autoAdjustSidebarWidth() {
-        var width = $(window).width(),
-            manuallyToggled = $('.sidebar').data('manually-toggled');
-
-        if (width < 500) {
-//            $(".sidebar").removeClass('sidebar-slim');
-            $('.sidebar').addClass('sidebar-hidden');
-            $(".page-wrapper").addClass('with-sidebar-hidden');
-
-        } else {
-
-            $('.sidebar').removeClass('sidebar-hidden');
-            $('.page-wrapper').removeClass('with-sidebar-hidden');
-
-            if (!manuallyToggled) {
-                // If user didn't manually toggle the sidebar size
-                // then automatically resize according to window width
-                if (width > 800) {
-                    expandSidebarNav();
-                } else {
-                    contractSidebarNav();
-                }
-            } else if (width < 800 && width >= 500) {
-                // Else if user did manually toggle the sidebar size,
-                // contract it only when window size is too small
-                contractSidebarNav();
-            }
-        }
-    }
-
-    // Adjust sidebar size once on document load
-    autoAdjustSidebarWidth();
-
-    // Auto adjust sidebar size on window resize
-    $(window).resize(autoAdjustSidebarWidth);
-
 
     /*** Setup miscellaneous features ***/
 
@@ -379,6 +426,6 @@ $(function () {
     });
 
     // Fade in the content wrapper
-    $('.page-content').fadeIn();
+    $('.page-content').fadeIn(1000);
 
 });

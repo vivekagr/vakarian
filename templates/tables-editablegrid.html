@@ -1,0 +1,30 @@
+{% extends '_base.html' %}
+
+{% set page_title = "Editable Grid" %}
+
+{% block vendor_css %}
+    <link rel="stylesheet" href="{{ static('css/lib/editablegrid-2.0.1.css') }}">
+{% endblock %}
+
+{% block main %}
+    {{ s('Editable Grid') }}
+    <div class="alert alert-page alert-success">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        Try editing the cells by clicking on them.
+        Visit <a href="http://www.editablegrid.net/en" class="alert-link" target="_blank">Editable Grid's site</a> for documentation and more customization options.
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading"><div class="panel-title">Editable Grid</div></div>
+        <div class="panel-body">
+            <div id="editable-grid" class="editable-grid table-responsive"></div>
+        </div>
+    </div>{{ e('Editable Grid') }}
+{% endblock %}
+
+{% block vendor_js %}
+    <script src="{{ static('js/lib/tables/editablegrid-2.0.1.js') }}"></script>
+{% endblock %}
+
+{% block js %}
+    <script src="{{ static('js/template/tables-editablegrid.js') }}"></script>
+{% endblock %}

@@ -36,14 +36,16 @@
   background: linear-gradient($val);
 }
 
-// Extend this class and set a font awesome
-// icon with it's hex code in `content` property
-.fa-icon {
+// Use this mixin for using font awesome icons,
+// generally in :after or :before pseudo-classes
+// by passing the proper hex code for the icon
+@mixin fa-icon($hexVal) {
   display: inline-block;
   font-family: FontAwesome;
   font-style: normal;
   font-weight: normal;
   line-height: 1;
+  content: $hexVal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

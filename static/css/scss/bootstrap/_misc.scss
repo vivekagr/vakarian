@@ -1,0 +1,400 @@
+// Vakarian Admin Template
+//
+// This file contains the custom styles for
+// extended bootstrap or new bootstrap-like components.
+
+
+
+/* Dropdown Menu */
+
+.dropdown-menu {
+  border-color: #ecf0f1;
+
+  li > a {
+    padding: 6px 15px;
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #2c3e50;
+  }
+}
+
+
+/* Alerts */
+
+/* Styles for the alerts within a panel */
+.panel .alert {
+  padding: 12px 15px;
+  border: none;
+  font-size: 0.9em;
+
+  &.alert-default {
+    background-color: #ecf0f1;
+
+    &, & .alert-link {
+      color: #7f8c8d;
+    }
+  }
+}
+
+/* Use .alert-page when creating alert on the page level (not inside any panel) */
+.alert.alert-page, .alert.alert-top {
+  background-color: #fff;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-left-width: 6px;
+  border-radius: 0;
+  font-family: 'Raleway', sans-serif;
+
+  .btn { margin-top: 10px; font-weight: 600; }
+
+  .close {
+    line-height: 0.65;
+    font-size: 25px;
+  }
+}
+
+.alert.alert-page {
+  &.alert-success { border-color: #1abc9c; }
+  &.alert-info { border-color: #60B2E9; }
+  &.alert-warning { border-color: #FFE373; }
+  &.alert-danger { border-color: #F87F73; }
+}
+
+
+/* Use .alert-top for top-of-the-page notification */
+.alert.alert-top {
+  position: relative;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 0;
+  padding: 12px;
+  padding-left: 39px;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #95a5a6;
+  border-bottom: 1px solid #E4E4E4;
+
+  .alert-icon {
+    display: inline-block;
+    font-size: 1.8em;
+    position: absolute;
+    top: 10px;
+    left: 13px;
+  }
+
+  $alertTopColors: (
+    primary: #3498db,
+    success: #16a085,
+    info: #60B2E9,
+    warning: #f1c40f,
+    danger: #e74c3c
+  );
+
+  &.alert-primary i { color: #3498db; }
+  &.alert-success i { color: #16a085; }
+  &.alert-info i { color: #60B2E9; }
+  &.alert-warning i { color: #f1c40f; }
+  &.alert-danger i { color: #e74c3c; }
+
+  // Generating class for each notification type
+  // with respective icon and bottom border color
+  @each $btn, $col in $alertTopColors {
+    &.alert-#{$btn} {
+      i { color: $col; }
+//      border-bottom-color: $col;
+    }
+  }
+
+}
+
+
+
+/* Breadcrumbs */
+
+.breadcrumb-v {
+  background: transparent;
+  list-style: none;
+  padding-left: 0;
+  margin: 5px 0 15px;
+  font-size: 0.8em;
+
+  li {
+    display: inline-block;
+    margin-right: -3px;
+
+    &:first-child a { padding-left: 8px; }
+    &:last-child a:after { content: none; }
+
+    &.highlight a {
+      $bg-color: #3498db;
+      background-color: $bg-color;
+      color: #ecf0f1;
+      font-weight: 400;
+
+      &:after {
+        background-color: $bg-color;
+        border-color: $bg-color;
+        @include transform(scale(0.707) rotate(45deg));
+      }
+    }
+  }
+
+  a {
+    $height: 22px;
+
+    display: inline-block;
+    line-height: $height;
+    background-color: lighten($background-color, 2%);
+    color: #95a5a6;
+    font-weight: 600;
+    padding: 0 11.5px 0 20px;
+
+    &:hover {
+      text-decoration: none;
+      color: #34495e;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      background-color: lighten($background-color, 2%);
+      border-top: 2px solid #ecf0f1;
+      border-right: 2px solid #ecf0f1;
+      margin: 0 0 1px 1px;
+      width: $height;
+      height: $height;
+      @include transform(scale(0.767) rotate(45deg));
+    }
+  }
+
+  &.breadcrumb-v-inverse {
+    li.highlight a {
+      $bg-color: #34495e;
+      background-color: $bg-color;
+
+      &:after {
+        background-color: $bg-color;
+        border-color: $bg-color;
+      }
+    }
+  }
+}
+
+
+// Use this for a simpler breadcrumb
+.breadcrumb.breadcrumb-plain {
+  font-size: 0.86em;
+  background-color: #F7F7F7;
+
+  > li > a {
+    color: #3498db;
+  }
+
+  &.breadcrumb-plain-inverse {
+    background-color: #34495e;
+
+    > li > a {
+      color: #1abc9c;
+    }
+
+    > li.active {
+      color: #bdc3c7;
+    }
+  }
+}
+
+
+
+/* Pagination */
+
+.pagination {
+  > li > a {
+    border-color: #bdc3c7;
+    color: #7f8c8d;
+    padding-left: 18px;
+    padding-right: 18px;
+    font-size: 0.9em;
+
+    &:hover {
+      color: #2c3e50;
+      background-color: #ecf0f1;
+      border-color: #bdc3c7;
+    }
+  }
+
+  &.pagination-sm > li > a {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 0.8em;
+  }
+
+  &.pagination-lg > li > a {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1em;
+  }
+
+  > li.active > a {
+    background-color: #3498db;
+    &:hover { border-color: none; }
+  }
+
+  &.pagination-inverse {
+    > li > a {
+      background-color: #505F6F;
+      color: #fff;
+      border-color: #fff;
+
+      &:hover {
+        background-color: #2c3e50;
+      }
+    }
+
+    > li.active > a {
+      background-color: #27ae60;
+      &:hover { border-color: #fff; }
+    }
+
+    > li.disabled > a {
+      color: #bdc3c7;
+
+      &:hover {
+        background-color: #505F6F;
+      }
+    }
+  }
+
+  .panel & {
+    margin: 7px 0;
+  }
+}
+
+
+
+/* Pager */
+
+.pager {
+  > li > a {
+    font-size: 0.9em;
+    @include transition(all 0.15s ease);
+  }
+
+  &.pager-inverse {
+    > li > a {
+      border-color: #fff;
+      background-color: #34495e;
+      color: #ecf0f1;
+
+      &:hover {
+        background-color: #2980b9;
+      }
+    }
+
+    > li.disabled > a {
+      background-color: #95a5a6;
+      &:hover { color: #ecf0f1; }
+    }
+  }
+}
+
+
+
+/* Labels */
+
+.label {
+  &.label-default { background-color: #D6DADB; }
+  &.label-primary { background-color: #3498db; }
+  &.label-success { background-color: #1abc9c; }
+  &.label-warning { background-color: #f1c40f; }
+  &.label-danger { background-color: #e74c3c; }
+}
+
+
+
+/* Progress bars */
+
+.progress {
+  background-color: #ECECEC;
+  height: 15px;
+  border-radius: 3px;
+}
+
+.progress, .progress-bar {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+.progress-bar {
+  font-size: 11px;
+  line-height: 15px;
+
+  &.progress-bar-success { background-color: #2BC7A8; }
+  &.progress-bar-info { background-color: #7AD0E9; }
+  &.progress-bar-warning { background-color: #F7D757; }
+  &.progress-bar-danger { background-color: #E06763; }
+}
+
+.progress-slim {
+  height: 5px;
+  border-radius: 2px;
+  > .progress-bar > span { display: none; }
+
+  table & {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+
+
+/* Modals */
+
+.modal {
+  .modal-content {
+    border-radius: 3px;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    border: none;
+
+    p { font-size: 0.9em; }
+  }
+  .modal-footer .btn {
+    margin-bottom: 0;
+  }
+}
+
+
+
+/* Tooltip */
+
+.tooltip {
+  $bg-color: #dce0e1;
+  .tooltip-inner {
+    background-color: $bg-color;
+    color: #34495e;
+  }
+  &.left .tooltip-arrow { border-left-color: $bg-color; }
+  &.right .tooltip-arrow { border-right-color: $bg-color; }
+  &.top .tooltip-arrow { border-top-color: $bg-color; }
+  &.bottom .tooltip-arrow { border-bottom-color: $bg-color; }
+}
+
+
+
+/* Popover */
+
+.popover {
+  padding: 0;
+  border-radius: 4px;
+  border-color: #dce0e1;
+  box-shadow: 0 2px 11px rgba(0,0,0,.1);
+  -webkit-box-shadow: 0 2px 11px rgba(0,0,0,.1);
+
+  .popover-content { font-size: 0.9em; }
+
+  &.right > .arrow { border-right-color: #dce0e1; }
+  &.left > .arrow { border-left-color: #dce0e1; }
+  &.top > .arrow { border-top-color: #dce0e1; }
+  &.bottom > .arrow { border-bottom-color: #dce0e1; }
+}

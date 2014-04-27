@@ -1,0 +1,368 @@
+// Panels
+
+.panel {
+  position: relative;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.10);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.10);
+
+  &, .panel-heading {
+    border: none;
+  }
+
+  .panel-heading {
+    font-family: 'Raleway', sans-serif;
+  }
+
+  p {
+    font-size: 0.9em;
+    &.lead { font-size: 1.5em; }
+  }
+
+  blockquote  {
+    p { font-size: 1.05em; }
+    p, footer { font-weight: 300; }
+  }
+
+  &.panel-default {
+    .panel-heading {
+      background-color: #EBEBEB;
+    }
+  }
+
+  &.panel-clean {
+    .panel-heading {
+      color: #bdc3c7;
+      border-bottom-color: $background-color;
+    }
+    .panel-body {
+      padding-top: 10px;
+    }
+    &.tabs-fixed .panel-body { border-top: 1px solid darken($background-color, 7%); }
+  }
+
+  &.panel-dark {
+    .panel-heading {
+      background-color: #3E5166;
+      color: $text-color;
+    }
+    &.tabs-fixed .nav.nav-tabs > li > a { color: #3E5166; }
+  }
+
+  &.panel-primary {
+    border-color: #4CA5DF;
+    .panel-heading {
+      background-color: #4CA5DF;
+      border-bottom-color: #4CA5DF;
+    }
+    &.tabs-fixed .nav.nav-tabs > li > a { color: #4CA5DF; }
+  }
+
+  &.panel-success {
+    border-color: #1abc9c;
+    .panel-heading {
+      background-color: #1abc9c;
+      border-bottom-color: #1abc9c;
+      color: #fff;
+    }
+    &.tabs-fixed .nav.nav-tabs > li > a { color: #1abc9c; }
+  }
+
+  &.panel-info {
+    .panel-heading {
+      background-color: #BDE4FF;
+    }
+  }
+
+  &.panel-warning {
+    .panel-heading {
+      background-color: #FFEFAD;
+      color: #C3A36A;
+    }
+  }
+
+  &.panel-danger {
+    .panel-heading {
+      background-color: #F17366;
+      color: #fff;
+    }
+  }
+
+  &.panel-info.tabs-fixed .nav.nav-tabs > li > a { color: #87BEDA; }
+  &.panel-warning.tabs-fixed .nav.nav-tabs > li > a { color: #F0CF4A; }
+  &.panel-danger.tabs-fixed .nav.nav-tabs > li > a { color: #E4A0A0; }
+
+  //
+  // Fixed Tabs inside panel
+  //
+  &.tabs-fixed .panel-heading {
+    padding: 11px;
+  }
+
+  &.tabs-fixed ul.nav.nav-tabs {
+    border: none;
+    position: absolute;
+    top: 1.11em;
+    right: 1.11em;
+
+    li {
+      border: none;
+
+      a {
+        padding: 5px 12px;
+        margin-right: 1px;
+        border: 1px solid transparent;
+        border-top: none;
+        border-radius: 0;
+        background-color: darken($background-color, 4%);
+        color: #7f8c8d;
+        font-size: 0.9em;
+
+        &:hover {
+          background-color: darken($background-color, 8%);
+        }
+      }
+
+      &.active > a {
+        background-color: darken($background-color, 9%);
+        border-color: darken($background-color, 9%);
+
+        &:hover {
+          background-color: darken($background-color, 9%);
+        }
+      }
+    }
+
+  }
+
+  // Different color of tabs for different tabs
+  &.tabs-fixed {
+    &.panel-dark, &.panel-primary, &.panel-success {
+      ul.nav.nav-tabs > li > a {
+        &, &:hover { background-color: rgba(255, 255, 255, 0.8); }
+      }
+      ul.nav.nav-tabs > li.active > a {
+        &, &:hover { background-color: rgba(255, 255, 255, 1); }
+        border-color: rgba(255, 255, 255, 1);
+      }
+    }
+    &.panel-info, &.panel-warning, &.panel-danger {
+      ul.nav.nav-tabs > li > a {
+        &, &:hover { background-color: rgba(255, 255, 255, 0.7); }
+      }
+      ul.nav.nav-tabs > li.active > a {
+        &, &:hover { background-color: rgb(255, 255, 255); }
+        border-color: rgb(255, 255, 255);
+      }
+    }
+  }
+
+  //
+  // Slim variation of the fixed tabs inside panels
+  //
+  &.tabs-fixed-slim ul.nav.nav-tabs {
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 15px;
+
+    li {
+      border: none;
+
+      &:first-child > a { border-bottom-left-radius: 5px; }
+      &:last-child > a { border-bottom-right-radius: 5px; }
+
+      &.active > a {
+        background-color: #3498db;
+        border-color: #3498db;
+
+        &:hover {
+          background-color: #3498db;
+        }
+      }
+
+      a {
+        padding: 5px 12px;
+        margin-right: 1px;
+        border: 1px solid transparent;
+        border-top: none;
+        border-radius: 0;
+        background-color: #2980b9;
+        color: #fff;
+        font-size: 0.85em;
+
+        &:hover {
+          background-color: darken(#2980b9, 3%);
+        }
+      }
+    }
+  }
+
+  // Different color of tabs for different slim tabs
+  &.panel-primary.tabs-fixed-slim .nav.nav-tabs > li > a { color: #4CA5DF; }
+  &.panel-success.tabs-fixed-slim .nav.nav-tabs > li > a { color: #1abc9c; }
+  &.panel-info.tabs-fixed-slim .nav.nav-tabs > li > a { color: #87BEDA; }
+  &.panel-warning.tabs-fixed-slim .nav.nav-tabs > li > a { color: #f1c40f; }
+  &.panel-danger.tabs-fixed-slim .nav.nav-tabs > li > a { color: #E4A0A0; }
+
+  &.tabs-fixed-slim {
+    &.panel-primary, &.panel-success, &.panel-info, &.panel-warning, &.panel-danger {
+      ul.nav.nav-tabs > li > a {
+        &, &:hover { background-color: rgba(255, 255, 255, 0.8); }
+      }
+      ul.nav.nav-tabs > li.active > a {
+        &, &:hover { background-color: rgba(255, 255, 255, 1); }
+        border-color: rgba(255, 255, 255, 1);
+      }
+    }
+  }
+
+  // Used for showing extra details in the panel
+  .widget-info {
+    margin: 10px 0 5px;
+    padding: 7px 10px;
+    border: 2px solid #f5f5f5;
+    border-radius: 3px;
+    font-size: 0.9em;
+    color: #7f8c8d;
+
+    p {
+      margin: 6px 0;
+      line-height: 1.8em;
+      &:first-child { margin-top: 0; }
+      &:last-child { margin-bottom: 0; }
+      &:only-of-type { margin-bottom: 6px; }
+    }
+
+    pre {
+      margin: 4px 0;
+      font-size: 0.85em;
+      background-color: #f5f5f5;
+    }
+
+    code {
+      background-color: #f5f5f5;
+      color: #16a085;
+    }
+
+  }
+
+  // Widget sub-title
+  .subtitle {
+    margin: 10px 0 3px 4px;
+    font-size: 0.8em;
+    color: #bdc3c7;
+
+    display: table;
+    white-space: nowrap;
+    &:before, &:after {
+      border-top: 1px solid #ecf0f1;
+      content: '';
+      display: table-cell;
+      position: relative;
+      top: 0.6em;
+    }
+    &:before {
+      width: 5px;
+      right: 3px;
+    }
+    &:after {
+      width: 5px;
+      left: 3px;
+    }
+  }
+
+  // If there is too much content in the .widget-info,
+  // encapsulate it within this to limit it's size.
+  .widget-info-fixed-size {
+    position: relative;
+
+    .widget-info {
+      overflow: scroll;
+      height: 120px;
+    }
+
+    &.open .widget-info {
+      overflow: visible;
+      height: auto;
+    }
+
+    .expand {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding: 2px 3px;
+      background: #fff;
+      border: 2px solid #ecf0f1;
+      border-top-left-radius: 3px;
+      font-size: 0.8em;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #D0D4D4;
+      @include user-select(none);
+      cursor: pointer;
+
+      &:hover {
+        color: #B0B4B4;
+      }
+    }
+
+  }
+
+  // Show any small text as a footnote with this
+  .widget-footnote {
+    &:before {
+      @include fa-icon('\f05a');
+      margin-right: 5px;
+    }
+
+    font-size: 0.9em;
+    font-weight: 300;
+    color: #bdc3c7;
+  }
+
+  .panel-toolbar {
+    position: absolute;
+    top: 6px;
+    right: 11px;
+    @include user-select(none);
+    cursor: default;
+
+    a {
+      display: inline-block;
+      font-size: 0.95em;
+      color: #CFD7DA;
+      text-align: center;
+      vertical-align: middle;
+      margin-left: 5px;
+      @include transition(all 0.2s ease);
+
+      &:hover {
+        color: darken(#CFD7DA, 10%);
+      }
+    }
+  }
+}
+
+
+// Accordion
+.panel-group .panel {
+  font-size: 0.9em;
+  border-color: #ecf0f1;
+  border-radius: 3px;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+
+  &.panel-default .panel-heading {
+    background-color: #ecf0f1;
+  }
+
+  .panel-heading+.panel-collapse .panel-body {
+    border: none;
+  }
+
+  .panel-title {
+    font-size: 1.1em;
+
+    a:hover { text-decoration: none; }
+  }
+}

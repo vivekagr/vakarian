@@ -137,13 +137,11 @@
       }
     }
     &.sorting_asc:after {
-      @extend .fa-icon;
-      content: '\f0dd';
+      @include fa-icon('\f0dd');
       float: right;
     }
     &.sorting_desc:before {
-      @extend .fa-icon;
-      content: '\f0de';
+      @include fa-icon('\f0de');
       float: right;
       margin-top: 4px;
     }
@@ -206,14 +204,12 @@
     }
 
     &.paginate_disabled_previous:before, &.paginate_enabled_previous:before {
-      @extend .fa-icon;
-      content: '\f0a8';
+      @include fa-icon('\f0a8');
       margin-right: 4px;
     }
 
     &.paginate_disabled_next:after, &.paginate_enabled_next:after {
-      @extend .fa-icon;
-      content: '\f0a9';
+      @include fa-icon('\f0a9');
       margin-left: 4px;
     }
 

@@ -70,7 +70,7 @@ pre {
 }
 
 
-/* This encapsulates the entire page */
+/* Page wrapper encapsulates the entire page */
 
 .page-wrapper {
   position: relative;
@@ -290,9 +290,8 @@ button.btn-navbar {
 
   // Add the search icon towards the right
   &:before {
-    @extend .fa-icon;
+    @include fa-icon('\f002');
     position: absolute;
-    content: '\f002';
     color: $sidebar-color;
     top: 18px;
     right: 18px;
@@ -407,8 +406,7 @@ SIDEBAR
 
     // Show empty space for items without dropdown menu
     span:before {
-      @extend .fa-icon;
-      content: '';
+      @include fa-icon('');
       margin-right: 6px;
     }
 
@@ -519,8 +517,7 @@ SIDEBAR
 
       > li.dropdown {
         > a:before {
-          @extend .fa-icon;
-          content: $collapse-indicator-icon;
+          @include fa-icon($collapse-indicator-icon);
         }
         &.active > a:before {
           content: $collapse-indicator-down-icon;

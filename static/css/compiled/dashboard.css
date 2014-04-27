@@ -1,13 +1,3 @@
-.fa-icon, .support-tickets-table > table tbody > tr > td.status:before, .user-voice .media-body:before {
-  display: inline-block;
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 #trafficChart {
   margin-top: 15px;
   width: 100%;
@@ -212,7 +202,14 @@
   background-color: #3498db;
 }
 .support-tickets-table > table tbody > tr > td.status:before {
-  content: '\f05c';
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  content: "\f05c";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   margin-right: 0.4em;
 }
 .support-tickets-table > table tbody > tr > td.status.answered:before {
@@ -251,6 +248,14 @@
   color: #bdc3c7;
 }
 .user-voice .media-body:before {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  content: "";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   position: absolute;
   top: 5px;
   right: 5px;

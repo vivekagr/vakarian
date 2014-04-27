@@ -190,8 +190,7 @@
     }
 
     &.status:before {
-      @extend .fa-icon;
-      content: '\f05c';
+      @include fa-icon('\f05c');
       margin-right: 0.4em;
     }
 
@@ -228,7 +227,7 @@
     }
 
     &:before {
-      @extend .fa-icon;
+      @include fa-icon('');
       position:absolute;
       top: 5px;
       right: 5px;

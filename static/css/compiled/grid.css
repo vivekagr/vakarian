@@ -1,13 +1,3 @@
-.fa-icon {
-  display: inline-block;
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 .grid-example > .panel-body > .row {
   margin-left: -10px;
   margin-right: -10px;

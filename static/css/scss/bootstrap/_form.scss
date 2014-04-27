@@ -1,0 +1,132 @@
+/* Form Control */
+
+.form-control {
+  font-size: 0.9em;
+  padding: 7px 12px;
+  border-radius: 3px;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+
+  &:focus {
+    border-color: #A2A3A5;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+}
+
+.form-group {
+  .help-block {
+    font-size: 0.8em;
+  }
+
+  .file-input-wrapper {
+    input[type="file"] {
+      display: none;
+    }
+
+    .file-name {
+      display: inline-block;
+      font-size: 0.85em;
+    }
+  }
+
+  label {
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #34495e;
+  }
+
+  &.has-success, &.has-warning, &.has-error {
+    .form-control {
+      box-shadow: none;
+      -webkit-box-shadow: none;
+    }
+  }
+
+  &.has-success {
+    .form-control { border-color: #28B89B; }
+    .help-block, label { color: #28B89B; }
+  }
+
+  &.has-warning {
+    .form-control { border-color: #E5A53E; }
+    .help-block, label { color: #E5A53E; }
+  }
+
+  &.has-error {
+    .form-control { border-color: #E27367; }
+    .help-block, label { color: #E27367; }
+  }
+}
+
+
+/*
+  Radio buttons and Checkboxes
+*/
+
+.radio, .radio-inline, .checkbox, .checkbox-inline {
+  padding-left: 0;
+
+  label {
+    font-size: 0.9em;
+  }
+
+  input[type="radio"], input[type="checkbox"] {
+    display: none;
+    margin-left: -12px;
+
+    &:checked + span:before {
+      content: '\f192';
+    }
+
+    &:disabled + span {
+      color: #7f8c8d;
+    }
+  }
+
+  span {
+    position: relative;
+    left: 1.2857142857142858em;
+  }
+
+  span:before {
+    @include fa-icon('\f10c');
+    position: absolute;
+    display: inline-block;
+    width: 1.2857142857142858em;
+    font-size: 1.2em;
+    left: -1.1057142857142858em;
+    top: 2px;
+  }
+
+  span {
+    font-weight: 400;
+  }
+
+  span:hover {
+    cursor: pointer;
+  }
+
+}
+
+.checkbox, .checkbox-inline {
+  input[type="checkbox"]:checked + span:before {
+    content: '\f046';
+  }
+
+  span:before {
+    content: '\f096';
+  }
+}
+
+.radio-inline, .checkbox-inline {
+  margin-right: 12px;
+}
+
+.form-inline .radio, .form-inline .checkbox {
+  margin-right: 16px;
+}
+
+.input-group {
+  margin: 5px 0 15px;
+}

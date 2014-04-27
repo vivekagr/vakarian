@@ -7,17 +7,28 @@
 {%- endblock %}
 
 {% block main %}
-    {{ s('Calendar') }}
-    <div class="panel panel-clean">
-        <div class="panel-body">
-            <div class="fullcalendar fullcalendar-lg" id="calendar"></div>
-            <div class="widget-info">
-                <p>Note: The events above are drag-and-droppbable.</p>
-                <p>Custom styles for FullCalendar (suited to this template) are located in <code>css/compiled/lib/fullcalendar.custom.css</code>. Use <code>.fullcalendar</code> class on the calendar element to utilize them. You can also add <code>.fullcalendar-lg</code> for larger event elements.</p>
-                <p>This calendar was rendered using <a href="http://arshaw.com/fullcalendar/" target="_blank">FullCalendar</a> which supports extensive customization. For more details please have a look at the <a href="http://arshaw.com/fullcalendar/docs/" target="_blank">documentation</a> .</p>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="panel panel-clean">
+                <div class="panel-body">
+                    
+                </div>
             </div>
         </div>
-    </div>{{ e('Calendar') }}
+        <div class="col-md-9">
+            {{ s('Calendar') }}
+            <div class="panel panel-clean">
+                <div class="panel-body">
+                    <div class="fullcalendar fullcalendar-lg" id="calendar"></div>
+                    <div class="widget-info">
+                        <p>Note: The events above are drag-and-droppbable.</p>
+                        <p>Custom styles for FullCalendar (suited to this template) are located in <code>css/compiled/lib/fullcalendar.custom.css</code>. Use <code>.fullcalendar</code> class on the calendar element to utilize them. You can also add <code>.fullcalendar-lg</code> for larger event elements.</p>
+                        <p>This calendar was rendered using <a href="http://arshaw.com/fullcalendar/" target="_blank">FullCalendar</a> which supports extensive customization. For more details please have a look at the <a href="http://arshaw.com/fullcalendar/docs/" target="_blank">documentation</a> .</p>
+                    </div>
+                </div>
+            </div>{{ e('Calendar') }}
+        </div>
+    </div>
 {% endblock %}
 
 {% block vendor_js %}
@@ -27,73 +38,75 @@
 
 {% block js %}
 <script>
-    // Setting up the events data for the calendar
-    date = new Date();
-    d = date.getDate();
-    m = date.getMonth();
-    y = date.getFullYear();
+    $(function() {
+        var date, d, m, y, events;
 
-    events = [
-        {
-            title: 'All Day Event',
-            start: new Date(y, m, 1)
-        },
-        {
-            title: 'Long Event',
-            start: new Date(y, m, d-5),
-            end: new Date(y, m, d-2)
-        },
-        {
-            id: 999,
-            title: 'Repeating Event',
-            start: new Date(y, m, d-3, 16, 0),
-            allDay: false
-        },
-        {
-            id: 999,
-            title: 'Repeating Event',
-            start: new Date(y, m, d+4, 16, 0),
-            allDay: false
-        },
-        {
-            title: 'Meeting',
-            start: new Date(y, m, d, 10, 30),
-            allDay: false
-        },
-        {
-            title: 'Lunch',
-            start: new Date(y, m, d, 12, 0),
-            end: new Date(y, m, d, 14, 0),
-            allDay: false
-        },
-        {
-            title: 'Birthday Party',
-            start: new Date(y, m, d+1, 19, 0),
-            end: new Date(y, m, d+1, 22, 30),
-            allDay: false
-        },
-        {
-            title: 'Click for Google',
-            start: new Date(y, m, 28),
-            end: new Date(y, m, 29),
-            url: 'http://google.com/'
-        }
-    ];
+        // Setting up the events data for the calendar
+        date = new Date();
+        d = date.getDate();
+        m = date.getMonth();
+        y = date.getFullYear();
 
-    // Rendering the calendar
-    $('#calendar').fullCalendar({
-        height: 480,
-        selectable: true,
-        selectHelper: true,
-        editable: true,
-        header: {
-            left: 'title',
-            center: '',
-            right: 'month,agendaWeek,agendaDay prev,next'
-        },
-        events: events
+        events = [
+            {
+                title: 'All Day Event',
+                start: new Date(y, m, 1)
+            },
+            {
+                title: 'Long Event',
+                start: new Date(y, m, d-5),
+                end: new Date(y, m, d-2)
+            },
+            {
+                id: 999,
+                title: 'Repeating Event',
+                start: new Date(y, m, d-3, 16, 0),
+                allDay: false
+            },
+            {
+                id: 999,
+                title: 'Repeating Event',
+                start: new Date(y, m, d+4, 16, 0),
+                allDay: false
+            },
+            {
+                title: 'Meeting',
+                start: new Date(y, m, d, 10, 30),
+                allDay: false
+            },
+            {
+                title: 'Lunch',
+                start: new Date(y, m, d, 12, 0),
+                end: new Date(y, m, d, 14, 0),
+                allDay: false
+            },
+            {
+                title: 'Birthday Party',
+                start: new Date(y, m, d+1, 19, 0),
+                end: new Date(y, m, d+1, 22, 30),
+                allDay: false
+            },
+            {
+                title: 'Click for Google',
+                start: new Date(y, m, 28),
+                end: new Date(y, m, 29),
+                url: 'http://google.com/'
+            }
+        ];
+
+        // Rendering the calendar
+        $('#calendar').fullCalendar({
+            height: 480,
+            selectable: true,
+            selectHelper: true,
+            editable: true,
+            header: {
+                left: 'title',
+                center: '',
+                right: 'month,agendaWeek,agendaDay prev,next'
+            },
+            events: events
+        });
     });
-
-    $(window).trigger('resize');
 </script>
 {% endblock %}

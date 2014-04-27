@@ -4,7 +4,7 @@
 {% set page_subtitle = "Welcome back John" %}
 
 {% block vendor_css %}
-    <link rel="stylesheet" href="{{ static('plugins/odometer/odometer-theme-minimal.css') }}">
+    <link rel="stylesheet" href="{{ static('css/lib/odometer-theme-minimal.css') }}">
     <link rel="stylesheet" href="{{ static('css/lib/morris-0.4.3.min.css') }}">
     <link rel="stylesheet" href="{{ static('css/lib/fullcalendar.css') }}">
     <link rel="stylesheet" href="{{ static('css/lib/nanoscroller.css') }}">
@@ -273,34 +273,34 @@
 
 {% block vendor_js %}
     {{ c('Odometer') }}
-    <script src="{{ static('plugins/odometer/odometer.min.js') }}"></script>
+    <script src="{{ static('js/lib/odometer.min.js') }}"></script>
 
     {{ c('Flot Charts') }}
-    <script src="{{ static('js/plugins/chart-flot/jquery.flot.min.js') }}"></script>
-    <script src="{{ static('js/plugins/chart-flot/jquery.flot.time.min.js') }}"></script>
-    <script src="{{ static('js/plugins/chart-flot/jquery.flot.tooltip.min.js') }}"></script>
-    <script src="{{ static('js/plugins/chart-flot/jquery.flot.resize.js') }}"></script>
+    <script src="{{ static('js/lib/charts/chart-flot/jquery.flot.min.js') }}"></script>
+    <script src="{{ static('js/lib/charts/chart-flot/jquery.flot.time.min.js') }}"></script>
+    <script src="{{ static('js/lib/charts/chart-flot/jquery.flot.tooltip.min.js') }}"></script>
+    <script src="{{ static('js/lib/charts/chart-flot/jquery.flot.resize.js') }}"></script>
     {{ c('Uncomment and include the following plugin to enable curved flot charts') }}
-    <!--<script src="{{ static('js/plugins/chart-flot/curvedLines.js') }}"></script>-->
+    <!--<script src="{{ static('js/lib/charts/chart-flot/curvedLines.js') }}"></script>-->
 
     {{ c('Peity Charts') }}
-    <script src="{{ static('js/plugins/chart-peity/jquery.peity.min.js') }}"></script>
+    <script src="{{ static('js/lib/charts/jquery.peity.min.js') }}"></script>
 
     {{ c('Raphel.js - dependency for morris.js and jquery.mapael.js') }}
-    <script src="{{ static('js/raphael-min.js') }}"></script>
+    <script src="{{ static('js/lib/raphael-min.js') }}"></script>
 
     {{ c('morris.js') }}
-    <script src="{{ static('js/plugins/chart-morris.js/morris.min.js') }}"></script>
+    <script src="{{ static('js/lib/charts/chart-morris.js/morris.min.js') }}"></script>
 
     {{ c('jQuery Mapael') }}
-    <script src="{{ static('js/maps/jquery.mapael.js') }}"></script>
-    <script src="{{ static('js/maps/usa_states.js') }}"></script>
+    <script src="{{ static('js/lib/maps/jquery.mapael.js') }}"></script>
+    <script src="{{ static('js/lib/maps/mapael-usa_states.js') }}"></script>
 
     {{ c('FullCalendar') }}
-    <script src="{{ static('js/fullcalendar.min.js') }}"></script>
+    <script src="{{ static('js/lib/fullcalendar.min.js') }}"></script>
 
     {{ c('NanoScroller') }}
-    <script src="{{ static('js/jquery.nanoscroller.min.js') }}"></script>
+    <script src="{{ static('js/lib/jquery.nanoscroller.min.js') }}"></script>
 {% endblock %}
 
 {% block js %}

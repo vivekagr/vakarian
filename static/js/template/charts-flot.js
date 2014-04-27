@@ -1,3 +1,8 @@
+/*
+    Renders the charts in 'chart-flot.html'
+    using flot charts library.
+*/
+
 $(function () {
 
     // Realtime Graph

@@ -1,3 +1,8 @@
+/*
+    Renders the charts in 'chart-morris.html'
+    using morris.js library.
+*/
+
 $(function () {
     // data stolen from http://howmanyleft.co.uk/vehicle/jaguar_'e'_type
     var tax_data = [

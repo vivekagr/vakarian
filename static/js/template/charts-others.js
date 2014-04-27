@@ -1,3 +1,8 @@
+/*
+    Renders the charts in 'chart-others.html'
+    using piecon, xCharts, Peity Charts and jQuery sparkline libraries.
+*/
+
 $(function () {
 
     // Piecon

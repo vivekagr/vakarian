@@ -1,3 +1,8 @@
+/*
+    Renders the charts in 'chart-chartjs.html'
+    using chart.js library.
+*/
+
 $(function () {
 
     function setupChart(selector, type, data, options) {

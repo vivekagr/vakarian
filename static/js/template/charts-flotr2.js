@@ -1,3 +1,8 @@
+/*
+    Renders the charts in 'chart-flotr2.html'
+    using flotr2 library.
+*/
+
 $(function () {
 
     Flotr.defaultOptions.mouse.lineColor = '#3498db';

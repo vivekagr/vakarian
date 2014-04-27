@@ -1,10 +1,14 @@
-// Initializes the graphs on the dashboard
+/*
+    Renders the graphs, map, animations, calendar, etc.
+    on the dashboard ('index.html').
+*/
 
 $(function () {
 
     setTimeout(function() {
-        App.animateEl($('.alert-top').slideDown(), 'bounceInLeft');
-    }, 4000);
+//        App.animateEl($('.alert-top').slideDown(), 'bounceInLeft');
+        $('.alert-top').slideDown().animateCss('bounceInLeft');
+    }, 3000);
 
     var pageviews, visits, uniques, bounce, pageviewsDs, visitsDs, data, options, date, d, m, y, events;
 

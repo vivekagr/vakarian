@@ -217,9 +217,9 @@
     </div>{{ e('Icon Buttons') }}
 
     <div class="row">
-
-        {{ s('Social Buttons') }}
         <div class="col-md-6">
+
+            {{ s('Social Buttons') }}
             <div class="panel panel-clean">
                 <div class="panel-heading"><div class="panel-title">Social Buttons</div></div>
                 <div class="panel-body">
@@ -248,32 +248,10 @@
                         <pre>&lt;button class=&quot;btn btn-facebook&quot;&gt;&lt;i class=&quot;fa fa-facebook&quot;&gt;&lt;/i&gt; Facebook&lt;/button&gt;<br><br>&lt;button class=&quot;btn btn-icon btn-twitter&quot;&gt;&lt;i class=&quot;fa fa-twitter&quot;&gt;&lt;/i&gt;&lt;/button&gt;</pre>
                     </div>
                 </div>
-            </div>
-        </div>{{ e('Social Buttons') }}
+            </div>{{ e('Social Buttons') }}
 
-        {{ s('Block Buttons') }}
-        <div class="col-md-6">
-            <div class="panel panel-clean">
-                <div class="panel-heading"><div class="panel-title">Block Buttons</div></div>
-                <div class="panel-body">
-                    <button class="btn btn-block btn-default">Default</button>
-                    <button class="btn btn-block btn-primary">Primary</button>
-                    <button class="btn btn-block btn-success">Success</button>
-                    <button class="btn btn-block btn-info">Info</button>
-                    <button class="btn btn-block btn-warning">Warning</button>
-                    <button class="btn btn-block btn-danger">Danger</button>
-                    <button class="btn btn-block btn-inverse">Inverse</button>
+            {{ s('Buttons Sizes') }}
 
-                    <div class="widget-info">
-                        <p>Add <code>.btn-block</code> class to make any button block sized.</p>
-                        <pre>&lt;button class="btn btn-block btn-primary"&gt;Primary&lt;/button&gt;</pre>
-                    </div>
-                </div>
-            </div>
-        </div>{{ e('Block Buttons') }}
-
-        {{ s('Buttons Sizes') }}
-        <div class="col-md-6">
             <div class="panel panel-clean">
                 <div class="panel-heading"><div class="panel-title">Button Sizes</div></div>
                 <div class="panel-body">
@@ -292,11 +270,9 @@
                         <pre>&lt;button class=&quot;btn btn-lg btn-default&quot;&gt;Large&lt;/button&gt;</pre>
                     </div>
                 </div>
-            </div>
-        </div>{{ e('Buttons Sizes') }}
+            </div>{{ e('Buttons Sizes') }}
 
-        {{ s('Buttons Groups') }}
-        <div class="col-md-6">
+            {{ s('Buttons Groups') }}
             <div class="panel panel-clean">
                 <div class="panel-heading"><div class="panel-title">Buttons Groups</div></div>
                 <div class="panel-body">
@@ -354,81 +330,32 @@
                         <div class="expand">Expand</div>
                     </div>
                 </div>
-            </div>
-        </div>{{ e('Buttons Groups') }}
+            </div>{{ e('Buttons Groups') }}
 
-        {{ s('Nested Buttons Groups') }}
+        </div>{{ c('/div.col-md-6') }}
+
         <div class="col-md-6">
+
+            {{ s('Block Buttons') }}
             <div class="panel panel-clean">
-                <div class="panel-heading"><div class="panel-title">Nested Button Groups</div></div>
+                <div class="panel-heading"><div class="panel-title">Block Buttons</div></div>
                 <div class="panel-body">
+                    <button class="btn btn-block btn-default">Default</button>
+                    <button class="btn btn-block btn-primary">Primary</button>
+                    <button class="btn btn-block btn-success">Success</button>
+                    <button class="btn btn-block btn-info">Info</button>
+                    <button class="btn btn-block btn-warning">Warning</button>
+                    <button class="btn btn-block btn-danger">Danger</button>
+                    <button class="btn btn-block btn-inverse">Inverse</button>
 
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="subtitle">Horizontal Variation</div>
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-default">1</button>
-                                <button type="button" class="btn btn-default">2</button>
-
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                                        Dropdown
-                                        <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Dropdown link</a></li>
-                                        <li><a href="#">Dropdown link</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="subtitle">Vertical Variation</div>
-                            <div class="btn-group-vertical">
-                                <button type="button" class="btn btn-default">1</button>
-                                <button type="button" class="btn btn-default">2</button>
-
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                                        Dropdown
-                                        <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Dropdown link</a></li>
-                                        <li><a href="#">Dropdown link</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="widget-info-fixed-size">
-                        <div class="widget-info">
-                            <p>A <code>.btn-group</code> can be nested inside other as a dropdown menu.</p>
-                            <pre>&lt;div class=&quot;btn-group&quot;&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;1&lt;/button&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;2&lt;/button&gt;
-
-        &lt;div class=&quot;btn-group&quot;&gt;
-            &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
-                Dropdown
-                &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
-            &lt;/button&gt;
-            &lt;ul class=&quot;dropdown-menu&quot;&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Dropdown link&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Dropdown link&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;</pre>
-                            <p>For vertical variation of the same, use <code>.btn-group-vertical</code> instead of <code>.btn-group</code> in the parent.</p>
-                        </div>
-                        <div class="expand">Expand</div>
+                    <div class="widget-info">
+                        <p>Add <code>.btn-block</code> class to make any button block sized.</p>
+                        <pre>&lt;button class="btn btn-block btn-primary"&gt;Primary&lt;/button&gt;</pre>
                     </div>
                 </div>
-            </div>
-        </div>{{ e('Nested Buttons Groups') }}
+            </div>{{ e('Block Buttons') }}
 
-        {{ s('Justified Buttons Groups') }}
-        <div class="col-md-6">
+            {{ s('Justified Buttons Groups') }}
             <div class="panel panel-clean">
                 <div class="panel-heading"><div class="panel-title">Justified Button Groups</div></div>
                 <div class="panel-body">
@@ -467,10 +394,223 @@
                         <div class="expand">Expand</div>
                     </div>
                 </div>
-            </div>
-        </div>{{ e('Justified Buttons Groups') }}
+            </div>{{ e('Justified Buttons Groups') }}
 
+        </div>
     </div>
+
+    {{ s('Nested Buttons Groups') }}
+    <div class="panel panel-clean">
+        <div class="panel-heading"><div class="panel-title">Nested Button Groups</div></div>
+        <div class="panel-body">
+            <div class="subtitle">Horizontal Variation</div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-default">1</button>
+                <button type="button" class="btn btn-default">2</button>
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        Dropdown
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Dropdown link</a></li>
+                        <li><a href="#">Dropdown link</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary">1</button>
+                <button type="button" class="btn btn-primary">2</button>
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                        Dropdown
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Dropdown link</a></li>
+                        <li><a href="#">Dropdown link</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-success">1</button>
+                <button type="button" class="btn btn-success">2</button>
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                        Dropdown
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Dropdown link</a></li>
+                        <li><a href="#">Dropdown link</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-info">1</button>
+                <button type="button" class="btn btn-info">2</button>
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                        Dropdown
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Dropdown link</a></li>
+                        <li><a href="#">Dropdown link</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-warning">1</button>
+                <button type="button" class="btn btn-warning">2</button>
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+                        Dropdown
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Dropdown link</a></li>
+                        <li><a href="#">Dropdown link</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-danger">1</button>
+                <button type="button" class="btn btn-danger">2</button>
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+                        Dropdown
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Dropdown link</a></li>
+                        <li><a href="#">Dropdown link</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-inverse">1</button>
+                <button type="button" class="btn btn-inverse">2</button>
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">
+                        Dropdown
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Dropdown link</a></li>
+                        <li><a href="#">Dropdown link</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="subtitle">Vertical Variation</div>
+            <div class="btn-group-vertical">
+                <button type="button" class="btn btn-default">1</button>
+                <button type="button" class="btn btn-default">2</button>
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        Dropdown
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Dropdown link</a></li>
+                        <li><a href="#">Dropdown link</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn-group-vertical">
+                <button type="button" class="btn btn-primary">1</button>
+                <button type="button" class="btn btn-primary">2</button>
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                        Dropdown
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Dropdown link</a></li>
+                        <li><a href="#">Dropdown link</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn-group-vertical">
+                <button type="button" class="btn btn-success">1</button>
+                <button type="button" class="btn btn-success">2</button>
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                        Dropdown
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Dropdown link</a></li>
+                        <li><a href="#">Dropdown link</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn-group-vertical">
+                <button type="button" class="btn btn-warning">1</button>
+                <button type="button" class="btn btn-warning">2</button>
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+                        Dropdown
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Dropdown link</a></li>
+                        <li><a href="#">Dropdown link</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn-group-vertical">
+                <button type="button" class="btn btn-danger">1</button>
+                <button type="button" class="btn btn-danger">2</button>
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+                        Dropdown
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Dropdown link</a></li>
+                        <li><a href="#">Dropdown link</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="widget-info-fixed-size">
+                <div class="widget-info">
+                    <p>A <code>.btn-group</code> can be nested inside other as a dropdown menu.</p>
+                    <pre>&lt;div class=&quot;btn-group&quot;&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;1&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;2&lt;/button&gt;
+
+&lt;div class=&quot;btn-group&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+        Dropdown
+        &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Dropdown link&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Dropdown link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;</pre>
+                    <p>For vertical variation of the same, use <code>.btn-group-vertical</code> instead of <code>.btn-group</code> in the parent.</p>
+                </div>
+                <div class="expand">Expand</div>
+            </div>
+        </div>
+    </div>{{ e('Nested Buttons Groups') }}
 
     {{ s('Single Buttons Dropdown') }}
     <div class="panel panel-clean">

@@ -1541,7 +1541,6 @@ table .btn.btn-icon {
   border-left-width: 6px;
   border-radius: 0;
   font-family: 'Raleway', sans-serif;
-  font-size: 1.07em;
 }
 .alert.alert-page .btn, .alert.alert-top .btn {
   margin-top: 10px;
@@ -2358,4 +2357,55 @@ div.slider.slider-vertical .tooltip .tooltip-arrow {
 /* Nano Scroller */
 .nano > .nano-content:focus {
   outline: none;
+}
+
+/* Editable Grid */
+.editable-grid td {
+  line-height: 1.8em !important;
+}
+.editable-grid input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #bdc3c7;
+}
+
+.ui-datepicker {
+  position: relative;
+  background-color: #fff;
+  border: 3px solid #3498db;
+  padding: 5px 3px;
+  margin-top: 5px;
+}
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
+  display: inline-block;
+  float: right;
+  margin: 0 3px 5px;
+  padding: 1px 3px;
+  font-size: 0.7em;
+  background-color: #3498db;
+  color: #fff;
+}
+.ui-datepicker .ui-datepicker-prev:hover, .ui-datepicker .ui-datepicker-next:hover {
+  text-decoration: none;
+  background-color: #2980b9;
+  cursor: pointer;
+}
+.ui-datepicker .ui-datepicker-prev {
+  float: left;
+}
+.ui-datepicker .ui-datepicker-title {
+  text-align: center;
+  color: #bdc3c7;
+  font-size: 0.9em;
+  font-weight: 300;
+}
+.ui-datepicker table.ui-datepicker-calendar {
+  margin: 5px 10px;
+}
+.ui-datepicker table.ui-datepicker-calendar th, .ui-datepicker table.ui-datepicker-calendar td {
+  padding: 2px 4px;
+  color: #34495e;
+}
+.ui-datepicker table.ui-datepicker-calendar td a {
+  color: #3498db;
 }

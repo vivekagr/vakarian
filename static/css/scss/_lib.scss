@@ -411,3 +411,62 @@ div.slider.slider-vertical {
 .nano > .nano-content:focus {
   outline: none;
 }
+
+/* Editable Grid */
+
+.editable-grid {
+  td { line-height: 1.8em !important; }
+  input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #bdc3c7;
+  }
+}
+
+// jQuery UI datepicker used by editable grid
+.ui-datepicker {
+  position: relative;
+  background-color: #fff;
+  border: 3px solid #3498db;
+  padding: 5px 3px;
+  margin-top: 5px;
+
+  .ui-datepicker-prev, .ui-datepicker-next {
+    display: inline-block;
+    float: right;
+    margin: 0 3px 5px;
+    padding: 1px 3px;
+    font-size: 0.7em;
+    background-color: #3498db;
+    color: #fff;
+
+    &:hover {
+      text-decoration: none;
+      background-color: #2980b9;
+      cursor: pointer;
+    }
+  }
+
+  .ui-datepicker-prev { float: left; }
+
+  .ui-datepicker-title {
+    text-align: center;
+    color: #bdc3c7;
+    font-size: 0.9em;
+    font-weight: 300;
+  }
+
+  table.ui-datepicker-calendar {
+    margin: 5px 10px;
+
+    th, td {
+      padding: 2px 4px;
+      color: #34495e;
+    }
+
+    td a {
+      color: #3498db;
+    }
+  }
+
+}

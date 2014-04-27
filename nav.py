@@ -24,7 +24,7 @@ nav_menu = [
     { 'title': 'Tables', 'icon': 'ion-clipboard', 'children': [
         { 'title': 'Static Tables', 'template': 'tables-static.html' },
         { 'title': 'DataTables', 'template': 'tables-datatables.html' },
-        { 'title': 'EditableGrid', 'template': '#' },
+        { 'title': 'EditableGrid', 'template': 'tables-editablegrid.html' },
     ] },
 
     { 'title': 'Forms', 'icon': 'ion-ios7-compose-outline', 'children': [

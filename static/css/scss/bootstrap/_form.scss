@@ -4,11 +4,12 @@
   font-size: 0.9em;
   padding: 7px 12px;
   border-radius: 3px;
+  border-color: #CACDCE;
   box-shadow: none;
   -webkit-box-shadow: none;
 
   &:focus {
-    border-color: #A2A3A5;
+    border-color: darken(#CACDCE, 12%);
     box-shadow: none;
     -webkit-box-shadow: none;
   }
@@ -129,4 +130,18 @@
 
 .input-group {
   margin: 5px 0 15px;
+
+  .input-group-addon {
+    background-color: #ecf0f1;
+    font-size: 0.9em;
+  }
+
+  .input-group-btn {
+    font-size: 1em;
+
+    .btn {
+      padding-top: 7px;
+      padding-bottom: 7px;
+    }
+  }
 }

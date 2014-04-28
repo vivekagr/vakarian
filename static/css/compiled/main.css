@@ -1566,11 +1566,12 @@ table .btn.btn-icon {
   font-size: 0.9em;
   padding: 7px 12px;
   border-radius: 3px;
+  border-color: #CACDCE;
   box-shadow: none;
   -webkit-box-shadow: none;
 }
 .form-control:focus {
-  border-color: #A2A3A5;
+  border-color: #aaafb1;
   box-shadow: none;
   -webkit-box-shadow: none;
 }
@@ -1676,6 +1677,17 @@ table .btn.btn-icon {
 
 .input-group {
   margin: 5px 0 15px;
+}
+.input-group .input-group-addon {
+  background-color: #ecf0f1;
+  font-size: 0.9em;
+}
+.input-group .input-group-btn {
+  font-size: 1em;
+}
+.input-group .input-group-btn .btn {
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 
 /* Dropdown Menu */

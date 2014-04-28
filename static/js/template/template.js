@@ -427,10 +427,10 @@ $(function () {
     });
 
     // Fade in the content wrapper
-    $('.spinner').fadeOut(1000);
+    $('.spinner').fadeOut(3000);
     $('.page-content').fadeIn(1000);
 
     $(window).on('beforeunload', function() {
-        $('.spinner').fadeIn(500);
+        $('.spinner').show();
     });
 });

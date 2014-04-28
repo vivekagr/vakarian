@@ -427,7 +427,7 @@ $(function () {
     });
 
     // Fade in the content wrapper
-    $('.spinner').fadeOut(3000);
+    $('.spinner').fadeOut(2000);
     $('.page-content').fadeIn(1000);
 
     $(window).on('beforeunload', function() {

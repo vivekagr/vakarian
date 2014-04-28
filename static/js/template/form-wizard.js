@@ -252,7 +252,7 @@ $(function() {
     $.each(countries, function(i, item) {
         countrySelect.append($('<option>', { value: item.code, text: item.name }))
     });
-    countrySelect.find('option[value="US"]').attr('selected', true);
+    countrySelect.val('US');
 
     // Initialize Bootstrap Select
     $(".selectpicker").selectpicker();
@@ -262,6 +262,8 @@ $(function() {
 
     // Customer Info Form
     customerInfoForm.bootstrapValidator({
+        live: 'enabled',
+//        trigger: 'change',
         feedbackIcons: {
             valid: 'ion-ios7-checkmark-outline',
             invalid: 'ion-ios7-close-outline',
@@ -298,6 +300,23 @@ $(function() {
                 e.preventDefault();
             }
         }
+    });
+
+    // Sample data filler for step 2
+    $('#fillSampleDataStep2').click(function() {
+        customerInfoForm.find('input[name="email"]').val('harry.p@hogwarts.edu');
+        customerInfoForm.find('input[name="password"]').val('alohomora');
+        customerInfoForm.find('input[name="first-name"]').val('Harry');
+        customerInfoForm.find('input[name="last-name"]').val('Potter');
+        customerInfoForm.find('input[name="phone"]').val('07 987 654 321');
+        customerInfoForm.find('input[name="street"]').val('4 Privet Drive, Little Whinging');
+        customerInfoForm.find('input[name="city"]').val('Surrey');
+        customerInfoForm.find('input[name="zip"]').val('SW1 0AA');
+        customerInfoForm.find('select[name="country"]').selectpicker('val', 'GB');
+
+        customerInfoForm.find('input').trigger('input');
+
+        customerInfoForm.data('bootstrapValidator').validate();
     });
 
 });

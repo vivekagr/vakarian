@@ -431,4 +431,10 @@ $(function () {
     $('.sidebar').fadeIn(1000);
     $('.page-content').fadeIn(1000);
 
+    $(window).on('beforeunload', function() {
+        $('.sidebar').fadeOut();
+        $('.page-content').fadeOut();
+        $('.spinner').fadeIn();
+    });
+
 });

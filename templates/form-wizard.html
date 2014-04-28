@@ -253,31 +253,46 @@
                         <h4>Vakarian Servers <small>Payment</small></h4>
                         <hr>
 
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <h4 class="text-center">Credit Card</h4>
-                                <form id="customerInfoForm" class="form-horizontal">
-                                    <div class="form-group">
-                                        <label class="control-label col-lg-3 col-sm-2">Email Address</label>
-                                        <div class="col-lg-9 col-sm-10">
-                                            <input class="form-control" name="email" tabindex="5" type="email" required>
-                                        </div>
-                                    </div>
-                                </form>
+                        <table class="table text-center">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">Products Description</th>
+                                    <th class="text-center">Duration</th>
+                                    <th class="text-center">Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Basic Server - $29/mo</td>
+                                    <td>Mar 15, 2014 - Apr 14, 2014</td>
+                                    <td>$29</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <hr>
+
+                        <form class="form-inline pull-right">
+                            <div class="form-group">
+                                <label class="sr-only" for="couponCode">Coupon Code</label>
+                                <input id="couponCode" name="couponCode" class="form-control" placeholder="Coupon Code">
                             </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label class="control-label col-lg-3 col-sm-2">Password</label>
-                                    <div class="col-lg-9 col-sm-10">
-                                        <input class="form-control" name="password" tabindex="5" type="password" required>
-                                    </div>
-                                </div>
-                            </div>
+                            <button type="submit" class="btn btn-primary">Apply</button>
+                        </form>
+                        <div class="clearfix"></div>
+
+                        <hr>
+
+                        <div class="text-center">
+                            <p>Pay using</p>
+
+                            <button class="btn btn-lg btn-primary"><i class="fa fa-credit-card"></i> Credit Card</button>
+                            <button class="btn btn-lg btn-info"><i class="fa fa-dollar"></i> Paypal</button>
+                            <button class="btn btn-lg btn-success"><i class="fa fa-bitcoin"></i> Bitcoin</button>
                         </div>
                     </div>
 
                 </div>
-
             </div>
 {% endblock %}
 

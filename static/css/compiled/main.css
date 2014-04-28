@@ -2405,6 +2405,7 @@ div.slider.slider-vertical .tooltip .tooltip-arrow {
 /* FuelUX Wizard */
 .fuelux .step-content {
   background-color: #fff;
+  padding-bottom: 30px;
 }
 
 /* Nano Scroller */

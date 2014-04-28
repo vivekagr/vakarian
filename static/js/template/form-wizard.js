@@ -270,6 +270,7 @@ $(function() {
         fields: {
             'first-name': { message: 'Please enter your first name' },
             'last-name': { message: 'Please enter your last name' },
+            'password': { message: 'Please enter a password' },
             'email': {
                 validators: {
                     emailAddress: { message: 'The is not a valid email address' },
@@ -294,7 +295,7 @@ $(function() {
             if (customerInfoForm.data('bootstrapValidator').isValid()) {
                 wizard.next();
             } else {
-                //e.preventDefault();
+                e.preventDefault();
             }
         }
     });

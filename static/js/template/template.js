@@ -431,6 +431,6 @@ $(function () {
     $('.page-content').fadeIn(1000);
 
     $(window).on('beforeunload', function() {
-        $('.spinner').fadeIn();
+        $('.spinner').fadeIn(500);
     });
 });

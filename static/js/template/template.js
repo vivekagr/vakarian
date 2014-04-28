@@ -426,10 +426,11 @@ $(function () {
         }
     });
 
-    // Fade in the content wrapper
-    $('.spinner').fadeOut(2000);
+    // Fade in the content wrapper and hide spinner
+    $('.spinner').fadeOut(1500);
     $('.page-content').fadeIn(1000);
 
+    // Display loading indicator when the user navigates away from the page
     $(window).on('beforeunload', function() {
         $('.spinner').css('display', 'inline-block');
     });

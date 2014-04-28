@@ -72,28 +72,82 @@
     </div>
 
 
-    {{ s('Inline Form') }}
-    <div class="panel panel-clean">
-        <div class="panel-heading"><div class="panel-title">Inline Form</div></div>
-        <div class="panel-body">
-            <form class="form-inline" role="form">
-                <div class="form-group">
-                    <label class="sr-only" for="inlineFormEmail">Email address</label>
-                    <input type="email" class="form-control" id="inlineFormEmail" name="email" placeholder="Enter email">
+    <div class="row">
+
+        {{ s('Inline Form') }}
+        <div class="col-lg-8">
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Inline Form</div></div>
+                <div class="panel-body">
+                    <form class="form-inline" role="form">
+                        <div class="form-group">
+                            <label class="sr-only" for="inlineFormEmail">Email address</label>
+                            <input type="email" class="form-control" id="inlineFormEmail" name="email" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="inlineFormPassword">Password</label>
+                            <input type="password" class="form-control" id="inlineFormPassword" name="password" placeholder="Password">
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                              <input name="remember" type="checkbox"> <span>Remember me</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-v btn-default">Sign in</button>
+                    </form>
                 </div>
-                <div class="form-group">
-                    <label class="sr-only" for="inlineFormPassword">Password</label>
-                    <input type="password" class="form-control" id="inlineFormPassword" name="password" placeholder="Password">
+            </div>
+        </div>{{ e('Inline Form') }}
+
+        {{ s('Modal Form') }}
+        <div class="col-lg-4">
+            <div class="panel panel-clean">
+                <div class="panel-heading"><div class="panel-title">Modal Form</div></div>
+                <div class="panel-body text-center">
+                    <button class="btn btn-success" data-toggle="modal" data-target="#modalForm">
+                        Open Modal Form
+                    </button>
+                    <div class="modal fade" id="modalForm" tabindex="-1" role="dialog" aria-labelledby="modalForm" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <form role="form">
+                                        <div class="form-group">
+                                            <label class="sr-only" for="contactName">Name</label>
+                                            <input type="text" class="form-control" id="contactName" name="contactName" placeholder="Name">
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="sr-only" for="contactEmail">Email</label>
+                                                    <input type="email" class="form-control" id="contactEmail" name="contactEmail" placeholder="Email">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="sr-only" for="contactPhone">Phone Number</label>
+                                                    <input type="text" class="form-control" id="contactPhone" name="contactPhone" placeholder="Phone Number">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="sr-only" for="contactMessage">Message</label>
+                                            <textarea class="form-control" rows="6" id="contactMessage" name="contactMessage" placeholder="Message"></textarea>
+                                        </div>
+                                        <div class="text-right">
+                                            <button type="button" class="btn btn-v btn-default" data-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-v btn-primary">Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="checkbox">
-                    <label>
-                      <input name="remember" type="checkbox"> <span>Remember me</span>
-                    </label>
-                </div>
-                <button type="submit" class="btn btn-v btn-default">Sign in</button>
-            </form>
-        </div>
-    </div>{{ e('Inline Form') }}
+            </div>
+        </div>{{ e('Modal Form') }}
+    
+    </div>
 
 
     {{ s('Horizontal Form') }}

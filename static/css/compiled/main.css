@@ -1161,6 +1161,9 @@ to preserve the slide animation effect with jQuery
   background: -o-linear-gradient(top, #f2f5f5, #dae2e4);
   background: linear-gradient(top, #f2f5f5, #dae2e4);
 }
+.btn-group.open .btn.btn-default {
+  background-color: #e3e9eb;
+}
 .btn.btn-default.btn-rounded {
   padding-left: 1.5em;
   padding-right: 1.5em;
@@ -1195,6 +1198,9 @@ to preserve the slide animation effect with jQuery
   background: -moz-linear-gradient(top, #2b86c1, #236fa0);
   background: -o-linear-gradient(top, #2b86c1, #236fa0);
   background: linear-gradient(top, #2b86c1, #236fa0);
+}
+.btn-group.open .btn.btn-primary {
+  background-color: #2677ac;
 }
 .btn.btn-primary.btn-rounded {
   padding-left: 1.5em;
@@ -1231,6 +1237,9 @@ to preserve the slide animation effect with jQuery
   background: -o-linear-gradient(top, #17a98c, #12856f);
   background: linear-gradient(top, #17a98c, #12856f);
 }
+.btn-group.open .btn.btn-success {
+  background-color: #14937a;
+}
 .btn.btn-success.btn-rounded {
   padding-left: 1.5em;
   padding-right: 1.5em;
@@ -1265,6 +1274,9 @@ to preserve the slide animation effect with jQuery
   background: -moz-linear-gradient(top, #5ba9dd, #3a98d6);
   background: -o-linear-gradient(top, #5ba9dd, #3a98d6);
   background: linear-gradient(top, #5ba9dd, #3a98d6);
+}
+.btn-group.open .btn.btn-info {
+  background-color: #469ed8;
 }
 .btn.btn-info.btn-rounded {
   padding-left: 1.5em;
@@ -1301,6 +1313,9 @@ to preserve the slide animation effect with jQuery
   background: -o-linear-gradient(top, #f7ba5a, #f6aa33);
   background: linear-gradient(top, #f7ba5a, #f6aa33);
 }
+.btn-group.open .btn.btn-warning {
+  background-color: #f6b041;
+}
 .btn.btn-warning.btn-rounded {
   padding-left: 1.5em;
   padding-right: 1.5em;
@@ -1335,6 +1350,9 @@ to preserve the slide animation effect with jQuery
   background: -moz-linear-gradient(top, #f66859, #f34532);
   background: -o-linear-gradient(top, #f66859, #f34532);
   background: linear-gradient(top, #f66859, #f34532);
+}
+.btn-group.open .btn.btn-danger {
+  background-color: #f45241;
 }
 .btn.btn-danger.btn-rounded {
   padding-left: 1.5em;
@@ -1371,6 +1389,9 @@ to preserve the slide animation effect with jQuery
   background: -o-linear-gradient(top, #384e65, #293a4a);
   background: linear-gradient(top, #384e65, #293a4a);
 }
+.btn-group.open .btn.btn-inverse {
+  background-color: #2f4154;
+}
 .btn.btn-inverse.btn-rounded {
   padding-left: 1.5em;
   padding-right: 1.5em;
@@ -1405,6 +1426,9 @@ to preserve the slide animation effect with jQuery
   background: -moz-linear-gradient(top, #3e5d9f, #324c82);
   background: -o-linear-gradient(top, #3e5d9f, #324c82);
   background: linear-gradient(top, #3e5d9f, #324c82);
+}
+.btn-group.open .btn.btn-facebook {
+  background-color: #37538d;
 }
 .btn.btn-facebook.btn-rounded {
   padding-left: 1.5em;
@@ -1441,6 +1465,9 @@ to preserve the slide animation effect with jQuery
   background: -o-linear-gradient(top, #4a9eff, #2189ff);
   background: linear-gradient(top, #4a9eff, #2189ff);
 }
+.btn-group.open .btn.btn-twitter {
+  background-color: #3191ff;
+}
 .btn.btn-twitter.btn-rounded {
   padding-left: 1.5em;
   padding-right: 1.5em;
@@ -1475,6 +1502,9 @@ to preserve the slide animation effect with jQuery
   background: -moz-linear-gradient(top, #de5342, #d33724);
   background: -o-linear-gradient(top, #de5342, #d33724);
   background: linear-gradient(top, #de5342, #d33724);
+}
+.btn-group.open .btn.btn-google-plus {
+  background-color: #db3f2c;
 }
 .btn.btn-google-plus.btn-rounded {
   padding-left: 1.5em;

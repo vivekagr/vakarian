@@ -56,6 +56,10 @@
         }
       }
 
+      .btn-group.open & {
+        background-color: darken($col, 3%);
+      }
+
       &.btn-rounded {
         padding-left: 1.5em;
         padding-right: 1.5em;

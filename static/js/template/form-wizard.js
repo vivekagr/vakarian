@@ -314,6 +314,7 @@ $(function() {
         customerInfoForm.find('input[name="zip"]').val('SW1 0AA');
         customerInfoForm.find('select[name="country"]').selectpicker('val', 'GB');
 
+        // Manually triggering input event so that validation takes place
         customerInfoForm.find('input').trigger('input');
 
         customerInfoForm.data('bootstrapValidator').validate();

@@ -121,7 +121,7 @@ var Sidebar = {
         this.autoAdjustSidebarWidth();
 
         // Show the sidebar when the nav menu has been setup above
-        this.el.sidebar.show();
+//        this.el.sidebar.show();
     },
 
     /*
@@ -427,6 +427,8 @@ $(function () {
     });
 
     // Fade in the content wrapper
+    $('.spinner').fadeOut(1000);
+    $('.sidebar').fadeIn(1000);
     $('.page-content').fadeIn(1000);
 
 });

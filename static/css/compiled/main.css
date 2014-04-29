@@ -29,9 +29,6 @@ a {
   color: #3498db;
 }
 
-table {
-  font-size: 0.95em;
-}
 table th {
   font-weight: 600;
 }
@@ -1645,12 +1642,18 @@ table .btn.btn-icon {
 
 /* Form Control */
 .form-control {
-  font-size: 0.9em;
+  font-size: 0.95em;
   padding: 7px 12px;
   border-radius: 3px;
   border-color: #CACDCE;
   box-shadow: none;
   -webkit-box-shadow: none;
+}
+.form-control.input-sm {
+  font-size: 0.9em;
+}
+.form-control.input-lg {
+  font-size: 1.1em;
 }
 .form-control:focus {
   border-color: #aaafb1;

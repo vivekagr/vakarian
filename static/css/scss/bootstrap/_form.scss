@@ -1,12 +1,15 @@
 /* Form Control */
 
 .form-control {
-  font-size: 0.9em;
+  font-size: 0.95em;
   padding: 7px 12px;
   border-radius: 3px;
   border-color: #CACDCE;
   box-shadow: none;
   -webkit-box-shadow: none;
+
+  &.input-sm { font-size: 0.9em; }
+  &.input-lg { font-size: 1.1em; }
 
   &:focus {
     border-color: darken(#CACDCE, 12%);

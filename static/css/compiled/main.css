@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background-color: whitesmoke;
   height: 100%;
   width: 100%;
@@ -206,6 +206,7 @@ button.btn-navbar .events-count {
   display: inline-block;
 }
 .navbar-search input, .sidebar-search input {
+  font-family: sans-serif;
   display: inline-block;
   vertical-align: middle;
   background-color: transparent;

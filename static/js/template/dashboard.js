@@ -6,7 +6,7 @@
 $(function () {
 
     setTimeout(function() {
-//        $('.alert-top').slideDown().animateCss('bounceInLeft');
+        $('.alert-top').slideDown().animateCss('bounceInLeft');
     }, 3000);
 
     var pageviews, visits, uniques, bounce, pageviewsDs, visitsDs, data, options, date, d, m, y, events;

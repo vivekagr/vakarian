@@ -1,10 +1,10 @@
-#trafficChart {
+#trafficChartYearly, #trafficChartMonthly {
   margin-top: 15px;
   width: 100%;
-  height: 240px;
+  height: 250px;
 }
-@media (min-width: 1200px) {
-  #trafficChart {
+@media (min-width: 1400px) {
+  #trafficChartYearly, #trafficChartMonthly {
     height: 300px;
   }
 }
@@ -17,20 +17,9 @@
 .traffic-widget {
   padding-bottom: 15px;
 }
-.traffic-widget .traffic-widget-subtitle {
-  font-size: 0.9em;
-  font-weight: 400;
-  color: #7f8c8d;
-  margin: 0 0 20px;
-  text-align: center;
-}
 .traffic-widget .metric {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   cursor: default;
-  margin: 12px 0;
+  margin: 30px 0 10px;
   font-size: 0.85em;
   font-weight: 600;
   color: #c5c8cb;
@@ -54,16 +43,6 @@
   -ms-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
-}
-.traffic-widget .metric:hover {
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-.traffic-widget .metric:hover, .traffic-widget .metric:hover .metric-value {
-  color: #223344;
 }
 
 .quick-stat-widget {

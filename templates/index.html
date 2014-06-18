@@ -58,33 +58,70 @@
     </div>{{ e('Quick Stat Widgets') }}
 
     {{ s('Traffic Statistics') }}
-    <div class="panel panel-clean traffic-widget">
+    <div class="panel panel-clean traffic-widget tabs-fixed-slim">
         <div class="panel-heading"><div class="panel-title">Traffic Statistics</div></div>
+
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#trafficYear" data-toggle="tab">Year</a></li>
+            <li><a href="#trafficMonth" data-toggle="tab">Month</a></li>
+            <li><a href="#trafficWeek" data-toggle="tab">Week</a></li>
+        </ul>
+
         <div class="panel-body row">
-            <div class="col-md-8">
-                <div id="trafficChart"></div>
-            </div>
-            <div class="col-md-4">
-                <h4 class="traffic-widget-subtitle">Highlight of Last 30 Days</h4>
-                <div class="row">
-                    <div class="col-md-6 col-sm-3 col-xs-6 metric">
-                        <span id="visitsPiety" class="line"></span>
-                        <span class="metric-value">21,361</span> Visits
+            <div class="tab-content">
+                <div class="tab-pane active" id="trafficYear">
+                    <div class="col-md-8">
+                        <div id="trafficChartYearly"></div>
                     </div>
-                    <div class="col-md-6 col-sm-3 col-xs-6 metric">
-                        <span id="uniquesPiety" class="line"></span>
-                        <span class="metric-value">16,875</span> Unique Visitors
-                    </div>
-                    <div class="col-md-6 col-sm-3 col-xs-6 metric">
-                        <span id="pageviewsPiety" class="line"></span>
-                        <span class="metric-value">48,773</span> Page Views
-                    </div>
-                    <div class="col-md-6 col-sm-3 col-xs-6 metric">
-                        <span id="bouncePiety" class="line"></span>
-                        <span class="metric-value">72.45%</span> Bounce Rate
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-3 col-xs-6 metric">
+                                <span id="visitsPiety" class="line"></span>
+                                <span class="metric-value">21,361</span> Visits
+                            </div>
+                            <div class="col-md-6 col-sm-3 col-xs-6 metric">
+                                <span id="uniquesPiety" class="line"></span>
+                                <span class="metric-value">16,875</span> Unique Visitors
+                            </div>
+                            <div class="col-md-6 col-sm-3 col-xs-6 metric">
+                                <span id="pageviewsPiety" class="line"></span>
+                                <span class="metric-value">48,773</span> Page Views
+                            </div>
+                            <div class="col-md-6 col-sm-3 col-xs-6 metric">
+                                <span id="bouncePiety" class="line"></span>
+                                <span class="metric-value">72.45%</span> Bounce Rate
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <div class="tab-pane" id="trafficMonth">
+                    <div class="col-md-8">
+                        <div id="trafficChartMonthly"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-3 col-xs-6 metric">
+                                <span id="visitsPiety" class="line"></span>
+                                <span class="metric-value">21,361</span> Visits
+                            </div>
+                            <div class="col-md-6 col-sm-3 col-xs-6 metric">
+                                <span id="uniquesPiety" class="line"></span>
+                                <span class="metric-value">16,875</span> Unique Visitors
+                            </div>
+                            <div class="col-md-6 col-sm-3 col-xs-6 metric">
+                                <span id="pageviewsPiety" class="line"></span>
+                                <span class="metric-value">48,773</span> Page Views
+                            </div>
+                            <div class="col-md-6 col-sm-3 col-xs-6 metric">
+                                <span id="bouncePiety" class="line"></span>
+                                <span class="metric-value">72.45%</span> Bounce Rate
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="trafficWeek"></div>
             </div>
+
         </div>
     </div>{{ e('Traffic Statistics') }}
 

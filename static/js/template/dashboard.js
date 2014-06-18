@@ -9,35 +9,81 @@ $(function () {
         $('.alert-top').slideDown().animateCss('bounceInLeft');
     }, 3000);
 
-    var pageviews, visits, uniques, bounce, pageviewsDs, visitsDs, data, options, date, d, m, y, events;
+    var ds, pageviews, visits, uniques, bounce, x, data, options, date, d, m, y, events;
 
-    function randrange (min, max) { return Math.random() * (max - min) + min; }
+    // Returns a random number between min and max
+    function randRange (min, max) { return Math.random() * (max - min) + min; }
 
-    // Traffic data points
-    pageviews = [11726,8340,9993,7837,6454,9495,13434,12453,14445,18455,19995,18957,17445,20953,24497,22886];
-    visits = pageviews.map(function(x) { return Math.floor(x * randrange(0.39, 0.5)); });
-    uniques = pageviews.map(function(x) { return Math.floor(x * randrange(0.16, 0.25)); });
-    bounce = (function() {
-        var val = [];
-        for (var i=0; i<pageviews.length; i++)
-            val.push(randrange(0.45, 0.8) * 100);
-        return val;
-    })();
+    // Returns a random integer between min and max
+    function randRangeInt (min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
 
-    // Creating out dataset in format [ [timestamp, value],... ] with values from above array
-    pageviewsDs = [];
-    visitsDs=[];
-    for (var i=1; i<=pageviews.length; i++) {
-        var x = new Date();
+    // Returns an array of n random integers between min and max
+    function randVals (min, max, n) {
+        var vals = [];
+        for (i=0; i<n; i++)
+            vals.push(randRangeInt(min, max));
+        return vals;
+    }
+
+    // Multiplies each element of array n with a random number
+    // between min and max
+    function randMul(arr, min, max) {
+        return arr.map(function(n) { return Math.floor(n * randRange(min, max)); });
+    }
+
+    // Creating random traffic data set
+
+    // Pageviews
+    pageviews = {
+        yearly: [11726,8340,9993,7837,6454,9495,13434,12453,14445,18455,19995,18957],
+        monthly: randVals(450, 700, 30),
+        weekly: randVals(550, 700, 7)
+    };
+
+    visits = {
+        yearly: randMul(pageviews.yearly, 0.39, 0.5),
+        monthly: randMul(pageviews.monthly, 0.39, 0.5),
+        weekly: randMul(pageviews.weekly, 0.39, 0.5)
+    };
+
+    uniques = {
+        yearly: randMul(pageviews.yearly, 0.16, 0.25),
+        monthly: randMul(pageviews.monthly, 0.16, 0.25),
+        weekly: randMul(pageviews.weekly, 0.16, 0.25)
+    };
+
+    bounce = {
+        yearly: randVals(50, 60, 12),
+        monthly: randVals(45, 70, 30),
+        weekly: randVals(45, 70, 7)
+    };
+
+
+    // Creating out dataset in format [ [timestamp, value],... ] with values above
+    ds = {
+        pageviews: { yearly: [], monthly: [] },
+        visits: { yearly: [], monthly: [] }
+    };
+
+
+    for (i=1; i<=12; i++) {
+        x = new Date();
         x.setDate(1);
-        x.setMonth(x.getMonth()-(pageviews.length-i));
-        pageviewsDs.push([x.getTime() , pageviews[i-1]]);
-        visitsDs.push([x.getTime() , visits[i-1]]);
+        x.setMonth(x.getMonth()-(12-i));
+        ds.pageviews.yearly.push([x.getTime() , pageviews.yearly[i-1]]);
+        ds.visits.yearly.push([x.getTime() , visits.yearly[i-1]]);
+    }
+
+    for (var i=1; i<=30; i++) {
+        x = new Date();
+        x.setDate(x.getDate()-(30-i));
+        ds.pageviews.monthly.push([x.getTime() , pageviews.monthly[i-1]]);
+        ds.visits.monthly.push([x.getTime() , visits.monthly[i-1]]);
     }
 
     data = [
         {
-            data: pageviewsDs,
+            data: ds.pageviews.yearly,
 
             lines: { show: true, lineWidth: 1},
             curvedLines: { apply:true },
@@ -45,18 +91,18 @@ $(function () {
         },
         {
             label: 'Pageviews',
-            data: pageviewsDs,
+            data: ds.pageviews.yearly,
             points: { show: true }
         },
         {
-            data: visitsDs,
+            data: ds.visits.yearly,
             lines: { show: true, lineWidth: 1},
 
             curvedLines: { apply:true },
             hoverable: false
         },
         {
-            data: visitsDs,
+            data: ds.visits.yearly,
             label: 'Visits',
             points: { show: true }
         }
@@ -113,7 +159,11 @@ $(function () {
     };
 
     // Drawing the traffic flot chart with the proper parameters
-    $.plot("#trafficChart", data, options);
+    $.plot("#trafficChartYearly", data, options);
+
+    data[0].data = data[1].data = ds.pageviews.monthly;
+    data[2].data = data[3].data = ds.visits.monthly;
+    $.plot("#trafficChartMonthly", data, options);
 
 
     // Updating the default colors of line graphs in peity.js
@@ -121,10 +171,10 @@ $(function () {
     $.fn.peity.defaults.line.stroke = 'rgb(189, 195, 199)';
 
     // Inserting the traffic data into the peity chart elements
-    $("#visitsPiety").html(visits.join(','));
-    $("#uniquesPiety").html(uniques.join(','));
-    $("#pageviewsPiety").html(pageviews.join(','));
-    $("#bouncePiety").html(bounce.join(','));
+    $("#visitsPiety").html(visits.yearly.join(','));
+    $("#uniquesPiety").html(uniques.yearly.join(','));
+    $("#pageviewsPiety").html(pageviews.yearly.join(','));
+    $("#bouncePiety").html(bounce.yearly.join(','));
 
     // Render the peity charts
     $(".line").peity("line");
